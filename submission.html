@@ -1,0 +1,122 @@
+---
+layout: page
+title: Data Submission
+description: How to submit imaging data to the BIL
+---
+
+  <h3>Overview</h3>
+
+  <p>The BrainImageLibrary is currently in developmental status and running on
+  temporary hardware. The Library will accept limited data to aid in the
+  development of our systems, and importantly to test, diagnose and improve the
+  networking speeds between the library and the data generating sites. Currently
+  the library is accepting:</p>
+
+  <p><b>Priority1:</b> Image data from the BRAIN Initiative Cell Census Network Mouse
+  Mini-Atlas project.</p>
+
+  <p><b>Priority1:</b> Image data from BRAIN Investigators from each data generating
+  site (test data).</p>
+
+  <h4>ACCOUNTS</h4>
+  <p>To deposit data an account will need to be created on our machines. To request
+  an account, please send an email message to: bil-support@psc.edu with the
+  following information:</p>
+  <ul>
+    <li>Name
+    <li>Institution</li>
+    <li>Mailing Address</li>
+    <li>Current email address (plus an alternate if available)</li>
+    <li>Telephone number</li>
+    <li>Preferred login name (at least 2 and no more than 8 characters, lowercase letters and numbers only)</li>
+    <li>The BICCN or BRAIN initiative project you are associated with.</li>
+    <li>Your academic (or other) status (e.g. Faculty, Research Staff, Postdoctorate, Graduate Student, Undergraduate Student, Government, Nonprofit, Industry)</li>
+  </ul>
+
+  <p>Creating an account for each person within a workgroup is not a problem.
+  Please include the same information listed above for each person needing an
+  account.</p>
+
+  <p>After your account is created, you will receive an email regarding your
+  account and how to set the initial password on it through a special website:
+  apr.psc.edu. <a
+  href="https://www.psc.edu/user-resources/password-policies">Instructions on
+  password policies and how to set or change your password</a></p>
+
+
+  <h4>ASSISTANCE/HELP</h4>
+  <p>If you need assistance please email: bil-support@psc.edu. If the issue is
+  time-critical, you may phone the PSC hotline at: 412/ 268-6350. Please note
+  that we are located in the Eastern Time zone.</p>
+
+  <h4>TRANSFERRING FILES</h4>
+  We can help you get started transferring your files, and diagnose networking
+  and file transfer issues. There are many supported ways to transfer files
+  including sftp, scp, rsync, and Globus Online.
+
+  <p>If you need assistance with file transfer, please email: bil-support@psc.edu
+  or call the hotline.</p>
+
+  <p>When you are ready, you may begin transferring files to
+  /crucible/brain/username/ (e.g. user “ropelews” would transfer to
+  /crucible/brain/ropelews/) on data.psc.edu. Be sure not to transfer into your
+  home directory since that is on a much smaller filesystem.  You can use either
+  scp, rsync, or sftp to transfer files or use Globus. If you use Globus, the
+  endpoint to use is psc#dxc. For more information about using Globus, see the
+  guide here: https://www.psc.edu/bridges/user-guide/transferring-files#globus.
+  Note: you will be using the psc#dxc endpoint, not the psc#bridges-xsede or
+  psc#bridges-cilogon endpoints listed in this guide.</p>
+
+  <p>The only host you can log in to with ssh is dxc.psc.edu. While you can log in
+  to that machine, and use it for data transfers, please note that transferring
+  files directly to dxc.psc.edu will result in a much slower transfer than
+  through data.psc.edu. At the level of transferring small amounts (&lt;50GB/day),
+  it probably doesn't matter.  Also, at that level we can do the checksums after
+  the transfers are complete and not worry about doing them on the fly.</p>
+
+  <p>By default, the files that you transfer will only be accessible by you (and
+  our sysadmins) because of the protections on your /crucible/brain/username/
+  directory.  You can, of course, change those permissions to be
+  group-readable/searchable with chmod.</p>
+
+  <p>Users should consider data transferred as staged rather than submitted to the
+  library. Please retain a copy of these datasets on your lab machines. We
+  expect to have an easy path for your staged data to be submitted to the
+  library once the permanent hardware is operational without having to
+  re-transfer the data.</p>
+
+  <h4>INTERACTIVE/COMMAND LINE ACCESS</h4>
+  <p>The machine that you can access data from is called the Data Exacell (DXC). A
+  user’s guide for DXC is available here:
+  https://www.psc.edu/user-resources/software/seecer?id=1905</p>
+
+  <p>There are several distinct file spaces on the DXC including:</p>
+
+  <p>/home</p>
+  <p>This is the default space for all your files. You have a home directory named
+  /home/username, where username is your DXC username. The /home filesystem is
+  shared across DXC, so you can access your files in /home from all DXC nodes.
+  There is currently no quota on the /home file system.</p>
+
+  <p>/crucible</p>
+  <p>This is the large storage space where you transferred your data to. Your
+  crucible directory is named /crucible/brain/username, where username is your
+  DXC username.</p>
+
+  <h4>FILE FORMATS</h4>
+  <p>The Library will eventually harmonize data into a common image format (most
+  likely OME-TIFF) and common metadata format (most likely the one selected by
+  BICCN).. At the current time, we are not enforcing an image file format
+  standard, but data that is convertible to the OME-TIFF format will likely be
+  the only data that can be submitted into the permanent library.  For more
+  information see:</p>
+  <p>https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html.</p>
+
+  <p>Metadata should be uploaded in a shareable text format (can be xml, json,
+  etc.) and will need eventually need to include the minimal metadata standards
+  and formats (yet to be decided) for submission into the permanent library.</p>
+
+  <h4>NETWORKING SUPPORT</h4>
+  <p>If you are having networking issues related to data transfer (including slow
+  transfer speeds), email us at at bil-support@psc.edu and one of our networking
+  experts will get in contact with you.</p>
