@@ -1,12 +1,6 @@
-# Virtual Volume File System Site
+# Brain Image Library Information Site
 
-## Overview
-
-This is just a flashy little webpage to advertise the VVFS. It's pretty light
-on content at the moment, and there is still some placeholder lorem ipsum text
-that needs replaced.
-
-## How to Use
+## How to Build
 
 It's probably easiest to use rvm (ruby version manager), but you can probably
 do this with whatever version of ruby that is available in your package
