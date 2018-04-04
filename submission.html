@@ -6,11 +6,11 @@ description: How to submit imaging data to the BIL
 
   <h3>Overview</h3>
 
-  <p>The BrainImageLibrary is currently in developmental status and running on
-  temporary hardware. The Library will accept limited data to aid in the
-  development of our systems, and importantly to test, diagnose and improve the
-  networking speeds between the library and the data generating sites. Currently
-  the library is accepting:</p>
+  <p>The <b>BrainImageLibrary</b> is currently in developmental status and
+  running on temporary hardware. The Library will accept limited data to aid in
+  the development of our systems, and importantly to test, diagnose and improve
+  the networking speeds between the library and the data generating sites.
+  Currently the library is accepting:</p>
 
   <p><b>Priority1:</b> Image data from the BRAIN Initiative Cell Census Network Mouse
   Mini-Atlas project.</p>
@@ -39,7 +39,7 @@ description: How to submit imaging data to the BIL
 
   <p>After your account is created, you will receive an email regarding your
   account and how to set the initial password on it through a special website:
-  apr.psc.edu. <a
+  <a href="apr.psc.edu" target="_blank">apr.psc.edu</a>. <a
   href="https://www.psc.edu/user-resources/password-policies">Instructions on
   password policies and how to set or change your password</a></p>
 
@@ -61,27 +61,27 @@ description: How to submit imaging data to the BIL
   or call the hotline.</p>
 
   <p>When you are ready, you may begin transferring files to
-  /crucible/brain/username/ (e.g. user “jsmith” would transfer to
-  /crucible/brain/jsmith/) on data.psc.edu. Be sure not to transfer into your
-  home directory since that is on a much smaller filesystem.  You can use
-  either scp, rsync, or sftp to transfer files or use <a
-  href="https://www.psc.edu/bridges/user-guide/transferring-files#globus"
+  <code>/crucible/brain/username/</code> (e.g. user “jsmith” would transfer to
+  <code>/crucible/brain/jsmith/</code>) on data.psc.edu. Be sure not to
+  transfer into your home directory since that is on a much smaller filesystem.
+  You can use either scp, rsync, or sftp to transfer files or use 
+  <a href="https://www.psc.edu/bridges/user-guide/transferring-files#globus"
   target="_blank">Globus</a>. If you use Globus, the endpoint to use is
-  psc#dxc, not the psc#bridges-xsede or psc#bridges-cilogon endpoints shown in
-  the link above.</p>
+  <code>psc#dxc</code>, not the <code>psc#bridges-xsede</code> or
+  <code>psc#bridges-cilogon</code> endpoints shown in the link above.</p>
 
   <p>The only host you can log in to with ssh is dxc.psc.edu. While you can log
   in to that machine, and use it for data transfers, please note that
   transferring files directly to dxc.psc.edu will result in a much slower
   transfer than through data.psc.edu. At the level of transferring small
-  amounts (&lt;50GB/day), it probably doesn't matter.  Also, at that level we
+  amounts (&lt;50GB/day), it probably doesn't matter. Also, at that level we
   can do the checksums after the transfers are complete and not worry about
   doing them on the fly.</p>
 
   <p>By default, the files that you transfer will only be accessible by you
   (and our sysadmins) because of the protections on your
-  /crucible/brain/username/ directory.  You can, of course, change those
-  permissions to be group-readable/searchable with chmod.</p>
+  <code>/crucible/brain/username/</code> directory. You can, of course, change
+  those permissions to be group-readable/searchable with chmod.</p>
 
   <p>Users should consider data transferred as staged rather than submitted to
   the library. Please retain a copy of these datasets on your lab machines. We
@@ -91,22 +91,26 @@ description: How to submit imaging data to the BIL
 
   <h4>INTERACTIVE/COMMAND LINE ACCESS</h4>
   <p>The machine that you can access data from is called the Data Exacell
-  (DXC).  New users may want to refer to the <a
+  (DXC). New users may want to refer to the <a
   href="https://www.psc.edu/user-resources/software/seecer?id=1905"
   target="_blank">users guide</a>.</p>
 
   <p>There are several distinct file spaces on the DXC including:</p>
 
-  <p>/home</p>
+  <code>/home</code>
+
+  <p></p>
   <p>This is the default space for all your files. You have a home directory named
   /home/username, where username is your DXC username. The /home filesystem is
   shared across DXC, so you can access your files in /home from all DXC nodes.
   There is currently no quota on the /home file system.</p>
 
-  <p>/crucible</p>
+  <code>/crucible</code>
+
+  <p></p>
   <p>This is the large storage space where you transferred your data to. Your
-  crucible directory is named /crucible/brain/username, where username is your
-  DXC username.</p>
+  crucible directory is named <code>/crucible/brain/username</code>, where
+  username is your DXC username.</p>
 
   <h4>FILE FORMATS</h4>
   <p>The Library will eventually harmonize data into a common image format
