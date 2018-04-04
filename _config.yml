@@ -9,6 +9,7 @@ first_published: 2018 # if migrating another site, the year of your first publis
 email: bil-support@psc.edu
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
+remote_theme: "arkadianriver/spectral"
 social:
   #twitter: https://twitter.com/<username>
   github: https://github.com/brain-image-library
