@@ -1,131 +1,306 @@
----
-layout: page
-title: Data Submission
-description: How to submit imaging data to the BIL
----
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+     <title>Brain Image Library: Data Submission</title>
+     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <h3>Overview</h3>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="/css/bootstrap.css" />
+     <link rel="stylesheet" href="/css/styles.css" />
+     <link rel="stylesheet" href="/my.css" />
+     <script src="/js/jquery.min.js"></script>
 
-  <p>The <b>BrainImageLibrary</b> is currently in developmental status and
-  running on temporary hardware. The Library will accept limited data to aid in
-  the development of our systems, and importantly to test, diagnose and improve
-  the networking speeds between the library and the data generating sites.
-  Currently the library is accepting:</p>
+</head>
 
-  <p><b>Priority1:</b> Image data from the BRAIN Initiative Cell Census Network Mouse
-  Mini-Atlas project.</p>
+<body class="bg">
+    <div class="container">
+        <p>&nbsp;</p>
+    </div>
+    <div class="container">
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
 
-  <p><b>Priority1:</b> Image data from BRAIN Investigators from each data generating
-  site (test data).</p>
-
-  <h4>ACCOUNTS</h4>
-  <p>To deposit data an account will need to be created on our machines. To request
-  an account, please send an email message to: <a href="mailto:bil-support@psc.edu?subject=account">bil-support@psc.edu</a>
-  with the following information:</p>
-  <ul>
-    <li>Name
-    <li>Institution</li>
-    <li>Mailing Address</li>
-    <li>Current email address (plus an alternate if available)</li>
-    <li>Telephone number</li>
-    <li>Preferred login name (at least 2 and no more than 8 characters, lowercase letters and numbers only)</li>
-    <li>The BICCN or BRAIN initiative project you are associated with.</li>
-    <li>Your academic (or other) status (e.g. Faculty, Research Staff, Postdoctorate, Graduate Student, Undergraduate Student, Government, Nonprofit, Industry)</li>
-  </ul>
-
-  <p>Creating an account for each person within a workgroup is not a problem.
-  Please include the same information listed above for each person needing an
-  account.</p>
-
-  <p>After your account is created, you will receive an email regarding your
-  account and how to set the initial password on it through a special website:
-  <a href="https://apr.psc.edu" target="_blank">https://apr.psc.edu</a>. <a
-  href="https://www.psc.edu/user-resources/password-policies">Instructions on
-  password policies and how to set or change your password</a></p>
+    <div class="jumbotron pagejumbotron">
 
 
-  <h4>ASSISTANCE/HELP</h4>
-  <p>If you need assistance please email: <a
-  href="mailto:bil-support@psc.edu?subject=feedback">bil-support@psc.edu</a>.
-  If the issue is time-critical, you may phone the PSC hotline at:
-  412-268-6350. Please note
-  that we are located in the Eastern Time zone.</p>
+<H1>Data Submission</H1>
+<H2>Overview</H2>
+A data contributor portal has been created to enable laboratories to submit data to the Brain Image Library. The key processes to submit data are:
+<ol>
+<li><a href="#Setup">Set up your submission account:</a> Setting up your submission account only needs to be done once. </li>
+<ol type="A">
+<li><a href="#Portal">Create an XSEDE portal account:</a> An XSEDE portal account is required to submit data. To create an XSEDE Portal Account, Visit the portal website  at <a href="portal.xsede.org">portal.xsede.org</a>.
+</li>
+<li><a href="#RequestDSP">Request access to the data submission portal:</a> Visit the data submission portal and request access using your portal id.You will receive an email message once access has been enabled.  Please allow 24 hours for access to be granted.
+</li>
+</ol> 
+<li><a href="#EnterDSP">Enter the data submission portal:</a> Using your XSEDE credentials, log into the data submission portal.
+</li> 
+<li><a href="#CreateCollection">Create a collection bundle:</a> Log into the portal and create a collection. 
+</li>
+<li><a href="#UploadImage">Upload image data:</a> Because this is time-limiting step, we suggest this step be started before entering metadata for the collection. Alternately, you may choose to upload metadata before uploading image data
+</li>
+<li><a href="#UploadMetadata">Upload metadata:</a>  Collection metadata may be entered directly through the portal or uploaded through the portal in spreadsheet format.
+ </li>
+<li><a href="#ValidateData">Validate data:</a>  At the current time, validation can only occur once all collection data (both image data and metadata) have been uploaded.
+</li>
+<li><a href="#ReviewSubmit">Review and submit data:</a> Please correct all errors and check all warnings in the validation log prior to submission. Collections with validation warnings may be submitted. Collections with outstanding validation errors may not.
+</li>
+</ol>
+<img src="assets/WebSubmitFlow.png" alt="Data Submission Workflow" 
+height="90%" width="90%" />
 
-  <h4>TRANSFERRING FILES</h4>
-  We can help you get started transferring your files, and diagnose networking
-  and file transfer issues. There are many supported ways to transfer files
-  including sftp, scp, rsync, and Globus Online.
+<H2>Submission Steps</H2>
+<ol>
+<li id="Setup"><b>Set up your submission account</b>
+<ol type="A">
 
-  <p>If you need assistance with file transfer, please email:
-  <a href="mailto:bil-support@psc.edu?subject=account">bil-support@psc.edu</a>
-  or call the hotline.</p>
 
-  <p>When you are ready, you may begin transferring files to
-  <code>/crucible/brain/username/</code> (e.g. user “jsmith” would transfer to
-  <code>/crucible/brain/jsmith/</code>) on data.psc.edu. Be sure not to
-  transfer into your home directory since that is on a much smaller filesystem.
-  You can use either scp, rsync, or sftp to transfer files or use 
-  <a href="https://www.psc.edu/bridges/user-guide/transferring-files#globus"
-  target="_blank">Globus</a>. If you use Globus, the endpoint to use is
-  <code>psc#dxc</code>, not the <code>psc#bridges-xsede</code> or
-  <code>psc#bridges-cilogon</code> endpoints shown in the link above.</p>
+<li id="Portal"><b>Create an XSEDE portal Account</b>
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+At the current time we are using local PSC (DXC) accounts.  However if you have an existing PSC (DXC) account, we encourage you to create a portal account at this time if you do not already have one. A portal account, once enabled on our system will give you access to the Globus endpoint.  For best results, use your existing PSC userid as your portal ID if available.
+</p>
+</div>
+</div> 
+<p>To get an XSEDE portal ID, visit 
+<a href="portal.xsede.org">portal.xsede.org</a> and click on the blue <span class="badge badge-info">Create Portal ID</span> button on the left hand side of the screen. </p>
+</li>
 
-  <p>The only host you can log in to with ssh is dxc.psc.edu. While you can log
-  in to that machine, and use it for data transfers, please note that
-  transferring files directly to dxc.psc.edu will result in a much slower
-  transfer than through data.psc.edu. At the level of transferring small
-  amounts (&lt;50GB/day), it probably doesn't matter. Also, at that level we
-  can do the checksums after the transfers are complete and not worry about
-  doing them on the fly.</p>
 
-  <p>By default, the files that you transfer will only be accessible by you
-  (and our sysadmins) because of the protections on your
-  <code>/crucible/brain/username/</code> directory. You can, of course, change
-  those permissions to be group-readable/searchable with chmod.</p>
 
-  <p>Users should consider data transferred as staged rather than submitted to
-  the library. Please retain a copy of these datasets on your lab machines. We
-  expect to have an easy path for your staged data to be submitted to the
-  library once the permanent hardware is operational without having to
-  re-transfer the data.</p>
+<li id="RequestDSP"><b>Request access to the data submission portal</b>
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+At the current time we are using local PSC (DXC) accounts. This step will be added for new users soon. 
+</p>
+</div>
+</div> 
+</li>
+</ol>
+</li>
 
-  <h4>INTERACTIVE/COMMAND LINE ACCESS</h4>
-  <p>The machine that you can access data from is called the Data Exacell
-  (DXC). New users may want to refer to the <a
-  href="https://www.psc.edu/user-resources/software/seecer?id=1905"
-  target="_blank">users guide</a>.</p>
 
-  <p>There are several distinct file spaces on the DXC including:</p>
+<li id="EnterDSP"><b>Enter the data submission portal</b>
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+At the current time we are using local PSC (DXC) accounts. Existing users should use their local PSC (DXC) login credentials. 
+</p>
+</div>
+</div> 
+<p>Log in to the data submission portal using your XSEDE credentials</p>
+</li>
 
-  <code>/home</code>
+<li id="CreateCollection"><b>Create a collection bundle</b>
+<p>
+The next step in the submission process is to create a collection 
+bundle through the portal. A collection bundle is an ingestion wrapper 
+that contains one or more related datasets and metadata. (A dataset is 
+a stand-alone entry (e.g. an image-volume) with metadata. A dataset can 
+contain many 2d image files that are assembled computationally to form 
+a more complex two or three dimensional volume.) Collections are tagged 
+with common identifying metadata (such as the NIH project that the data 
+is associated with) that upon submission will be propagated to each item 
+in the collection. This important tagging information will allow BIL to 
+report to NIH on data that has begun, but has not yet completed the 
+submission process. 
+</p><p>
+In general, smaller collection bundles are recommended because all datasets 
+within a collection must pass the validation process for the collection bundle to be accepted. 
+</p>
+<p>
+Each collection bundle will have a unique dropbox-like landing zone 
+directory associated with it (e.g. <em>/bil/lz/user/2018/07/6247417d-691a-4548-9bea-5d400045516f</em>. This landing zone directory is where the 
+collections datasets must be 
+transferred to for validation and ingestion processing. 
+</p>
+</li>
 
-  <p></p>
-  <p>This is the default space for all your files. You have a home directory named
-  /home/username, where username is your DXC username. The /home filesystem is
-  shared across DXC, so you can access your files in /home from all DXC nodes.
-  There is currently no quota on the /home file system.</p>
 
-  <code>/crucible</code>
+<li id="UploadImage"><b>Upload image data</b>
+<p>
+There are many supported ways to transfer files into the landing zone 
+directory including sftp, scp, rsync, and Globus Online.
+</p>
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+To encourage maximal automatic metadata scraping, the library STRONGLY 
+RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted. 
+The ingestion process supports native TIFF and JPEG 2000 image file formats 
+as well as formats that are convertible to the OME-TIFF format via the 
+bioformats tool. For more information on the bioformats tool see: <br />
+<a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
+https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.
+</p>
+</div>
+</div> 
+</li>
 
-  <p></p>
-  <p>This is the large storage space where you transferred your data to. Your
-  crucible directory is named <code>/crucible/brain/username</code>, where
-  username is your DXC username.</p>
 
-  <h4>FILE FORMATS</h4>
-  <p>The Library will eventually harmonize data into a common image format
-  (most likely OME-TIFF) and common metadata format (most likely the one
-  selected by BICCN). At the current time, we are not enforcing an image file
-  format standard, but <a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html" target="_blank">
-  data that is convertible to the OME-TIFF format</a> will likely be the only
-  data that can be submitted into the permanent library.</p>
 
-  <p>Metadata should be uploaded in a shareable text format (can be xml, json,
-  etc.) and will need eventually need to include the minimal metadata standards
-  and formats (yet to be decided) for submission into the permanent library.</p>
+<li id="UploadMetadata"><b>Upload metadata</b>
+</li>
+<p>Metadata for each dataset can be entered manually through the contributor   
+portal, or by uploading a spreadsheet to a collection via the contributor 
+portal. Please see the <!-- <a href="http://c00.bil.psc.edu:8095"> --> Contributor 
+Portal<!-- </a> --> for the most recent metadata specification.
+</p>
 
-  <h4>NETWORKING SUPPORT</h4>
-  <p>If you are having networking issues related to data transfer (including
-  slow transfer speeds), email us at <a
-  href="mailto:bil-support@psc.edu?subject=feedback"> bil-support@psc.edu</a>
-  and one of our networking experts will get in contact with you.</p>
+
+
+<li id="ValidateData"><b>Validate data</b>
+<p>Once all data has been uploaded to the landing zone area and all metadata 
+has been uploaded to the contributor portal, click on the validate button 
+for the collection.
+</p>
+<p>
+The validation process will lock the dataset for changes and scrape 
+additional metadata from the submitted files. When the process completes, 
+a log will be available for viewing through the portal.
+</p> 
+</li>
+
+
+<li id="ReviewSubmit"><b>Review and submit data</b>
+<p>When the validation process completes, 
+a log will be accessable from the contributor portal. Please examine 
+this log and correctany identified warnings and errors. (note: Only an 
+error will provent submission, a warning will not necessarly prevent data 
+submission. select suppress warnings and resubmit.)      
+</p>
+<p>
+Once you are satisfied that all errors and appropriate warnings have 
+been corrected, select submit. 
+</p>
+</li>
+</ol>
+
+<h2>Additional Information</h2>
+
+<p><b>File formats</b></p>
+<p>
+To encourage maximal automatic metadata scraping, the library STRONGLY 
+RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROCSCOPE be submitted. 
+</p>
+<p>
+The ingestion process supports native TIFF and JPEG 2000 image file formats 
+as well as formats that are convertible to the OME-TIFF format via the 
+bioformats tool. (For more information on the bioformats tool see: 
+<a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
+https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.)
+</p> 
+<p>Please
+see the <a href="http://c00.bil.psc.edu:8095">Contributor Portal</a> for 
+the most recent metadata specification.
+</p>
+
+<p>
+<p><b>Pre-Submission Processing of Files:</b></p><p>
+<p>
+If you need to make corrections or do other pre-submission processing on 
+one or more files after they heve been transfered to the landing zone, you 
+can log in with ssh to c00.bil.psc.edu. 
+</p>
+<p>By default, the files in the landing zone will only be accessible by you 
+and BIL support staff. You can, of course, change the permissions on the 
+landing zone to be group or world readable with chmod. This may help if you 
+need to share the data with others (such as other lab group members) before 
+completing the submission process. 
+</p>
+
+
+<p><b>Assistance and Help</b></p>
+<p>If you need assistance with anything, please email: bil-support@psc.edu. 
+If the issue is time-critical, you may phone the PSC hotline at: 412-268-6350.
+Please note that we are located in the Eastern Time zone. </p> 
+<p>
+If you are having networking issues related to data transfer (including 
+slow transfer speeds), email us at at bil-support@psc.edu and one of our 
+networking experts will get in contact with you. If network issues prevent 
+data transfer, we may recommend that you send your datasets to us via an
+alternate path such on our BrainBall portable device or on LTO tape.  
+</p>
+<p><b>Distribution Licence</b></p>
+Data submitted to the library will be redistributed to others under a 
+Creative Commons Attribution-ShareAlike 4.0 International License. In 
+addition, data submitters expressly permit the Library data to be 
+transferred to and maintained by another open-source repository or by 
+a government agency such as the US National Institutes of Health in the 
+future.  
+</p>
+<p>
+<b>Release of entries</b></p>
+<p>
+Data submitted to the library, by default,  will be released as soon 
+as possible once data has been validated. Optionally, data submitters 
+can select a limited embargo period for their submitted data of up to 
+one year. 
+</p>
+<p><b>Assignment of DOI</b></p>
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+DOI's are not being issued at the current time. We expect to be able to issue 
+DOI's for datasets as soon as metadata specifications are stabilized.
+</p>
+</div>
+</div> 
+
+A permanent, citable DOI for the submitted dataset will be created 
+through Carnegie Mellon University's KiltHub. A suggested citation for 
+users of the dataset will also be associated with the dataset. The DOI 
+will point to a a permanent record in the KiltHub system that points 
+to the dataset stored in the archive.
+
+</p>
+<p><b>Changes to entries after submission</b></p><p>
+Changes may be made to submitted entries prior to release. Minor changes, 
+such as updating metadata or adding citations may be made after dataset 
+release. Major revisions will require the existing entry to be marked as 
+obsolete and replaced by a new entry. The DOI pointing to the metadata for 
+the obsolete entry may have a superseded-by field added to it to point
+users to the superceded entry. There may be also be circumstances in which 
+an entry in the library may be marked as withdrawn (for example, research 
+misconduct). In those cases, the DOI for the obsolete entry will have a  
+withdrawn field added to it.  
+</p>
+<p><b>Sharing data and computing on data prior to submission</b></p><p>
+PSC's Bridges computational resource is an excellent place to explore and share your data with others prior to submission. The data submission landing zone path for your data on Bridges is very fast. 
+</p>
+<p>
+In addition, public data released by the BRAIN Image Library is also available on PSC's Bridges Computational Resource. The Bridges computational resource is available through XSEDE for non-commercial research. Corporate and other users can gain access through PSC's corporate programs: <a href="https://www.psc.edu/services/corporate-programs">https://www.psc.edu/services/corporate-programs.</a> 
+</p>
+<p><b>Use of Pre-publication Data</b></p><p>
+The Library expects all users of the submitted data to grant the authors of the data the right to publish the first paper concerning the dataset within three years of deposit. If there is no publication associated with the dataset, please contact the listed authors for permission to publish. There is no restriction on post-publication data. 
+</p>
+
+    </div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>

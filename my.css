@@ -1,0 +1,13 @@
+
+.mainjumbotron {
+  padding: 1.0em 0.1em;
+  background: none;
+ }
+.pagejumbotron {
+ }
+
+.bg { 
+    background-image: url("assets/intro.png");
+    background-position: center;
+    background-repeat: repeat;
+}
