@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-     <title>Brain Image Library: About</title>
+     <title>Brain Image Library: Download</title>
      <meta http-equiv="x-ua-compatible" content="ie=edge" />
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,10 +32,47 @@
 
     <div class="jumbotron pagejumbotron">
     <h1>Downloading Data</h1>
+<H2>Overview</H2>
+There are many supported ways to transfer files from BIL including anonymous ftp, 
+scp, rsync, and Globus Online.   
+<ol>
+<li><a href="#Locating">Locating Data:</a> Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name separated by a period.</li>
+<li><a href="#FTP">Anonymous FTP:</a> How to download datasets using anonymous FTP.</li>
+<ol type="A">
+<li><a href="#WEB">Using a web browser:</a> How to download datasets using anonymous FTP through a web browser.</li>
+<li><a href="#WGET">Using wget:</a> How to download datasets using unix wget command.</li>
+<li><a href="#WGET">Using other clients:</a>Advice on how to download datasets using other ftp clients.</li>
+</ol>
+<li><a href="#GLOBUS">Globus:</a> How to download datasets using Globus.</li>
+</ol>
+<H2>Download Steps</H2>
+<ol>
+<li id="#Locating"><b>Locating Data</b>
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+<p>Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name 
+separated by a period:</p>
+<p>&lt;16 digit unique identifier&gt.&lt;Dataset Name&gt;<p />
+<p>for example: 21f897a23b2674c1.AW326532-01<p /> 
+<p>The file path to BIL entries will be:<br /> 
+  /bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16 digit unique identifier&gt/&lt;Dataset Name&gt;.&lt;/</p>
+
+<p>where &lt;c1c2&gt; are replaced by the first and second characters of the unique identifier and &lt;c3c4&gt; are 
+  replaced by the third and fourth characters of the unique identifier. for example, the dataset referred to above 
+ (21f897a23b2674c1.AW326532-01) would be found down the following path:<br /> 
+</p>
+<p>/bil/data/12/f8/12f897a23b2674c1/AW326532-01/</p>
+
+</div>
+</div> 
+</li>
+</ol>
+</li>
+
+
 
 <p>
-There are many supported ways to transfer files from BIL including anonymous ftp, 
-scp, rsync, and Globus Online.  
 </p>
 
 <p><b>Locating Datasets</b></p>
