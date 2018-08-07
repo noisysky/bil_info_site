@@ -41,7 +41,7 @@ and Globus Online. This section discusses how to locate datasets in BIL and down
 <ol type="A">
 <li><a href="#WEB">Using a web browser:</a> How to download datasets using anonymous FTP through a web browser.</li>
 <li><a href="#WGET">Using wget:</a> How to download datasets using unix wget command.</li>
-<li><a href="#WGET">Using other clients:</a>Advice on how to download datasets using other ftp clients.</li>
+<li><a href="#OtherClients">Using other clients:</a>Advice on how to download datasets using other ftp clients.</li>
 </ol>
 <li><a href="#GLOBUS">Globus:</a> How to download datasets using Globus.</li>
 </ol>
@@ -50,8 +50,8 @@ and Globus Online. This section discusses how to locate datasets in BIL and down
 <li id="#Locating"><b>Locating Data</b>
 <p>Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name 
 separated by a period:</p>
-<p>&lt;16 digit unique identifier&gt.&lt;Dataset Name&gt;<p />
-<p>for example: 21f897a23b2674c1.AW326532-01<p /> 
+<p>&lt;16 digit unique identifier&gt.&lt;Dataset Name</p>
+<p>for example: 21f897a23b2674c1.AW326532-01</p> 
 <p>The file path to BIL entries will be:<br /> 
   /bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16 digit unique identifier&gt/&lt;Dataset Name&gt;.&lt;/</p>
 
@@ -59,51 +59,51 @@ separated by a period:</p>
   replaced by the third and fourth characters of the unique identifier. for example, the dataset referred to above 
  (21f897a23b2674c1.AW326532-01) would be found down the following path:<br /> 
 </p>
-<p>/bil/data/12/f8/12f897a23b2674c1/AW326532-01/</p>
+<p>/bil/data/21/f8/12f897a23b2674c1/AW326532-01/</p>
+</li>
+<li id="#FTP"><b>Anonymous FTP</b> 
+<ol type="A">
+<li id="#WEB"><b>Using a web browser:</b> 
+<p>
+  To access the files, enter the following URL in your web browser <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
+
+  Note: most web-browser anonymous ftp clients will place you in the <b><i>/bil/data</i></b> directory as the root directory.
+</p> 
+</li>
+<li id="#WGET"><b>Using wget:</b>
+  To access the files, enter the complete URL to the file in your web browser, without the /bil/data path <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
+<p>
+wget ftp://download.brainimagelibrary.org:8811/00/00/README
+</p>
+</li>
+<li id="#OtherClients"><b>Using other clients:</b>
+  <p>
+  Due to the variety of FTP clients produced, we can only offer the following general advice:
+  </p>
+  <ol type="A">
+  <li>Connect to the host: download.brainimagelibrary.org</li>
+  <li>Connect through port 8811. <I>IMPORTANT: THIS IS NOT THE DEFAULT ANONYMOUS FTP PORT/</i>.
+  <li>For some clients, you will have to use the complete file path to acces the data (e.g. begin with /bil/data)</li>
+  </ol>
+</li>
+</ol>
 
 </li>
 </ol>
 
 
 
+
 <p>
 </p>
 
-<p><b>Locating Datasets</b></p>
-<p>Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name 
-separated by a period: <br />
-  &lt;16 digit unique identifier&gt.&lt;Dataset Name&gt;<br />
-  for example:<br />
-  21f897a23b2674c1.AW326532-01<br /> 
-  
-  The file path to BIL entries will be:<br /> 
-  /bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16 digit unique identifier&gt/&lt;Dataset Name&gt;.&lt;/
-
-  where &lt;c1c2&gt; are replaced by the first and second characters of the unique identifier and &lt;c3c4&gt; are 
-  replaced by the third and fourth characters of the unique identifier. 
-
-  for example, the dataset referred to above (21f897a23b2674c1.AW326532-01) would be found down the following path:<br /> 
-
-  /bil/data/12/f8/12f897a23b2674c1/AW326532-01/
 
 <p><b>Anonymous FTP - Using a web browser</b></p>
-<p>
-  To access the files, enter the following URL in your web browser <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
-
-  Note: most web-browser anonymous ftp clients will place you in the <b><i>/bil/data</i></b> directory as the root directory.
-</p> 
 
 <p><b>Anonymous FTP - wget client</b></p>
 <p>
-  To access the files, enter the complete URL to the file in your web browser, without the /bil/data path <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
-
- wget ftp://download.brainimagelibrary.org:8811/00/00/README
-
 <p><b>Anonymous FTP - Command-line client</b></p>
 <p>
-  To access the files, enter the following URL in your web browser <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
-
-  Note: most web-browser anonymous ftp clients will place you in the <b><i>/bil/data</i></b> directory as the root directory.
 </p> 
 
 ftp://download.brainimagelibrary.org:8811/
