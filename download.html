@@ -34,19 +34,50 @@
     <h1>Downloading Data</h1>
 
 <p>
-There are many supported ways to transfer files from BIL including sftp, 
-scp, rsync, and Globus Online.  At present, it is necessary to have an XSEDE portal
-account to access the data.  For instructions on how to obtain an XSEDE portal
-account, see the
-<a href="http://www.brainimagelibrary.org/submission.html">Data Submission</a> page.
+There are many supported ways to transfer files from BIL including anonymous ftp, 
+scp, rsync, and Globus Online.  
 </p>
-<p><b>Location of files</b></p>
+
+<p><b>Locating Datasets</b></p>
+<p>Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name 
+separated by a period: <br />
+  &lt;16 digit unique identifier&gt.&lt;Dataset Name&gt;<br />
+  for example:<br />
+  21f897a23b2674c1.AW326532-01<br /> 
+  
+  The file path to BIL entries will be:<br /> 
+  /bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16 digit unique identifier&gt/&lt;Dataset Name&gt;.&lt;/
+
+  where &lt;c1c2&gt; are replaced by the first and second characters of the unique identifier and &lt;c3c4&gt; are 
+  replaced by the third and fourth characters of the unique identifier. 
+
+  for example, the dataset referred to above (21f897a23b2674c1.AW326532-01) would be found down the following path:<br /> 
+
+  /bil/data/12/f8/12f897a23b2674c1/AW326532-01/
+
+<p><b>Anonymous FTP - Using a web browser</b></p>
 <p>
-  To access the files, point your sftp, scp, or rsync client
-  to <b><i>data.bridges.psc.edu</i></b> and navigate to the <b><i>/bil/data</i></b>
-  directory.  Individual datasets are stored in subdirectories corresponding
-  to the submitter's username.
-</p>      
+  To access the files, enter the following URL in your web browser <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
+
+  Note: most web-browser anonymous ftp clients will place you in the <b><i>/bil/data</i></b> directory as the root directory.
+</p> 
+
+<p><b>Anonymous FTP - wget client</b></p>
+<p>
+  To access the files, enter the complete URL to the file in your web browser, without the /bil/data path <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
+
+ wget ftp://download.brainimagelibrary.org:8811/00/00/README
+
+<p><b>Anonymous FTP - Command-line client</b></p>
+<p>
+  To access the files, enter the following URL in your web browser <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
+
+  Note: most web-browser anonymous ftp clients will place you in the <b><i>/bil/data</i></b> directory as the root directory.
+</p> 
+
+ftp://download.brainimagelibrary.org:8811/
+
+     
 <p><b>Image file download formats</b></p>
 <p>
 Image files can be downloaded in the format as submitted to the library. Additional download file 
