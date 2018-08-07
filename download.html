@@ -44,36 +44,46 @@ and Globus Online. This section discusses how to locate datasets in BIL and down
 <li><a href="#OtherClients">Using other clients:</a>Advice on how to download datasets using other ftp clients.</li>
 </ol>
 <li><a href="#GLOBUS">Globus:</a> How to download datasets using Globus.</li>
+<li><a href="#FMT">Download Formats:</a> A brief description of the download formats.</li>
+<li><a href="#Help">Assistance and Help</a></li>
+<li><a href="#Licence">Distribution Licence</a></li>
+<li><a href="#Embargo">Embargoed entries</a></li>
+<li><a href="#Citataion">Citation of entries and acceptable use</a></li>
 </ol>
+
 <H2>Download Steps</H2>
 <ol>
 <li id="#Locating"><b>Locating Data</b>
 <p>Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name 
 separated by a period:</p>
-<p>&lt;16 digit unique identifier&gt.&lt;Dataset Name</p>
-<p>for example: 21f897a23b2674c1.AW326532-01</p> 
+<p>&lt;16-digit-unique-identifier&gt.&lt;Dataset-Name&gt;</p>
 <p>The file path to BIL entries will be:<br /> 
-  /bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16 digit unique identifier&gt/&lt;Dataset Name&gt;.&lt;/</p>
+  /bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16-digit-unique-identifier&gt/&lt;Dataset-Name&gt;</p>
 
 <p>where &lt;c1c2&gt; are replaced by the first and second characters of the unique identifier and &lt;c3c4&gt; are 
-  replaced by the third and fourth characters of the unique identifier. for example, the dataset referred to above 
- (21f897a23b2674c1.AW326532-01) would be found down the following path:<br /> 
-</p>
-<p>/bil/data/21/f8/12f897a23b2674c1/AW326532-01/</p>
+  replaced by the third and fourth characters of the unique identifier. </p>
+
+  <p>For example, the dataset: abcded0123456789.example_dataset_01 would be found down the following path:</p>
+  <p>/bil/data/ab/cd/abcdef0123456789/example_dataset_01/</p>
 </li>
 <li id="#FTP"><b>Anonymous FTP</b> 
 <ol type="A">
 <li id="#WEB"><b>Using a web browser:</b> 
 <p>
-  To access the files, enter the following URL in your web browser <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
+  To access the files, enter the following URL in your web browser:</p>
+  <p><i>ftp://download.brainimagelibrary.org:8811/</i></p>.
+  <p>Note: most web-browser anonymous ftp clients will place you in the <i>/bil/data</i> directory as the root directory.
 
-  Note: most web-browser anonymous ftp clients will place you in the <b><i>/bil/data</i></b> directory as the root directory.
+  <p>The URL to access the example dataset mentioned above would be:</p>
+  <p><i>ftp://download.brainimagelibrary.org:8811/ab/cd/abcdef0123456789/example_dataset_01
 </p> 
 </li>
 <li id="#WGET"><b>Using wget:</b>
-  To access the files, enter the complete URL to the file in your web browser, without the /bil/data path <b><i>ftp://download.brainimagelibrary.org:8811/</i></b>.
-<p>
-wget ftp://download.brainimagelibrary.org:8811/00/00/README
+<P>  To download the files, use wget with the -r option and the URL to the desired dataset without the 
+    /bil/data path.</p>
+ 
+  <p>For example, to retreive the example dataset mentioned above with wget, enter:</p>
+<p><i>wget -r ftp://download.brainimagelibrary.org:8811/ab/cd/abcdef0123456789/example_dataset_01/</i></p>.
 </p>
 </li>
 <li id="#OtherClients"><b>Using other clients:</b>
@@ -81,44 +91,50 @@ wget ftp://download.brainimagelibrary.org:8811/00/00/README
   Due to the variety of FTP clients produced, we can only offer the following general advice:
   </p>
   <ol type="A">
-  <li>Connect to the host: download.brainimagelibrary.org</li>
-  <li>Connect through port 8811. <I>IMPORTANT: THIS IS NOT THE DEFAULT ANONYMOUS FTP PORT/</i>.
-  <li>For some clients, you will have to use the complete file path to acces the data (e.g. begin with /bil/data)</li>
+  <li>Connect to the host: download.brainimagelibrary.org.</li>
+  <li>Connect through port 8811. <I>IMPORTANT: THIS IS NOT THE DEFAULT ANONYMOUS FTP PORT/</i>.</li>
+  <li>For some clients, you will have to use the complete file path to acces the data (e.g. begin with /bil/data).</li>
   </ol>
 </li>
 </ol>
+</li>
+<li id="#WGET"><b>Using Globus:</b>
+
+  <P>Login to the Globus transfer web service at www.globus.org. Select an Endpoint field and select 'Brain Image Library Download' (a shortcut is available as bil#download). Upon successful connection to the Brain Image Library Download server, you will land in the /bil/data directory, which lists the first layer of the 00..ff directory hierarchy. Navigate (or type the path in the Path field) to the directory containing the dataset(s) that you wish to download.</p>
+<img src="assets/globus0.png">
+   
+<p>In the other Endpoint field, select (and if needed, authenticate to) your destination server. This may be a remote GridFTP server or your Globus Connect Personal endpoint. In the Transfer Settings section at the bottom, select the settings that apply to your download needs, e.g., "preserve source file modification times", "verify file integrity after transfer", etc.
+</p>
+<img src="assets/globus01.png">
+
+ 
+<p>Select the dataset(s) and/or files that you wish to download by highlighting their directory and/or file names.</p>
+<img src="assets/globus02.png">
+ 
+ 
+<p>Click the arrow button in the direction of the transfer from the Brain Image Library Download side toward your target Endpoint. This will schedule your transfer to begin. At this point you may log out of the Globus user interface and let the transfer proceed.
+</p> 
+<img src="assets/globus03.png">
+ 
+<p>To check on the progress of your transfer, select the Activity tab in the globus.org interface, and then select the job corresponding to your transfer.
+</p> 
+<img src="assets/globus04.png">
+
+ 
+<p>Upon successful completion of your transfer, the status page for your transfer will show 'Condition SUCCEEDED' - you will also receive an e-mail to notify you if your Globus account settings are configured to do so.
+</p> 
+<img src="assets/globus05.png">
 
 </li>
-</ol>
 
-
-
-
+<li id="#FMT"><b>Download Formats</b>
 <p>
-</p>
-
-
-<p><b>Anonymous FTP - Using a web browser</b></p>
-
-<p><b>Anonymous FTP - wget client</b></p>
-<p>
-<p><b>Anonymous FTP - Command-line client</b></p>
-<p>
-</p> 
-
-ftp://download.brainimagelibrary.org:8811/
-
-     
-<p><b>Image file download formats</b></p>
-<p>
-Image files can be downloaded in the format as submitted to the library. Additional download file 
+Image files and Metadata files can be downloaded in the format as submitted to the library. Additional download file 
 formats are expected to be added in 2018.
 </p>
-<p><b>Metadata file download formats</b></p>
-<p>Metadata for each dataset will be downloaded in either: json, xml, or 
-tab delimited formats. 
-</p>
-<p><b>Assistance and Help</b></p>
+</li>
+
+<li id="#Help"><b>Assistance and Help</b>
 <p>If you need assistance with anything, please email: bil-support@psc.edu. 
 If the issue is time-critical, you may phone the PSC hotline at: 412-268-6350.
 Please note that we are located in the Eastern Time zone. </p> 
@@ -126,27 +142,36 @@ Please note that we are located in the Eastern Time zone. </p>
 If you are having networking issues related to data transfer (including 
 slow transfer speeds), email us at at bil-support@psc.edu and one of our 
 networking experts will get in contact with you.</p>
-<p><b>Distribution Licence</b></p>
-BIL Data is distributed under the Creative Commons Attribution-ShareAlike 
+</li>
+<li id="#Licence"><b>Distribution Licence</b>
+<p>BIL Data is distributed under the Creative Commons Attribution-ShareAlike 
 4.0 International License. 
 </p>
-<p>
-<b>Embargoed entries</b></p>
+</li>
+<li id="#Embargo"><b>Embargoed Entries</b>
 <p>
 Data submitted to the library, by default,  will be released as soon 
 as possible once data has been validated. Optionally, data submitters 
 can select a limited embargo period for their submitted data of up to 
 one year. Data subjected to embargo can not be downloaded.
 </p>
-<p><b>Citation of entries and acceptable use</b></p>
+<li id="#Citataion"><b>Citation of entries and acceptable use</b></p>
 <p>
-Use of Pre-publication Data.
-The Library expects all users to grant the authors/creators of the data 
-the right to publish the first paper concerning the dataset within three
-years of deposit into BIL. If there is no publication associated with 
-the dataset, please contact the listed authors for permission to publish. 
-</p>
+The recommended format for citing data in the Brain Image Library is as follows:
 
+
+<p>[1] Sean Deitrich, Jacob Czech, Alexander Ropelewski, Arthur W. Wetzel, Greg Hood, Derek Simmel, 
+Marcel Bruchez, Simon C. Watkins, and Alan M. Watson. 2018. Applying iRODS to the Brain Image Library. 
+In Proceedings of the Practice and Experience on Advanced Research Computing (PEARC '18). ACM, 
+New York, NY, USA, Article 79, 4 pages. DOI: https://doi.org/10.1145/3219104.3229266 </p>
+
+<i>Use of Pre-publication Data.</i>
+The Library expects all users to grant the authors/creators of the data 
+the right to publish the first paper concerning the dataset. If there is 
+no publication associated with the dataset, please contact the listed 
+authors for permission to publish. 
+</p>
+</ol>
 
 
     </div>
