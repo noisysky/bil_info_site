@@ -36,10 +36,22 @@
 <p>Bridges is a high performance computing system designed to support familiar, convenient software and environments for both traditional and non-traditional HPC users. Its richly-connected set of interacting systems offers exceptional flexibility for data analytics, simulation, workflows and gateways, leveraging interactivity, parallel computing, Spark and Hadoop.
 </p>
 <p><b>All Brain Image Library data is directly accessable on bridges.psc.edu 
-and is located on the /bil file system.</b> Data collections can be found at:
-/bil/data/{year}/{month}/{uuid} where {year} is the year of submission, 
-{month} is the month of submission and {uuid} is the uuid associated with 
-the collection</p> 
+and is located on the /bil file system.</b> </p>
+
+Datasets in BIL are uniquely referred to by a combination of a 16 digit 
+unique identifier and the dataset name separated by a period:
+
+&lt;16-digit-unique-identifier>.&lt;Dataset-Name>
+
+The file path to BIL entries will be:
+/bil/data/&lt;c1c2&gt;/&lt;c3c4&gt;/&lt;16-digit-unique-identifier&gt;/&lt;Dataset-Name&gt;
+
+<p>
+where &lt;c1c2&gt; are replaced by the first and second characters of the unique identifier and &lt;c3c4&gt; are replaced by the third and fourth characters of the unique identifier.
+
+For example, the dataset: abcded0123456789.example_dataset_01 would be found down the following path:
+
+/bil/data/ab/cd/abcdef0123456789/example_dataset_01/
 
 <p>Additional information about Bridges can be found <a href="https://www.psc.edu/resources/computing/bridges">here.</a></p>
 <p><b>Get access to Bridges: </b></p>
