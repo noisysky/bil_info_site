@@ -104,7 +104,7 @@ the projectname for the project. </li>
 <li>The shared project space is accessable to authorized users with 
 authenticated access via sftp, scp, rsync and globus:</li>
 <ul>
-<li>Using sftp to submit.brainimagelibrary.org: An example logging into the project space as testuser@submit.brainimagelibrary.org is shown below. The put command is used to upload data (test1.tiff) and the get command is used to download data (test2.tiff):
+<li>Using sftp to submit.brainimagelibrary.org: An example logging into the project space as testuser@submit.brainimagelibrary.org is shown below. The put command is used to upload data (data1.tiff) and the get command is used to download data (data2.tiff):
 <div class="card bg-light">
 <div class="card-body text-left">
 <p class="card-text">
@@ -138,7 +138,7 @@ sftp> exit
 </li>
 
 <li>Using scp to submit.brainimagelibrary.org: An example uploading data 
-(test1.tiff) and downloading data (test2.tiff) from the project space as 
+(data1.tiff) and downloading data (data2.tiff) from the project space as 
 testuser@submit.brainimagelibrary.org is shown below: 
 <div class="card bg-light">
 <div class="card-body text-left">
@@ -154,6 +154,38 @@ testuser@test.psc.edu:~$ scp testuser@upload.brainimagelibrary.org:/bil/proj/tes
 testuser@submit.brainimagelibrary.org's password:
 data2.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
 data2.tiff                                                                    100%  764KB 763.8KB/s   00:00
+</code>
+</pre>
+</p>
+</div>
+</div> 
+
+<li>Using rsync to submit.brainimagelibrary.org: An example uploading data 
+(data1.tiff) and downloading data (data2.tiff) from the project space as 
+testuser@submit.brainimagelibrary.org is shown below: 
+<div class="card bg-light">
+<div class="card-body text-left">
+<p class="card-text">
+<pre>
+<code>
+testuser@test.psc.edu:~$ rsync -lrtpDvP data1.tiff testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data1.tiff
+sending incremental file list
+data1.tiff
+        1160   0%    0.00kB/s    0:00:00
+     1356122 100%   86.15MB/s    0:00:00 (xfer#1, to-check=0/1)
+
+sent 4752 bytes  received 7051 bytes  7868.67 bytes/sec
+total size is 1356122  speedup is 114.90
+
+
+testuser@test.psc.edu:~$ rsync -lrtpDvP data2.tiff testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data2.tiff
+sending incremental file list
+data2.tiff
+         880   0%    0.00kB/s    0:00:00
+      782160 100%   82.79MB/s    0:00:00 (xfer#1, to-check=0/1)
+
+sent 3628 bytes  received 5365 bytes  17986.00 bytes/sec
+total size is 782160  speedup is 86.97
 </code>
 </pre>
 </p>
