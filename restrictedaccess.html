@@ -101,6 +101,47 @@ be added.)
 <li> Your shared project space will be created down the following path: 
 <i>/bil/proj/&lt;projectname&gt;</i> where <i>&lt;projectname&gt;</i> is 
 the projectname for the project. </li>
+<li>The shared project space is accessable to authorized users with 
+authenticated access via sftp, scp, rsync and globus:</li>
+<ul>
+<li>Using sftp to submit.brainimagelibrary.org: An example logging into the project space as testuser@submit.brainimagelibrary.org is shown below. The put command is used to upload data (test1.tiff) and the get command is used to download data (test2.tiff):
+<div class="card bg-light">
+<div class="card-body text-left">
+<p class="card-text">
+<pre>
+<code>
+testuser@test.psc.edu:~$ sftp testuser@submit.brainimagelibrary.org
+The authenticity of host 'submit.brainimagelibrary.org (128.182.108.164)' can't be established.
+ECDSA key fingerprint is 32:cf:46:44:3d:9c:8e:b2:1d:14:03:66:45:0b:11:29.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'submit.brainimagelibrary.org,128.182.108.164' (ECDSA) to the list of known hosts.
+testuser@submit.brainimagelibrary.org's password:
+Connected to submit.brainimagelibrary.org.
+sftp> cd /bil/proj/testproj
+
+sftp> put data1.tiff
+Uploading data1.tiff to /bil/proj/testproj/data1.tiff
+data1.tiff                                      0%    0     0.0KB/s   --:-- ETA
+data1.tiff                                    100% 1324KB   1.3MB/s   00:00
+
+sftp> get data2.tiff
+Fetching /bil/proj/testproj/data2.tiff to data2.tiff
+/bil/proj/testproj/data2.tiff                   0%    0     0.0KB/s   --:-- ETA
+/bil/proj/testproj/data2.tiff                 100%  764KB 763.8KB/s   00:00
+sftp> exit
+</code>
+</pre>
+</p>
+</div>
+</div> 
+
+</li>
+<li>Using Globus: Login to the Globus transfer web service at www.globus.org. 
+Select an Endpoint field and select 'Brain Image Library Download' 
+(a shortcut is available as bil#download). Upon successful connection to 
+the Brain Image Library Download server, you will land in the /bil/data directory, which lists the first layer of the 00..ff directory hierarchy. Navigate (or type the path in the Path field) to the directory containing the dataset(s) that you wish to download.
+</li>
+
 </ol>
 <li id="#Compute">To set up data sharing with Bridges computational 
 access</li>
@@ -127,7 +168,9 @@ be added.)
 </li>
 <li> Your shared project space will be created down the following path: 
 <i>/bil/proj/&lt;projectname&gt;</i> where <i>&lt;projectname&gt;</i> is 
-the projectname of the project. </li>
+the projectname of the project. 
+
+</li> 
 </ol>
 <li id="#PRRequest">Requesting Access:</a></li>
 <ol type="a">
