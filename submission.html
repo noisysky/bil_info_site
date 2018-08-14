@@ -134,6 +134,87 @@ transferred to for validation and ingestion processing.
 There are many supported ways to transfer files into the landing zone 
 directory including sftp, scp, rsync, and Globus Online.
 </p>
+<ul>
+<li>Using sftp to submit.brainimagelibrary.org: An example logging into the project space as testuser@submit.brainimagelibrary.org is shown below. The put command is used to upload data (data1.tiff):
+<div class="card bg-light">
+<div class="card-body text-left">
+<p class="card-text">
+<pre>
+<code>
+testuser@test.psc.edu:~$ sftp testuser@submit.brainimagelibrary.org
+The authenticity of host 'submit.brainimagelibrary.org (128.182.108.164)' can't be established.
+ECDSA key fingerprint is 32:cf:46:44:3d:9c:8e:b2:1d:14:03:66:45:0b:11:29.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'submit.brainimagelibrary.org,128.182.108.164' (ECDSA) to the list of known hosts.
+testuser@submit.brainimagelibrary.org's password:
+Connected to submit.brainimagelibrary.org.
+sftp> cd /bil/proj/lz/ab/cd/abcdef0123456789
+sftp> mkdir /bil/proj/lz/ab/cd/abcdef0123456789/testproj
+sftp> cd /bil/proj/lz/ab/cd/abcdef0123456789/testproj
+
+sftp> put data1.tiff
+Uploading data1.tiff to /bil/lz/ab/cd/abcdef0123456789/testproj/data1.tiff
+data1.tiff                                      0%    0     0.0KB/s   --:-- ETA
+data1.tiff                                    100% 1324KB   1.3MB/s   00:00
+
+sftp> exit
+</code>
+</pre>
+</p>
+</div>
+</div> 
+
+</li>
+
+<li>Using scp to submit.brainimagelibrary.org: An example uploading data 
+(data1.tiff) and downloading data (data2.tiff) from the project space as 
+testuser@submit.brainimagelibrary.org is shown below: 
+<div class="card bg-light">
+<div class="card-body text-left">
+<p class="card-text">
+<pre>
+<code>
+testuser@test.psc.edu:~$ scp data1.tiff testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data1.tiff
+testuser@submit.brainimagelibrary.org's password:
+data1.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
+data1.tiff                                                                    100% 1324KB   1.3MB/s   00:00
+
+testuser@test.psc.edu:~$ scp testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data2.tiff data2.tiff
+testuser@submit.brainimagelibrary.org's password:
+data2.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
+data2.tiff                                                                    100%  764KB 763.8KB/s   00:00
+</code>
+</pre>
+</p>
+</div>
+</div> 
+</li>
+<li>Using rsync to submit.brainimagelibrary.org: An example uploading all data in the directory 
+(testproj) as testuser@submit.brainimagelibrary.org is shown below: 
+<div class="card bg-light">
+<div class="card-body text-left">
+<p class="card-text">
+<pre>
+<code>
+testuert@test.psc.edu:~$ rsync -lrtpDvP testproj testuser@upload.brainimagelibrary.org:/bil/lz/testuser/abcdef0123456789
+sending incremental file list
+testproj/
+testproj/data1.tiff
+     1356122 100%  126.20MB/s    0:00:00 (xfer#1, to-check=0/2)
+
+sent 1356392 bytes  received 35 bytes  2712854.00 bytes/sec
+total size is 1356122  speedup is 1.00
+
+</code>
+</pre>
+</p>
+</div>
+</div> 
+</li>
+</ul>
+
+
+
 <div class="card bg-light">
 <div class="card-body text-center">
 <p class="card-text">
