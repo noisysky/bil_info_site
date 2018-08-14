@@ -136,6 +136,31 @@ sftp> exit
 </div> 
 
 </li>
+
+<li>Using scp to submit.brainimagelibrary.org: An example uploading data 
+(test1.tiff) and downloading data (test2.tiff) from the project space as 
+testuser@submit.brainimagelibrary.org is shown below: 
+<div class="card bg-light">
+<div class="card-body text-left">
+<p class="card-text">
+<pre>
+<code>
+testuser@test.psc.edu:~$ scp data1.tiff testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data1.tiff
+testuser@submit.brainimagelibrary.org's password:
+data1.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
+data1.tiff                                                                    100% 1324KB   1.3MB/s   00:00
+
+testuser@test.psc.edu:~$ scp testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data2.tiff data2.tiff
+testuser@submit.brainimagelibrary.org's password:
+data2.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
+data2.tiff                                                                    100%  764KB 763.8KB/s   00:00
+</code>
+</pre>
+</p>
+</div>
+</div> 
+
+</li>
 <li>Using Globus: Login to the Globus transfer web service at www.globus.org. 
 Select an Endpoint field and select 'Brain Image Library Download' 
 (a shortcut is available as bil#download). Upon successful connection to 
