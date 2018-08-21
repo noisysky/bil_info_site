@@ -72,10 +72,20 @@ separated by a period:</p>
 <p>
   To access the files, enter the following URL in your web browser:</p>
   <p><i>ftp://download.brainimagelibrary.org:8811/</i></p>.
-  <p>Note: most web-browser anonymous ftp clients will place you in the <i>/bil/data</i> directory as the root directory.
+  <div class="alert alert-primary" role="alert">
+  Most web-browser anonymous ftp clients (Chrome, Firefox, Safari) will place you in the <i>/bil/data</i> 
+  directory as the root directory. Internet Explorer/Edge will place you in <i>/</i> as the root directory.
+  </div>
+  <p>Note: 
+  <p>The URL to access the example dataset mentioned above (Chrome, Firefox, Safari) would be:</p>
+  <p><i>ftp://download.brainimagelibrary.org:8811/ab/cd/abcdef0123456789/example_dataset_01/</i></p>
+  <p>The URL to access the example dataset mentioned above (Internet Explorer/Edge) would be:</p>
+  <p><i>ftp://download.brainimagelibrary.org:8811/bil/data/ab/cd/abcdef0123456789/example_dataset_01/</i>
 
-  <p>The URL to access the example dataset mentioned above would be:</p>
-  <p><i>ftp://download.brainimagelibrary.org:8811/ab/cd/abcdef0123456789/example_dataset_01</i>
+  <div class="alert alert-primary" role="alert">
+  With some web-browsers, if you forget the trailing / in the url you may receive a blank page. 
+  </div>
+  <p>
   <img width="100%" height="100%" src="assets/AnonFTP.png">
 
 </p> 
