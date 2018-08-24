@@ -22,7 +22,9 @@
 	
 </head>
 
+
 <body>
+<button><a href="index.html">Back to Brainimagelibrary.org</a></button>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <table id="myTable" cellspacing="1QW" border="5">
 	<colgroup width="521"></colgroup>
@@ -5313,6 +5315,7 @@ function myFunction() {
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
+	break;
       } else {
         tr[i].style.display = "none";
       }
