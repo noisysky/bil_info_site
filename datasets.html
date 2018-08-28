@@ -1,31 +1,44 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Brain Image Library: A public resource enabling researchers to deposit, analyze, mine, share and interact with large brain image datasets.</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<html>
-<head>
-	
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"/>
-	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="2018-08-20T15:43:25.449364064"/>
-	
-	<style type="text/css">
-		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:x-small }
-		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
-		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
-		comment { display:none;  } 
-	th {
-	    cursor: pointer;
-	    font-size: 18px;
-	}
-	</style>
-	
-</head>
-
-
-<body>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/my.css" />
+        <link rel="icon" href="assets/BIL_logo.png" />
+        <!--<link rel="stylesheet" href="/css/styles.css"> -->
+        <script src="/js/jquery.min.js"></script>
+    </head>
+<style>
+p {
+    font-size: 8px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+</style>
+    <body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+          <!--  <img src="assets/brainicon.png">
+            <img src="assets/BIL_logo.png"> -->
+        </div>
+    <div class="container">
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+    <div class="jumbotron mainjumbotron">
 <button><a href="index.html">Back to BrainimageLibrary.org</a></button>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Bil Dataset ID" title="Type in a name">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Bil Dataset ID" title="Type in a name" />
 <table id="myTable" cellspacing="1QW" border="5">
 	<colgroup width="521"></colgroup>
 	<colgroup width="402"></colgroup>
@@ -43,21 +56,21 @@
 	<colgroup width="938"></colgroup>
 	<colgroup width="978"></colgroup>
 	<tr>
-		<th height="17" align="left" onclick="sortTable(0)">BIL_Dataset_ID</td>
-		<th align="left" sdnum="1033;0;@" onclick="sortTable(1)">sample_id</td>
-		<th align="left" onclick="sortTable(2)">organism_type</td>
-		<th align="left" onclick="sortTable(3)">taxonomy_id</td>
-		<th align="left" onclick="sortTable(5)">transgenic_line_information</td>
-		<th align="left" onclick="sortTable(6)">modality</td>
-		<th align="left" onclick="sortTable(7)">method</td>
-		<th align="left" onclick="sortTable(8)">technique</td>
-		<th align="left" onclick="sortTable(9)">anatomical_structure</td>
-		<th align="left" onclick="sortTable(10)">organization</td>
-		<th align="left" onclick="sortTable(11)">lab_name</td>
-		<th align="left" onclick="sortTable(12)">investigator</td>
-		<th align="left" onclick="sortTable(13)">grant_number</td>
-		<th align="left" onclick="sortTable(14)">comments</td>
-		<th align="left" onclick="sortTable(15)">BIL_ftp://download_Path</td>
+		<th height="17" align="left" onclick="sortTable(0)">BIL_Dataset_ID</th>
+		<th align="left" sdnum="1033;0;@" onclick="sortTable(1)">sample_id</th>
+		<th align="left" onclick="sortTable(2)">organism_type</th>
+		<th align="left" onclick="sortTable(3)">taxonomy_id</th>
+		<th align="left" onclick="sortTable(5)">transgenic_line_information</th>
+		<th align="left" onclick="sortTable(6)">modality</th>
+		<th align="left" onclick="sortTable(7)">method</th>
+		<th align="left" onclick="sortTable(8)">technique</th>
+		<th align="left" onclick="sortTable(9)">anatomical_structure</th>
+		<th align="left" onclick="sortTable(10)">organization</th>
+		<th align="left" onclick="sortTable(11)">lab_name</th>
+		<th align="left" onclick="sortTable(12)">investigator</th>
+		<th align="left" onclick="sortTable(13)">grant_number</th>
+		<th align="left" onclick="sortTable(14)">comments</th>
+		<th align="left" onclick="sortTable(15)">BIL_ftp://download_Path</th>
 	</tr>
 	<tr>
 		<td height="17" align="left">7402741313727c9b.0500368612</td>
@@ -67,7 +80,7 @@
 		<td align="left">A930038C07Rik-Tg1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -84,7 +97,7 @@
 		<td align="left">A930038C07Rik-Tg1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -101,7 +114,7 @@
 		<td align="left">Chat-IRES-Cre-neo</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">NDB Diagonal band nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -118,7 +131,7 @@
 		<td align="left">Chat-IRES-Cre-neo</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SI Substantia innominata</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -135,7 +148,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -152,7 +165,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSs Supplemental somatosensory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -169,7 +182,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSs Supplemental somatosensory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -186,7 +199,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -203,7 +216,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -220,7 +233,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs Secondary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -237,7 +250,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp-ul Primary somatosensory area;upper limb</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -254,7 +267,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp-ul Primary somatosensory area;upper limb</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -271,7 +284,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -288,7 +301,7 @@
 		<td align="left">Grik4-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">VAL Ventral anterior-lateral complex of the thalamus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -305,7 +318,7 @@
 		<td align="left">Grik4-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PO Posterior complex of the thalamus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -322,7 +335,7 @@
 		<td align="left">Grik4-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PO Posterior complex of the thalamus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -339,7 +352,7 @@
 		<td align="left">Nr5a1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -356,7 +369,7 @@
 		<td align="left">Ntsr1-Cre_GN220</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -373,7 +386,7 @@
 		<td align="left">Ntsr1-Cre_GN220</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -390,7 +403,7 @@
 		<td align="left">Penk-IRES2-Cre-neo</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP Caudoputamen</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -407,7 +420,7 @@
 		<td align="left">Penk-IRES2-Cre-neo</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP Caudoputamen</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -424,7 +437,7 @@
 		<td align="left">Pvalb-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SCm Superior colliculus;motor related</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -441,7 +454,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs Secondary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -458,7 +471,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp-ul Primary somatosensory area;upper limb</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -475,7 +488,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs Secondary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -492,7 +505,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp-ul Primary somatosensory area;upper limb</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -509,7 +522,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -526,7 +539,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSs Supplemental somatosensory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -543,7 +556,7 @@
 		<td align="left">Scnn1a-Tg3-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -560,7 +573,7 @@
 		<td align="left">Sepw1-Cre_NP39</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -577,7 +590,7 @@
 		<td align="left">Sepw1-Cre_NP39</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -594,7 +607,7 @@
 		<td align="left">Sim1-Cre_KJ18</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -611,7 +624,7 @@
 		<td align="left">Sim1-Cre_KJ18</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -628,7 +641,7 @@
 		<td align="left">Slc17a6-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PG Pontine gray</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -645,7 +658,7 @@
 		<td align="left">Slc17a6-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SCm Superior colliculus;motor related</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -662,7 +675,7 @@
 		<td align="left">Slc17a6-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SCm Superior colliculus;motor related</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -679,7 +692,7 @@
 		<td align="left">Slc17a6-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PG Pontine gray</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -696,7 +709,7 @@
 		<td align="left">Slc17a6-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">GRN Gigantocellular reticular nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -713,7 +726,7 @@
 		<td align="left">Slc32a1-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">APN Anterior pretectal nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -730,7 +743,7 @@
 		<td align="left">Slc32a1-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">APN Anterior pretectal nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -747,7 +760,7 @@
 		<td align="left">Slc6a5-Cre_KF109</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PARN Parvicellular reticular nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -764,7 +777,7 @@
 		<td align="left">Slc6a5-Cre_KF109</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PARN Parvicellular reticular nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -781,7 +794,7 @@
 		<td align="left">Slc6a5-Cre_KF109</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">GRN Gigantocellular reticular nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -798,7 +811,7 @@
 		<td align="left">Slc6a5-Cre_KF109</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">GRN Gigantocellular reticular nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -815,7 +828,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AId Agranular insular area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -832,7 +845,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SCm Superior colliculus;motor related</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -849,7 +862,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -866,7 +879,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -883,7 +896,7 @@
 		<td align="left">Syt6-Cre_KI148</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RSPv Retrosplenial area;ventral part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -900,7 +913,7 @@
 		<td align="left">Syt6-Cre_KI148</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -917,7 +930,7 @@
 		<td align="left">Syt6-Cre_KI148</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -934,7 +947,7 @@
 		<td align="left">Syt6-Cre_KI148</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -951,7 +964,7 @@
 		<td align="left">Tac1-IRES2-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP Caudoputamen</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -968,7 +981,7 @@
 		<td align="left">Tac1-IRES2-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP Caudoputamen</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -985,7 +998,7 @@
 		<td align="left">Th-Cre_FI172</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">VTA Ventral tegmental area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1002,7 +1015,7 @@
 		<td align="left">Tlx3-Cre_PL56</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp Primary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1019,7 +1032,7 @@
 		<td align="left">Tlx3-Cre_PL56</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp Primary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1036,7 +1049,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1053,7 +1066,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1070,7 +1083,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AId Agranular insular area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1087,7 +1100,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RSPv Retrosplenial area;ventral part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1104,7 +1117,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1121,7 +1134,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1138,7 +1151,7 @@
 		<td align="left">A930038C07Rik-Tg1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1155,7 +1168,7 @@
 		<td align="left">Calb2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1172,7 +1185,7 @@
 		<td align="left">Ctgf-T2A-dgCre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1189,7 +1202,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SPF Subparafascicular nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1206,7 +1219,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">DN Dentate nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1223,7 +1236,7 @@
 		<td align="left">Cux2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp Primary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1240,7 +1253,7 @@
 		<td align="left">Gad2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1257,7 +1270,7 @@
 		<td align="left">Gad2-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">VMH Ventromedial hypothalamic nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1274,7 +1287,7 @@
 		<td align="left">Glt25d2-Cre_NF107</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1291,7 +1304,7 @@
 		<td align="left">Glt25d2-Cre_NF107</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">VMH Ventromedial hypothalamic nucleus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1308,7 +1321,7 @@
 		<td align="left">Glt25d2-Cre_NF107</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSs Supplemental somatosensory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1325,7 +1338,7 @@
 		<td align="left">Glt25d2-Cre_NF107</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp Primary motor area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1342,7 +1355,7 @@
 		<td align="left">Grik4-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">IGL Intergeniculate leaflet of the lateral geniculate complex</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1359,7 +1372,7 @@
 		<td align="left">Nr5a1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1376,7 +1389,7 @@
 		<td align="left">Nr5a1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp-m Primary somatosensory area;mouth</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1393,7 +1406,7 @@
 		<td align="left">Nr5a1-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AId Agranular insular area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1410,7 +1423,7 @@
 		<td align="left">Ntsr1-Cre_GN220</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1427,7 +1440,7 @@
 		<td align="left">Ntsr1-Cre_GN220</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1444,7 +1457,7 @@
 		<td align="left">Ntsr1-Cre_GN220</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ACAd Anterior cingulate area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1461,7 +1474,7 @@
 		<td align="left">Pvalb-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">IGL Intergeniculate leaflet of the lateral geniculate complex</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1478,7 +1491,7 @@
 		<td align="left">Pvalb-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AId Agranular insular area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1495,7 +1508,7 @@
 		<td align="left">Pvalb-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AId Agranular insular area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1512,7 +1525,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1529,7 +1542,7 @@
 		<td align="left">Rbp4-Cre_KL100</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1546,7 +1559,7 @@
 		<td align="left">Scnn1a-Tg3-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1563,7 +1576,7 @@
 		<td align="left">Sim1-Cre_KJ18</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AId Agranular insular area;dorsal part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1580,7 +1593,7 @@
 		<td align="left">Sim1-Cre_KJ18</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ZI Zona incerta</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1597,7 +1610,7 @@
 		<td align="left">Slc17a6-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RSPv Retrosplenial area;ventral part</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1614,7 +1627,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1631,7 +1644,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">VAL Ventral anterior-lateral complex of the thalamus</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1648,7 +1661,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AUDp Primary auditory area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1665,7 +1678,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1682,7 +1695,7 @@
 		<td align="left">Sst-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1699,7 +1712,7 @@
 		<td align="left">Vip-IRES-Cre</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PL Prelimbic area</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -1713,10 +1726,10 @@
 		<td align="left" sdval="683703754" sdnum="1033;0;@">683703754</td>
 		<td align="left">mouse</td>
 		<td align="left">NCBI:txid10090</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">RabiesTransSynaptic</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -3671,13 +3684,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170711-02A</td>
 	</tr>
 	<tr>
@@ -3688,13 +3701,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs-ul;VISC;MOp-ul;SSp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170711-03B</td>
 	</tr>
 	<tr>
@@ -3705,13 +3718,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSs-cv;SSp-ul;MOp-ul;MOs-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170711-04A</td>
 	</tr>
 	<tr>
@@ -3722,13 +3735,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp;SSs;MOp;MOs</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170711-05A</td>
 	</tr>
 	<tr>
@@ -3739,13 +3752,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170811-01A</td>
 	</tr>
 	<tr>
@@ -3756,13 +3769,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170811-02A</td>
 	</tr>
 	<tr>
@@ -3773,13 +3786,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs-mi;MOs-ul;SSp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW170829-01A</td>
 	</tr>
 	<tr>
@@ -3790,13 +3803,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs-mi;MOp-ul;SSp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW170829-02A</td>
 	</tr>
 	<tr>
@@ -3807,13 +3820,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs-mi;MOp-ul;SSp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW170910-01A</td>
 	</tr>
 	<tr>
@@ -3824,13 +3837,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RE;AMd;MM;RSPv</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170911-01A</td>
 	</tr>
 	<tr>
@@ -3841,13 +3854,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RE;AM;PVp;RSPd</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW170911-02A</td>
 	</tr>
 	<tr>
@@ -3858,13 +3871,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp-mo;MOp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW170917-01A</td>
 	</tr>
 	<tr>
@@ -3875,13 +3888,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW171101-01A</td>
 	</tr>
 	<tr>
@@ -3892,13 +3905,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW171101-02A</td>
 	</tr>
 	<tr>
@@ -3909,13 +3922,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW171102-01A</td>
 	</tr>
 	<tr>
@@ -3926,13 +3939,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PO;VAL;VM</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171116-01A</td>
 	</tr>
 	<tr>
@@ -3943,13 +3956,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP;SSp;LH</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171116-02A</td>
 	</tr>
 	<tr>
@@ -3960,13 +3973,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171116-03A</td>
 	</tr>
 	<tr>
@@ -3977,13 +3990,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SCm;RSPv;MRN;VAL</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171116-04A</td>
 	</tr>
 	<tr>
@@ -3994,13 +4007,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171117-01A</td>
 	</tr>
 	<tr>
@@ -4011,13 +4024,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RSPd;PO;MOs;ORBl</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171117-02A</td>
 	</tr>
 	<tr>
@@ -4028,13 +4041,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">AONm;TTd;MOs;ACAd;AD;AMv;fx;RSPagl;RSPd</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171117-03A</td>
 	</tr>
 	<tr>
@@ -4045,13 +4058,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RSPagl;LP;ACAd;MOs;ORBvl</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171117-04A</td>
 	</tr>
 	<tr>
@@ -4062,13 +4075,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW171120-01A</td>
 	</tr>
 	<tr>
@@ -4079,13 +4092,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW171120-02A</td>
 	</tr>
 	<tr>
@@ -4096,13 +4109,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW171120-04A</td>
 	</tr>
 	<tr>
@@ -4113,13 +4126,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW171120-05A</td>
 	</tr>
 	<tr>
@@ -4130,13 +4143,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp-ul;MOp</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW171130-01A</td>
 	</tr>
 	<tr>
@@ -4147,13 +4160,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/e4/2d/e42d6385cc272c17/SW171130-02A</td>
 	</tr>
 	<tr>
@@ -4164,13 +4177,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RE;RT;AV;MM;tp</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171205-01A</td>
 	</tr>
 	<tr>
@@ -4181,13 +4194,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RE;AM;RSPv</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171205-02A</td>
 	</tr>
 	<tr>
@@ -4198,13 +4211,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW171219-01A</td>
 	</tr>
 	<tr>
@@ -4215,13 +4228,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PF;VAL;VM;CP</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171221-01A</td>
 	</tr>
 	<tr>
@@ -4232,13 +4245,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PF;VAL;VM;CP</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171221-02A</td>
 	</tr>
 	<tr>
@@ -4249,13 +4262,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
+		<td align="left"><br /></td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171221-03A</td>
 	</tr>
 	<tr>
@@ -4266,13 +4279,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP;SSp-ul;SSp-bfd;SSs</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW171221-04A</td>
 	</tr>
 	<tr>
@@ -4283,13 +4296,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">CP;SSp-ul;SSp-bfd;SSs</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">RF1 MH114112-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/7c/ea/7cea2057a6d831af/SW180125-01A</td>
 	</tr>
 	<tr>
@@ -4300,13 +4313,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">RE;AMd;MM;RSPv</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">RF1 MH114112-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/7c/ea/7cea2057a6d831af/SW180125-02A</td>
 	</tr>
 	<tr>
@@ -4317,13 +4330,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">PVT;AMd;CM;IAM;RE</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">RF1 MH114112-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/7c/ea/7cea2057a6d831af/SW180125-03A</td>
 	</tr>
 	<tr>
@@ -4334,13 +4347,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">LPO;LHA</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">RF1 MH114112-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/7c/ea/7cea2057a6d831af/SW180130-01A</td>
 	</tr>
 	<tr>
@@ -4351,13 +4364,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">LPO;LHA</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">RF1 MH114112-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/7c/ea/7cea2057a6d831af/SW180130-02A</td>
 	</tr>
 	<tr>
@@ -4368,13 +4381,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">V;VII</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U01-MH114829-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/84/c1/84c11fe5e4550ca0/SW180131-02A</td>
 	</tr>
 	<tr>
@@ -4385,13 +4398,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs;CP;VPL;PF</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114821-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/d7/a0/d7a0f9003b992e3b/SW180202-01A</td>
 	</tr>
 	<tr>
@@ -4402,13 +4415,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp;MOp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW180510-01A</td>
 	</tr>
 	<tr>
@@ -4419,13 +4432,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSp-bfd;MOp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW180510-02A</td>
 	</tr>
 	<tr>
@@ -4436,13 +4449,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">SSs;MOp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW180510-03A</td>
 	</tr>
 	<tr>
@@ -4453,13 +4466,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW180510-04A</td>
 	</tr>
 	<tr>
@@ -4470,13 +4483,13 @@
 		<td align="left">Strain_Name='C57BL/6J';</td>
 		<td align="left">Histology</td>
 		<td align="left">Nissl</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">MOs;MOp-ul</td>
 		<td align="left">University of Southern California</td>
 		<td align="left">Dong_U01</td>
 		<td align="left">Hong-Wei Dong</td>
 		<td align="left">1-U19-MH114831-01</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">ftp://download.brainimagelibrary.org:8811/8d/ad/8dade6699fc4d327/SW180510-05A</td>
 	</tr>
 	<tr>
@@ -5201,7 +5214,7 @@
 		<td align="left">Gnb4-IRES2-CreERT2</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">FullMorphology</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">subcortical claustrum; cortical intratelencephalic Layer 6</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -5218,7 +5231,7 @@
 		<td align="left">Plxnd1-CreER</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">FullMorphology</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">cortical intratelencephalic Layer 2/3;Layer 5</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -5235,7 +5248,7 @@
 		<td align="left">Gnb4-IRES2-CreERT2</td>
 		<td align="left">Anatomy/Morphology</td>
 		<td align="left">FullMorphology</td>
-		<td align="left"><br></td>
+		<td align="left"><br /></td>
 		<td align="left">subcortical claustrum; cortical intratelencephalic Layer 6</td>
 		<td align="left">Allen Institute for Brain Science</td>
 		<td align="left">Zeng_U19</td>
@@ -5346,7 +5359,21 @@ document.querySelector('#myInput').addEventListener('keyup', filterTable, false)
 </script>
 -->
 <!-- ************************************************************************** -->
-</body>
+</div></div>
 
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
 
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
 </html>
+
