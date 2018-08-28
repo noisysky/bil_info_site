@@ -5,6 +5,10 @@
  }
 .pagejumbotron {
  }
+.tablejumbotron {
+max-width: 2500px;
+ }
+
 
 .bg { 
     background-image: url("assets/intro.png");
