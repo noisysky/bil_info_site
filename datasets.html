@@ -5311,6 +5311,26 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td");
+    tr[i].style.display = "none";
+    for (j = 0; j < td.length; j++) {
+      if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      }
+    }
+  }
+}
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+</script>
+<!--<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -5324,6 +5344,7 @@ function myFunction() {
 
 document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
 </script>
+-->
 <!-- ************************************************************************** -->
 </body>
 
