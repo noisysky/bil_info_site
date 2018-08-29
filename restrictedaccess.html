@@ -104,19 +104,19 @@ the projectname for the project. </li>
 <li>The shared project space is accessable to authorized users with 
 authenticated access via sftp, scp, and rsync:</li>
 <ul>
-<li>Using sftp to submit.brainimagelibrary.org: An example logging into the project space as testuser@submit.brainimagelibrary.org is shown below. The put command is used to upload data (data1.tiff) and the get command is used to download data (data2.tiff):
+<li>Using sftp to upload.brainimagelibrary.org: An example logging into the project space as testuser@upload.brainimagelibrary.org is shown below. The put command is used to upload data (data1.tiff) and the get command is used to download data (data2.tiff):
 <div class="card bg-light">
 <div class="card-body text-left">
 <p class="card-text">
 <pre>
 <code>
-testuser@test.psc.edu:~$ sftp testuser@submit.brainimagelibrary.org
-The authenticity of host 'submit.brainimagelibrary.org (128.182.108.164)' can't be established.
+testuser@test.psc.edu:~$ sftp testuser@upload.brainimagelibrary.org
+The authenticity of host 'upload.brainimagelibrary.org (128.182.108.164)' can't be established.
 ECDSA key fingerprint is 32:cf:46:44:3d:9c:8e:b2:1d:14:03:66:45:0b:11:29.
 Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'submit.brainimagelibrary.org,128.182.108.164' (ECDSA) to the list of known hosts.
-testuser@submit.brainimagelibrary.org's password:
-Connected to submit.brainimagelibrary.org.
+Warning: Permanently added 'upload.brainimagelibrary.org,128.182.108.164' (ECDSA) to the list of known hosts.
+testuser@upload.brainimagelibrary.org's password:
+Connected to upload.brainimagelibrary.org.
 sftp> cd /bil/proj/testproj
 
 sftp> put data1.tiff
@@ -137,21 +137,21 @@ sftp> exit
 
 </li>
 
-<li>Using scp to submit.brainimagelibrary.org: An example uploading data 
+<li>Using scp to upload.brainimagelibrary.org: An example uploading data 
 (data1.tiff) and downloading data (data2.tiff) from the project space as 
-testuser@submit.brainimagelibrary.org is shown below: 
+testuser@upload.brainimagelibrary.org is shown below: 
 <div class="card bg-light">
 <div class="card-body text-left">
 <p class="card-text">
 <pre>
 <code>
 testuser@test.psc.edu:~$ scp data1.tiff testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data1.tiff
-testuser@submit.brainimagelibrary.org's password:
+testuser@upload.brainimagelibrary.org's password:
 data1.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
 data1.tiff                                                                    100% 1324KB   1.3MB/s   00:00
 
 testuser@test.psc.edu:~$ scp testuser@upload.brainimagelibrary.org:/bil/proj/testproj/data2.tiff data2.tiff
-testuser@submit.brainimagelibrary.org's password:
+testuser@upload.brainimagelibrary.org's password:
 data2.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
 data2.tiff                                                                    100%  764KB 763.8KB/s   00:00
 </code>
@@ -160,9 +160,9 @@ data2.tiff                                                                    10
 </div>
 </div> 
 </li>
-<li>Using rsync to submit.brainimagelibrary.org: An example uploading data 
+<li>Using rsync to upload.brainimagelibrary.org: An example uploading data 
 (data1.tiff) and downloading data (data2.tiff) from the project space as 
-testuser@submit.brainimagelibrary.org is shown below: 
+testuser@upload.brainimagelibrary.org is shown below: 
 <div class="card bg-light">
 <div class="card-body text-left">
 <p class="card-text">
