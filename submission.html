@@ -34,7 +34,8 @@
 
 <H1>Data Submission</H1>
 <H2>Overview</H2>
-A data contributor portal has been created to enable laboratories to submit data to the Brain Image Library. The key processes to submit data are:
+A data contributor portal has been created to enable laboratories to submit 
+data to the Brain Image Library. The key processes to submit data are:
 <ol>
 <li><a href="#Setup">Set up your submission account:</a> Setting up your submission account only needs to be done once. </li>
 <ol type="A">
@@ -70,11 +71,10 @@ all errors and check all warnings in the validation log prior to submission.
 height="90%" width="90%" />
 
 <H2>Submission Steps</H2>
+<p><i>If you have problems with the steps below, do not hesitate to contact 
+the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
 <ol>
 <li id="Setup"><b>Set up your submission account</b>
-<i>If you have problems with the steps below, do not hesitate to contact 
-us via email at bil-support@psc.edu or through the PSC hotline at: 
-412-268-6350</i>.
 <ol type="A">
 
 <li id="Portal"><b>Create an XSEDE portal Account</b>
@@ -95,20 +95,24 @@ password.</p>
 </ol>
 
 <li id="EnterDSP"><b>Enter the data submission portal</b>
-<div class="card bg-light">
-<div class="card-body text-center">
-<p class="card-text">
-At the current time we are using local PSC (DXC) accounts. Existing users should use their local PSC (DXC) login credentials. 
+To enter the data submission portal, visit 
+<a href="submit.brainimagelibrary.org">submit.brainimagelibrary.org</a>. 
+At the top right corner of the page (see red arrow in the image below), 
+you will find the menu option for the login page: 
 </p>
-</div>
-</div> 
-<p>Log in to the data submission portal using your XSEDE credentials</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubPortal1Arrow.png" alt="login" 
+height="90%" width="90%" />
+</p>
+<p>Clicking on this meu option, will bring up the login page. Enter your PSC 
+username and password on this page. If you are having problems logging in, 
+please contact the <a href="contact.html">BIL Helpdesk</a>. 
 </li>
 
-<li id="CreateCollection"><b>Create a collection bundle</b>
+<li id="CreateCollection"><b>Create a Collection</b>
 <p>
 The next step in the submission process is to create a collection 
-bundle through the portal. A collection bundle is an ingestion wrapper 
+through the portal. A collection is an ingestion wrapper 
 that contains one or more related datasets and metadata. (A dataset is 
 a stand-alone entry (e.g. an image-volume) with metadata. A dataset can 
 contain many 2d image files that are assembled computationally to form 
@@ -119,14 +123,22 @@ in the collection. This important tagging information will allow BIL to
 report to NIH on data that has begun, but has not yet completed the 
 submission process. 
 </p><p>
-In general, smaller collection bundles are recommended because all datasets 
-within a collection must pass the validation process for the collection bundle to be accepted. 
+In general, smaller collections are recommended because all datasets 
+within a collection must pass the validation process for the collection
+bundle to be submitted. 
 </p>
 <p>
 Each collection bundle will have a unique dropbox-like landing zone 
-directory associated with it (e.g. <em>/bil/lz/user/2018/07/6247417d-691a-4548-9bea-5d400045516f</em>. This landing zone directory is where the 
-collections datasets must be 
-transferred to for validation and ingestion processing. 
+directory associated with it (e.g. <em>/bil/lz/user/6247417d691a4548</em>. 
+This landing zone directory is where the datasets belonging to the 
+collection must be transferred to for validation and ingestion processing. 
+</p>
+<p>To create a collection, select the <span class="badge badge-secondary">
+Collection</span>sub-option of the <span class="badge badge-dark">New</span> 
+menu. (See red arrow in the image below.)</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalNewMenuArrow.png" alt="New-Collection" 
+height="90%" width="90%" />
 </p>
 </li>
 
