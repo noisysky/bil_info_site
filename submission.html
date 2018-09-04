@@ -152,8 +152,19 @@ height="90%" width="90%" />
 </li>
 
 <li id="UploadImage"><b>Upload image data</b>
-<p>As mentioned above, the submission portal create a landing zone for image
-data to be uploaded to. To find this landing zone, select the 
+<p>To encourage maximal automatic metadata scraping, the library STRONGLY 
+RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted. 
+The ingestion process currently supports native TIFF and JPEG 2000 image 
+file formats andwill soon support formats that are convertible to the 
+OME-TIFF format via the 
+bioformats tool. For more information on the bioformats tool see: <br />
+<a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
+https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.
+</p>
+
+<p>As mentioned above in the prior step, the submission portal creates 
+an upload landing zone space for image data. To find 
+this landing zone, select the 
 <span class="badge badge-secondary">
 Collections</span> sub-option of the 
 <span class="badge badge-dark">View</span> 
@@ -170,14 +181,12 @@ Path</span> column:
 height="90%" width="90%" />
 </p>
 <p>
-There are many supported ways to transfer files into the landing zone 
-directory through the data transfer nodes including rsync, 
-Globus Online, sftp, and scp. 
-<div class="card text-white bg-warning">
+<div class="card bg-warning">
 <div class="card-body text-left">
 <p class="card-text">
 Due to size, 
-image data can not be uploaded through the submission portal. 
+image data can not be uploaded through the submission portal 
+(submit.brainimagelibrary.org). 
 It must be uploaded 
 separately through the BIL data transfer nodes, which are available 
 at the virtual host: upload.brainimagelibrary.org. All users authorized to 
@@ -187,19 +196,25 @@ The username and passwords are the same on both systems.
 </p>
 </div>
 </div>
+There are many supported ways to upload files into the landing zone 
+directory through the BIL data transfer nodes including rsync, 
+Globus, sftp, and scp. 
 </p>
 <ul>
-<li>Using rsync to upload.brainimagelibrary.org: An example uploading all data in the directory 
-(testproj) as testuser@upload.brainimagelibrary.org is shown below: 
+<li>Using rsync to upload.brainimagelibrary.org: An example uploading 
+all data in the directory 
+(mouse1) as user <i>testuser</i> through the data transfer node 
+upload.brainimagelibrary.org to the collections landing zone 
+(abcdef0123456789)is shown below: 
 <div class="card bg-light">
 <div class="card-body text-left">
 <p class="card-text">
 <pre>
 <code>
-testuert@test.psc.edu:~$ rsync -lrtpDvP testproj testuser@upload.brainimagelibrary.org:/bil/lz/testuser/abcdef0123456789
+$ rsync -lrtpDvP mouse1 testuser@upload.brainimagelibrary.org:/bil/lz/testuser/abcdef0123456789
 sending incremental file list
-testproj/
-testproj/data1.tiff
+mouse1/
+mouse1/data1.tiff
      1356122 100%  126.20MB/s    0:00:00 (xfer#1, to-check=0/2)
 
 sent 1356392 bytes  received 35 bytes  2712854.00 bytes/sec
@@ -277,34 +292,35 @@ transfers, the use of rsync and Globus is recommended over scp.</span></p>
 
 </ul>
 
-
-
-<div class="card bg-light">
-<div class="card-body text-center">
-<p class="card-text">
-To encourage maximal automatic metadata scraping, the library STRONGLY 
-RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted. 
-The ingestion process supports native TIFF and JPEG 2000 image file formats 
-as well as formats that are convertible to the OME-TIFF format via the 
-bioformats tool. For more information on the bioformats tool see: <br />
-<a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
-https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.
-</p>
-</div>
-</div> 
 </li>
 
 
 
-<li id="UploadMetadata"><b>Upload metadata</b>
+<li id="UploadMetadata"><b>Upload Descriptive Metadata</b>
 </li>
-<p>Metadata for each dataset can be entered manually through the contributor   
-portal, or by uploading a spreadsheet to a collection via the contributor 
-portal. Please see the <!-- <a href="http://c00.bil.psc.edu:8095"> --> Contributor 
-Portal<!-- </a> --> for the most recent metadata specification.
+<p>Metadata for each dataset within a collection can be uploaded through the 
+submission portal in spreadsheet format. BIL is currently using a draft 
+descriptive metadata specification very similar to the specification 
+produced by the Brain Initiative Cell Census Network. A template spreadsheet 
+can be found on the submission portal by selecting the 
+<span class="badge badge-secondary">
+Descriptive Metadata</span> sub-option of the 
+<span class="badge badge-dark">New</span> 
+menu:</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalNewMenu.PNG" alt="New-Descriptive-Metadata Menu image" 
+height="90%" width="90%" />
 </p>
-
-
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalDescriptiveMetadata.PNG" alt="Descriptive-Metadata Image" 
+height="90%" width="90%" />
+</p>
+<p>After a metadata spreadsheet is prepared, Select the collection it will 
+be associated with. Then select the <span class="badge badge-info">
+Upload Metadata</span> button to locate your metadata spreadsheet and 
+upload it.
+</p>
+</li>
 
 <li id="ValidateData"><b>Validate data</b>
 <p>Once all data has been uploaded to the landing zone area and all metadata 
