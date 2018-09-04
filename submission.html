@@ -143,19 +143,41 @@ menu. (See red arrow in the image below.)</p>
 <img src="assets/SubmissionPortal/DataSubPortalNewMenuArrow.png" alt="New-Collection" 
 height="90%" width="90%" />
 </p>
-<p>Next, enter metadata associated with the collection (see image below). 
-Please take note of the staging area shown.</p>
+<p>Next, enter the required metadata associated with the collection (see 
+image below). 
 <p>
 <img src="assets/SubmissionPortal/DataSubPortalNewCollection.png" alt="New-Collection-full" 
 height="90%" width="90%" />
 </p>
 </li>
 
-
 <li id="UploadImage"><b>Upload image data</b>
+<p>As mentioned above, the submission portal create a landing zone for image
+data to be uploaded to. To find this landing zone, select the 
+<span class="badge badge-secondary">
+Collections</span> sub-option of the 
+<span class="badge badge-dark">View</span> 
+menu.</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalViewMenu.PNG" alt="View-Menu" 
+height="90%" width="90%" />
+</p>
+<p>The landing zone is listed under the <span class="badge badge-info">Data 
+Path</span> column:
+</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubViewCollections.PNG" alt="View-Collections" 
+height="90%" width="90%" />
+</p>
+<p>
+<span class="badge badge-warning">Due to size, image data can not be uploaded 
+through the submission portal. It must be uploaded to the through the BIL data 
+transfer nodes at upload.brainimagelibrary.org. </span>
+</p>
 <p>
 There are many supported ways to transfer files into the landing zone 
-directory including sftp, scp, rsync, and Globus Online.
+directory through the data transfer nodes including sftp, scp, rsync, and 
+Globus Online.
 </p>
 <ul>
 <li>Using sftp to submit.brainimagelibrary.org: An example logging into the project space as testuser@submit.brainimagelibrary.org is shown below. The put command is used to upload data (data1.tiff):
