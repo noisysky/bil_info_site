@@ -51,7 +51,7 @@ allow 24 hours for access to be granted.
 <li><a href="#EnterDSP">Enter the data submission portal:</a> Using your username and password, log into the data submission portal.
 </li> 
 <li><a href="#CreateCollection">Create a collection:</a> A collection 
-is an wrapper associating data with metadata. 
+is a wrapper associating image data with metadata. 
 </li>
 <li><a href="#UploadImage">Upload image data:</a> Because this is the 
 time-limiting step, we suggest this step be started before uploading 
@@ -324,23 +324,51 @@ upload it.
 
 <li id="ValidateData"><b>Validate data</b>
 <p>Once all data has been uploaded to the landing zone area and all metadata 
-has been uploaded to the contributor portal, click on the validate button 
-for the collection.
+has been uploaded to the contributor portal, select the 
+<span class="badge badge-secondary">
+Validate Collection</span> sub-option of the 
+<span class="badge badge-dark">Validate</span> menu:
 </p>
 <p>
-The validation process will lock the dataset for changes and scrape 
-additional metadata from the submitted files. When the process completes, 
-a log will be available for viewing through the portal.
+<img src="assets/SubmissionPortal/DataSubPortalValidateMenu.PNG" alt="Validate-Collection-Menu Image" 
+height="90%" width="90%" />
+</p>
+<p>
+Next, choose the collection that you want to validate by selecting the <span class="badge badge-info">
+Select</span> button.
+</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubViewCollections.PNG" alt="Validate-Collection-Choose Image" 
+height="90%" width="90%" />
+</p>
+<p>Then select the <span class="badge badge-info">Validate</span> button. 
+</p>
+<img src="assets/SubmissionPortal/DataSubViewCollections.PNG" alt="Validate-Collection-Choose Image" 
+height="90%" width="90%" />
+</p>
+The validation process is asyncronous. To check on the status, you may 
+click on the <i>Validation Status</i> row in the screen shown above.   
+The validation process will scrape additional metadata from the image
+files. When the process completes, a log will be available for viewing 
+by clicking on the <i>Validation Status</i> row. Below is an example of 
+a validation log for a collection that failed the validation process. 
+(In this case, the problem was that image data was not uploaded for the 
+collection.)
 </p> 
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalValidationDetail.PNG" alt="Validation-Detail Image" 
+height="90%" width="90%" />
+</p>
+
 </li>
 
 
 <li id="ReviewSubmit"><b>Review and submit data</b>
+
 <p>When the validation process completes, 
 a log will be accessable from the contributor portal. Please examine 
-this log and correctany identified warnings and errors. (note: Only an 
-error will provent submission, a warning will not necessarly prevent data 
-submission. select suppress warnings and resubmit.)      
+this log and correct any identified warnings and errors. (note: Only an 
+error will prevent submission, a warning will not prevent data submission)     
 </p>
 <p>
 Once you are satisfied that all errors and appropriate warnings have 
@@ -348,67 +376,67 @@ been corrected, select submit.
 </p>
 </li>
 </ol>
+<h2>Additional Submission Information</h2>
 
-<h2>Additional Information</h2>
-
-<p><b>File formats</b></p>
+<p><b>Image File Formats</b></p>
 <p>
 To encourage maximal automatic metadata scraping, the library STRONGLY 
 RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted. 
 </p>
 <p>
 The ingestion process supports native TIFF and JPEG 2000 image file formats 
-as well as formats that are convertible to the OME-TIFF format via the 
+andwill soon support formats that are convertible to the OME-TIFF format 
+via the 
 bioformats tool. (For more information on the bioformats tool see: 
 <a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
 https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.)
 </p> 
-<p>Please
-see the <a href="http://c00.bil.psc.edu:8095">Contributor Portal</a> for 
-the most recent metadata specification.
+<p><b>Metadata Formats and Schema</b></p>
+<p>Please see the <a href="https://submit.brainimagelibrary.org">Submission 
+Portal</a> for the most recent metadata specification.
 </p>
-
 <p>
 <p><b>Pre-Submission Processing of Files:</b></p><p>
 <p>
 If you need to make corrections or do other pre-submission processing on 
-one or more files after they heve been transfered to the landing zone, you 
-can log in with ssh to c00.bil.psc.edu. 
+one or more files after they heve been transfered to the landing zone, 
+please contact the <a href="contact.html">BIL Helpdesk</a> for assistance.
 </p>
+<!--
 <p>By default, the files in the landing zone will only be accessible by you 
 and BIL support staff. You can, of course, change the permissions on the 
 landing zone to be group or world readable with chmod. This may help if you 
 need to share the data with others (such as other lab group members) before 
 completing the submission process. 
 </p>
-
+-->
 
 <p><b>Assistance and Help</b></p>
-<p>If you need assistance with anything, please email: bil-support@psc.edu. 
-If the issue is time-critical, you may phone the PSC hotline at: 412-268-6350.
+<p>If you need assistance with anything, 
+please contact the <a href="contact.html">BIL Helpdesk</a> for assistance.
 Please note that we are located in the Eastern Time zone. </p> 
 <p>
-If you are having networking issues related to data transfer (including 
-slow transfer speeds), email us at at bil-support@psc.edu and one of our 
-networking experts will get in contact with you. If network issues prevent 
-data transfer, we may recommend that you send your datasets to us via an
-alternate path such on our BrainBall portable device or on LTO tape.  
+Please note that BIL also provides networking support. If you are 
+experiencing networking issues related to data transfer (including 
+slow transfer speeds), contact the <a href="contact.html">BIL Helpdesk</a>.
+If network issues prevent data transfer, we may recommend that you send 
+your datasets to us via an alternate path such on our BrainBall portable 
+device or on LTO tape.  
 </p>
 <p><b>Distribution Licence</b></p>
 Data submitted to the library will be redistributed to others under a 
 Creative Commons Attribution-ShareAlike 4.0 International License. In 
-addition, data submitters expressly permit the Library data to be 
-transferred to and maintained by another open-source repository or by 
-a government agency such as the US National Institutes of Health in the 
-future.  
+addition, all data submitters expressly permit the Library data to be 
+transferred to and maintained by another open data repository or by 
+a government agency such as the US National Institutes of Health.
 </p>
 <p>
 <b>Release of entries</b></p>
 <p>
 Data submitted to the library, by default,  will be released as soon 
-as possible once data has been validated. Optionally, data submitters 
-can select a limited embargo period for their submitted data of up to 
-one year. 
+as possible once data has completed the submission process. Optionally, 
+data submitters can select a limited embargo period for their submitted 
+data of up to one year. 
 </p>
 <p><b>Assignment of DOI</b></p>
 <div class="card bg-light">
@@ -419,7 +447,6 @@ DOI's for datasets as soon as metadata specifications are stabilized.
 </p>
 </div>
 </div> 
-
 A permanent, citable DOI for the submitted dataset will be created 
 through Carnegie Mellon University's KiltHub. A suggested citation for 
 users of the dataset will also be associated with the dataset. The DOI 
