@@ -49,8 +49,8 @@ tr:nth-child(even){background-color: #f2f2f2}
         });
     </script>
     <!--end of Navigation bar-->
-    <div class="jumbotron tablejumbotron">
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" />
+    <div class="jumbotron tablejumbotron" style="overflow-x:auto;">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" />
 <table class="table" id="myTable" table-layout="fixed" cellspacing="1QW" border="5">
 <thead><tr><th title="Field #1">bil_uuid</th>
 <th title="Field #2">sample_id</th>
@@ -15879,6 +15879,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 <td>/bil/lz/ibowman/fa97d06c626cb078/2019_Q2/Virus_tracing_B3-1</td>
 </tr>
 </tbody></table>
+</div>
 
 <script>
 function sortTable(n) {
