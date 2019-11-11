@@ -31,6 +31,9 @@ th, td {
   text-align: left;
   padding: 8px;
 }
+div {
+  overflow-x:auto;
+}
 tr:nth-child(even){background-color: #f2f2f2}
 </style>
     <body class="bg">
@@ -49,7 +52,7 @@ tr:nth-child(even){background-color: #f2f2f2}
         });
     </script>
     <!--end of Navigation bar-->
-    <div class="jumbotron tablejumbotron" style="overflow-x:auto;">
+    <div class="jumbotron tablejumbotron">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name" />
 <table class="table" id="myTable" table-layout="fixed" cellspacing="1QW" border="5">
 <thead><tr><th title="Field #1">bil_uuid</th>
