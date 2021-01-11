@@ -155,7 +155,7 @@ height="90%" width="90%" />
 <p>To encourage maximal automatic metadata scraping, the library STRONGLY 
 RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted. 
 The ingestion process currently supports native TIFF and JPEG 2000 image 
-file formats andwill soon support formats that are convertible to the 
+file formats and will soon support formats that are convertible to the 
 OME-TIFF format via the 
 bioformats tool. For more information on the bioformats tool see: <br />
 <a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
@@ -333,7 +333,13 @@ upload it.
 </p>
 </li>
 
-<li id="ValidateData"><b>Validate data</b>
+<!-- <li id="ValidateData"><b>Validate data</b>
+-->
+<li id="ValidateData"><b>Validate and Submit data</b>
+Once all data has been uploaded to the landing zone area and all metadata 
+has been uploaded to through the submission portal, request that the data is validated. To do this, please send email to bil-support@psc.edu along with the collection id that you which to be validated. If the dataset should be embargoed prior to public release, please note that in the email message. 
+ 
+<!--
 <p>Once all data has been uploaded to the landing zone area and all metadata 
 has been uploaded to through the submission portal, select the 
 <span class="badge badge-secondary">
@@ -387,6 +393,8 @@ error will prevent submission, a warning will not prevent data submission)
 <span class="badge badge-warning">Data submission through the portal has 
 not been enabled yet.</span> 
 </p>
+-->
+
 </li>
 </ol>
 <h2>Additional Submission Information</h2>
@@ -398,8 +406,7 @@ RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted.
 </p>
 <p>
 The ingestion process supports native TIFF and JPEG 2000 image file formats 
-andwill soon support formats that are convertible to the OME-TIFF format 
-via the 
+and formats that are convertible to the OME-TIFF format via the 
 bioformats tool. (For more information on the bioformats tool see: 
 <a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
 https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.)
@@ -408,12 +415,14 @@ https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.)
 <p>Please see the <a href="https://submit.brainimagelibrary.org/">Submission 
 Portal</a> for the most recent metadata specification.
 </p>
+<p>The archive is transitioning to a new, more comprehensive metadata schema developed as a part of the NIH BRAIN Initiative "BRAIN 3D MICROSCOPY STANDARDS PROJECT". For more information about the standards project, please see the <a 
+href="https://www.doryworkspace.org/">Dory website</a>.   A draft spreadsheet implementing this standard, which will soon be required by the ingest portal is available here. Collecting metadata on this more extensive form will also enable BIL to issue DOIs for datasets when data is submitted. 
 <p>
 <p><b>Pre-Submission Processing of Files:</b></p><p>
 <p>
-If you need to make corrections or do other pre-submission processing on 
-one or more files after they heve been transfered to the landing zone, 
-please contact the <a href="contact.html">BIL Helpdesk</a> for assistance.
+All data submitters are given access to a Cent-OS login node "login.brainimagelibrary.org". To connect to this node, use a terminal program that implements ssh (such as xterm, the native mac terminal program, or PuTTY) and use the same username and password that you would use for the submission portal. The login node is ideal for non-cpu intensive processing, such as editing or deleting a file that is already in the landing zone. 
+</p>
+If you need to perform more intensive processing on your data, such as QA/QC processing or if you need to share your data with others prior to submission, please see the section "Sharing data and computing on data prior to submission" below, then contact <a href="contact.html">BIL Helpdesk</a> for urther assistance.
 </p>
 <!--
 <p>By default, the files in the landing zone will only be accessible by you 
@@ -452,20 +461,7 @@ data submitters can select a limited embargo period for their submitted
 data of up to one year. 
 </p>
 <p><b>Assignment of DOI</b></p>
-<div class="card bg-light">
-<div class="card-body text-center">
-<p class="card-text">
-DOI's are not being issued at the current time. We expect to be able to issue 
-DOI's for datasets as soon as metadata specifications are stabilized.
-</p>
-</div>
-</div> 
-A permanent, citable DOI for the submitted dataset will be created 
-through Carnegie Mellon University's KiltHub. A suggested citation for 
-users of the dataset will also be associated with the dataset. The DOI 
-will point to a a permanent record in the KiltHub system that points 
-to the dataset stored in the archive.
-
+BIL will soon issue permanent, citable DOI for submitted datasets, when the new metadata schema is implemented. BIL can also issue DOI's for collections of data so that they may be cited in a paper (<a href="https://doi.brainimagelibrary.org/doi/10.35077/g.19">See here for an example</a>).  
 </p>
 <p><b>Changes to entries after submission</b></p><p>
 Changes may be made to submitted entries prior to release. Minor changes, 
@@ -478,14 +474,26 @@ an entry in the library may be marked as withdrawn (for example, research
 misconduct). In those cases, the DOI for the obsolete entry will have a  
 withdrawn field added to it.  
 </p>
-<p><b>Sharing data and computing on data prior to submission</b></p><p>
-<a href="compute.html">PSC's Bridges</a> computational resource is an excellent place to explore and share your data with others prior to submission. The data submission landing zone path for your data on Bridges is very fast. 
+<p><b>Sharing and computing on data prior to submission</b></p><p>
+There are several platforms that data submitters can use to share and compute on data prior to submission:
+<ul>
+<li> BIL login node: All users have access to the BIL login node (login.brainimagelibrary.org)
+</li>
+<li>BIL VM System: This system has a variety of memory and GPU configurations, has remote-desktop capability, and can serve web portals. The VM system is ideal if you access to desktop software to visualize your data.  
+</li>
+<li><a href="compute.html">PSC's Bridges</a> computational resource is an excellent place to explore and share your data with others prior to submission. The data submission landing zone path for your data on Bridges is very fast. In addition, public data released by the BRAIN Image Library is also available on PSC's Bridges Computational Resource. The Bridges computational resource is available through XSEDE for non-commercial research. Corporate and other users can gain access through PSC's corporate programs: <a href="https://www.psc.edu/services/corporate-programs">https://www.psc.edu/services/corporate-programs.</a>
+</li> 
+<div class="card bg-light">
+<div class="card-body text-center">
+<p class="card-text">
+The Bridges Computational Resource will soon be replaced by the more advanced Bridges 2 system currently being installed. We expect the transition from the original Bridges to the <a href="https://www.psc.edu/resources/bridges-2/">Bridges-2</a> system to occour in the first quarter of 2021. In addition to Bridges, a unique AI machine named <a href="https://www.cmu.edu/psc/aibd/neocortex/">Neocortex</a> is also expected to be available in the first quarter of 2021. Neocortex features two Cerebras CS-1 systems and an HPE Superdome Flex HPC server robustly provisioned to drive the CS-1 systems simultaneously at maximum speed and support the complementary requirements of AI and high performance data analytic workflows.
 </p>
-<p>
-In addition, public data released by the BRAIN Image Library is also available on PSC's Bridges Computational Resource. The Bridges computational resource is available through XSEDE for non-commercial research. Corporate and other users can gain access through PSC's corporate programs: <a href="https://www.psc.edu/services/corporate-programs">https://www.psc.edu/services/corporate-programs.</a> 
+</div>
+</div>
+</ul> 
 </p>
 <p><b>Use of Pre-publication Data</b></p><p>
-The Library expects all users of the submitted data to grant the authors of the data the right to publish the first paper concerning the dataset within three years of deposit. If there is no publication associated with the dataset, please contact the listed authors for permission to publish. There is no restriction on post-publication data. 
+The Library expects all users of the submitted data, unless explicitly granted by the data submitter or the data submitter's project, to grant the authors of the data the right to publish the first paper concerning the dataset within three years of deposit. If there is no publication associated with the dataset, please contact the listed authors for permission to publish. There is no restriction on post-publication data.  
 </p>
 
     </div>
