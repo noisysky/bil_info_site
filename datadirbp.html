@@ -29,7 +29,7 @@
     <!--end of Navigation bar-->
     <div class="jumbotron">
 <p>This document outlines a few recommended practices to structure your data directories 
-  for submission to the Brain Image Library</p> If you have questions on how to structure 
+  for submission to the Brain Image Library If you have questions on how to structure 
   your data uploads for a modality not covered, please contact the help desk 
   (bil-support@psc.edu).</p>
 <h3>Whole brain datasets containing lower-level data</h3>
@@ -38,28 +38,29 @@
    5 mouse datasets (with sample names of mouse1, mouse2, mouse3, mouse4, mouse5) that
    you wanted to to include as a single ingest-collection, you would create 5 subdirectories
    in the landing zone for the collection, one for each mouse dataset. e.g:
-<code>
+	    </p>
+<pre>
 /bil/lz/testuser/abcdef0123456789/mouse1
 /bil/lz/testuser/abcdef0123456789/mouse2
 /bil/lz/testuser/abcdef0123456789/mouse3
 /bil/lz/testuser/abcdef0123456789/mouse4
 /bil/lz/testuser/abcdef0123456789/mouse5
-</code>
-</p>
+</pre>
 <p>If you have additional metadata that you want to include, place it in a subdirectory 
 called <i>extras</i>:</p>
-<code>
+<pre>
 /bil/lz/testuser/abcdef0123456789/mouse1/extras
-</code>
+</pre>
 <p>If processed data will also be included, use subdirectories to indicate these different 
 procesing levels. Recommended subdirectory names to use would be:<i>raw</i>, 
 <i>unstitched</i>, <i>stitched</i>, <i>aligned</i>, and <i>tracings</i>.  (You may also
 use otherdescriptive subdirectory names to segregate different processing levels if needed)
-For example if stitched data, data aligned to the Allen reference) were included with mouse1:
-<code>
+For example if stitched data, data aligned to the Allen reference) were included with mouse1:</p>
+<pre>
 /bil/lz/testuser/abcdef0123456789/mouse1/stitched
 /bil/lz/testuser/abcdef0123456789/mouse1/aligned
-</code>
+</pre>
+<p>&nbsp;</p>	    
 <h3>Whole brain datasets containing only higher-level data</h3>
 <p>It is not unusual to make lower-level image data available before the higher-level 
 analysis is complete. In this case, use the same sample name as the prior BIL submission and 
