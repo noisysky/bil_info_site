@@ -37,9 +37,10 @@ There are many supported ways to download datasets from BIL including anonymous 
 and Globus Online. This section discusses how to locate datasets in BIL and download them using these methods.   
 <ol>
 <li><a href="#Locating">Locating Data:</a> Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name separated by a period.</li>
+<li><a href="#HTTPS">Using a web browser: HTTPS</a> How to download datasets using a web browser.</li>
 <li><a href="#FTP">Anonymous FTP:</a> How to download datasets using anonymous FTP.</li>
 <ol type="A">
-<li><a href="#WEB">Using a web browser:</a> How to download datasets using anonymous FTP through a web browser.</li>
+<li><a href="#WEB">Using a web browser: anonymous FTP</a> How to download datasets using anonymous FTP through a web browser.</li>
 <li><a href="#WGET">Using wget:</a> How to download datasets using unix wget command.</li>
 <li><a href="#OtherClients">Using other clients:</a>Advice on how to download datasets using other ftp clients.</li>
 </ol>
@@ -66,9 +67,18 @@ separated by a period:</p>
   <p>For example, the dataset: abcded0123456789.example_dataset_01 would be found down the following path:</p>
   <p>/bil/data/ab/cd/abcdef0123456789/example_dataset_01/</p>
 </li>
+<li id="#HTTPS"><b>Using a web browser: HTTPS</b> 
+<p>
+  To access the files, enter the following URL in your web browser:</p>
+  <p><i>https://download.brainimagelibrary.org/</i></p>
+  <p>The URL to access the example dataset mentioned above would be:</p>
+  <p><i>https://download.brainimagelibrary.org/ab/cd/abcdef0123456789/example_dataset_01/</i></p>
+</p> 
+</li>
+	
 <li id="#FTP"><b>Anonymous FTP</b> 
 <ol type="A">
-<li id="#WEB"><b>Using a web browser:</b> 
+<li id="#WEB"><b>Using a web browser: FTP</b> 
 <p>
   To access the files, enter the following URL in your web browser:</p>
   <p><i>ftp://download.brainimagelibrary.org:8811/</i></p>
