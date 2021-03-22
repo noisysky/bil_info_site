@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Brain Image Library: Data Directory Best Practices</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/my.css" />
+        <script src="/js/jquery.min.js"></script>
+    </head>
+
+    <body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+    <div class="jumbotron">
+<p>This document outlines a few recommended practices to structure your data directories 
+  for submission to the Brain Image Library</p> If you have questions on how to structure 
+  your data uploads for a modality not covered, please contact the help desk 
+  (bil-support@psc.edu).</p>
+<h3>Whole brain datasets containing lower-level data</h3>
+<p>To tie metadata to an image dataset (a stack of z-planes), each image dataset must be 
+   uploaded in a separate subdirectory. For example, if you had an experiment containing
+   5 mouse datasets (with sample names of mouse1, mouse2, mouse3, mouse4, mouse5) that
+   you wanted to to include as a single ingest-collection, you would create 5 subdirectories
+   in the landing zone for the collection, one for each mouse dataset. e.g:
+<code>
+/bil/lz/testuser/abcdef0123456789/mouse1
+/bil/lz/testuser/abcdef0123456789/mouse2
+/bil/lz/testuser/abcdef0123456789/mouse3
+/bil/lz/testuser/abcdef0123456789/mouse4
+/bil/lz/testuser/abcdef0123456789/mouse5
+</code>
+</p>
+<p>If you have additional metadata that you want to include, place it in a subdirectory 
+called <i>extras</i>:</p>
+<code>
+/bil/lz/testuser/abcdef0123456789/mouse1/extras
+</code>
+<p>If processed data will also be included, use subdirectories to indicate these different 
+procesing levels. Recommended subdirectory names to use would be:<i>raw</i>, 
+<i>unstitched</i>, <i>stitched</i>, <i>aligned</i>, and <i>tracings</i>.  (You may also
+use otherdescriptive subdirectory names to segregate different processing levels if needed)
+For example if stitched data, data aligned to the Allen reference) were included with mouse1:
+<code>
+/bil/lz/testuser/abcdef0123456789/mouse1/stitched
+/bil/lz/testuser/abcdef0123456789/mouse1/aligned
+</code>
+<h3>Whole brain datasets containing only higher-level data</h3>
+<p>It is not unusual to make lower-level image data available before the higher-level 
+analysis is complete. In this case, use the same sample name as the prior BIL submission and 
+a subdirectory to indicate the level of procesing. For example, If SWC tracing files were 
+provided for mouse1 above at a later date:  
+<code>
+/bil/lz/testuser/fef9236f6400b832/mouse1/tracings
+</code>
+Note that you would need to create a new collection to submit this data at a later date.
+</p>
+
+    </div>
+</div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
