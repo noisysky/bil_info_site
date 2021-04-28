@@ -1,0 +1,138 @@
+
+The BRAIN Image Library (BIL) is the data archive established to receive microscopy data from the BRAIN Initiative. Our general mission is to be the national public 
+resource for microscopy data, enabling researchers to deposit, analyze, mine, share and interact with microscopy datasets of the brain. Our data scope includes: 
+
+<ul>
+<li>Whole brain microscopy image datasets and their accompaning secondary data such as neuron morphologies. 
+<li>Targeted microscope-enabled experiments including connectivity between cells and spatial transcriptomics
+<li>Historical collections of value to the community.
+<ul>
+
+Your experimental data does not need to been produced with NIH funding, but the deposited data needs to be relevant to the BRAIN Initiative. 
+This includes data from primates, most mammals and model organisms. Mice of various types are currently the most frequent type of data deposited.   
+
+<i>Essentially, if your data has been produced on a microscope, and is relevant to NIH your data may be submitted to the archive. </i> 
+
+<B>There is no-charge to contribute data to BIL or access BIL services.</b> 
+
+
+* Provide HPC computing capability local to the data for pre-submission data processing and post-submission exploration
+–	Enclave access to pre-release data 
+–	Research access to restricted-access, secured data
+* Provide user access and support
+
+* Accept original microscopy image datasets from investigators. Provide text for inclusion in Resource Sharing Plans. 
+
+* Accept higher-level datasets of other types (e.g. neuron morphologies) that are derived from or relate to image datasets housed at BIL
+ 
+* Provide data-transfer support including network analysis to find transfer bottlenecks, a lendable portable disk (BrainBall) device and the ability to receive extremely large datasets directly on LTO8 tape.
+ 
+* Provide download access to all public datasets. Current supported download methods include Globus and FTP.
+
+* Provide project-only access to brain-initiative collaborations, allowing collaborators to share and operate on datasets prior to publication
+
+* Provide stable DOIs that can be used in published literature to reference
+  specific datasets or images
+
+* Provide computational resources on which users can run applications that operate directly on BIL-housed datasets
+
+* Host custom portals that can operate directly on BIL-housed datasets.
+
+* Collaborate with investigators on establishing standardized formats, pipelines, and services that can be adopted and/or made available through BIL. 
+
+
+In terms of data modalities. 
+We provide extensive computational access through a unique High Performance Computing facility which I will be describing in a few slides. This includes, small and large memory nodes, nodes with GPUS and soon to be a Cerebras CS-1 system.  We also provide a remote-desktop environment and the capability to host unique web-interfaces to the data.  
+[Next Slide]
+In terms of data, we are doubling the datasets that we receive about every year, and currently have about 3PB of data on disk. The overwhelming amount of data is from Mouse, with a handful of datasets from marmosets and humans.  
+In terms of modalities, the majority of our datasets are slicewise image stacks from whole brain imaging experiments. The images in the middle of the screen illustrate a one of our highest-resolution mouse datasets, a whole-brain fMOST dataset contributed by Zeng Lab at the Allen Institute. 
+The size of these datasets range from about 8-13TB each, and contain about 10-15,000 slices per dataset. The resolution of each individual slice is about 35 thousand pixels by 55 thousand pixels. In terms of size the x,y resolution of about .35 by .35 microns and the z spacing is about 1micron.
+We receive this data on tape directly from China which we load into our system for the PI to validate on our system and ultimately submit to the archive.  
+The black and white images represent the two separate channels of this data, which have been combined into the center top image. The next series of images illustrate the high-resolution nature of this data, zooming in on the boxed in region to an ultimate zoom factor of 34.  
+On the right is an illustration of higher-level traced-neuron data from the fMOST image data, which we receive in .swc format. 
+On the far right is an example of a patch-seq dataset from a marmoset contributed by the Feng lab. The top image shows the raw image dataset, and the bottom is showing a neuron reconstruction from the dataset. 
+We currently about 7500 tracings from primary data in the archive. 
+
+
+
+
+
+We are a collaborative project between the Pittsburgh Supercomputing Center, The Molecular Biosensor and Imaging Center at 
+Carnegie Mellon University and the Center for Biologic Imaging at the University of Pittsburgh. 
+[Next Slide]
+
+
+The Brain Image Library (BIL) is a national public resource enabling researchers to deposit, analyze, mine, share and interact with large brain image datasets. 
+BIL encompasses the deposition of datasets, the integration of datasets into a searchable web-accessible system, the redistribution of datasets, and a computational enclave to allow researchers to process datasets in-place and share restricted and pre-release datasets.
+What Data is accepted: 
+Any microscopy data 
+File Formats: 
+
+## Objectives
+* Permanent repository for high-quality brain microscopy datasets   
+–	Brain images of mouse, rat, human, other mammals and model organisms
+–	Targeted experiments, including connectivity between cells and spatial transcriptomics ( *FISH)
+–	Historical collections
+* Provide HPC computing capability local to the data for pre-submission data processing and post-submission exploration
+–	Enclave access to pre-release data 
+–	Research access to restricted-access, secured data
+* Provide user access and support
+
+## In-scope
+* Accept original microscopy image datasets from investigators. Provide text for inclusion in Resource Sharing Plans. There is no-charge to contribute data to BIL or access BIL services. 
+
+* Accept higher-level datasets of other types (e.g. neuron morphologies) that are derived from or relate to image datasets housed at BIL
+ 
+* Provide data-transfer support including network analysis to find transfer bottlenecks, a lendable portable disk (BrainBall) device and the ability to receive extremely large datasets directly on LTO8 tape.
+ 
+* Provide download access to all public datasets. Current supported download methods include Globus and FTP.
+
+* Provide project-only access to brain-initiative collaborations, allowing collaborators to share and operate on datasets prior to publication
+
+* Provide stable DOIs that can be used in published literature to reference
+  specific datasets or images
+
+* Provide computational resources on which users can run applications that operate directly on BIL-housed datasets
+
+* Host custom portals that can operate directly on BIL-housed datasets.
+
+* Collaborate with investigators on establishing standardized formats, pipelines, and services that can be adopted and/or made available through BIL. 
+
+## Out-of-scope
+* Performing analyses for users (e.g. registration or other analyses of datasets)
+
+# Communication
+## Help Desk
+For technical questions, assistance depositing files in BIL including networking support, assistance retrieving data deposited in BIL or to comment on our Web documentation.
+
+Non-time critical issues:
+Submit a help ticket. Send email to bil-support@psc.edu
+
+Time-critical issues:
+Phone the PSC hotline at: 412.268.6350
+
+## E-mail
+
+Please use bil-support@psc.edu for any Brain Image Library issues or questions in lieu of contacting specific people listed.
+
+## Website
+
+Informational website containing instructions and current inventory: http://www.brainimagelibrary.org/
+
+Restricted-access authenticated submission portal for all submissions to BIL:
+http://submit.brainimagelibrary.org/
+
+The BIL is operated as a partnership between the Biomedical Applications Group at the Pittsburgh Supercomputing Center, the Center for Biologic Imaging (CBI) at the University of Pittsburgh and the Molecular Biosensor and Imaging Center at Carnegie Mellon University:
+
+http://www.psc.edu/
+http://www.cbi.pitt.edu/
+http://pathways.mbic.cmu.edu/
+
+
+## Funding
+The Brain Image Library is supported by the National Institutes of Mental Health of the National Institutes of Health under award number R24-MH-114793.
+
+Link to the NIH Reporter link or appropriate reference
+
+[pending]
+
