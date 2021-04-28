@@ -72,10 +72,36 @@ provided for mouse1 above at a later date:
 </pre>
 <p>Note that you would need to create a new collection to submit this data at a later date.
 </p>
+<p>&nbsp;</p>	    
+<h3>Spatial Transcriptomic Datasets</h3>
+<p>We recommend that spatial transcriptomic data contains both the raw and processed image 
+	data as well as the processed csvs, as well as any extra metadata you would like to include. 
+	Please submit your image data using the following structure: </p>
+<pre>
+/bil/lz/testuser/abcdef0123456789/rawimages/mouse1_sample1
+/bil/lz/testuser/abcdef0123456789/rawimages/mouse1_sample2
+/bil/lz/testuser/abcdef0123456789/rawimages/mouse2_sample1
+/bil/lz/testuser/abcdef0123456789/rawimages/mouse2_sample2
+/bil/lz/testuser/abcdef0123456789/processedimages/mouse1_sample1
+/bil/lz/testuser/abcdef0123456789/processedimages/mouse1_sample2
+/bil/lz/testuser/abcdef0123456789/processedimages/mouse2_sample1
+/bil/lz/testuser/abcdef0123456789/processedimages/mouse2_sample2
+</pre>
+<p>Place your processed data as csv files in a subdirectory 
+called <i>processed</i>:</p>
+<pre>
+/bil/lz/testuser/abcdef0123456789/processed
+</pre>	    	    
+<p>If you have additional metadata that you want to include, place it in a subdirectory 
+called <i>extras</i>:</p>
+<pre>
+/bil/lz/testuser/abcdef0123456789/extras
+</pre>	    
+	    
 
     </div>
 </div>
-    <!--Bottom Footer -->
+    <!--begin of bottomfooter -->
     <div id="bottomfooter">
     </div>
     <script>
