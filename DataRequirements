@@ -1,5 +1,36 @@
 
-The BRAIN Image Library (BIL) is the data archive established to receive microscopy data from the BRAIN Initiative. Our general mission is to be the national public 
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Brain Image Library: About</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/my.css" />
+        <script src="/js/jquery.min.js"></script>
+    </head>
+
+    <body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+    <div class="jumbotron pagejumbotron">
+      
+<p>The BRAIN Image Library (BIL) is the data archive established to receive microscopy data from the BRAIN Initiative. Our general mission is to be the national public 
 resource for microscopy data, enabling researchers to deposit, analyze, mine, share and interact with microscopy datasets of the brain. Our data scope includes: 
 
 <ul>
@@ -8,12 +39,36 @@ resource for microscopy data, enabling researchers to deposit, analyze, mine, sh
 <li>Historical collections of value to the community.
 <ul>
 
-Your experimental data does not need to been produced with NIH funding, but the deposited data needs to be relevant to the BRAIN Initiative. 
-This includes data from primates, most mammals and model organisms. Mice of various types are currently the most frequent type of data deposited.   
-
-<i>Essentially, if your data has been produced on a microscope, and is relevant to NIH your data may be submitted to the archive. </i> 
-
 <B>There is no-charge to contribute data to BIL or access BIL services.</b> 
+
+<H3> Does BIL have a limit on the amount of data deposited?</h3>
+BIL Does not have a limit on the abount of data deposited per-dataset or per-invesigator. If you intend to deposit in excess of 
+50TB of data in a single year, we ask that you contact us in advance and discuss your data depositition plans.   
+ 
+<H3> Does my deposited data need to be funded by the US National Institutes of Health?</h3>
+Your deposited data does not need to have associated NIH funding, but the deposited data needs to be relevant to the BRAIN Initiative.  
+
+<H3> Do you accept data from any organism? </h3>
+The deposited data needs to be relevant to the BRAIN Initiative. This includes data from primates, most mammals and model organisms. 
+Mice of various types are currently the most frequent type of data deposited.   
+
+<H3>What file formats are accepted</h3>
+BIL prefers image data to be deposited in tiff format, but we will also accept data in jpg-2000 format. Original propritary formats
+are acceptable if they can be converted into ome-tiff using bioformats. Higher-level traced-neuron data is accepted in .swc format.
+
+<h3>Do you accept raw or processed data?</h3>
+BIL accepts both raw and processed data. Ideally, higher level (procesed) data, such as neuron tracings can be linked to the lower level data in BIL.  
+
+<h3>How should I structure my data for submission? </h3>
+A set of recommended practices have been established. Please see: <a href="http://www.brainimagelibrary.org/datadirbp.html">Submission Best Practices</a> 
+
+<h3>Can you issue a doi for my dataset?</h3>
+At the current time we can issue dois for datasets (or groupings of datasets) manually, and in the future automatically on dataset release. 
+To request a doi, please contact us at bil-support@psc.edu as there is additional metadata that we will need to collect. Allow at least two 
+weeks after we receive the metadata for doi issuance. 
+
+
+
 
 
 * Provide HPC computing capability local to the data for pre-submission data processing and post-submission exploration
