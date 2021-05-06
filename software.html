@@ -41,7 +41,9 @@ the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
   <li><a href="#imagej">imagej-fiji/1.53h: </a>.</li>
   <li><a href="#julia">julia: </a>.</li>
   <li><a href="#knime">knime: </a>.</li>
-  <li><a href="#matlab">matlab: </a>.</li>
+  <li><a href="#matlab">matlab: </a> MATLAB is a high-level language and interactive environment that 
+	  enables you to perform computationally intensive tasks faster than with traditional programming languages.
+	  </li>
   <li><a href="#R">R and Rstudio:</a>.</li>  
   <li><a href="#scala">scala: </a>.</li>  
   <li><a href="#vaa3d">vaa3d: </a>.</li>  
@@ -114,6 +116,24 @@ the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
       </div>
       </div>
 </ol>
+<H2>How to use interactive visualization software:</H2>
+     <p>Some software (fiji/Vaa3d/rstudio and others) have graphical user interfaces. 
+	To use software that contains a gui, the X2GO software should be used to connect to the BIL system.  and  that may be used on the BIL systems in an interactive  The environment management package Module is essential for running software on most PSC systems.
+     </p>
+     <p>
+	To list all of the installed software and their versions, type in:
+     </p> 
+     <div class="card bg-light">
+     <div class="card-body text-left">
+     <p class="card-text">
+     <code>
+      $ module avail
+     </code>
+     </p>
+     </div>
+     </div>
+	    
+	    
 <H2>How to use specific software packages:</H2>
   <ol>
      <li id="anaconda"><b>Anaconda</b>: Anaconda is installed as a module 
@@ -171,11 +191,78 @@ the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
 	</div>
 	</div>
 	<li id="knime"><b>knime:</b> Knime is installed as a module</li>
-  	<li id="matlab"><b>matlab: </b> Matlab is installed as a module</li>
-  	<li id="R"><b>R and Rstudio:</b>is installed as a module</li>  
-  	<li id="scala"><b>scala: </b>Scala is installed as a module</li>  
-  	<li id="vaa3d"><b>vaa3d: </b>Vaa3d is installed as a module</li>  
-  </ol>
+	To run Knime:
+        <div class="card bg-light">
+        <p class="card-text">
+        <code>
+	$ module load knime
+	$ knime
+	</code>
+	<p>
+	</div>
+	</div>
+
+	<li id="matlab"><b>matlab: </b> Matlab is installed as a module</li>
+	To run Matlab, users first need to fill out the following form: 
+        <a href="https://www.psc.edu/resources/software/matlab/permission-form/">https://www.psc.edu/resources/software/matlab/permission-form/</a>
+        After permission is granted, 
+        <div class="card bg-light">
+        <p class="card-text">
+        <code>
+	$ module load matlab
+	$ matlab -options   < input-file  > output-file
+	</code>
+	<p>
+	</div>
+	</div>
+        After loading the module, to see what toolkits are available: 
+	<div class="card bg-light">
+        <p class="card-text">
+        <code>
+	$ ver
+	</code>
+	<p>
+	</div>
+	</div>
+	Additional documentation: <a href="http://www.mathworks.com/products/matlab/">http://www.mathworks.com/products/matlab/ </a> 
+	<li id="R"><b>R and Rstudio:</b>is installed as a module</li>  
+	Interactive use of R and RStudio are available through Anaconda:
+        <div class="card bg-light">
+        <p class="card-text">
+        <code>
+	$ module load anaconda
+	$ conda activate rstudio
+	</code>
+	<p>
+	</div>
+	</div>
+
+        <li id="scala"><b>scala: </b>Scala is installed as a module</li>  
+	To run Julia:
+        <div class="card bg-light">
+        <p class="card-text">
+        <code>
+	$ module load julia
+	$ julia
+	</code>
+	<p>
+	</div>
+	</div>
+
+        <li id="vaa3d"><b>vaa3d: </b>Vaa3d is installed as a module</li>  
+	To run Julia:
+        <div class="card bg-light">
+        <p class="card-text">
+        <code>
+	$ module load julia
+	$ julia
+	</code>
+	<p>
+	</div>
+	</div>
+  
+
+</ol>
  </ul> 
 </p>
 <p><b>Use of Pre-publication Data</b></p><p>
