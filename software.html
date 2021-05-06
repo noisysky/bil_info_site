@@ -118,20 +118,27 @@ the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
 </ol>
 <H2>How to use interactive visualization software:</H2>
      <p>Some software (fiji/Vaa3d/rstudio and others) have graphical user interfaces. 
-	To use software that contains a gui, the X2GO software should be used to connect to the BIL system.  and  that may be used on the BIL systems in an interactive  The environment management package Module is essential for running software on most PSC systems.
+	To use software that contains a gui, the X2Go software client should be installed locally, then used to connect to the BIL system.
+	Here is how you would do that: 
      </p>
-     <p>
-	To list all of the installed software and their versions, type in:
-     </p> 
-     <div class="card bg-light">
-     <div class="card-body text-left">
-     <p class="card-text">
-     <code>
-      $ module avail
-     </code>
-     </p>
-     </div>
-     </div>
+     <ul>
+	 <li>Download the X2GO clientfor your machine from: <a href="https://wiki.x2go.org/doku.php">https://wiki.x2go.org/doku.php</a></li>
+	 <li>Start the X2Go client software on your machine. </li>
+	     <li>From the <b>SESSION</b> menu select <b>NEWSESSION</b>.</li>
+	     <li>In the <b>“Session preferences”</b> Popup:</li>
+	     <ul>
+			     <li>Set the Session Name to: <b>viz.brainimagelibrary.org</b></li>
+			     <li>Under Server, set the Host to: <b>viz.brainimagelibrary.org</b></li>
+			     <li>Under session type, set the selection to: <b>MATE</b></li>
+			     <li>Click the <b>[OK]</b> Button</li>
+	     </ul> 
+	     <li>Move the mouse cursor to the light gray box over the words: <b>“viz.brainimagelibrary.org</b></li>
+	     <li>click the <b>LEFT</b> mouse button</li>
+	     <li>Enter your (login) username and your password then click the <b>[OK]</b> Button</li>
+	     <li>After a few seconds, an X2GO desktop will appear on your screen</li>
+	     <li>When you are done, be sure to select shutdown to completely terminate the X2Go session.</li> 
+	 </ul>
+    
 	    
 	    
 <H2>How to use specific software packages:</H2>
