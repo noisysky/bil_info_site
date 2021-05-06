@@ -116,7 +116,38 @@ the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
 </ol>
 <H2>How to use specific software packages:</H2>
   <ol>
-  	<li id="anaconda"><b>Anaconda</b>: Anaconda is installed as a module </li>
+     <li id="anaconda"><b>Anaconda</b>: Anaconda is installed as a module 
+	To run Anaconda:
+        <div class="card bg-light">
+        <div class="card-body text-left">
+        <p class="card-text">
+        <code>
+	$ module load anaconda
+	$ python3
+	</code>
+	<p>
+	</div>
+	</div>
+	After loading the module, users can also run:
+        <ul>
+		<li>ipython</li>
+		<li>Jupyter Notebooks</li>
+		<li>Jupyter Labs</li>
+	</ul>		
+        Additional packages that are included in anaconda include: allensdk,
+        biopython, bokeh, Dask, napari, nilearni, neuron, pandas, pytorch,
+        scikit-image, scikit-learn, starfish, Theano. 
+        To see a full list of all available packages, type in terminal
+        <div class="card bg-light">
+        <div class="card-body text-left">
+        <p class="card-text">
+        <code>
+	$ pip list
+	</code>
+	</p>
+	</div>
+	</div>  
+	</li>
 	<li id="imagej"><b>imagej-fiji</b>: Fiji is installed as a module</li>
 	<li id="julia"><b>julia:</b> Julia is installed as a module</li>
 	<li id="knime"><b>knime:</b> Knime is installed as a module</li>
