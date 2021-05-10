@@ -54,7 +54,7 @@ and Globus Online. This section discusses how to locate datasets in BIL and down
 
 <H2>Download Steps</H2>
 <ol>
-<li id="#Locating"><b>Locating Data</b>
+<li id="Locating"><b>Locating Data</b>
 <p>Datasets in BIL are uniquely referred to by a combination of a 16 digit unique identifier and the dataset name 
 separated by a period:</p>
 <p>&lt;16-digit-unique-identifier&gt.&lt;Dataset-Name&gt;</p>
@@ -67,7 +67,7 @@ separated by a period:</p>
   <p>For example, the dataset: abcded0123456789.example_dataset_01 would be found down the following path:</p>
   <p>/bil/data/ab/cd/abcdef0123456789/example_dataset_01/</p>
 </li>
-<li id="#HTTPS"><b>Using a web browser: HTTPS</b> 
+<li id="HTTPS"><b>Using a web browser: HTTPS</b> 
 <p>
   To access the files, enter the following URL in your web browser:</p>
   <p><i>https://download.brainimagelibrary.org/</i></p>
@@ -76,8 +76,9 @@ separated by a period:</p>
 </p> 
 </li>
 	
-<li id="#FTP"><b>Anonymous FTP</b> 
+<li id="FTP"><b>Anonymous FTP</b> 
 <ol type="A">
+<!--
 <li id="#WEB"><b>Using a web browser: FTP</b> 
 <p>
   To access the files, enter the following URL in your web browser:</p>
@@ -99,7 +100,8 @@ separated by a period:</p>
 
 </p> 
 </li>
-<li id="#WGET"><b>Using wget:</b>
+-->
+<li id="WGET"><b>Using wget:</b>
 <P>  To download the files, use wget with the -r option and the URL to the desired dataset without the 
     /bil/data path.</p>
  
@@ -107,7 +109,7 @@ separated by a period:</p>
 <p><i>wget -r ftp://download.brainimagelibrary.org:8811/ab/cd/abcdef0123456789/example_dataset_01/</i></p>.
 </p>
 </li>
-<li id="#OtherClients"><b>Using other clients:</b>
+<li id="OtherClients"><b>Using other clients:</b>
   <p>
   Due to the variety of FTP clients produced, we can only offer the following general advice:
   </p>
@@ -119,7 +121,7 @@ separated by a period:</p>
 </li>
 </ol>
 </li>
-<li id="#WGET"><b>Using Globus:</b>
+<li id="GLOBUS"><b>Using Globus:</b>
 
   <P>Login to the Globus transfer web service at www.globus.org. Select an Endpoint field and select 'Brain Image Library Download' (a shortcut is available as bil#download). Upon successful connection to the Brain Image Library Download server, you will land in the /bil/data directory, which lists the first layer of the 00..ff directory hierarchy. Navigate (or type the path in the Path field) to the directory containing the dataset(s) that you wish to download.</p>
 <img width="100%" height="100%" src="assets/globus00.png">
@@ -148,17 +150,15 @@ separated by a period:</p>
 
 </li>
 
-<li id="#FMT"><b>Download Formats</b>
+<li id="FMT"><b>Download Formats</b>
 <p>
 Image files and Metadata files can be downloaded in the format as submitted to the library. Additional download file 
 formats are expected to be added in 2018.
 </p>
 </li>
 
-<li id="#Help"><b>Assistance and Help</b>
-<p>If you need assistance with anything, please email: bil-support@psc.edu. 
-If the issue is time-critical, you may phone the PSC hotline at: 412-268-6350.
-Please note that we are located in the Eastern Time zone. </p> 
+<li id="Help"><b>Assistance and Help</b>
+<p>If you need assistance with anything, please email: bil-support@psc.edu.</p> 
 <p>
 If you are having networking issues related to data transfer (including 
 slow transfer speeds), email us at at bil-support@psc.edu and one of our 
