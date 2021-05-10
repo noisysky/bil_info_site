@@ -50,14 +50,14 @@ allow 24 hours for access to be granted.
 </ol> 
 <li><a href="#EnterDSP">Enter the data submission portal:</a> Using your username and password, log into the data submission portal.
 </li> 
-<li><a href="#CreateCollection">Create a collection:</a> A collection 
+<li><a href="#CreateSubCollection">Create a submission collection:</a> A submission collection 
 is a wrapper associating image data with metadata. 
 </li>
 <li><a href="#UploadImage">Upload image data:</a> Because this is the 
 time-limiting step, we suggest this step be started before uploading 
-metadata for the collection. 
+metadata for the submission collection. 
 </li>
-<li><a href="#UploadMetadata">Upload metadata:</a>  Collection metadata can 
+<li><a href="#UploadMetadata">Upload metadata:</a>  Submission collection metadata can 
 be uploaded through the portal in spreadsheet format.
 </li>
 <li><a href="#ValidateData">Validate data:</a>  Validate the data and 
@@ -112,38 +112,38 @@ height="90%" width="90%" />
 </p>
 </li>
 
-<li id="CreateCollection"><b>Create a Collection</b>
+<li id="CreateSubCollection"><b>Create a submission collection</b>
 <p>
-The next step in the submission process is to create a collection 
-through the portal. A collection is an ingestion wrapper 
+The next step in the submission process is to create a submission collection 
+through the portal. A submission collection is an ingestion wrapper 
 that contains one or more related datasets and metadata. (A dataset is 
 a stand-alone entry (e.g. an image-volume) with metadata. A dataset can 
 contain many 2d image files that are assembled computationally to form 
-a more complex two or three dimensional volume.) Collections are tagged 
+a more complex two or three dimensional volume.) Submission collections are tagged 
 with common identifying metadata (such as the NIH project that the data 
 is associated with) that upon submission will be propagated to each item 
-in the collection. This important tagging information will allow BIL to 
+in the submission collection. This important tagging information will allow BIL to 
 report to NIH on data that has begun, but has not yet completed the 
 submission process. 
 </p><p>
-In general, smaller collections are recommended because all datasets 
-within a collection must pass the validation process for the collection
-bundle to be submitted. A collection can contain a single dataset.
+In general, smaller submission collections are recommended because all datasets 
+within a submission collection must pass the validation process for the submission collection
+bundle to be published. A submission collection can contain a single dataset.
 </p>
 <p>
-Each collection bundle will have a unique dropbox-like landing zone 
+Each submission collection bundle will have a unique dropbox-like landing zone 
 directory associated with it (e.g. <em>/bil/lz/user/6247417d691a4548</em>. 
 This landing zone directory is where the datasets belonging to the 
-collection must be transferred to for validation and ingestion processing. 
+submission collection must be transferred to for validation and ingestion processing. 
 </p>
-<p>To create a collection, select the <span class="badge badge-secondary">
+<p>To create a submission collection, select the <span class="badge badge-secondary">
 Collection</span> sub-option of the <span class="badge badge-dark">New</span> 
 menu. (See red arrow in the image below.)</p>
 <p>
 <img src="assets/SubmissionPortal/DataSubPortalNewMenuArrow.png" alt="New-Collection image" 
 height="90%" width="90%" />
 </p>
-<p>Next, enter the required metadata associated with the collection (see 
+<p>Next, enter the required metadata associated with the submission collection (see 
 image below). 
 <p>
 <img src="assets/SubmissionPortal/DataSubPortalNewCollection.PNG" alt="New-Collection-full image" 
@@ -182,8 +182,8 @@ height="90%" width="90%" />
 </p>
 <p>To tie metadata to an image dataset, each image dataset must be uploaded 
 in a separate subdirectory. For example, if you had an experiment containing 
-5 mouse datasets that you wanted to to include as a single collection, you 
-would create 5 subdirectories in the landing zone for the collection, one 
+5 mouse datasets that you wanted to to include as a single submission collection, you 
+would create 5 subdirectories in the landing zone for the submission collection, one 
 for each mouse dataset. e.g:</p>
 /bil/lz/testuser/abcdef0123456789/mouse1<br />
 /bil/lz/testuser/abcdef0123456789/mouse2<br />
@@ -215,7 +215,7 @@ Globus, sftp, and scp.
 <li>Using rsync to upload.brainimagelibrary.org: An example uploading 
 all data in the directory 
 (mouse1) as user <i>testuser</i> through the data transfer node 
-upload.brainimagelibrary.org to the collections landing zone 
+upload.brainimagelibrary.org to the submission collection landing zone 
 (abcdef0123456789)is shown below: 
 <div class="card bg-light">
 <div class="card-body text-left">
@@ -240,7 +240,7 @@ total size is 1356122  speedup is 1.00
 
 <li>Using sftp to upload.brainimagelibrary.org: An example logging into 
 the data transfer node as <i>testuser</i> is shown below. The first cd 
-command is used to move to the BIL landing zone for the collection. 
+command is used to move to the BIL landing zone for the submission collection. 
 The mkdir command is used to create a sub-directory (called <i>mouse1</i> 
 in the landing zone, while the second cd command is used to move to this 
 subdirectory.  Finally, the put command is used to upload data - in 
@@ -309,7 +309,7 @@ transfers, the use of rsync and Globus is recommended over scp.</span></p>
 
 <li id="UploadMetadata"><b>Upload Descriptive Metadata</b>
 </li>
-<p>Metadata for each dataset within a collection can be uploaded through the 
+<p>Metadata for each dataset within a submission collection can be uploaded through the 
 submission portal in spreadsheet format. BIL is currently using a draft 
 descriptive metadata specification very similar to the specification 
 produced by the Brain Initiative Cell Census Network. A template spreadsheet 
@@ -326,7 +326,7 @@ height="90%" width="90%" />
 <img src="assets/SubmissionPortal/DataSubPortalDescriptiveMetadata.PNG" alt="Descriptive-Metadata Image" 
 height="90%" width="90%" />
 </p>
-<p>After a metadata spreadsheet is prepared, Select the collection it will 
+<p>After a metadata spreadsheet is prepared, Select the submission collection it will 
 be associated with. Then select the <span class="badge badge-info">
 Upload Metadata</span> button to locate your metadata spreadsheet and 
 upload it.
@@ -337,7 +337,7 @@ upload it.
 -->
 <li id="ValidateData"><b>Validate and Submit data</b>
 Once all data has been uploaded to the landing zone area and all metadata 
-has been uploaded to through the submission portal, request that the data is validated. To do this, please send email to bil-support@psc.edu along with the collection id that you which to be validated. If the dataset should be embargoed prior to public release, please note that in the email message. 
+has been uploaded to through the submission portal, request that the data is validated. To do this, please send email to bil-support@psc.edu along with the submission collection id that you which to be validated. If the dataset should be embargoed prior to public release, please note that in the email message. 
  
 <!--
 <p>Once all data has been uploaded to the landing zone area and all metadata 
@@ -461,7 +461,7 @@ data submitters can select a limited embargo period for their submitted
 data of up to one year. 
 </p>
 <p><b>Assignment of DOI</b></p>
-BIL will soon issue permanent, citable DOI for submitted datasets, when the new metadata schema is implemented. BIL can also issue DOI's for collections of data so that they may be cited in a paper (<a href="https://doi.brainimagelibrary.org/doi/10.35077/g.19">See here for an example</a>).  
+BIL will soon issue permanent, citable DOI for submitted datasets, when the new metadata schema is implemented. BIL can also issue DOI's for groups of data so that they may be cited in a paper (<a href="https://doi.brainimagelibrary.org/doi/10.35077/g.19">See here for an example</a>).  
 </p>
 <p><b>Changes to entries after submission</b></p><p>
 Changes may be made to submitted entries prior to release. Minor changes, 
@@ -493,7 +493,10 @@ There are several platforms that data submitters can use to share and compute on
 </ul> 
 </p>
 <p><b>Use of Pre-publication Data</b></p><p>
-The Library expects all users of the submitted data, unless explicitly granted by the data submitter or the data submitter's project, to grant the authors of the data the right to publish the first paper concerning the dataset within three years of deposit. If there is no publication associated with the dataset, please contact the listed authors for permission to publish. There is no restriction on post-publication data.  
+The Library expects all users of the submitted data, unless explicitly granted by the data submitter or the data submitter's project, 
+	to grant the authors of the data the right to publish the first paper concerning the dataset within three years of deposit. 
+	If there is no publication associated with the dataset, please contact the listed authors for permission to publish. 
+	There is no restriction on post-publication data.  
 </p>
 
     </div>
