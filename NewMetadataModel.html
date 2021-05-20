@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Brain Image Library: New Metadata Model</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/my.css" />
+        <script src="/js/jquery.min.js"></script>
+    </head>
+
+    <body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+    <div class="jumbotron pagejumbotron">
+
+	    
+<h1>New Metadata Model</h1>	
+	    <br/><br/>
+<H2>Overview</H2>
+      
+<p>The BRAIN Image Library (BIL) is transitioning to a new metadata model. 
+  Many of the fields that will be required in the near future are shown below. 
+  For more information about the model, please see the following preprint: 
+</p>
+<p> 
+Essential Metadata for 3D BRAIN Microscopy<br/> 
+Alexander J. Ropelewski, Megan A. Rizzo, Jason R. Swedlow, Jan Huisken, Pavel Osten, Neda Khanjani, Kurt Weiss, Vesselina Bakalov, Michelle Engle, Lauren Gridley, Michelle Krzyzanowski, Tom Madden, Deborah Maiese, Justin Waterfield, David Williams, Carol Hamilton, Wayne Huggins<br />
+arXiv:2105.09158v1, 2021  <br />   
+<a href="https://arxiv.org/abs/2105.09158">https://arxiv.org/abs/2105.09158</a> 
+</p>     
+<br/><br/>
+<h2>Data Depositor Frequently Asked Questions</h2>	    
+<ol>
+<li><a href="#Limit">Does BIL have a limit on the amount of data deposited?</a></li> 
+<li><a href="#NIH">Does my deposited data need to be funded by the US National Institutes of Health?</a></li>
+<li><a href="#Organism">Do you accept data from any organism?</a></li>
+<li><a href="#File">What file formats are accepted?</a></li>
+<li><a href="#Raw">Do you accept raw or processed data?</a></li>
+<li><a href="#Dir">How should I structure my data for submission?</a></li>	
+<li><a href="#DOI">Can you issue a doi for my dataset?</a></li>
+<li><a href="#BIG">My data is really big, how can I get it to BIL?</a></li>
+<li><a href="#Reformat">Can I pre-process and reformat my data at BIL prior to submission?</a></li>
+<li><a href="#Grant">I'm writing a grant proposal that if funded, will deposit data into BIL. What should I do?</a></li>
+<li><a href="#Portal">Can you host a custom portal to my data in BIL?</a></li>
+<li><a href="#Help">How do I get additional help?</a></li>
+</ol>
+	    
+<ol>
+<li id="Limit"><b> Does BIL have a limit on the amount of data deposited?</b>
+BIL Does not have a limit on the abount of data deposited per-dataset or per-invesigator. If you intend to deposit in excess of 
+50TB of data in a single year, we ask that you contact us in advance and discuss your data depositition plans.   
+	<br/><br/></li>	
+<li id="NIH"><b>Does my deposited data need to be funded by the US National Institutes of Health?</b>
+Your deposited data does not need to have associated NIH funding, but the deposited data needs to be relevant to the BRAIN Initiative.  
+  <br/><br/></li>
+<li id="Organism"><b>Do you accept data from any organism? </b>
+The deposited data needs to be relevant to the BRAIN Initiative. This includes data from primates, most mammals and model organisms. 
+Mice of various types are currently the most frequent type of data deposited.   
+  <br/><br/></li>
+<li id="File"><b>What file formats are accepted?</b>
+BIL prefers image data to be deposited in tiff format, but we will also accept data in jpg-2000 format. Original propritary formats
+are acceptable if they can be converted into ome-tiff using bioformats. Higher-level traced-neuron data is accepted in .swc format.
+  <br/><br/></li>
+<li id="Raw"><b>Do you accept raw or processed data?</b>
+BIL accepts both raw and processed data. Ideally, higher level (procesed) data, such as neuron tracings can be linked to the lower level data in BIL.  
+  <br/><br/></li>
+<li id="Dir"><b>How should I structure my data for submission? </b>
+A set of recommended practices have been established. Please see: <a href="http://www.brainimagelibrary.org/datadirbp.html">Submission Best Practices</a> 
+  <br/><br/></li>
+<li id="DOI"><b>Can you issue a doi for my dataset?</b>
+At the current time we can issue dois for datasets (or groupings of datasets) manually, and in the future automatically on dataset release. 
+To request a doi, please contact us at bil-support@psc.edu as there is additional metadata that we will need to collect. Allow at least two 
+weeks after we receive the metadata for doi issuance. 
+  <br/><br/></li>
+<li id="BIG"><b>Is my data is really big, how can I get it to BIL?</b>
+BIL provides data-transfer support including network analysis to find transfer bottlenecks. In addition, BIL has the ability to 
+receive data on alternate media including LTO8 tape. Contact bil-support@psc.edu for additional information. 
+  <br/><br/></li>
+<li id="Reformat"><b>Can I pre-process and reformat my data at BIL prior to submission?</b>
+  Absolutely. BIL provides HPC computing capability local to the data for pre-submission data processing and post-submission exploration
+  <br/><br/></li>
+<li id="Grant"><b>I'm writing a grant proposal that if funded, will deposit data into BIL. What should I do?</b>
+  Please contact BIL at bil-support@psc.edu to discuss your project with us. We can provide text 
+  suitable for inclusion in Resource Sharing Plans and support letters as needed. BIL is also open to actively
+  contribute to proposals, if such a role would benefit both parties.  
+  <br/><br/></li>
+<li id="Portal"><b>Can you host a custom portal to my data in BIL?</b> 
+BIL has the capability to host custom portals to data housed at BIL. Please contact us at bil-support@psc.edu for more information. 
+  <br/><br/></li>
+<li id="Help"><b>How do I get additional help?</b>
+For technical questions, assistance depositing files in BIL including networking support, assistance retrieving data deposited in 
+BIL or to comment on our Web documentation, submit a help ticket by emailing bil-support@psc.edu
+  <br/><br/></li>
+  </ol>
+
+    </div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
