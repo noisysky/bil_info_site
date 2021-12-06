@@ -97,46 +97,50 @@ password.</p>
 <li id="EnterDSP"><b>Enter the data submission portal</b>
 To enter the data submission portal, visit 
 <a href="https://submit.brainimagelibrary.org/">submit.brainimagelibrary.org</a>. 
-At the top right corner of the page (see red arrow in the image below), 
-you will find the menu option for the login page: 
-</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubPortal1Arrow.png" alt="login-location" 
-height="90%" width="90%" />
-</p>
-<p>Clicking on this menu option, will bring up the login page (shown below).Enter your PSC username and password on this page. If you are having problems 
+Enter your PSC username and password on this page. If you are having problems 
 logging in, please contact the <a href="contact.html">BIL Helpdesk</a>. </p>
 <p>
 <img src="assets/SubmissionPortal/DataSubPortalLogin.PNG" alt="login-page" 
 height="90%" width="90%" />
 </p>
 </li>
-
-<li id="CreateSubCollection"><b>Create a submission collection</b>
+<li id="SetProject"><b>Set the project</b>
+	<p>Users that do not have PI/Data manager permissions will not have access to this step. 
+	If you need access to these functions, have the PI send email to the BIL helpdesk and ask 
+	for the user to have this permission. </p> 
+	<p>This section describes the way to describe projects in which data will be submitted 
+	and associate aditional BIL users with the project. Users with PI/Data manager permissions
+	will next see the PI dashboard:</p>
+	<img src="assets/SubmissionPortal/PI_Dash.PNG" alt="login-page" 
+height="90%" width="90%" />
+	To enter (or edit) project information, Select the
+	<span class="badge badge-secondary">Manage Project</span>option.  
+	    
+<li id="CreateSubCollection"><b>Create a submission</b>
 <p>
-The next step in the submission process is to create a submission collection 
-through the portal. A submission collection is an ingestion wrapper 
-that contains one or more related datasets and metadata. (A dataset is 
-a stand-alone entry (e.g. an image-volume) with metadata. A dataset can 
+The next step in the submission process is to create a submission 
+through the portal. A submission is an ingestion wrapper 
+that contains one or more related datasets and metadata belonging to the same project. 
+(In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) with metadata.
+A dataset can 
 contain many 2d image files that are assembled computationally to form 
-a more complex two or three dimensional volume.) Submission collections are tagged 
-with common identifying metadata (such as the NIH project that the data 
-is associated with) that upon submission will be propagated to each item 
-in the submission collection. This important tagging information will allow BIL to 
-report to NIH on data that has begun, but has not yet completed the 
-submission process. 
+a more complex two or three dimensional volume.) Submissions are tagged 
+with common project metadata (such as the NIH project that the data 
+is associated with) that will be propagated to each dataset
+in the submission. 
 </p><p>
 In general, smaller submission collections are recommended because all datasets 
-within a submission collection must pass the validation process for the submission collection
-bundle to be published. A submission collection can contain a single dataset.
+within a submission collection must pass the validation process for the datasets 
+within the submission to be published. A submission can contain a single dataset.
 </p>
 <p>
-Each submission collection bundle will have a unique dropbox-like landing zone 
-directory associated with it (e.g. <em>/bil/lz/user/6247417d691a4548</em>. 
+Each submission will have a a unique 16-digit identifier associated with it (e.g. 6247417d691a4548) and
+a unique dropbox-like landing zone directory  
+(e.g. <em>/bil/lz/user/6247417d691a4548</em>. 
 This landing zone directory is where the datasets belonging to the 
-submission collection must be transferred to for validation and ingestion processing. 
+submission must be transferred to for validation and ingestion processing. 
 </p>
-<p>To create a submission collection, select the <span class="badge badge-secondary">
+<p>To create a submission, select the <span class="badge badge-secondary">
 Collection</span> sub-option of the <span class="badge badge-dark">New</span> 
 menu. (See red arrow in the image below.)</p>
 <p>
