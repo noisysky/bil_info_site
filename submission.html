@@ -108,19 +108,20 @@ height="90%" width="90%" />
 <li id="SetProject"><b>Define your projects (PIs and Data Managers Only)</b>
 <p>
 <span class="badge badge-warning">Users that do not have PI/Data manager permissions will not have access to 
-	the functions described in this step. If you need access to these functions, have the PI send email
-	to the BIL helpdesk with your BIL userid/name and request that you be granted this portal permission. 
+	the functions described in this step. If you need access to these functions,<br /> have the PI send email
+	to the BIL helpdesk with your BIL userid and name and request that you be granted this portal permission. 
 	</span></p> 
 	
 	<p>The PI dashboard allows PIs and Data managers to define and manage projects that will be submitting 
 	datasets to BIL.  This dashboard will allow the PI to add authorized users to the project and see the status
 	of in-progress, unsuccessful, and successful submissions associated with the project, regardless of the 
-	users that uploaded and submitted the data. Users with these permissions will next see the PI dashboard:</p>
+	users that uploaded and submitted the data. </p>
 	<img src="assets/SubmissionPortal/PI_Dash.PNG" alt="login-page" 
 	     height="90%" width="90%" /> </p>
 	<p>To enter (or edit) project information, Select the
-	<span class="badge badge-secondary">Manage Project</span>option. From this menu you can create a new Project and 
-	view personnel and submissions associated with each defined project. There MUST be at least one project defined. 
+	<span class="badge badge-secondary">Manage Projects</span> option. From this menu you can create a new project and 
+		view both the personnel and submissions associated with each project. </p>
+	<p> 
 	To define a project select the <span class="badge badge-secondary">Create a New Project</span> button. 
 	Enter the <em>Project Name</em> and the grant number associated with the project in the <em>Funded By:</em>
 	field. If the project is a BICCN project, please be sure to tag the project appropriately and make
@@ -137,31 +138,30 @@ height="90%" width="90%" />
 <span class="badge badge-warning">There MUST be a project defined to create a BIL submission</span></p>
 <p>
 The next step in the submission process is to create a BIL submission. A submission is an ingestion wrapper 
-that contains one or more related datasets and metadata belonging to the same project. 
-(In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) with metadata.
-A dataset can 
-contain many 2d image files that are assembled computationally to form 
-a more complex two or three dimensional volume.) Submissions are tagged 
-with common project metadata (such as the NIH project that the data 
-is associated with) that will be propagated to each dataset
-in the submission. 
+	that contains one or more related datasets and associated metadata. </p>
+<p><span class="badge badge-warning">	
+In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) with metadata.
+A dataset can contain many 2d image files that are assembled computationally to form 
+	a more complex two or three dimensional volume.</span></p>
+<p>Submissions will inherit project metadata (such as the NIH project that the data 
+is associated with), thus all datasets within a submission must belong to the same project. 
 </p><p>
 A submission can contain a single or multiple datasets. In general, smaller submissions are recommended
 because all datasets within a submission must pass the validation process for the datasets 
 within the submission to be published. 
 </p>
 <p>
-When created, each BIL submission will have a a unique 16-digit identifier associated with it (e.g. 6247417d691a4548) and
+When created, each BIL submission will have a a unique 16-digit identifier associated with it (e.g. <em>6247417d691a4548</em>) and
 a unique dropbox-like landing zone directory  
 (e.g. <em>/bil/lz/user/6247417d691a4548</em>. 
 This landing zone directory is where the datasets belonging to the 
 submission must be transferred to for validation and ingestion processing. 
 </p>
 <p>To create a submission, select the <span class="badge badge-secondary">
-Submission</span> sub-option of the <span class="badge badge-dark">New</span> 
+Submission</span> sub-option of the <span class="badge badge-secondary">New</span> 
 menu.</p>
 <p>
-<img src="assets/SubmissionPortal/NewSub.png" alt="New-Submission image" 
+<img src="assets/SubmissionPortal/NewSub.PNG" alt="New-Submission image" 
 height="90%" width="90%" />
 </p>
 <p>Next, enter the required metadata associated with the submission collection (see 
