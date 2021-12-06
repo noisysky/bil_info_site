@@ -105,21 +105,33 @@ height="90%" width="90%" />
 </p>
 </li>
 <li id="SetProject"><b>Set the project</b>
-	<p>Users that do not have PI/Data manager permissions will not have access to this step. 
-	If you need access to these functions, have the PI send email to the BIL helpdesk and ask 
-	for the user to have this permission. </p> 
-	<p>This section describes the way to describe projects in which data will be submitted 
-	and associate aditional BIL users with the project. Users with PI/Data manager permissions
-	will next see the PI dashboard:</p>
+	<p>Users that do not have PI/Data manager permissions will not have access to the functions described in 
+	this step. If you need access to these functions, have the PI send email to the BIL helpdesk and ask 
+	for the user to have this permission added.</p> 
+	<p>The PI dashboard allows PIs and Data managers to define and manage projects that will be submitting 
+	datasets to BIL.  This dashboard will allow the PI to add authorized users to the project and see the status
+	of in-progress, unsuccessful, and successful submissions associated with the project, regardless of the 
+	users that uploaded and submitted the data. Users with these permissions will next see the PI dashboard:</p>
 	<img src="assets/SubmissionPortal/PI_Dash.PNG" alt="login-page" 
 height="90%" width="90%" />
 	To enter (or edit) project information, Select the
-	<span class="badge badge-secondary">Manage Project</span>option.  
+	<span class="badge badge-secondary">Manage Project</span>option. From this menu you can create a new Project and 
+	view personnel and submissions associated with each defined project. There MUST be at least one project defined. 
+	To define a project select the <span class="badge badge-secondary">Create a New Project</span> button. 
+	Enter the <em>Project Name</em> and the grant number associated with the project in the <em>Funded By:</em>
+	field. If the project is a BICCN project, please be sure to tag the project appropriately and make
+	sure that the Project Name field contains the project name assigned by BCDC.</p>
+	
+	<p>To add a user to the project (such as a data submitter) select the <span class="badge badge-secondary">View
+	Personnel</span> link and add the user.
+	</p>
+	
+	
 	    
 <li id="CreateSubCollection"><b>Create a submission</b>
 <p>
-The next step in the submission process is to create a submission 
-through the portal. A submission is an ingestion wrapper 
+<em>There MUST be a project defined to create a BIL submission</em> 
+The next step in the submission process is to create a BIL submission. A submission is an ingestion wrapper 
 that contains one or more related datasets and metadata belonging to the same project. 
 (In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) with metadata.
 A dataset can 
@@ -129,9 +141,9 @@ with common project metadata (such as the NIH project that the data
 is associated with) that will be propagated to each dataset
 in the submission. 
 </p><p>
-In general, smaller submission collections are recommended because all datasets 
-within a submission collection must pass the validation process for the datasets 
-within the submission to be published. A submission can contain a single dataset.
+A submission can contain a single or multiple datasets. In general, smaller submissions are recommended
+because all datasets within a submission must pass the validation process for the datasets 
+within the submission to be published. 
 </p>
 <p>
 Each submission will have a a unique 16-digit identifier associated with it (e.g. 6247417d691a4548) and
