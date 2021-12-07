@@ -89,11 +89,11 @@ height="90%" width="90%" />
 	    within the submission to be published.</dd>
 	<dt>Project</dt>
 	<dd>A way of grouping data to ensure that (1) people working with the data get 
-	    gain appropriate access and credit for their contributions and (2) Links the 
-	    data produced to one or more funding sources</dd>
+	    gain appropriate access and credit for their contributions and (2) Data is linked to the 
+	    proper funding sources. Datasets within a submission will inherit project metadata</dd>
 	<dt>Publish</dT>
 	<dd>The act of making a submission that has passed all validation checks publicly 
-	    available. Data is not fully "submitted" to BIL, until it is published</dd>
+		available. <em>Data is not fully "submitted" to BIL, until it is published</em></dd>
 </dl>
 </p>
 <H2>Submission Steps</H2>
@@ -166,10 +166,6 @@ height="90%" width="90%" />
 The next step in the submission process is to create a BIL submission. A submission is an ingestion wrapper 
 	that contains one or more related datasets and associated metadata. Submissions will inherit project metadata (such as the NIH project that the data 
 is associated with), thus all datasets within a submission must belong to the same project. </p>
-<p><span class="badge badge-warning">	
-In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) with metadata.
-A dataset can contain many 2d image files that are assembled <br /> computationally to form 
-	a more complex two or three dimensional volume.</span></p>
 <p>
 A submission can contain a single or multiple datasets. In general, smaller submissions are recommended
 because all datasets within a submission must pass the validation process for the datasets 
@@ -189,17 +185,50 @@ menu.</p>
 <img src="assets/SubmissionPortal/NewSub.PNG" alt="New-Submission image" 
 height="90%" width="90%" />
 </p>
+
 <p>Next, enter the required metadata associated with the submission collection (see 
 image below). 
 <p>
 <img src="assets/SubmissionPortal/DataSubPortalNewSub.PNG" alt="New-Submission-full image" 
 height="90%" width="90%" />
 </p>
+<p>select the <span class="badge badge-secondary">Save</span> button.</p>
+Next, 
 </li>
 
-<li id="UploadImage"><b>Upload image data</b>
-<p>To encourage maximal automatic metadata scraping, the library STRONGLY 
-RECOMMENDS ORIGINAL FILES CAPTURED BY THE MICROSCOPE be submitted. 
+<li id="UploadMetadata"><b>Upload Descriptive Metadata</b>
+</li>
+<p>Metadata for each dataset within a submission collection can be uploaded through the 
+submission portal in spreadsheet format at this time.  A template spreadsheet 
+can be found on the submission portal by selecting the 
+<span class="badge badge-secondary">
+New Metadata</span> sub-option of the 
+<span class="badge badge-secondary">New</span> 
+menu:</p>
+<p><span class="badge badge-warning">
+	If you are NOT ready to upload metadata at this time, click cancel to exit the metadata step. 
+	When you are ready to load your metadata, return to the portal and select the
+	<span class="badge badge-secondary">New Metadata</span> sub-option of the 
+        <span class="badge badge-secondary">New</span> menu.
+	</span>
+</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalNewMenu.PNG" alt="New-Descriptive-Metadata Menu image" 
+height="90%" width="90%" />
+</p>
+<p>
+<img src="assets/SubmissionPortal/DataSubPortalDescriptiveMetadata.PNG" alt="Descriptive-Metadata Image" 
+height="90%" width="90%" />
+</p>
+<p>After a metadata spreadsheet is prepared, Select the submission collection it will 
+be associated with. Then select the <span class="badge badge-info">
+Upload Metadata</span> button to locate your metadata spreadsheet and 
+upload it.
+</p>
+</li>
+
+	<li id="UploadImage"><b>Upload image data</b>
+<p>
 The ingestion process currently supports native TIFF and JPEG 2000 image 
 file formats and will soon support formats that are convertible to the 
 OME-TIFF format via the 
@@ -353,31 +382,7 @@ transfers, the use of rsync and Globus is recommended over scp.</span></p>
 
 
 
-<li id="UploadMetadata"><b>Upload Descriptive Metadata</b>
-</li>
-<p>Metadata for each dataset within a submission collection can be uploaded through the 
-submission portal in spreadsheet format. BIL is currently using a draft 
-descriptive metadata specification very similar to the specification 
-produced by the Brain Initiative Cell Census Network. A template spreadsheet 
-can be found on the submission portal by selecting the 
-<span class="badge badge-secondary">
-Descriptive Metadata</span> sub-option of the 
-<span class="badge badge-dark">New</span> 
-menu:</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalNewMenu.PNG" alt="New-Descriptive-Metadata Menu image" 
-height="90%" width="90%" />
-</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalDescriptiveMetadata.PNG" alt="Descriptive-Metadata Image" 
-height="90%" width="90%" />
-</p>
-<p>After a metadata spreadsheet is prepared, Select the submission collection it will 
-be associated with. Then select the <span class="badge badge-info">
-Upload Metadata</span> button to locate your metadata spreadsheet and 
-upload it.
-</p>
-</li>
+
 
 <!-- <li id="ValidateData"><b>Validate data</b>
 -->
