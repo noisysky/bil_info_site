@@ -206,8 +206,9 @@ New Metadata</span> sub-option of the
 <span class="badge badge-secondary">New</span> 
 menu:</p>
 <p><span class="badge badge-warning">
-	If you are NOT ready to upload metadata at this time, click cancel to exit the metadata step. 
-	When you are ready to load your metadata, return to the portal <br /> and select the
+	If you are NOT ready to upload metadata at this time, click <span class="badge badge-secondary">Cancel</span>
+	to exit the upload metadata spreadsheet step. 
+	When you are ready to load your metadata, <br /> return to the portal and select the
 	<span class="badge badge-secondary">New Metadata</span> sub-option of the 
         <span class="badge badge-secondary">New</span> menu.
 	</span>
@@ -222,14 +223,21 @@ for each dataset in the submission.  The recommended practices to structure your
 height="90%" width="90%" />
 </p>
 <p>After a metadata spreadsheet is prepared, Select the submission collection it will 
-be associated with. Then select the <span class="badge badge-info">
+be associated with. Then select the <span class="badge badge-secondary">
 Upload Metadata</span> button to locate your metadata spreadsheet and 
 upload it.
 </p>
 </li>
 
 	<li id="UploadImage"><b>Upload image data</b>
-<p>
+<p>As mentioned above, the submission portal creates 
+an upload landing zone space for you to transfer your image data to. To find 
+this landing zone, select the 
+<span class="badge badge-secondary">
+Submissions</span> sub-option of the 
+<span class="badge badge-dark">View</span> 
+menu. The field "Data Path" shows the landing zone space for the submission.</p>
+		<p>
 The ingestion process currently supports native TIFF and JPEG 2000 image 
 file formats and will soon support formats that are convertible to the 
 OME-TIFF format via the 
@@ -238,26 +246,8 @@ bioformats tool. For more information on the bioformats tool see: <br />
 https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.
 </p>
 
-<p>As mentioned above in the prior step, the submission portal creates 
-an upload landing zone space for image data. To find 
-this landing zone, select the 
-<span class="badge badge-secondary">
-Collections</span> sub-option of the 
-<span class="badge badge-dark">View</span> 
-menu.</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalViewMenu.PNG" alt="View-Menu" 
-height="90%" width="90%" />
-</p>
-<p>The landing zone is listed under the <span class="badge badge-info">Data 
-Path</span> column:
-</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubViewCollections.PNG" alt="View-Collections" 
-height="90%" width="90%" />
-</p>
-<p>To tie metadata to an image dataset, each image dataset must be uploaded 
-in a separate subdirectory. For example, if you had an experiment containing 
+<p> Note that separate data subdirectories are required for each dataset in the submission.
+For example, if you had an experiment containing 
 5 mouse datasets that you wanted to to include as a single submission collection, you 
 would create 5 subdirectories in the landing zone for the submission collection, one 
 for each mouse dataset. e.g:</p>
@@ -267,6 +257,14 @@ for each mouse dataset. e.g:</p>
 /bil/lz/testuser/abcdef0123456789/mouse4<br />
 /bil/lz/testuser/abcdef0123456789/mouse5<br />
 </p>
+<p>
+The recommended practices to structure your data directories are further
+<a href="https://www.brainimagelibrary.org/datadirbp.html">described here</a>.
+</p>		
+
+<p>To tie metadata to an image dataset, each image dataset must be uploaded 
+in a separate subdirectory. 
+
 <p>
 <div class="card bg-warning">
 <div class="card-body text-left">
