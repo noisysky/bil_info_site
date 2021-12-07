@@ -69,7 +69,33 @@ all errors and check all warnings in the validation log prior to submission.
 </ol>
 <img src="assets/WebSubmitFlow.png" alt="Data Submission Workflow" 
 height="90%" width="90%" />
-
+<H2>Definitions</H2>
+The following terms in this document have specific context, as defined below:
+<dl>
+	<dt>Dataset</dT>
+	<dd>In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) 
+	    with unique metadata. A dataset typically contains many 2d image files that are
+	    assembled to form a more complex two or three dimensional volume. A each "level"
+	    of data is considered a separate dataset. (e.g. The set of raw data and the same 
+	    data aligned to a reference are considered two separate datasets.)</dd>
+	<dt>Submission</dT>
+	<dd>A submission is an ingestion wrapper that contains one or more related datasets
+	    and associated metadata. Submissions will inherit project metadata (such as the 
+	    NIH project that the data is associated with), thus all datasets within a 
+	    submission must belong to the same project. A submission can contain a single or 
+	    multiple datasets. In general, smaller submissions are recommended because all
+	    datasets within a submission must pass the validation process for the datasets 
+	    within the submission to be published.</dd>
+	<dt>Project</dt>
+	<dd>A way of grouping data to ensure that (1) people working with the data get 
+	    gain appropriate access and credit for their contributions and (2) Links the 
+	    data produced to one or more funding sources</dd>
+	<dt>Publish</dT>
+	<dd>The act of making a submission that has passed all validation checks publicly 
+	    available. Data is not fully "submitted" to BIL, until it is published</dd>
+</dl>
+data to the Brain Image Library. The key processes to submit data are:
+<ol>
 <H2>Submission Steps</H2>
 <p><i>If you have problems with the steps below, do not hesitate to contact 
 the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
