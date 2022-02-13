@@ -28,11 +28,11 @@
     </script>
     <!--end of Navigation bar-->
     <div class="jumbotron">
-<p>This document outlines a few recommended practices to structure your data directories 
-  for submission to the Brain Image Library If you have questions on how to structure 
-  your data uploads for a modality not covered, please contact the help desk 
-  (bil-support@psc.edu).</p>
-	    <H3>General File Cleanup</H3>
+<p>This document outlines a few recommended best practices to structure your data uploads  
+   to the Brain Image Library. If you have questions on how to structure 
+   your data that is not answered here, please contact the help desk 
+   (bil-support@psc.edu).</p>
+	    <H3>General file cleanup</H3>
 	    Be aware that there may be operating system created hidden files transferred 
 	    along with your data that should be removed from the BIL landing-zone directory 
 	    prior to making your data public. These files include: 
@@ -46,7 +46,7 @@
 	    <H3>Avoid problematic special characters:</h3>
 	    Use characters that are generally safe in your filenames.  Avoid special characters in filenames that can be problematic on a unix/linux system.
 	    <blockquote>
-		    <b>Characters that are generally safe to include in filenames</b>
+		    <p><b>Characters that are generally safe to include in filenames:</b>
 		    <ul>
 			    <li>Underscore <span class="badge bg-success text-light"><u>&nbsp;</u></span></li>
 		    	<li>Dash <span class="badge bg-success text-light">-</span> </li> 
@@ -55,7 +55,7 @@
 		    	<li>Upper-case letters <span class="badge bg-success text-light">A-Z</span></li>
 		    	<li>Numbers <span class="badge bg-success text-light">0-9</span></li>
 		    </ul>
-		    <b>Special characters that can be problematic</b>
+		    <b>Special characters that can be problematic:</b>
 		    <ul>
 			    <li>Space <span class="badge bg-warn text-muted">&nbsp;</span></li> 
 			    <li>Ampersand <span class="badge bg-warn text-muted">&amp;</span> </li>
@@ -68,7 +68,15 @@
 			    <li>Question <span class="badge bg-warn text-muted">?</span> </li>
 			    <li>Asterisk <span class="badge bg-warn text-muted">*</span></li>
 		    </ul>
-	    </dl></blockquote>
+		    </p>
+	    </blockquote>
+	    <H3>Only place subdirectories in the root of the landing-zone</h3>
+	    The submission portal will create a landing-zone directory for you to upload your data to. 
+	    Please do not place files in this root directory, but rather create one or more subdirectories
+	    here for each unique dataset that you are uploading. Then upload each unique dataset under the
+	    subdirectories that you have created. Note that the complete path to the directory that you 
+	    have created should be entered in the metadata spreadsheet along with the associated metadata
+	    for each dataset. 
 	    
 <h3>Whole brain datasets containing lower-level data</h3>
 <p>To tie metadata to an image dataset (a stack of z-planes), each image dataset must be 
