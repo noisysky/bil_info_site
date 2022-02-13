@@ -32,7 +32,8 @@
    to the Brain Image Library. If you have questions on how to structure 
    your data that is not answered here, please contact the help desk 
    (bil-support@psc.edu).</p>
-	    <H3>Perform general file cleanup after data transfer</H3>
+	    <H3> General Practices</H3>
+	    <H4>Perform general file cleanup after data transfer</H4>
 	    Be aware that there may be operating system created hidden files transferred 
 	    along with your data that should be removed from the BIL landing-zone directory 
 	    prior to making your data public. These files may include: 
@@ -43,7 +44,7 @@
 		    	<li><b>Thumbs.db</b> -- A Microsoft Windows file  
 			(for more information see <a href="https://en.wikipedia.org/wiki/Windows_thumbnail_cache">https://en.wikipedia.org/wiki/Windows_thumbnail_cache</a>)</li>
 	    </ul></blockquote>
-	    <H3>Avoid problematic special characters:</h3>
+	    <H4>Avoid problematic special characters:</h4>
 	    Use characters that are generally safe in your filenames.  Avoid special characters in filenames that can be problematic on a unix/linux system.
 	    <blockquote>
 		    <p><b>Characters that are generally safe to include in filenames:</b>
@@ -70,15 +71,17 @@
 		    </ul>
 		    </p>
 	    </blockquote>
-	    <H3>Only place subdirectories in the root of the landing-zone</h3>
+	    <H4>Only place subdirectories in the root of the landing-zone</h4>
 	    <p>The submission portal will create a landing-zone directory for you to upload your data to. 
 	    Please do not place files in this root directory, but rather create one or more subdirectories
 	    here for each dataset that you are uploading. Then upload each dataset under the
 	    subdirectories that you have created. Note that the complete path to the directory that you 
 	    have created should be entered in the metadata spreadsheet along with the associated metadata
 	    for each dataset. </p>
-	    
-<h3>Whole brain datasets containing lower-level data</h3>
+<H3>Modality-Specific Recommendations</H3>
+	    <p>Below are modality-specific recommendtions. If your exact data type is not listed, 
+	you can model your submission with the closest type or contact bil-support@psc.edu for more information. </p> 
+<h4>Whole brain datasets containing lower-level data</h4>
 <p>To tie metadata to an image dataset (a stack of z-planes), each image dataset must be 
    uploaded in a separate subdirectory. For example, if you had an experiment containing
    5 mouse datasets (with sample names of mouse1, mouse2, mouse3, mouse4, mouse5) that
@@ -107,7 +110,7 @@ For example if stitched data, data aligned to the Allen reference) were included
 /bil/lz/testuser/abcdef0123456789/mouse1/aligned
 </pre>
 <p>&nbsp;</p>	    
-<h3>Whole brain datasets containing only higher-level data</h3>
+<h4>Whole brain datasets containing only higher-level data</h4>
 <p>It is not unusual to make lower-level image data available before the higher-level 
 analysis is complete. In this case, use the same sample name as the prior BIL submission and 
 a subdirectory to indicate the level of procesing. For example, If SWC tracing files were 
@@ -119,7 +122,7 @@ provided for mouse1 above at a later date:
 <p>Note that you would need to create a new submission collection to submit this data at a later date.
 </p>
 <p>&nbsp;</p>	    
-<h3>Spatial transcriptomic datasets</h3>
+<h4>Spatial transcriptomic datasets</h4>
 <p>We recommend that spatial transcriptomic data contains both the raw and processed image 
    data as well as the processed csvs. Please submit your image data using the following directory structure: </p>
 <pre>
