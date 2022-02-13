@@ -81,7 +81,7 @@
 <H3>Modality-Specific Recommendations</H3>
 	    <p>Below are modality-specific recommendtions. If your exact data type is not listed, 
 	you can model your submission with the closest type or contact bil-support@psc.edu for more information. </p> 
-<h4>Whole brain datasets containing lower-level data</h4>
+<h4>Whole brain datasets containing only lower-level data</h4>
 <p>To tie metadata to an image dataset (a stack of z-planes), each image dataset must be 
    uploaded in a separate subdirectory. For example, if you had an experiment containing
    5 mouse datasets (with sample names of mouse1, mouse2, mouse3, mouse4, mouse5) that
@@ -95,31 +95,56 @@
 /bil/lz/testuser/abcdef0123456789/mouse4
 /bil/lz/testuser/abcdef0123456789/mouse5
 </pre>
-<p>If you have additional metadata that you want to include, place it in a subdirectory 
-called <i>extras</i>:</p>
+<p>If you have additional (non BIL required) metadata that you want to include with each dataset, place 
+it in a subdirectory 
+called <i>extras</i> inside each subdirectory:</p>
 <pre>
 /bil/lz/testuser/abcdef0123456789/mouse1/extras
 </pre>
-<p>If processed data will also be included, use subdirectories to indicate these different 
-procesing levels. Recommended subdirectory names to use would be: <i>raw</i>, 
-<i>unstitched</i>, <i>stitched</i>, <i>aligned</i>, and <i>tracings</i>.  (You may also
-use otherdescriptive subdirectory names to segregate different processing levels if needed)
-For example if stitched data, data aligned to the Allen reference) were included with mouse1:</p>
+<h4>Whole brain data containing a mix of lower-level and higher level data</h4>
+<p> If the dataset contains a mix of lower-level and higher level data, note that 
+    in our system, each level of data is considered a unique dataset. We recommend that you 
+    follow the general advice above for <i>Whole brain datasets containing only lower-level
+    data</i>. 	
+ For example, if you had an experiment containing
+   5 mouse datasets (with sample names of mouse1, mouse2, mouse3, mouse4, mouse5) that
+   you wanted to to include as a single submission collection, you would create 5 subdirectories
+   in the landing zone for the submission collection, one for each mouse dataset. e.g:
+	    </p>
+<pre>
+/bil/lz/testuser/abcdef0123456789/mouse1
+/bil/lz/testuser/abcdef0123456789/mouse2
+/bil/lz/testuser/abcdef0123456789/mouse3
+/bil/lz/testuser/abcdef0123456789/mouse4
+/bil/lz/testuser/abcdef0123456789/mouse5
+</pre>
+<p> Next, create subdirectories that indicate the level of processing done on the data.  
+Recommended subdirectory names to use would include: <i>raw</i>, <i>unstitched</i>, <i>stitched</i>, <i>aligned</i>, <i>tracings</i>, <i>masks<i>.  If multiple-resolutions 
+are provided, use names indicative of the resolution (e.g. 10x, 30x or some other descriptive lable such as 40micron). Also, create a readme.txt file in a <b>required</b> 
+<i>extras</i> subdirectory that describes the content of each subdirectory. For example:
 <pre>
 /bil/lz/testuser/abcdef0123456789/mouse1/stitched
 /bil/lz/testuser/abcdef0123456789/mouse1/aligned
-</pre>
+/bil/lz/testuser/abcdef0123456789/mouse1/tracings
+/bil/lz/testuser/abcdef0123456789/mouse1/extras/readme.txt
+</pre>	
+<p>Feel free to add additional (non BIL required) metadata that you want to include with each dataset
+	in the extras subdirectories. </p>
+
 <p>&nbsp;</p>	    
 <h4>Whole brain datasets containing only higher-level data</h4>
 <p>It is not unusual to make lower-level image data available before the higher-level 
-analysis is complete. In this case, use the same sample name as the prior BIL submission and 
-a subdirectory to indicate the level of procesing. For example, If SWC tracing files were 
-provided for mouse1 above at a later date:  
+analysis is complete. When you are ready to submit this data, you would need to create
+a new submission. In this case, use the same sample name as the prior BIL submission and 
+a subdirectory to indicate the level of procesing (see recommended names above under 
+<i>Whole brain data containing a mix of lower-level and higher level data</i>.
+	
+For example, If SWC tracing files were provided for the sample named "mouse1" at a later
+date, you might create a directory like:  
 	    </p>
 	    <pre>
 /bil/lz/testuser/fef9236f6400b832/mouse1/tracings
 </pre>
-<p>Note that you would need to create a new submission collection to submit this data at a later date.
 </p>
 <p>&nbsp;</p>	    
 <h4>Spatial transcriptomic datasets</h4>
