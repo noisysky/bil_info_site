@@ -59,6 +59,7 @@ Mac) from: <a href="https://wiki.x2go.org/doku.php">https://wiki.x2go.org/doku.p
   <p> Below is an example using X2GO to connect to the BIL VM <i>workshop.brainimagelibrary.org</i> 
     If you are connecting to a different BIL VM, substitute the name of that VM for 
     <i>workshop.brainimagelibrary.org</i> in the instructions below.</p>
+	<p>
    <ul>
 	 <li>Start the X2Go client software on your machine. </li>
 	     <li>From the <b>Session</b> menu select <b>New Session</b>.</li>
@@ -69,165 +70,16 @@ Mac) from: <a href="https://wiki.x2go.org/doku.php">https://wiki.x2go.org/doku.p
 			     <li>Under session type, set the selection to: <b>MATE</b></li>
 			     <li>Click the <b>[OK]</b> Button</li>
 	     </ul> 
-	     <li>Move the mouse cursor to the light gray box over the words: <b>“viz.brainimagelibrary.org</b></li>
-	     <li>click the <b>LEFT</b> mouse button</li>
+	     <li>On the Right side of the screen, you should see a grey box with the session information you entered: </li>
+	     <li>Move the mouse cursor to the light gray box over the words: <b>workshop.brainimagelibrary.org</b></li>
+	     <li>Click the <b>LEFT</b> mouse button</li>
 	     <li>Enter your (login) username and your password then click the <b>[OK]</b> Button</li>
 	     <li>After a few seconds, an X2GO desktop will appear on your screen</li>
-	     <li>When you are done, be sure to select shutdown to completely terminate the X2Go session.</li> 
+	     <li>Open up a terminal, then run any program that produces graphical output.</li>
+	   <li>When you are done, be sure to select the <b>System</b> menu then select <b>Shut Down</b> 
+	      to completely terminate the X2Go session.</li> 
 	 </ul>
-  <br /><br />   
-	    
-<H2>How to use specific software packages:</H2>
-  <ol>
-     <li id="anaconda"><b>Anaconda</b>: Anaconda is installed as a module 
-	To run Anaconda:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-        <p class="card-text">
-        <code>
-	$ module load anaconda<br>
-	$ python3
-	</code>
 	</p>
-	</div>
-	</div>
-	After loading the module, users can also run:
-        <ul>
-		<li>ipython</li>
-		<li>Jupyter Notebooks</li>
-		<li>Jupyter Labs</li>
-	</ul>		
-        Additional packages that are included in anaconda include: allensdk,
-        biopython, bokeh, Dask, napari, nilearni, neuron, pandas, pytorch,
-        scikit-image, scikit-learn, starfish, Theano. 
-        To see a full list of all available packages, type in the terminal window:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-        <p class="card-text">
-        <code>
-	$ pip list
-	</code>
-	</p>
-	</div>
-	</div>
-	<br /><br />
-	</li>
-	<li id="imagej"><b>imagej-fiji</b>: Fiji is installed as a module
-	To run imagej/fiji:
-        <div class="card bg-light">
-	<div class="card-body text-left">
-        <p class="card-text">
-        <code>
-	$ module load fiji
-	$ fiji
-	</code>
-	</p>
-	</div>
-	</div>
-			<br /><br />
-	</li>
-	<li id="julia"><b>julia:</b> Julia is installed as a module
-	To run Julia:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ module load julia
-	$ julia
-	</code>
-	</p>
-	</div>
-	</div>
-			<br /><br />
-	</li>
-	<li id="knime"><b>knime:</b> Knime is installed as a module
-	To run Knime:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ module load knime
-	$ knime
-	</code>
-	</p>
-	</div>
-	</div>
-			<br /><br />
-</li>
-	<li id="matlab"><b>matlab: </b> Matlab is installed as a module
-	To run Matlab, users first need to fill out the following form: 
-        <a href="https://www.psc.edu/resources/software/matlab/permission-form/">https://www.psc.edu/resources/software/matlab/permission-form/</a>
-        After permission is granted, 
-        <div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ module load matlab
-	$ matlab -options   < input-file  > output-file
-	</code>
-	</p>
-	</div>
-	</div>
-        After loading the module, to see what toolkits are available: 
-	<div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ ver
-	</code>
-	</p>
-	</div>
-	</div>
-	Additional documentation: <a href="http://www.mathworks.com/products/matlab/">http://www.mathworks.com/products/matlab/ </a> 
-	<br /><br />
-	  </li>
-<li id="R"><b>R and Rstudio:</b>is installed as a module  
-	Interactive use of R and RStudio are available through Anaconda:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ module load anaconda
-	$ conda activate rstudio
-	</code>
-	</p>
-	</div>
-	</div>
-	<br /><br />
-	  </li>
-        <li id="scala"><b>scala: </b>Scala is installed as a module  
-	To run Julia:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ module load scala
-	$ scala
-	</code>
-	</p>
-	</div>
-	</div>
-	<br /><br /></li>
-        <li id="vaa3d"><b>vaa3d: </b>Vaa3d is installed as a module</li>  
-	To run Vaa3d:
-        <div class="card bg-light">
-        <div class="card-body text-left">
-	<p class="card-text">
-        <code>
-	$ module load vaa3d
-	$ vaa3d
-	</code>
-	</p>
-	</div>
-	</div>
-  
-
-</ol>
- </ul> 
-</p>
-<p><b>Use of Pre-publication Data</b></p><p>
-The Library expects all users of the submitted data, unless explicitly granted by the data submitter or the data submitter's project, to grant the authors of the data the right to publish the first paper concerning the dataset within three years of deposit. If there is no publication associated with the dataset, please contact the listed authors for permission to publish. There is no restriction on post-publication data.  
-</p>
 
     </div>
     <!--Bottom Footer -->
