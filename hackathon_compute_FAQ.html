@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+        <title>Brain Image Library: Analysis Ecosystem</title>
+     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="/css/bootstrap.css" />
+     <link rel="stylesheet" href="/css/styles.css" />
+     <link rel="stylesheet" href="/my.css" />
+     <script src="/js/jquery.min.js"></script>
+
+</head>
+
+<body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
+
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="jumbotron">
+
+      <h1>Username/Password</H1>
+      If you requested an account, you should have received an email from grants@psc.edu with your username and 
+      instructions on how to <a href="https://www.brainimagelibrary.org/password.html">change your password</a>. 
+      <i>All BIL systems use the same username and password.<i>
+      If you can not find the email or do not know what your username is, please email bil-support@psc.edu for assistance.
+      
+        
+      <H1>Hackathon Data</H1>
+      The BIL Filesystem, which is a lustre based filesystem, is mounted on all BIL systems at: /bil . 
+      The hackathon data itself can be found at:  /bil/proj/hackathon/2022_GYBS/
+        
+      <H1>BIL Hackathon Tutorial</H1>
+      We highly recommend that users <a href="https://hackmd.io/@biomed-apps/B1B8mQCb5">review the BIL 
+      hackathon tutorial</a>. The BIL Hackathon tutorial goes over several items to be aware of using 
+      the BIL environment. If you haven't used them before,  LMOD and SLURM are the two <i>most important</i>
+      items to review and understand from the tutorial: 
+        <ul>
+        <li>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job 
+          scheduling system.</li>
+        <li>LMOD is software to manage software emvironments. It is used to make software available for use. 
+        </ul>
+        The hackathon tutorial also goes into detail outlining several ways to containerize codes and also
+        gives examples on how to run select software packages on the BIL system including MATLAB.  
+      
+      <h1>Analysis Ecosystem</H1>
+      <p>The Brain Image Library analysis ecosystem provides an integrated computational and visualization system to  
+      explore, visualize, and and access data without having to download it. It consists of several parts including:</p>
+      <ul>
+        <li><b>BIL Login Node:</b> <i>login.brainimagelibrary.org</i> The BIL login node provides command line, secure 
+          shell (ssh) terminal access to BIL data.  The login node is 
+          not intended for heavy computation or visualization, but rather to provide convenient shell access to
+	  BIL data and enable interactive and batch use of the <i>BIL Computational Cluster</i>.Connect using secure shell. ssh access to the BIL login node<./li>
+        <li><b>BIL Workshop Node:</b> The BIL Workshop node  . To run graphical applications, we recommend that you 
+          connect using <a href="software/X2Go.html">X2Go</a> 
+        <li><b>BIL Workshop GPU Node:</b> The BIL Workshop GPU node. The BIL workshop GPU node contains two V100 GPUS. 
+          To run graphical applications that use the GPUs, we recommend that you connect using <a href="software/X2Go.html">X2Go</a>  
+	      <li><b>BIL Computational Cluster:</b> The BIL Computational cluster consists of eight nodes 
+	         with 3 terabytes of RAM each. The computational cluster runs SLURM and is avaiable for 
+          both batch and interactive access from the <u>BIL login node</u> and the <u>BIL Workshop Node</u>.</li>       
+        <li><b>BIL VM System:</b>The BIL VM system is a flexible resource that is made up of several large
+          memory machines equiped with modern GPUS. The VM system is remote desktop capable, can host 
+          user-licenced commercial, and can host web gateways to provide project-specific data views, support
+          web-based visualization, and compute-in-place applications.</li> 
+       
+      <div id="login"></div>
+      <h3>BIL Login Node</h3>    
+        <p>The BIL login node provides command line (ssh terminal) access to BIL data. Everyone who requests
+          a BIL account has access to the login node using their BIL Username and Password. The login node is 
+          not intended for heavy computation or visualization, but rather to provide convenient shell access to
+	  BIL data and enable interactive and batch use of the <i>BIL Computational Cluster</i>. The BIL 
+	  computational cluster provides a suitable resource for both computation and visualization.</p>
+        <p>To request a BIL account and gain access to the login node, follow 
+          <a href="http://www.brainimagelibrary.org/XSEDEportal.html">these instructions</a> to create an 
+	        XSEDE portal Account. Then, send email to <i>bil-support@psc.edu</i> along with your XSEDE Portal Account 
+          and the subject "Access to BIL Login Node for data exploration". You will receive an email message 
+          once access has been enabled with instructions to set your password. Please allow 24 hours for access
+          to be granted.</p> 
+        <p> Once access has been granted you may connect using ssh to login.brainimagelibrary.org and log in 
+          with your username/password combination.</p>
+ 
+      <h3>BIL VM System</h3>
+			  <p>The BIL VM system is a flexible resource that is made up of several large
+	        memory machines equiped with modern GPUS. The VM system is remote desktop capable, can host 
+          user-licenced commercial, and can host web gateways to provide project-specific data views, support
+	        web-based visualization, and compute-in-place applications.</p>
+	      <p>The VM system can be set up to support two different remote-desktop models: X2Go and for high-resolution
+		      graphics TGX.</a>
+        <p>There is a rich suite of open-source and commercial software availiable on the VMs through the 
+				  modules package. The suite available includes:  C/C++, Java, Python, R, Matlab, Fiji, Vaa3d, and others.
+				<p>VMs can also be configured to host web gateways to provide project specific views of data in BIL and 
+					to support visualization, APIs, and compute-in-place applications.</p>
+			  <p>Since customization is involved, existing BIL users should send email to <i>bil-support@psc.edu</i> 
+				  describing their proposed VM usage. BIL staff will then contact the enailer and set up a time to 
+          discuss various VM options in more detail. </p>
+      
+      <H3>Bridges-2 HPC Access</h3> 
+          <p>The Brain Image Library data (the /bil filesystem) is directly accessable
+            on the Bridges-2 Platform (bridges2.psc.edu)</b></p>
+          <p>The Bridges-2 system  is a high performance computing system designed to support
+            familiar, convenient software and environments for both traditional and non-traditional 
+            HPC users. Bridges-2 is the ideal system for resource-intensive applications as well 
+            as applications targeting HPC + AI + Data. Additional information about Bridges-2 
+            capabilities can be found 
+            <a href="https://www.psc.edu/resources/bridges-2/">here.</a> In addition there is a  
+            <a href="https://www.psc.edu/resources/bridges-2/user-guide-2/">Bridges-2 User Guide</a> 
+            available which provides user-specific information.</p>
+          <p>Bridges-2 is allocated through XSEDE.  There are three types of allocations that can be 
+            requested for open research:
+            <ul>
+              <li><em>Start-up allocations</em> allow you to explore high-performance computing and Bridges-2. 
+                The application process is streamlined. See 
+                <a href="https://portal.xsede.org/allocations/startup" target="_blank" rel="noopener noreferrer">https://portal.xsede.org/allocations/startup</a>
+                for details on applying.</li>
+              <li><em>Research allocations</em> provide expanded resource limits when you are ready to scale up your work. See
+                <a href="https://portal.xsede.org/allocations/research" target="_blank" rel="noopener noreferrer">https://portal.xsede.org/allocations/research</a>
+                for details on applying.</li>
+              <li><em>Coursework allocations</em> supplement educational activities from workshops to semester 
+                courses that benefit from the use of high-performance computing.  See 
+                <a href="https://portal.xsede.org/allocations/education" target="_blank" rel="noopener noreferrer">https://portal.xsede.org/allocations/education</a>
+                for details on applying.</li>
+            </ul>
+          </p>
+          <p>Multiple users can use a single allocation. To be added to an existing allocation by 
+            the allocation owner, you must have an XSEDE Portal account
+            (<a href="https://portal.xsede.org" target="_blank" rel="noopener noreferrer">create 
+            one here if you don't already have one</a>); once you do, the 
+            <a href="https://portal.xsede.org/knowledge-base/-/kb/document/aswb" target="_blank" rel="noopener noreferrer">Allocation 
+            owner can submit a request through the Portal to add you to the allocation</a>.<p>
+          <p>Proprietary research on Bridges-2 can be accommodated through the 
+            <a href="https://www.psc.edu/resources/computing/bridges/services/corporate-programs">Corporate 
+            Affiliates program</a></p>
+     <H3>Neocortex</h3>      
+       <p>Neocortex is a highly innovative resource that will accelerate AI-powered scientific discovery
+         by vastly shortening the time required for deep learning training, foster greater integration of
+         artificial deep learning with scientific workflows, and provide revolutionary new hardware for the
+         development of more efficient algorithms for artificial intelligence and graph analytics.</p>
+       <p>Additional information about Neocortex is available 
+          <a href="https://www.cmu.edu/psc/aibd/neocortex/">here</a>.
+              
+<p>&nbsp;</p>
+
+    </div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
+
