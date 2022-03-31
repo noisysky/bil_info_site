@@ -31,19 +31,19 @@
     <!--end of Navigation bar-->
 
     <div class="jumbotron">
-
-      <h1>Username/Password</H1>
+      <H1>Brain Image Library Hackathon</a> 
+      <h2>Username/Password</H2>
       If you requested an account, you should have received an email from grants@psc.edu with your username and 
       instructions on how to <a href="https://www.brainimagelibrary.org/password.html">change your password</a>. 
-      <i>All BIL systems use the same username and password.<i>
+      <i>All BIL systems use the same username and password.</i>
       If you can not find the email or do not know what your username is, please email bil-support@psc.edu for assistance.
       
         
-      <H1>Hackathon Data</H1>
+      <H2>Hackathon Data</H2>
       The BIL Filesystem, which is a lustre based filesystem, is mounted on all BIL systems at: /bil . 
       The hackathon data itself can be found at:  /bil/proj/hackathon/2022_GYBS/
         
-      <H1>BIL Hackathon Tutorial</H1>
+      <H2>BIL Hackathon Tutorial</H2>
       We highly recommend that users <a href="https://hackmd.io/@biomed-apps/B1B8mQCb5">review the BIL 
       hackathon tutorial</a>. The BIL Hackathon tutorial goes over several items to be aware of using 
       the BIL environment. If you haven't used them before,  LMOD and SLURM are the two <i>most important</i>
@@ -51,25 +51,31 @@
         <ul>
         <li>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job 
           scheduling system.</li>
-        <li>LMOD is software to manage software emvironments. It is used to make software available for use. 
+        <li>LMOD is software to manage software emvironments. It is used to make software available for use.</li> 
         </ul>
         The hackathon tutorial also goes into detail outlining several ways to containerize codes and also
         gives examples on how to run select software packages on the BIL system including MATLAB.  
       
-      <h1>Analysis Ecosystem</H1>
+      <h2>Analysis Ecosystem</H2>
       <p>The Brain Image Library analysis ecosystem provides an integrated computational and visualization system to  
       explore, visualize, and and access data without having to download it. It consists of several parts including:</p>
       <ul>
         <li><b>BIL Login Node:</b> <i>login.brainimagelibrary.org</i> The BIL login node provides command line, secure 
           shell (ssh) terminal access to BIL data.  The login node is 
           not intended for heavy computation or visualization, but rather to provide convenient shell access to
-	  BIL data and enable interactive and batch use of the <i>BIL Computational Cluster</i>.Connect using secure shell. ssh access to the BIL login node<./li>
-        <li><b>BIL Workshop Node:</b> The BIL Workshop node  . To run graphical applications, we recommend that you 
-          connect using <a href="software/X2Go.html">X2Go</a> 
-        <li><b>BIL Workshop GPU Node:</b> The BIL Workshop GPU node. The BIL workshop GPU node contains two V100 GPUS. 
-          To run graphical applications that use the GPUs, we recommend that you connect using <a href="software/X2Go.html">X2Go</a>  
+	        BIL data and enable interactive and batch use of the <i>BIL Computational Cluster</i>. </li>
+        <li><b>BIL Workshop Node:</b> <i>workshop.brainimagelibrary.org</i> The BIL Workshop node is a 56 multi-core VM 
+          node with about 3TB of memory. It is intended to run desktop-visualization applications. It also acts as a 
+          front-end running <i>SLURM and interact</i> to enable interactive and batch use of the 
+          <i>BIL Computational Cluster</i>. </li>To run graphical applications, we recommend that you 
+          connect using <a href="software/X2Go.html">X2Go</a> The workshop node can be connected to using 
+          secure shell (ssh) for users that do not need to run graphical applications.
+        <li><b>BIL Workshop GPU Node:</b> <i>workshop2.brainimagelibrary.org</i> The BIL Workshop GPU node is a 
+          multi-core machine containing two V100 GPUS. To run graphical applications that use the GPUs, we 
+          recommend that you connect using <a href="software/X2Go.html">X2Go</a>  The workshop GPU node can 
+          also be connected to using secure shell (ssh) for users that do not need to run graphical applications.
 	      <li><b>BIL Computational Cluster:</b> The BIL Computational cluster consists of eight nodes 
-	         with 3 terabytes of RAM each. The computational cluster runs SLURM and is avaiable for 
+	        with 3 terabytes of RAM each. The computational cluster runs SLURM and is avaiable for 
           both batch and interactive access from the <u>BIL login node</u> and the <u>BIL Workshop Node</u>.</li>       
         <li><b>BIL VM System:</b>The BIL VM system is a flexible resource that is made up of several large
           memory machines equiped with modern GPUS. The VM system is remote desktop capable, can host 
