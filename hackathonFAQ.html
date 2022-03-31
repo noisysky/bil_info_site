@@ -68,7 +68,8 @@
       
       <h2>Analysis Ecosystem</H2>
       <p>The Brain Image Library analysis ecosystem provides an integrated computational and visualization system to  
-      explore, visualize, and and access data without having to download it. It consists of several parts including:</p>
+      explore, visualize, and and access data without having to download it. The underlying operating system runs Unix (CentOS).  
+      It consists of several parts including:</p>
       <ul>
         <li><b>BIL Login Node:</b> <i>login.brainimagelibrary.org</i> The BIL login node provides command line, secure 
           shell (ssh) terminal access to BIL data.  The login node is 
@@ -76,7 +77,7 @@
 	        BIL data and enable interactive and batch use of the <i>BIL Computational Cluster</i>. </li>
         <li><b>BIL Workshop Node:</b> <i>workshop.brainimagelibrary.org</i> The BIL Workshop node is a 56 multi-core VM 
           node with about 2.6Tb of memory. It is intended to run desktop-visualization applications. It also acts as a 
-          front-end running <i>SLURM and interact</i> to eqnable interactive and batch use of the 
+          front-end running <i>SLURM and interact</i> to enable interactive and batch use of the 
           <i>BIL Computational Cluster</i>. </li>To run graphical applications, we recommend that you 
           connect using <a href="software/X2Go.html">X2Go</a> The workshop node can be connected to using 
           secure shell (ssh) for users that do not need to run graphical applications.
@@ -94,6 +95,10 @@
 	  			Cerebras advanced AI computing system. If you are interested in these systems, please see 
 					<a href="https://www.brainimagelibrary.org/computevisual.html"> this page</a> or contact 
 					bil-support@psc.edu
+				<li>Data Transfer Nodes:</li> <i>upload.brainimagelibrary.org and download.brainimagelibrary.org </i>  
+				These dedicated data transfer nodes can be used to move files to and from the BIL filesystem. 
+				There are many supported ways to upload and download files into your /bil home directory from 
+				the data transfer nodes, including rsync, Globus, sftp, and scp.
 			</ul>
 
               
