@@ -82,12 +82,48 @@
         <li><b>BIL Workshop Node:</b> <i>workshop.brainimagelibrary.org</i> The BIL Workshop node is a 56 multi-core VM 
           node with about 2.6Tb of memory. It is intended to run desktop-visualization applications. It also acts as a 
           front-end running <i>SLURM and interact</i> to enable interactive and batch use of the 
-          <u>BIL Computational Cluster</u>. </li>To run graphical applications, we recommend that you 
-          connect using <a href="software/X2Go.html">X2Go</a> The workshop node can be connected to using 
-          secure shell (ssh) for users that do not need to run graphical applications.
+          <u>BIL Computational Cluster</u>. Some notes about using the workshop node:
+	      <ul>
+		      <li>Any number of users can ssh in for command-line access</li>
+		      <li>To run graphical applications, we recommend that you 
+                           connect using <a href="software/X2Go.html">X2Go</a> . Any number of users can use X2Go
+			   to get a remote desktop. Many 
+			  graphical applications will work fine in X2Go (e.g. Matlab, Fiji, vaa3d) and
+                         some applications that require advanced OpenGL features will not 
+			 (e.g. NVidia sample CUDA applications such as volumeRender, marchingCubes, 
+			      and Mandelbrot;  VisRTX interactive viewer)</li>
+                      <li>A single user can use TGX Receiver (available in /bil/packages/TGX/2.2/)
+			      to get a remote desktop with GPU capabilities. All graphical 
+			      applications should work fine in this except for ones requiring 
+			      the most recent NVidia driver (e.g. VisRTX interactive viewer) </li>
+	      <li>Multiple processes can make use of the GPU at the same time</li>
+
+	    </ul>      
         <li><b>BIL Workshop GPU Node:</b> <i>workshop2.brainimagelibrary.org</i> The BIL Workshop GPU node is a 
-          multi-core (72 physical, 144 virtual cores) machine containing two V100 (32Gb) GPUS and about 1.5Tb of memory. 
-	  			To run graphical applications that use the GPUs, we 
+          multi-core (72 physical, 144 virtual cores) machine containing two V100
+		(32Gb) GPUS and about 1.5Tb of memory. Some notes about using the workshop node: 
+	  	<ul>		
+			<li>Any number of users can ssh in for command-line access</li>
+    			<li>Any number of users can use <a href="software/X2Go.html">X2Go</a> to get a remote desktop. 
+                            Many graphical applications will work fine in this (e.g. Matlab, 
+			    Fiji, vaa3d) and some applications that require advanced OpenGL
+			    features will not (e.g. NVidia sample CUDA applications such 
+			    as volumeRender, marchingCubes, and Mandelbrot;  VisRTX 
+				interactive viewer).</li>
+    			<li>A single user can use TGX Receiver (available in /bil/packages/TGX/2.2/)
+			    to get a remote desktop with GPU capabilities, all graphical 
+			    applications should work fine in this (including the VisRTX 
+				interactive viewer)</li>
+			<li>multiple processes can make use of the GPUs at the same time</li>
+			<li>Please note that if a user has an X2Go session open, they should 
+				not try to start a TGX session and vice versa.  This will 
+				cause your logins to get wedged, and it is a hassle to clean
+				this up.</li>
+		</ul>
+
+		
+		
+		To run graphical applications that use the GPUs, we 
           recommend that you connect using <a href="software/X2Go.html">X2Go</a>  The workshop GPU node can 
           also be connected to using secure shell (ssh) for users that do not need to run graphical applications.
 				<li><b>BIL Computational Cluster:</b> The BIL Computational cluster consists of eight nodes 
