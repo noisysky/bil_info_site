@@ -97,6 +97,10 @@
 			      applications should work fine in this except for ones requiring 
 			      the most recent NVidia driver (e.g. VisRTX interactive viewer) </li>
 	      <li>Multiple processes can make use of the GPU at the same time</li>
+		      <li>Please note that if a user has an X2Go session open, they should 
+				not try to start a TGX session and vice versa.  This will 
+				cause your logins to get wedged, and it is a hassle to clean
+				this up.</li>
 
 	    </ul>      
         <li><b>BIL Workshop GPU Node:</b> <i>workshop2.brainimagelibrary.org</i> The BIL Workshop GPU node is a 
