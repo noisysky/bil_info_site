@@ -42,278 +42,44 @@
 
 <H1>Data Submission</H1>
 	    
-	    <div class="alert alert-primary" role="alert">
-  
-  XSEDE will no longer be creating new accounts after August 22, 2022. If you need to create a new account, please do so before this date.
-		    
-
-After August 22, 2022 any new accouts should be requested by contacting bil-support@psc.edu
-</div>
-
-<H2>Overview</H2>
-A data contributor portal has been created to enable laboratories to submit 
-data to the Brain Image Library. The key processes to submit data are:
-<ol>
-<li><a href="#Setup">Set up your submission account:</a> Setting up your submission account only needs to be done once. </li>
-<ol type="A">
-<li><a href="#Portal">Create an XSEDE portal account:</a> An XSEDE portal account is required to submit data. 
+<h2 id="Overview" data-id="Overview" style=""><span>Overview</span></h2><p><span>The data submission portal enables laboratories to submit data to the Brain Image Library. The key processes to submit data are:</span></p><ol>
+<li><span>Create an account.</span></li>
+<li><span>Log in to the data submission portal.</span></li>
+<li><span>Create a submission: A submission is a collections of image sets associated with the metadata.</span></li>
+<li><span>Upload image data: Because this is the time-limiting step, we suggest this step be started before uploading metadata for the submission collection.</span></li>
+<li><span>Upload metadata: Submission collection metadata can be uploaded through the portal in spreadsheet format.</span></li>
+<li><span>Validate data: Users request to validate the data and correct any errors discovered.</span></li>
+<li><span>Data is made public: Once data is validated and metadata is curated, the submission is made public.</span></li>
+</ol><p><img src="https://i.imgur.com/2fCzGEQ.png" alt="" loading="lazy"></p><h4 id="Definitions" data-id="Definitions" width="1300"><strong><span>Definitions</span></strong></h4><p><span>The following terms in this document have specific context, as defined below:</span></p><p><strong><span>Dataset</span></strong><br>
+<span>At BIL a dataset is a stand-alone entry of an image-volume or image-set associated with a single subject or experimental unit with unique metadata. A single dataset is usually associated with a single donor or subject when submitting multiple subjects in a collection, or a single part of the brain when imaging many parts of the brain in a collection. Many datasets make up a collection. A dataset typically contains many 2d image files that are assembled to form a more complex two or three dimensional volume.</span></p><p><strong><span>Submission</span></strong><br>
+<span>A submission contains one or more related datasets and the associated metadata. Submissions will inherit project metadata (such as the NIH project, grant number, laboratory name, etc.), thus all datasets within a submission must belong to the same project. A submission can contain a single or multiple datasets. In general, smaller submissions are recommended because all datasets within a submission must pass the validation process for the datasets within the submission to be published. Each “level” of data should be uploaded in separate submissions (e.g. The set of raw data and the same data aligned to a reference are considered two separate submissions).</span></p><p><strong><span>Project</span></strong><br>
+<span>A way of grouping data to ensure that (1) People working with the data get gain appropriate access and credit for their contributions and (2) Data is linked to the proper funding sources.</span></p><p><strong><span>Publish</span></strong><br>
+<span>The act of making a submission that has passed all validation checks publicly available.</span></p>
+<h2 id="How-to-submit-data" data-id="How-to-submit-data" style=""><span>How to submit data</span></h2><p><span>Once you have created your account by creating an ACCESS portal account, requested access to the BIL submission portal, and set your initial password, you are ready to continue to the submission portal.</span></p><h3 id="1-Enter-the-submission-portal" data-id="1-Enter-the-submission-portal" style=""><span>1. Enter the submission portal</span></h3><p><span>Visit </span><a href="http://submit.brainimagelibrary.org" target="_blank" rel="noopener"><span>submit.brainimagelibrary.org</span></a><span> and enter your PSC username and password.</span></p><p><img src="https://i.imgur.com/ieWXt1B.png" alt="" loading="lazy"></p><h3 id="2-Define-your-projects-PIs-and-Data-Managers-Only" data-id="2-Define-your-projects-PIs-and-Data-Managers-Only" style=""><span>2. Define your projects </span><em><span>(PIs and Data Managers Only)</span></em></h3><div class="alert alert-info">
+<p><span>Only users with PI/Data manager access with have the functions described in this step. If you need access to these functions,</span><br>
+<span>have the PI send email to the </span><a href="mailto:bil-support@psc.edu" target="_blank" rel="noopener"><span>bil-support@psc.edu</span></a><span> with your BIL userid and name to request access.</span></p>
+</div><p><span>The PI dashboard allows PIs and Data Managers to define and manage projects. This dashboard will allow the PI to add authorized users to the project and see the status of in-progress, unsuccessful, and successful submissions, regardless of the users that uploaded and submitted the data.</span></p><p><img src="https://i.imgur.com/URt91hs.png" alt="" loading="lazy"></p><h4 id="Addedit-projects" data-id="Addedit-projects"><span>Add/edit projects</span></h4><p><span>To enter (or edit) project information, Select the </span><code>Manage Projects</code><span> option. From this menu you can create a new project and view both the personnel and submissions associated with each project.</span></p><p><span>To define a project select the </span><code>Create a New Project</code><span> button. Enter the project name and the grant number associated with the project in the </span><code>Funded By:</code><span> field.</span></p><p><span>If the project is a BICCN project, please be sure to tag the project appropriately and make sure that the </span><code>Project Name</code><span> field contains the project name assigned by BCDC.</span></p><h4 id="Add-users-to-a-project" data-id="Add-users-to-a-project"><span>Add users to a project</span></h4><p><span>To add a user to the project (such as a data submitter) select the </span><code>Manage Projects</code><span> link from the main dashboard then select </span><code>View Personnel</code><span> for the project you would like to add the user to. Select the user from the list and select </span><code>Submit</code><span> at the bottom of the page.</span></p><h3 id="3-Create-a-submission" data-id="3-Create-a-submission" style=""><span>3. Create a submission</span></h3><div class="alert alert-warning">
+<p><span>There MUST be a project defined to create a BIL submission. See step 2 above for more details.</span></p>
+</div><p><span>A submission contains one or more related datasets and associated metadata. Submissions will inherit project metadata (such as grant), thus all datasets within a submission must belong to the same project.</span></p><p><span>A submission can contain a single or multiple datasets, but smaller submissions are recommended because all datasets within a submission must pass the validation process for the datasets within the submission to be published.</span></p><p><span>To create a submission, select the Submission sub-option of the New menu.</span></p><p><img src="https://i.imgur.com/q6RYtjM.png" alt="" loading="lazy"></p><p><span>Next, enter the required metadata associated with the submission collection (see image below).</span></p><p><img src="https://i.imgur.com/25DnzRo.png" alt="" loading="lazy"></p><p><span>When you are done filling out the form, select the Save button. You will then be automatically taken to the metadata submission step.</span></p><p><span>When created, each BIL submission will have a a unique 16-digit identifier associated with it (e.g. 6247417d691a4548) and a unique dropbox-like landing zone directory (e.g. /bil/lz/username/6247417d691a4548. This landing zone directory is where the datasets belonging to the submission must be transferred to for validation and ingestion processing.</span></p><h3 id="4-Upload-Descriptive-Metadata" data-id="4-Upload-Descriptive-Metadata" style=""><span>4. Upload Descriptive Metadata</span></h3><p><span>After the collection is created, you will automatically be taken to the metadata submission page. Alternativey, you can also access the metadata submission page from the submission portal by selecting </span><code>New</code><span> and then </span><code>New Metadata</code><span> in the drop-down menu.</span></p><p><em><span>If you are NOT ready to upload metadata at this time, click Cancel to exit the upload metadata spreadsheet step. When you are ready to load your metadata, return to the portal and select </span><code>New</code><span> and then </span><code>New Metadata</code><span> in the drop-down menu.</span></em></p><p><img src="https://i.imgur.com/iffwE8H.png" alt="" loading="lazy"></p><p><span>You can download the metadata sheet in the submit portal at this point. Next, you will select the appropriate metadata-schema for your data. Be sure to choose the appropriate option as this will affect the way your metadata in ingested.</span></p><p><strong><span>Metadata Schema Options</span></strong></p><ol>
+<li>
+<p><span>Each dataset was generated from a single sample and donor (e.g. whole brain imaging) on the same instrument. Multiple datasets can be accommodated in a single submission. The lines of the specimen tab in the metadata spreadsheet must match exactly to the lines in the dataset tab (i.e. the specimen listed in specimen tab row 5 is the specimen for dataset row 5). Each dataset tab should have a corresponding image tab. There should be exactly one line in the instrument tab.</span></p>
 </li>
-<li><a href="#RequestDSP">Request access to the data submission portal:</a> 
-You will receive an email message once access has been enabled.  Please 
-allow 24 hours for access to be granted.
+<li>
+<p><span>The dataset was generated from multiple samples, specimens, or donors on the same instrument. Only a single dataset can be accommodated per submission. Multiple specimens should be listed in the metadata spreadsheet, but only a single dataset. There should be one line in the image tab. There should be exactly one line in the instrument tab.</span></p>
 </li>
-<li><a href="#SetPasswd">Set your initial password:</a> 
-</li> 
-</ol> 
-<li><a href="#EnterDSP">Enter the data submission portal:</a> Using your username and password, log into the data submission portal.
-</li> 
-<li><a href="#CreateSubCollection">Create a submission collection:</a> A submission collection 
-is a wrapper associating image data with metadata. 
+<li>
+<p><span>All datasets were generated from one specimen, but are from unique regions of interest on the specimen. Multiple datasets can be accommodated in a single submission. List the specimen multiple times in the specimen tab. Identify the specific region of interest in the locations column. Multiple donor lines must match exactly in the metadata spreadsheet (i.e. the specimen listed in specimen tab row 5 is the specimen for dataset row 5). Each dataset tab should have a corresponding image tab. There should be exactly one line in the instrument tab.</span></p>
 </li>
-<li><a href="#UploadImage">Upload image data:</a> Because this is the 
-time-limiting step, we suggest this step be started before uploading 
-metadata for the submission collection. 
+<li>
+<p><span>All datasets were generated from one specimen – but use different experimental (machinery) parameters. Multiple datasets can be accommodated as a single submission. There should be exactly one entry in the specimen tab. The lines listed in the Instrument tab in the metadata spreadsheet must match exactly to the lines in the dataset tab (i.e. the instrument listed in instrument tab row 5 is the instrument for dataset row 5). Each dataset tab should have a corresponding image tab.</span></p>
 </li>
-<li><a href="#UploadMetadata">Upload metadata:</a>  Submission collection metadata can 
-be uploaded through the portal in spreadsheet format.
-</li>
-<li><a href="#ValidateData">Validate data:</a>  Validate the data and 
-correct any errors discovered. 
-</li>
-<li><a href="#ReviewSubmit">Review and Submit data:</a> Please correct 
-all errors and check all warnings in the validation log prior to submission.
-</li>
-</ol>
-<img src="assets/WebSubmitFlow.png" alt="Data Submission Workflow" 
-height="90%" width="90%" />
-<H2>Definitions</H2>
-	    <p>The following terms in this document have specific context, as defined below:</p>
-<p>
-<dl>
-	<dt>Dataset</dT>
-	<dd>In the BIL context, a dataset is a stand-alone entry (e.g. an image-volume) 
-	    with unique metadata. A dataset typically contains many 2d image files that are
-	    assembled to form a more complex two or three dimensional volume. A each "level"
-	    of data is considered a separate dataset. (e.g. The set of raw data and the same 
-	    data aligned to a reference are considered two separate datasets.)</dd>
-	<dt>Submission</dT>
-	<dd>A submission is an ingestion wrapper that contains one or more related datasets
-	    and associated metadata. Submissions will inherit project metadata (such as the 
-	    NIH project that the data is associated with), thus all datasets within a 
-	    submission must belong to the same project. A submission can contain a single or 
-	    multiple datasets. In general, smaller submissions are recommended because all
-	    datasets within a submission must pass the validation process for the datasets 
-	    within the submission to be published.</dd>
-	<dt>Project</dt>
-	<dd>A way of grouping data to ensure that (1) people working with the data get 
-	    gain appropriate access and credit for their contributions and (2) Data is linked to the 
-	    proper funding sources. Datasets within a submission will inherit project metadata</dd>
-	<dt>Publish</dT>
-	<dd>The act of making a submission that has passed all validation checks publicly 
-		available. <em>Data is not fully "submitted" to BIL, until it is published</em></dd>
-</dl>
-</p>
-<H2>Submission Steps</H2>
-<p><i>If you have problems with the steps below, do not hesitate to contact 
-the <a href="contact.html">BIL Helpdesk</a> for assistance.</i></p>
-<ol>
-<li id="Setup"><b>Set up your submission account</b>
-<ol type="A">
-
-<li id="Portal"><b>Create an XSEDE portal Account</b>
-<p>Follow <a href="XSEDEportal.html">these instructions</a> to create an XSEDE portal Account. </p>
-</li>
-
-<li id="RequestDSP"><b>Request access to the data submission portal</b>
-<p>Send email to <i>bil-support@psc.edu</i> along with your XSEDE Portal
-Account. You will receive an email message once access has been enabled.  
-Please allow 24 hours for access to be granted.
-</p>
-</li>
-
-<li id="SetPasswd"><b>Set your initial password:</b>
-<p>Follow <a href="password.html">these instructions</a> to set your initial 
-password.</p>
-</li>
-</ol>
-
-<li id="EnterDSP"><b>Enter the data submission portal</b>
-To enter the data submission portal, visit 
-<a href="https://submit.brainimagelibrary.org/">submit.brainimagelibrary.org</a>. 
-Enter your PSC username and password on this page. If you are having problems 
-logging in, please contact the <a href="contact.html">BIL Helpdesk</a>. </p>
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalLogin.PNG" alt="login-page" 
-height="90%" width="90%" />
-</p>
-</li>
-<ol type="A">
-<li id="SetProject"><b>Define your projects (PIs and Data Managers Only)</b>
-<p>
-<span class="badge badge-warning">Users that do not have PI/Data manager permissions will not have access to 
-	the functions described in this step. If you need access to these functions,<br /> have the PI send email
-	to the BIL helpdesk with your BIL userid and name and request that you be granted this portal permission. 
-	</span></p> 
-	
-	<p>The PI dashboard allows PIs and Data managers to define and manage projects that will be submitting 
-	datasets to BIL.  This dashboard will allow the PI to add authorized users to the project and see the status
-	of in-progress, unsuccessful, and successful submissions associated with the project, regardless of the 
-	users that uploaded and submitted the data. </p>
-	<img src="assets/SubmissionPortal/PI_Dash.PNG" alt="login-page" 
-	     height="90%" width="90%" /> </p>
-	<p>To enter (or edit) project information, Select the
-	<span class="badge badge-secondary">Manage Projects</span> option. From this menu you can create a new project and 
-		view both the personnel and submissions associated with each project. </p>
-	<p> 
-	To define a project select the <span class="badge badge-secondary">Create a New Project</span> button. 
-	Enter the <em>Project Name</em> and the grant number associated with the project in the <em>Funded By:</em>
-	field. If the project is a BICCN project, please be sure to tag the project appropriately and make
-	sure that the Project Name field contains the project name assigned by BCDC.</p>
-	
-	<p>To add a user to the project (such as a data submitter) select the <span class="badge badge-secondary">View
-	Personnel</span> link and add the user.
-	</p>
-	
-	
-	    
-<li id="CreateSubCollection"><b>Create a submission</b>
-<p>
-<span class="badge badge-warning">There MUST be a project defined to create a BIL submission</span></p>
-<p>
-The next step in the submission process is to create a BIL submission. A submission is an ingestion wrapper 
-	that contains one or more related datasets and associated metadata. Submissions will inherit project metadata (such as the NIH project that the data 
-is associated with), thus all datasets within a submission must belong to the same project. </p>
-<p>
-A submission can contain a single or multiple datasets. In general, smaller submissions are recommended
-because all datasets within a submission must pass the validation process for the datasets 
-within the submission to be published. 
-</p>
-<p>
-When created, each BIL submission will have a a unique 16-digit identifier associated with it (e.g. <em>6247417d691a4548</em>) and
-a unique dropbox-like landing zone directory  
-(e.g. <em>/bil/lz/user/6247417d691a4548</em>. 
-This landing zone directory is where the datasets belonging to the 
-submission must be transferred to for validation and ingestion processing. 
-</p>
-<p>To create a submission, select the <span class="badge badge-secondary">
-Submission</span> sub-option of the <span class="badge badge-secondary">New</span> 
-menu.</p>
-<p>
-<img src="assets/SubmissionPortal/NewSub.PNG" alt="New-Submission image" 
-height="90%" width="90%" />
-</p>
-
-<p>Next, enter the required metadata associated with the submission collection (see 
-image below). 
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalNewSub.PNG" alt="New-Submission-full image" 
-height="90%" width="90%" />
-</p>
-<p>When you are done filling out the form, select the <span class="badge badge-secondary">Save</span> button.</p>
-
-</li>
-
-<li id="UploadMetadata"><b>Upload Descriptive Metadata</b>
-</li>
-<p>Metadata for each dataset within a submission collection can be uploaded through the 
-submission portal in spreadsheet format at this time.  A template spreadsheet 
-can be found on the submission portal by selecting the 
-<span class="badge badge-secondary">
-New Metadata</span> sub-option of the 
-<span class="badge badge-secondary">New</span> 
-menu:</p>
-<p><span class="badge badge-warning">
-	If you are NOT ready to upload metadata at this time, click <span class="badge badge-secondary">Cancel</span>
-	to exit the upload metadata spreadsheet step. 
-	When you are ready to load your metadata, <br /> return to the portal and select the
-	<span class="badge badge-secondary">New Metadata</span> sub-option of the 
-        <span class="badge badge-secondary">New</span> menu.
-	</span>
-</p>
-<p> Note that while preparing the metadata spreadsheet, separate data directories need to be listed
-for each dataset in the submission.  The recommended practices to structure your data directories
-	for submission are <a href="https://www.brainimagelibrary.org/datadirbp.html">described here</a>.
-</p>
-
-<p>
-<img src="assets/SubmissionPortal/Metadata.PNG" alt="Descriptive-Metadata Image" 
-height="90%" width="90%" />
-</p>
-<p>After a metadata spreadsheet is prepared, Select the submission collection it will 
-be associated with. Then select the <span class="badge badge-secondary">
-Upload Metadata</span> button to locate your metadata spreadsheet and 
-upload it.
-</p>
-</li>
-
-	<li id="UploadImage"><b>Upload image data</b>
-<p>As mentioned above, the submission portal creates 
-an upload landing zone space for you to transfer your image data to. To find 
-this landing zone, select the 
-<span class="badge badge-secondary">
-Submissions</span> sub-option of the 
-<span class="badge badge-secondary">View</span> 
-menu. The field "Data Path" shows the landing zone space for the submission.</p>
-		<p>
-The ingestion process currently supports native TIFF and JPEG 2000 image 
-file formats and will soon support formats that are convertible to the 
-OME-TIFF format via the 
-bioformats tool. For more information on the bioformats tool see: <br />
-<a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html">
-https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</a>.
-</p>
-
-<p> Note that separate data subdirectories are required for each dataset in the submission.
-For example, if you had an experiment containing 
-5 mouse datasets that you wanted to to include as a single submission collection, you 
-would create 5 subdirectories in the landing zone for the submission collection, one 
-for each mouse dataset. e.g:</p>
-/bil/lz/testuser/abcdef0123456789/mouse1<br />
-/bil/lz/testuser/abcdef0123456789/mouse2<br />
-/bil/lz/testuser/abcdef0123456789/mouse3<br />
-/bil/lz/testuser/abcdef0123456789/mouse4<br />
-/bil/lz/testuser/abcdef0123456789/mouse5<br />
-</p>
-<p>
-The recommended practices to structure your data directories are further
-<a href="https://www.brainimagelibrary.org/datadirbp.html">described here</a>.
-</p>		
-
-<p>To tie metadata to an image dataset, each image dataset must be uploaded 
-in a separate subdirectory. 
-
-<p>
-<div class="card bg-warning">
-<div class="card-body text-left">
-<p class="card-text">
-Due to size, 
-image data can not be uploaded through the submission portal 
-(submit.brainimagelibrary.org). 
-It must be uploaded 
-separately through the BIL data transfer nodes, which are available 
-at the virtual host: upload.brainimagelibrary.org. All users authorized to 
-use the data submission portal (submit.brainimagelibrary.org) are also 
-authorized to use the data transfer nodes (upload.brainimagelibrary.org). 
-The username and passwords are the same on both systems.
-</p>
-</div>
-</div>
-There are many supported ways to upload files into the landing zone 
-directory through the BIL data transfer nodes including rsync, 
-Globus, sftp, and scp. 
-</p>
-<ul>
-<li>Using rsync to upload.brainimagelibrary.org: An example uploading 
-all data in the directory 
-(mouse1) as user <i>testuser</i> through the data transfer node 
-upload.brainimagelibrary.org to the submission collection landing zone 
-(abcdef0123456789)is shown below: 
-<div class="card bg-light">
-<div class="card-body text-left">
-<p class="card-text">
-<pre>
-<code>
-$ rsync -lrtpDvP mouse1 testuser@upload.brainimagelibrary.org:/bil/lz/testuser/abcdef0123456789
+</ol><p><span>After a metadata spreadsheet is prepared, select the submission collection it will be associated with. Then select the </span><code>Upload Metadata</code><span> button to select your metadata spreadsheet and upload it. This button will not be available until a metadata schema is selected.</span></p><p><span>Note that while preparing the metadata spreadsheet, separate data directories need to be listed for each dataset in the submission.</span></p><h3 id="5-Upload-image-data" data-id="5-Upload-image-data" style=""><span>5. Upload image data</span></h3><p><span>The submission portal creates an upload landing zone space for you to transfer your image data to. To find this landing zone, select the Submissions sub-option of the View menu. The field “Data Path” shows the landing zone space for the submission.</span></p><p><span>The ingestion process currently supports native TIFF and JPEG 2000 image file formats and formats that are convertible to the OME-TIFF format via the bioformats tool. For more information on the bioformats tool see:</span><br>
+<a href="https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html" target="_blank" rel="noopener"><span>https://docs.openmicroscopy.org/bio-formats/5.7.3/formats/index.html</span></a><span>.</span></p><p><span>Note that </span><strong><span>separate data subdirectories are required for each dataset in the submission</span></strong><span>. For example, if you had an experiment containing 5 mouse datasets that you wanted to to include as a single submission collection, you would create 5 subdirectories in the landing zone for the submission collection, one for each mouse dataset. e.g:</span></p><pre><code>/bil/lz/testuser/abcdef0123456789/mouse1
+/bil/lz/testuser/abcdef0123456789/mouse2
+/bil/lz/testuser/abcdef0123456789/mouse3
+/bil/lz/testuser/abcdef0123456789/mouse4
+/bil/lz/testuser/abcdef0123456789/mouse5
+</code></pre><p><span>The recommended practices to structure your data directories are further described </span><a href="https://hackmd.io/@kenneyml/Hk_YvJQ3c/https%3A%2F%2Fhackmd.io%2F_xkmysVjTcWw6eHK2nTypw" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><p><span>To tie metadata to an image dataset, each image dataset must be uploaded in a separate subdirectory.</span></p><p><span>Due to size, image data can not be uploaded through the submission portal (</span><a href="http://submit.brainimagelibrary.org" target="_blank" rel="noopener"><span>submit.brainimagelibrary.org</span></a><span>). It must be uploaded separately through the BIL data transfer nodes, which are available at the virtual host: </span><a href="http://upload.brainimagelibrary.org" target="_blank" rel="noopener"><span>upload.brainimagelibrary.org</span></a><span>. All users authorized to use the data submission portal (</span><a href="http://submit.brainimagelibrary.org" target="_blank" rel="noopener"><span>submit.brainimagelibrary.org</span></a><span>) are also authorized to use the data transfer nodes (</span><a href="http://upload.brainimagelibrary.org" target="_blank" rel="noopener"><span>upload.brainimagelibrary.org</span></a><span>). The username and passwords are the same on both systems.</span></p><h4 id="Data-Upload-Methods" data-id="Data-Upload-Methods"><span>Data Upload Methods</span></h4><p><span>There are many supported ways to upload files into the landing zone directory through the BIL data transfer nodes including rsync, Globus, sftp, and scp.</span></p><h5 id="rsync" data-id="rsync"><span>rsync</span></h5><p><span>Using rsync to </span><a href="http://upload.brainimagelibrary.org" target="_blank" rel="noopener"><span>upload.brainimagelibrary.org</span></a><span>: An example uploading all data in the directory (mouse1) as user testuser through the data transfer node </span><a href="http://upload.brainimagelibrary.org" target="_blank" rel="noopener"><span>upload.brainimagelibrary.org</span></a><span> to the submission collection landing zone (abcdef0123456789)is shown below:</span></p><pre><code>$ rsync -lrtpDvP mouse1 testuser@upload.brainimagelibrary.org:/bil/lz/testuser/abcdef0123456789
 sending incremental file list
 mouse1/
 mouse1/data1.tiff
@@ -321,155 +87,33 @@ mouse1/data1.tiff
 
 sent 1356392 bytes  received 35 bytes  2712854.00 bytes/sec
 total size is 1356122  speedup is 1.00
-
-</code>
-</pre>
-</p>
-</div>
-</div> 
-</li>
-
-<li>Using sftp to upload.brainimagelibrary.org: An example logging into 
-the data transfer node as <i>testuser</i> is shown below. The first cd 
-command is used to move to the BIL landing zone for the submission collection. 
-The mkdir command is used to create a sub-directory (called <i>mouse1</i> 
-in the landing zone, while the second cd command is used to move to this 
-subdirectory.  Finally, the put command is used to upload data - in 
-this case, a single file  (data1.tiff):
-<div class="card bg-light">
-<div class="card-body text-left">
-<p class="card-text">
-<pre>
-<code>
-$ sftp testuser@upload.brainimagelibrary.org
+</code></pre><h5 id="sftp" data-id="sftp"><span>sftp</span></h5><p><span>Using sftp to </span><a href="http://upload.brainimagelibrary.org" target="_blank" rel="noopener"><span>upload.brainimagelibrary.org</span></a><span>: An example logging into the data transfer node as testuser is shown below. The first cd command is used to move to the BIL landing zone for the submission collection. The mkdir command is used to create a sub-directory (called mouse1 in the landing zone, while the second cd command is used to move to this subdirectory. Finally, the put command is used to upload data - in this case, a single file (data1.tiff):</span></p><pre><code>$ sftp testuser@upload.brainimagelibrary.org
 The authenticity of host 'upload.brainimagelibrary.org (128.182.108.164)' can't be established.
 ECDSA key fingerprint is 32:cf:46:44:3d:9c:8e:b2:1d:14:03:66:45:0b:11:29.
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added 'upload.brainimagelibrary.org,128.182.108.164' (ECDSA) to the list of known hosts.
 testuser@upload.brainimagelibrary.org's password:
 Connected to upload.brainimagelibrary.org.
-sftp> cd /bil/lz/testuser/abcdef0123456789
-sftp> mkdir /bil/lz/testuser/abcdef0123456789/mouse1
-sftp> cd /bil/lz/testuser/abcdef0123456789/mouse1
+sftp&gt; cd /bil/lz/testuser/abcdef0123456789
+sftp&gt; mkdir /bil/lz/testuser/abcdef0123456789/mouse1
+sftp&gt; cd /bil/lz/testuser/abcdef0123456789/mouse1
 
-sftp> put data1.tiff
+sftp&gt; put data1.tiff
 Uploading data1.tiff to /bil/lz/testuser/abcdef0123456789/mouse1/data1.tiff
 data1.tiff                                      0%    0     0.0KB/s   --:-- ETA
 data1.tiff                                    100% 1324KB   1.3MB/s   00:00
 
-sftp> exit
-</code>
-</pre>
-</p>
-</div>
-</div> 
-<p>
-<span class="badge badge-warning">Due to their ability to resume interupted 
-transfers, the use of rsync and Globus is recommended over sftp.</span></p> 
-</li>
-
-<li>Using scp to upload.brainimagelibrary.org: An example uploading data 
-(data1.tiff) to the landing zone as <i>testuser</i> is shown below: 
-<div class="card bg-light">
-<div class="card-body text-left">
-<p class="card-text">
-<pre>
-<code>
-$ scp data1.tiff testuser@upload.brainimagelibrary.org:/bil/lz/abcdef0123456789/mouse1/data1.tiff
+sftp&gt; exit
+</code></pre><p><span>Due to their ability to resume interupted transfers, the use of rsync and Globus is recommended over sftp.</span></p><h5 id="scp" data-id="scp"><span>scp</span></h5><p><span>Using scp to </span><a href="http://upload.brainimagelibrary.org" target="_blank" rel="noopener"><span>upload.brainimagelibrary.org</span></a><span>: An example uploading data (data1.tiff) to the landing zone as testuser is shown below:</span></p><pre><code>$ scp data1.tiff testuser@upload.brainimagelibrary.org:/bil/lz/abcdef0123456789/mouse1/data1.tiff
 testuser@upload.brainimagelibrary.org's password:
 data1.tiff                                                                      0%    0     0.0KB/s   --:-- ETA
 data1.tiff                                                                    100% 1324KB   1.3MB/s   00:00
-
-</code>
-</pre>
-</p>
-</div>
-</div> 
-<p>
-<span class="badge badge-warning">Due to their ability to resume interupted 
-transfers, the use of rsync and Globus is recommended over scp.</span></p> 
-</li>
-</li>
-
-
-</ul>
-
-</li>
-
-
-
-
-
-<!-- <li id="ValidateData"><b>Validate data</b>
--->
-<li id="ValidateData"><b>Validate and Submit Publish Request</b>
-<p>Once all data has been uploaded to the landing zone area and all metadata 
-has been uploaded to through the submission portal, request that the data is validated and made publicly avaliable. 
-This can be done through the submission portal by selecting <span class="badge badge-secondary">"Submit Publish request"</span>
-from the main menu.  If an embargo period is being requested, please send email to bil-support@psc.edu along with 
-the submission id. Please note that the dataset should be embargoed prior to public release, in the email message. 
-</p><p>
-If data fails to validate, the data submitter will be notified by email. The submitter should address the validation issue(s) 
-and re-submit the publication request. Both data and metadata need to pass the validation checks -- datasets that 
-fail the validation process are considered incomplete and will not be made publicly available.   	
-<!--
-<p>Once all data has been uploaded to the landing zone area and all metadata 
-has been uploaded to through the submission portal, select the 
-<span class="badge badge-secondary">
-Validate Collection</span> sub-option of the 
-<span class="badge badge-dark">Validate</span> menu:
-</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalValidateMenu.PNG" alt="Validate-Collection-Menu Image" 
-height="90%" width="90%" />
-</p>
-<p>
-Next, choose the collection that you want to validate by selecting the <span class="badge badge-info">
-Select</span> button.
-</p>
-<p>
-<img src="assets/SubmissionPortal/DataSubViewCollections.PNG" alt="Validate-Collection-Choose Image" 
-height="90%" width="90%" />
-</p>
-<p>Then select the <span class="badge badge-info">Validate</span> button. 
-</p>
-<img src="assets/SubmissionPortal/DataSubPortalValadateCollection.PNG" alt="Validate-Collection-Detail Image" 
-height="90%" width="90%" />
-</p>
-The validation process is asyncronous. To check on the status, you may 
-click on the <span class="badge badge-info">Validation Status</span> 
-row in the screen shown above.   
-The validation process will scrape additional metadata from the image
-files. When the process completes, a log will be available for viewing 
-by clicking on the <span class="badge badge-info">Validation Status</span>
-row. Below is an example of 
-a validation log for a collection that failed the validation process. 
-(In this case, the problem was that image data was not uploaded for the 
-collection.)
-</p> 
-<p>
-<img src="assets/SubmissionPortal/DataSubPortalValidationDetail.PNG" alt="Validation-Additional-Detail Image" 
-height="90%" width="90%" />
-</p>
-
-</li>
-
-
-<li id="ReviewSubmit"><b>Review and submit data</b>
-
-<p>When the validation process completes, 
-a log will be accessable from the contributor portal. Please examine 
-this log and correct any identified warnings and errors. (note: Only an 
-error will prevent submission, a warning will not prevent data submission)     
-</p>
-<p>
-<span class="badge badge-warning">Data submission through the portal has 
-not been enabled yet.</span> 
-</p>
--->
-
-</li>
-</ol>
+</code></pre><p><span>Due to their ability to resume interupted transfers, the use of rsync and Globus is recommended over scp.</span></p>
+<h5 id="rclone" data-id="rclone"><span>rclone</span></h5><p><span>For uploading data stored on Google Drive, you have the option to use rclone to transfer data directly.</span></p>
+<h3 id="5-Validate-and-Submit-Publish-Request" data-id="5-Validate-and-Submit-Publish-Request" style=""><span>5. Validate and Submit Publish Request</span></h3><p>
+     <span>Once all data has been uploaded to the landing zone and the metadata has been submitted, request that the data is validated and made publicly avaliable. This can be done through the submission portal by selecting </span><code>Submit Publish Request</code><span> from the main menu of the submission portal. If an embargo period is being requested, please send email to </span><a href="mailto:bil-support@psc.edu" target="_blank" rel="noopener"><span>bil-support@psc.edu</span></a><span> along with the submission id and brief note.</span></p><p><span>If data validation fails, the data submitter will be notified by email. The submitter should address the validation issue(s) and re-submit the validation request. Both data and metadata need to pass the validation checks – datasets that fail the validation process are considered incomplete and will not be made publicly available.</span></p>
+	    
+	    
 <h2>Additional Submission Information</h2>
 
 <p><b>Image File Formats</b></p>
