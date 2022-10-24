@@ -1,1 +1,1468 @@
-<meta http-equiv="refresh" content="1; URL=https://www.brainimagelibrary.org/computevisual.html" />
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        The BIL Analysis Ecosystem - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{background-color:#f7f7f7;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true" style=""><h1 id="The-BIL-Analysis-Ecosystem" data-id="The-BIL-Analysis-Ecosystem" style=""><a class="anchor hidden-xs" href="#The-BIL-Analysis-Ecosystem" title="The-BIL-Analysis-Ecosystem"><span class="octicon octicon-link"></span></a><span>The BIL Analysis Ecosystem</span></h1><h2 id="How-to-connect-to-the-BIL-Analysis-Ecosystem" data-id="How-to-connect-to-the-BIL-Analysis-Ecosystem" style=""><a class="anchor hidden-xs" href="#How-to-connect-to-the-BIL-Analysis-Ecosystem" title="How-to-connect-to-the-BIL-Analysis-Ecosystem"><span class="octicon octicon-link"></span></a><span>How to connect to the BIL Analysis Ecosystem</span></h2><h3 id="Connect-via-Terminal" data-id="Connect-via-Terminal" style=""><a class="anchor hidden-xs" href="#Connect-via-Terminal" title="Connect-via-Terminal"><span class="octicon octicon-link"></span></a><span>Connect via Terminal</span></h3><h3 id="SSH" data-id="SSH" style=""><a class="anchor hidden-xs" href="#SSH" title="SSH"><span class="octicon octicon-link"></span></a><span>SSH</span></h3><p><span>You can connect to BIL Analysis ecosystem resources with an ssh client from your local machine using your PSC credentials.</span></p><p><span>You must install SSH client software on your local machine, but free ssh clients for  Macs, Windows and Unix are available. Popular ssh clients (GUI) include PuTTY for Windows and Cyberduck for Macs. A command line version of ssh is installed on Macs  by default and you can use the Terminal application if you prefer. You can also check with your university to see if there is an ssh client that they recommend.</span></p><p><span>To use ssh to connect to the BIL Analysis Ecosystem:</span></p><pre><code>ssh userid@login.brainimagelibrary.org
+</code></pre><p><span>Everyone who requests a BIL account has access to the login node using their BIL Username and Password. The login node is not intended for heavy computation or visualization, but rather to provide convenient shell access to BIL data and enable interactive and batch use of the BIL Analysis Ecosystem. The BIL computational cluster provides a suitable resource for both computation and visualization.</span></p><h4 id="Workshop-VM" data-id="Workshop-VM"><a class="anchor hidden-xs" href="#Workshop-VM" title="Workshop-VM"><span class="octicon octicon-link"></span></a><span>Workshop VM</span></h4><p><span>For workshop purposes, enter your PSC credentials when prompted.</span></p><p><span>Open terminal and run the command</span></p><pre><code>ssh userid@workshop.brainimagelibrary.org
+</code></pre><p><span>For example,</span></p><pre><code>ssh icaoberg@workshop.brainimagelibrary.org
+icaoberg@workshop.brainimagelibrary.org's password:
+
+Last login: Mon Jan 24 10:46:38 2022 from pool-71-162-2-190.pitbpa.fios.verizon.net
+********************************* W A R N I N G ********************************
+You have connected to workshop.brainimagelibrary.org
+
+This computing resource is the property of the Pittsburgh Supercomputing Center.
+It is for authorized use only.  By using this system, all users acknowledge
+notice of, and agree to comply with, PSC polices including the Resource Use
+Policy, available at http://www.psc.edu/index.php/policies. Unauthorized or
+improper use of this system may result in administrative disciplinary action,
+civil charges/criminal penalties, and/or other sanctions as set forth in PSC
+policies. By continuing to use this system you indicate your awareness of and
+consent to these terms and conditions of use.
+
+LOG OFF IMMEDIATELY if you do not agree to the conditions stated in this warning
+
+
+
+Please contact support@psc.edu with any comments/concerns.
+
+********************************* W A R N I N G ********************************
+</code></pre><p><span>If you can see the message above when you connect, then you should be ready to start using the resources.</span></p><h3 id="Remote-Desktop-X2Go" data-id="Remote-Desktop-X2Go" style=""><a class="anchor hidden-xs" href="#Remote-Desktop-X2Go" title="Remote-Desktop-X2Go"><span class="octicon octicon-link"></span></a><span>Remote Desktop: X2Go</span></h3><p><span>You can access the BIL Analysis Ecosystem using a Virtual Machine system supported by the remote-desktop model X2Go. This will give you remote access to the system via a graphical user interface.</span></p><h4 id="Using-X2Go" data-id="Using-X2Go"><a class="anchor hidden-xs" href="#Using-X2Go" title="Using-X2Go"><span class="octicon octicon-link"></span></a><span>Using X2Go</span></h4><ul>
+<li><span>Download and install the appropriate X2Go client (Windows, Linux, or Mac) from </span><a href="https://wiki.x2go.org/doku.php" target="_blank" rel="noopener"><span>here</span></a><span>.</span></li>
+<li><span>Start the X2Go client.</span></li>
+</ul><p><img src="https://i.imgur.com/rTFe2eu.png" alt="" loading="lazy"></p><ul>
+<li><span>Under the Session menu, select </span><code>New Session</code></li>
+<li><span>Enter your VM name for the hostname</span></li>
+<li><span>Enter your PSC login name: (ex. </span><code>ropelews</code><span> or </span><code>icaoberg</code><span>)</span></li>
+<li><span>Under session type select </span><code>MATE</code></li>
+</ul><p><img src="https://i.imgur.com/NYH2vp6.png" alt="" loading="lazy"></p><ul>
+<li><span>On the right side of the screen you should see a box called new session.</span></li>
+</ul><p><img src="https://i.imgur.com/xMvb8PY.png" alt="" loading="lazy"></p><ul>
+<li><span>Move your mouse to the words </span><code>New session</code><span> and click the left mouse button.</span></li>
+<li><span>Log in using your username and password</span></li>
+<li><span>A new window will appear (usually within 10 seconds) . If you click on your left mouse button in this new window, a submenu will appear. Select </span><code>xterm</code><span> to start a terminal.</span></li>
+</ul><p><img src="https://i.imgur.com/m6D4ntw.png" alt="" loading="lazy"></p><ul>
+<li><span>From the </span><code>xterm</code><span> window, start an application with graphical output, such as vaa3D or Fiji. The application will appear in the window.</span></li>
+</ul><h2 id="Interactive-Apps" data-id="Interactive-Apps" style=""><a class="anchor hidden-xs" href="#Interactive-Apps" title="Interactive-Apps"><span class="octicon octicon-link"></span></a><span>Interactive Apps</span></h2><h3 id="OpenOnDemand" data-id="OpenOnDemand" style=""><a class="anchor hidden-xs" href="#OpenOnDemand" title="OpenOnDemand"><span class="octicon octicon-link"></span></a><span>OpenOnDemand</span></h3><p><span>The OpenOnDemand (OOD) interface allows you to connect to the BIL Analysis Ecosystem through the web browser. You can submit and manage jobs, move or create files, or use the apps such as Jupyter Notebook.</span></p><p><span>To connect to the BIL Analysis Ecosystem via Open OnDemand</span></p><ol>
+<li>
+<p><span>In your web broswer, go to </span><code>https://ondemand.bil.psc.edu</code></p>
+</li>
+<li>
+<p><span>Enter your </span><a href="https://hackmd.io/lXd3fXcNSg-odAVC8APRuQ" target="_blank" rel="noopener"><span>PSC username and password</span></a><br>
+<img src="https://i.imgur.com/ARpR80E.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><span>From the OOD dashboard, pictured below,  you will see the top menu bar where you can manage file, jobs, or select the apps to use.</span></p>
+</li>
+</ol><p><img src="https://i.imgur.com/ZKeTVXG.png" alt="" loading="lazy"></p><h4 id="Manage-files" data-id="Manage-files"><a class="anchor hidden-xs" href="#Manage-files" title="Manage-files"><span class="octicon octicon-link"></span></a><span>Manage files</span></h4><p><span>From the OOD dashboard, you can create, edit, or move files. Select the </span><code>Files</code><span> option from the top menu bar, then the </span><code>Home</code><span> which will navigate to your home directory at </span><code>/bil/users/</code><span>. From here, you will have the following options:</span></p><ul>
+<li><code>Go To…</code><span>: Navigate to a specified folder</span></li>
+<li><code>Open in Terminal</code><span>: Opens the active folder in a terminal session (new tab)</span></li>
+<li><code>New File</code><span>: Creates a new file in the active folder</span></li>
+<li><code>New Dir</code><span>: Creates a new folder in the active folder</span></li>
+<li><code>Upload</code><span>: Select files from your local machine to upload to the active folder</span></li>
+<li><code>Show Dotfiles</code><span>: Reveals hidden files</span></li>
+<li><code>Show Owner/Mode</code><span>: Shows ownership and permission information</span></li>
+<li><code>View</code><span>: Shows file contents inside the current tab</span></li>
+<li><code>Edit</code><span>: Opens a file editor in a new tab</span></li>
+<li><code>Rename/Move</code><span>: Gives a file a new path and/or name</span></li>
+<li><code>Download</code><span>: Downloads the file or folder to your local machine</span></li>
+<li><code>Copy</code><span>: Copies selected files to the clipboard</span></li>
+<li><code>Paste</code><span>: Pastes files from the clipboard</span></li>
+<li><code>(Un)Select All</code><span>: Select or unselect all files/folders</span></li>
+<li><code>Delete</code><span>: Deletes selected files/folders</span></li>
+</ul><h4 id="Manage-Jobs" data-id="Manage-Jobs"><a class="anchor hidden-xs" href="#Manage-Jobs" title="Manage-Jobs"><span class="octicon octicon-link"></span></a><span>Manage Jobs</span></h4><p><span>From the OOD dashboard, you can create, submit, and edit jobs. Select the </span><code>Jobs</code><span> option from the top menu bar, then </span><code>Job composer</code><span> which will take you to the job composer dashboard. From here, you will have the following options:</span></p><ul>
+<li><span>Create a new job script</span></li>
+<li><span>Edit job scripts</span></li>
+<li><span>Submit a job</span></li>
+</ul><p><span>When you first visit to this page, you’ll go through a helpful tutorial.  The buttons do the following:</span></p><ul>
+<li><code>New Job</code><span>: Create a new job</span>
+<ul>
+<li><code>From Default Template</code><span>: Uses system defaults to create a job that you can then edit.</span></li>
+<li><code>From Specified Path</code><span>: Creates a job from a specific job script.</span></li>
+<li><code>From Selected Job</code><span>: Creates a new job that is a copy of the selected job.</span></li>
+</ul>
+</li>
+<li><code>Edit Files</code><span>: Opens the project folder in a new File Explorer tab and allows you to edit the files within it.</span></li>
+<li><code>Job Options</code><span>: Allows you to edit the Name, Cluster, Job Script, and Account of a job.</span></li>
+<li><code>Open Terminal</code><span>: Opens a terminal session in a new tab at the project folder.</span></li>
+<li><code>Submit</code><span>: Submits the selected job.</span></li>
+<li><code>Stop</code><span>: Stops the selected job if it was already submitted.</span></li>
+<li><code>Delete</code><span>: Delete the selected job.</span></li>
+</ul><h4 id="Jupyter-Notebook" data-id="Jupyter-Notebook"><a class="anchor hidden-xs" href="#Jupyter-Notebook" title="Jupyter-Notebook"><span class="octicon octicon-link"></span></a><span>Jupyter Notebook</span></h4><p><span>From the OOD dashboard you can launch a Jupyter Notebook server on one or more nodes.</span></p><ul>
+<li><span>Select the </span><code>Apps</code><span> option from the top menu bar, then </span><code>Jupyter Notebook</code><span> which will take you to the page to set up your Jupyer Notebook session.</span></li>
+<li><span>From here, you will specify the timelimit, number of nodes to use. Use the Extra Slurm Args field to specify the number of cores or number of GPUs you want. Use the Extra Jupyter Args field to pass arguments to your Jupyter notebook.</span></li>
+<li><span>Select </span><code>Launch</code><span> to begin your Jupyter Notebook session.</span></li>
+<li><span>You will be taken to the dashboard for your interactive sessions. It may take some time for your resources to become available. When your session starts, select the blue “Connect to Jupyter”</span></li>
+<li><span>A new window running Jupyter Hub will open where you can being your Jupyter Notebook session.</span></li>
+<li><span>For instructions on using Jupyter Notebook, see the </span><a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html" target="_blank" rel="noopener"><span>official documentation</span></a><span>.</span></li>
+</ul><h2 id="Software-Modules" data-id="Software-Modules" style=""><a class="anchor hidden-xs" href="#Software-Modules" title="Software-Modules"><span class="octicon octicon-link"></span></a><span>Software Modules</span></h2><h3 id="LMOD" data-id="LMOD" style=""><a class="anchor hidden-xs" href="#LMOD" title="LMOD"><span class="octicon octicon-link"></span></a><span>LMOD</span></h3><img src="https://i.imgur.com/TiNg8y8.png" width="25%"><p><span>Lmod is a Lua based module system that easily handles the MODULEPATH Hierarchical problem. Environment Modules provide a convenient way to dynamically change the users’ environment through modulefiles.</span></p><p><span>In a nutshell, we use LMOD to manage software that can be used in the VM as well as the large memory nodes. Software available as modules should be accessible on both resources.</span></p><p><span>This document only lists a few commands. For complete documentation click </span><a href="https://lmod.readthedocs.io/en/latest/010_user.html" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> If you want us to install a piece of software in our resources, then please remember to submit software installation requests to </span><code>bil-support@psc.edu</code><span>.</span></p>
+</div><h3 id="Available-software-modules" data-id="Available-software-modules" style=""><a class="anchor hidden-xs" href="#Available-software-modules" title="Available-software-modules"><span class="octicon octicon-link"></span></a><span>Available software modules</span></h3><p><span>To list all available software modules use the command</span></p><pre><code>module avail
+</code></pre><p><span>For example</span></p><pre><code>module avail
+
+-------------- /bil/modulefiles ---------------
+anaconda/3.2019.7
+anaconda3/4.10.1
+aspera/3.9.6(default)
+bcftools/1.9(default)
+bioformats/6.0.1
+bioformats/6.1.1
+bioformats/6.4.0
+bioformats/6.5.1
+bioformats/6.6.1(default)
+bioformats2raw/0.2.4(default)
+c-blosc/1.19.0(default)
+dust/0.5.4
+ffmpeg/20210611
+</code></pre><p><span>The command above will list all available software.</span></p><div class="alert alert-info">
+<p><img class="emoji" alt=":envelope:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/envelope.png"><span> Cannot find the software you need to explore the collections? Please send a request to </span><code>bil-support@psc.edu</code><span>.</span></p>
+</div><h3 id="Software-versions" data-id="Software-versions" style=""><a class="anchor hidden-xs" href="#Software-versions" title="Software-versions"><span class="octicon octicon-link"></span></a><span>Software versions</span></h3><p><span>To list information about specific modules use the command</span></p><pre><code>module avail &lt;package-name&gt;
+</code></pre><p><span>For example, you can view the two versions of MatLab available</span></p><pre><code>module avail matlab
+
+-------------- /bil/modulefiles ---------------
+matlab/2019a matlab/2021a
+</code></pre><h4 id="Listing-useful-information" data-id="Listing-useful-information"><a class="anchor hidden-xs" href="#Listing-useful-information" title="Listing-useful-information"><span class="octicon octicon-link"></span></a><span>Listing useful information</span></h4><p><span>To list useful info about a module use the command</span></p><pre><code>module help &lt;package-name&gt;
+</code></pre><p><span>For example,</span></p><pre><code>module help matlab
+
+----------- Module Specific Help for 'matlab/2021a' ---------------
+
+Matlab 2021a
+------------
+
+To enable, first load the following required modules (via module load command):
+
+	module load matlab/2021a
+
+For a full list of binaries included in this module, type
+
+	module what-is matlab/2021a
+</code></pre><h3 id="Loading-modules" data-id="Loading-modules" style=""><a class="anchor hidden-xs" href="#Loading-modules" title="Loading-modules"><span class="octicon octicon-link"></span></a><span>Loading modules</span></h3><p><span>To load a module use the command</span></p><pre><code>module load &lt;package-name&gt;
+</code></pre><p><span>For example,</span></p><pre><code>module load matlab/2021a
+</code></pre><p><span>Running the command above will make the matlab binary available in the current session</span></p><pre><code>which matlab
+
+/bil/packages/matlab/R2021a/bin/matlab
+</code></pre><p><span>In this example, you can simply type </span><code>matlab</code><span> to start the Matlab engine</span></p><pre><code>matlab -nodesktop
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                &lt; M A T L A B (R) &gt;
+      Copyright 1984-2021 The MathWorks, Inc.
+ R2021a Update 5 (9.10.0.1739362) 64-bit (glnxa64)
+                  August 9, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+
+&gt;&gt;
+</code></pre><h3 id="Loading-a-specific-version-of-a-module" data-id="Loading-a-specific-version-of-a-module" style=""><a class="anchor hidden-xs" href="#Loading-a-specific-version-of-a-module" title="Loading-a-specific-version-of-a-module"><span class="octicon octicon-link"></span></a><span>Loading a specific version of a module</span></h3><p><span>There are times when there are multiple versions of the same same software.</span></p><p><span>For example,</span></p><pre><code>module avail bioformats
+
+---------------------- /bil/modulefiles ----------------------
+bioformats/6.0.1              bioformats/6.7.0
+bioformats/6.1.1              bioformats/6.8.0(default)
+bioformats/6.4.0              bioformats2raw/0.2.4
+bioformats/6.5.1              bioformats2raw/0.3.0(default)
+bioformats/6.6.1
+</code></pre><p><span>If you wish to load a specific version of a package use the command</span></p><pre><code>module load &lt;package&gt;/&lt;version&gt;
+</code></pre><p><span>For example,</span></p><pre><code>module load bioformats/6.4.0
+</code></pre><h3 id="Listing-loaded-modules" data-id="Listing-loaded-modules" style=""><a class="anchor hidden-xs" href="#Listing-loaded-modules" title="Listing-loaded-modules"><span class="octicon octicon-link"></span></a><span>Listing loaded modules</span></h3><p><span>To list the loaded modules use the command</span></p><pre><code>module list
+</code></pre><p><span>For example,</span></p><pre><code>module list
+
+Currently Loaded Modulefiles:
+  1) matlab/2021a
+</code></pre><h3 id="Unload-module" data-id="Unload-module" style=""><a class="anchor hidden-xs" href="#Unload-module" title="Unload-module"><span class="octicon octicon-link"></span></a><span>Unload module</span></h3><p><span>To load a module use the command</span></p><pre><code>module unload &lt;package-name&gt;
+</code></pre><p><span>for example</span></p><pre><code>module unload matlab/2021a
+</code></pre><h3 id="Using-modules-on-scripts" data-id="Using-modules-on-scripts" style=""><a class="anchor hidden-xs" href="#Using-modules-on-scripts" title="Using-modules-on-scripts"><span class="octicon octicon-link"></span></a><span>Using modules on scripts</span></h3><p><span>When building scripts that are using more than one tool available as modules, simply type the module command for each tool</span></p><pre><code class="hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">#!/bin/bash
+
+module load matlab/2021a
+module load bioformats
+</div></div></code></pre><h2 id="Job-management" data-id="Job-management" style=""><a class="anchor hidden-xs" href="#Job-management" title="Job-management"><span class="octicon octicon-link"></span></a><span>Job management</span></h2><h3 id="SLURM" data-id="SLURM" style=""><a class="anchor hidden-xs" href="#SLURM" title="SLURM"><span class="octicon octicon-link"></span></a><span>SLURM</span></h3><p><img src="https://i.imgur.com/3gPmu1r.png" alt="" loading="lazy"></p><p><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener"><span>Slurm</span></a><span> is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</span></p><p><span>This document only lists a few commands. For complete documentation click </span><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><h3 id="sinfo" data-id="sinfo" style=""><a class="anchor hidden-xs" href="#sinfo" title="sinfo"><span class="octicon octicon-link"></span></a><span>sinfo</span></h3><pre><code>sinfo - View information about Slurm nodes and partitions.
+ 
+
+SYNOPSIS
+sinfo [OPTIONS...]  
+</code></pre><p><span>For example</span></p><pre><code>sinfo -p compute
+</code></pre><h3 id="squeue" data-id="squeue" style=""><a class="anchor hidden-xs" href="#squeue" title="squeue"><span class="octicon octicon-link"></span></a><span>squeue</span></h3><pre><code>squeue - view information about jobs located in the Slurm scheduling queue.
+ 
+
+SYNOPSIS
+squeue [OPTIONS...]
+</code></pre><p><span>For example</span></p><pre><code>squeue -u icaoberg
+             
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+14243   compute script.s icaoberg  R      15:34      1 l001
+</code></pre><h3 id="scontrol" data-id="scontrol" style=""><a class="anchor hidden-xs" href="#scontrol" title="scontrol"><span class="octicon octicon-link"></span></a><span>scontrol</span></h3><pre><code>scontrol - view or modify Slurm configuration and state.
+ 
+
+SYNOPSIS
+scontrol [OPTIONS...] [COMMAND...]
+</code></pre><p><span>As a regular user you can view information about the nodes and jobs but won’t be able to modify them.</span></p><h4 id="Check-available-memory" data-id="Check-available-memory"><a class="anchor hidden-xs" href="#Check-available-memory" title="Check-available-memory"><span class="octicon octicon-link"></span></a><span>Check available memory</span></h4><p><span>The view information about the nodes, including information about memory, use the command</span></p><pre><code>scontrol show nodes
+</code></pre><p><span>To view information about a specific node, use the node name to print this information. For example</span></p><pre><code>scontrol show nodes l002
+
+NodeName=l002 Arch=x86_64 CoresPerSocket=20
+   CPUAlloc=0 CPUTot=80 CPULoad=0.03
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=l002 NodeHostName=l002 Version=18.08
+   OS=Linux 4.18.0-305.7.1.el8_4.x86_64 #1 SMP Tue Jun 29 21:55:12 UTC 2021
+   RealMemory=3000000 AllocMem=0 FreeMem=3090695 Sockets=4 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=compute
+   BootTime=2021-07-16T15:47:48 SlurmdStartTime=2021-08-03T20:58:25
+   CfgTRES=cpu=80,mem=3000000M,billing=80
+   AllocTRES=
+   CapWatts=n/a
+   CurrentWatts=0 LowestJoules=0 ConsumedJoules=0
+   ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+</code></pre><p><span>Because there exists one partition, the you can run </span><code>sinfo</code><span> or </span><code>sinfo -p compute</code><span> to gather basic information about this partition.</span></p><p><span>For example</span></p><pre><code>→ sinfo -p compute
+
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+compute*     up   infinite      8   idle l[001-008]
+</code></pre><h4 id="sbatch" data-id="sbatch"><a class="anchor hidden-xs" href="#sbatch" title="sbatch"><span class="octicon octicon-link"></span></a><span>sbatch</span></h4><pre><code>sbatch - Submit a batch script to Slurm.
+ 
+
+SYNOPSIS
+sbatch [OPTIONS(0)...] [ : [OPTIONS(N)...]] script(0) [args(0)...]
+</code></pre><h4 id="interact" data-id="interact"><a class="anchor hidden-xs" href="#interact" title="interact"><span class="octicon octicon-link"></span></a><span>interact</span></h4><p><span>The interact command is an in-house script for starting interactive sessions</span></p><pre><code>interact -h
+
+Usage:  interact [OPTIONS]
+  -d                    Turn on debugging information
+    --debug
+  --noconfig            Do not process config files
+  -gpu                  Allocate 1 gpu in the GPU-shared partition
+    --gpu
+  --gres=&lt;list&gt;         Specifies a comma delimited list of generic consumable
+                          resources. e.g.:    --gres=gpu:1
+  --mem=&lt;MB&gt;            Real memory required per node in MegaBytes
+  -N Nodes              Number of nodes
+    --nodes
+  -n NTasks             Number of tasks (spread over all Nodes) 
+  --ntasks-per-node=&lt;ntasks&gt;    Number of tasks, 1 per core per node. 
+  -p Partition          Partition/queue you would like to run on
+    --partition
+  -R Reservation        Reservation you would like to run on
+    --reservation
+  -t Time               Set a limit on the total run time. Format include
+                          mins, mins:secs, hours:mins:secs.  e.g. 1:30:00 
+    --time
+  -h                    Print this help message
+    -?
+</code></pre><ul>
+<li><span>At the moment, there only exists one partition named </span><code>compute</code><span>, so running</span></li>
+</ul><pre><code>interact
+</code></pre><p><span>or</span></p><pre><code>interact -p compute
+</code></pre><ul>
+<li><span>To specify the amount of memory use the option </span><code>--mem=&lt;MB&gt;</code><span>. For example </span><code>interact --mem=1Tb</code></li>
+<li><span>This is a shared partition, if you wish to get all the resources in a compute node, use the option </span><code>--nodes</code><span>. For example </span><code>interact -N 1</code><span>. Since this is a shared resource, please be considerate using this resource.</span></li>
+</ul><h4 id="scancel" data-id="scancel"><a class="anchor hidden-xs" href="#scancel" title="scancel"><span class="octicon octicon-link"></span></a><span>scancel</span></h4><pre><code>scancel - Used to signal jobs or job steps that are under the control of Slurm.
+ 
+
+SYNOPSIS
+scancel [OPTIONS...] [job_id[_array_id][.step_id]] [job_id[_array_id][.step_id]...]
+</code></pre><p><span>There is no need to</span></p><ul>
+<li><span>To cancel a specific job use the command </span><code>scancel &lt;job_id&gt;</code><span>. For example </span><code>scancel 00001</code></li>
+<li><span>To cancel all your running jobs use the command </span><code>scancel -u &lt;username&gt;</code><span>. For example </span><code>scancel -u icaoberg</code><span>.</span></li>
+</ul><h3 id="Docker" data-id="Docker" style=""><a class="anchor hidden-xs" href="#Docker" title="Docker"><span class="octicon octicon-link"></span></a><span>Docker</span></h3><p><span>Docker is not supported and it is not expected to be supported in the near future.</span></p><h4 id="uDocker" data-id="uDocker"><a class="anchor hidden-xs" href="#uDocker" title="uDocker"><span class="octicon octicon-link"></span></a><span>uDocker</span></h4><img src="https://github.com/indigo-dc/udocker/raw/master/docs/logo-small.png" width="25%"><p><span>If you want to run a program/tool and not a service, then </span><a href="https://github.com/indigo-dc/udocker" target="_blank" rel="noopener"><span>uDocker</span></a><span> might be an option for you.</span></p><p><span>To install uDocker</span></p><pre><code>module load anaconda3/4.11.0
+pip install --user udocker
+</code></pre><p><span>or</span></p><pre><code>module load anaconda3/4.11.0
+python -m venv .
+source ./bin/activate
+pip install udocker
+</code></pre><p><span>For example,</span></p><pre><code>udocker pull jtduda/python-itk-sitk-ants:0.1.0
+</code></pre><h3 id="Singularity" data-id="Singularity" style=""><a class="anchor hidden-xs" href="#Singularity" title="Singularity"><span class="octicon octicon-link"></span></a><span>Singularity</span></h3><h4 id="Building-containers" data-id="Building-containers"><a class="anchor hidden-xs" href="#Building-containers" title="Building-containers"><span class="octicon octicon-link"></span></a><span>Building containers</span></h4><p><strong><span>If you have elevated privileges to run Singularity</span></strong><br>
+<span>Make sure to run singularity builds as </span><code>sudo</code><span>, that’s all that matters.</span></p><div class="alert alert-warning">
+<p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> If you are constantly building containers, then run</span></p>
+<pre><code>singularity cache clean
+</code></pre>
+<p><span>often to clean cache.</span></p>
+</div><p><strong><span>If you don’t have elevated privileges</span></strong></p><p><span>This applies to all regular users including researchers. If you do not have elevated privileges, you can still build the images remotely.</span></p><p><span>Follow these steps to do so</span></p><ul>
+<li><span>Create an account on </span><a href="http://SyLabs.io" target="_blank" rel="noopener"><span>SyLabs.io</span></a><span>.</span></li>
+<li><span>Click </span><code>Access Tokens</code><span> on the top-right menu</span></li>
+</ul><p><img src="https://i.imgur.com/ILAwB6T.png" alt="" loading="lazy"></p><ul>
+<li><span>Click Create a </span><code>New Access Token</code></li>
+</ul><p><img src="https://i.imgur.com/HlKCHjo.png" alt="" loading="lazy"></p><ul>
+<li><span>Click </span><code>Copy token to Clipboard</code></li>
+</ul><p><img src="https://i.imgur.com/ztbbC8B.png" alt="" loading="lazy"></p><ul>
+<li><span>Login to the </span><code>workshop</code><span> VM and run the command</span></li>
+</ul><pre><code>singularity remote login
+</code></pre><ul>
+<li><span>Paste the token and click </span><code>Enter</code><span>.</span></li>
+</ul><p><span>Just make sure to use the </span><code>--remote</code><span> flag when running singularity build.</span></p><p><span>Check the </span><code>rbuild.sh</code><span> scripts in each repo for working examples.</span></p><div class="alert alert-warning">
+<p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> If you are constantly building containers remotely, make sure to erase them from your account to avoid running out of space.</span></p>
+</div><p><span>To see a list of vetted containers built by PSC, click </span><a href="https://github.com/pscedu/singularity" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><h4 id="Example" data-id="Example"><a class="anchor hidden-xs" href="#Example" title="Example"><span class="octicon octicon-link"></span></a><span>Example</span></h4><img src="https://camo.githubusercontent.com/d18f42e3f0fc2eb3d39084c23a19eaf5a65c25ed7d14fcef9c00c8176680fa95/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38302f436f777361795f5479706963616c5f4f75747075742e706e67"><p><span>You can find a Singularity definition file </span><a href="https://github.com/pscedu/singularity-cowsay" target="_blank" rel="noopener"><span>here</span></a><span>.  To build this image remotely run</span></p><pre><code>git clone https://github.com/pscedu/singularity-cowsay.git
+cd 3.04
+singularity build --remote cowsay.sif Singularity
+</code></pre><p><span>after getting a token from </span><a href="http://SyLabs.io" target="_blank" rel="noopener"><span>SyLabs.io</span></a><span>.</span></p><h2 id="Other" data-id="Other" style=""><a class="anchor hidden-xs" href="#Other" title="Other"><span class="octicon octicon-link"></span></a><span>Other</span></h2><h3 id="Installing-Miniconda" data-id="Installing-Miniconda" style=""><a class="anchor hidden-xs" href="#Installing-Miniconda" title="Installing-Miniconda"><span class="octicon octicon-link"></span></a><span>Installing Miniconda</span></h3><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Conda_logo.svg" width="50%"><br></p><p><span>There is nothing preventing you from installing a Conda distribution in your home directory, though this is not advised.</span></p><p><span>However if you need to, you might want to start with a Miniconda distribution</span></p><pre><code class="hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash ./https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+</div></div></code></pre><p><span>and follow the instructions on screen.</span></p><div class="alert alert-info">
+<p><img class="emoji" alt=":pencil:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/pencil.png"><span> If you use the default values in the Conda install, it will install in your home directory on </span><code>/bil/</code></p>
+</div><h3 id="Using-Jupyter-Notebooks" data-id="Using-Jupyter-Notebooks" style=""><a class="anchor hidden-xs" href="#Using-Jupyter-Notebooks" title="Using-Jupyter-Notebooks"><span class="octicon octicon-link"></span></a><span>Using Jupyter Notebooks</span></h3><h4 id="Loading-the-proper-module" data-id="Loading-the-proper-module"><a class="anchor hidden-xs" href="#Loading-the-proper-module" title="Loading-the-proper-module"><span class="octicon octicon-link"></span></a><span>Loading the proper module</span></h4><p><span>Click the black terminal icon in the top left corner of your screen</span></p><p><img src="https://i.imgur.com/Um1L4Kj.png" alt="" loading="lazy"></p><p><span>When the terminal opens, type the following commands to load Fiji into your workspace.</span></p><pre><code>module load anaconda3
+jupyter lab
+</code></pre><p><span>Running the commands above will open a browser</span></p><p><img src="https://i.imgur.com/WJb8t6i.png" alt="" loading="lazy"></p><p><span>The Anaconda3 installation available in BIL infrastructure has access to commonly used packages used in data analytics but it also has a list of unique packages commonly used in neuroscience like</span></p><ul>
+<li><span>allensdk</span></li>
+<li><span>biopython</span></li>
+<li><span>bokeh</span></li>
+<li><span>Dask</span></li>
+<li><span>napari</span></li>
+<li><span>nilearni</span></li>
+<li><span>neuron</span></li>
+<li><span>pandas</span></li>
+<li><span>pytorch</span></li>
+<li><span>scikit-image</span></li>
+<li><span>scikit-learn</span></li>
+<li><span>starfish</span></li>
+<li><span>Theano</span></li>
+</ul><p><span>To see a full list of packages of packages, run the command in terminal</span></p><pre><code>pip list
+</code></pre><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> Nothing prevents you from downloading and installing your own Anaconda/Miniconda distro in your home directory. However, user supported is limited if you choose to do so.</span></p>
+<p><span>For more info, click </span><a href="https://docs.anaconda.com/anaconda/install/linux/" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p>
+</div><h4 id="Using-Jupyter-Notebooks-on-the-large-memory-nodes" data-id="Using-Jupyter-Notebooks-on-the-large-memory-nodes"><a class="anchor hidden-xs" href="#Using-Jupyter-Notebooks-on-the-large-memory-nodes" title="Using-Jupyter-Notebooks-on-the-large-memory-nodes"><span class="octicon octicon-link"></span></a><span>Using  Jupyter Notebooks on the large memory nodes</span></h4><p><span>This document explains how to run a Jupyter notebook on BIL using a Jupyter client on the workshop VM.</span></p><p><span>Follow the steps below to run a Jupyter notebook on using a Jupyter client on your local machine.</span></p><ol>
+<li><span>Login to the workshop VM using </span><code>x2go</code><span>.</span></li>
+<li><span>Load an anaconda module to put the latest version of anaconda and Jupyter in your path.</span></li>
+</ol><pre><code>module load anaconda3
+</code></pre><ol start="3">
+<li><span>Get a BIL compute node allocated for your use. Get a BIL compute node allocated for you by using the </span><code>interact</code><span> command. For example,</span></li>
+</ol><pre><code>interact -n 10 --mem=64Gb
+A command prompt will appear when your session begins
+"Ctrl+d" or "exit" will end your session
+</code></pre><ol start="5">
+<li><span>Find the hostname of the node you are running on</span><br>
+<span>You will need the hostname when you are mapping a port on your local machine to the port on BIL compute node. Find the hostname of the node you are on from the prompt, or type the hostname command.</span></li>
+</ol><pre><code>04:37:12 icaoberg@l001 ~ → hostname
+
+l001.pvt.bil.psc.edu
+</code></pre><ol start="6">
+<li><span>Start a Jupyter notebook and find the port number and token</span><br>
+<span>Start a Jupyter notebook.  From the output of that command, find the port that you are running on and your token.  Pay attention to the port number you are given.  You will need it to make the connection between the compute node and the workshop VM.</span></li>
+</ol><p><span>The port number Jupyter uses on the compute node can be different each time a notebook is started.  Jupyter will attempt first to use port 8888, but if it is taken – by a different Jupyter user for example – it increases the port number by one and tries again, and repeats this until it finds a free port. The one it settles on is the one it will report.</span></p><pre><code>jupyter notebook --no-browser --ip=0.0.0.0
+[W 2022-03-22 16:45:13.993 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-03-22 16:45:13.994 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2022-03-22 16:45:13.994 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2022-03-22 16:45:14.013 LabApp] JupyterLab extension loaded from /bil/packages/anaconda3/4.11.0/lib/python3.9/site-packages/jupyterlab
+[I 2022-03-22 16:45:14.013 LabApp] JupyterLab application directory is /bil/packages/anaconda3/4.11.0/share/jupyter/lab
+[I 16:45:14.024 NotebookApp] Serving notebooks from local directory: /bil/users/icaoberg
+[I 16:45:14.024 NotebookApp] Jupyter Notebook 6.4.5 is running at:
+[I 16:45:14.025 NotebookApp] http://l001.pvt.bil.psc.edu:8888/?token=6dd14be951e5717631f9646d292a7dae06c8173c1d850c1b
+[I 16:45:14.025 NotebookApp]  or http://127.0.0.1:8888/?token=6dd14be951e5717631f9646d292a7dae06c8173c1d850c1b
+[I 16:45:14.025 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:45:14.039 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///bil/users/icaoberg/.local/share/jupyter/runtime/nbserver-1022410-open.html
+    Or copy and paste one of these URLs:
+        http://l001.pvt.bil.psc.edu:8888/?token=6dd14be951e5717631f9646d292a7dae06c8173c1d850c1b
+     or http://127.0.0.1:8888/?token=6dd14be951e5717631f9646d292a7dae06c8173c1d850c1b
+</code></pre><ol start="7">
+<li><span>Map a port on your local machine to the port Jupyter is using on the BIL compute node. Open another terminal to map the port 8888 in the workshop VM machine to the port you are using (8888 in this example) on the compute node.  This is a bit of the chicken-and-the-egg situation: if you knew what node and what port you would end up on, you could have done the mapping on the first connection. But there is no way to know that a-priori.</span></li>
+</ol><p><span>In the new terminal type</span></p><pre><code>ssh -L &lt;local-port&gt;:&lt;compute-host-name&gt;:&lt;compute-node-port&gt; workshop.bil.psc.edu -l &lt;username&gt;
+</code></pre><p><span>You must use the correct compute node name and port that you have been allocated.  In this case, because you were connected to port 8888 on compute node r001, that command would look like</span></p><pre><code>ssh -L 8888:l001.pvt.bil.psc.edu:8888 workshop.bil.psc.edu -l icaoberg
+</code></pre><p><span>Here the localhost port is </span><code>8888</code><span>.  After the first </span><code>:</code><span> comes the long name of the compute node, a colon, and the port where Jupyter is running. Here, that string is </span><code>l001.pvt.bil.psc.edu:8888</code><span>.</span></p><ol start="8">
+<li><span>Open a browser window to connect to the Jupyter server. On the workshop VM machine, open a browser and point it to </span><code>http://localhost:8888</code><span>.</span></li>
+</ol><p><img src="https://i.imgur.com/TRFxBOz.png" alt="" loading="lazy"></p><p><span>You will be prompted to enter a token to make the connection.  Use the token given to when you started the Jupyter server on the BIL compute node (step 6 above).</span></p><p><img src="https://i.imgur.com/FD6AdCo.png" alt="" loading="lazy"></p><ol start="9">
+<li><span>When you are done, close your interactive session on BIL.</span></li>
+</ol><h3 id="Using-Matlab" data-id="Using-Matlab" style=""><a class="anchor hidden-xs" href="#Using-Matlab" title="Using-Matlab"><span class="octicon octicon-link"></span></a><span>Using Matlab</span></h3><p><span>If you wish to use Matlab, then please request permission to use it first by filling this </span><a href="https://www.psc.edu/resources/software/matlab/permission-form/" target="_blank" rel="noopener"><span>form</span></a><span>.</span></p><p><span>After getting access you can use it with</span></p><pre><code>module load matlab/2021a
+matlab -nosplash
+</code></pre><p><img src="https://i.imgur.com/PYjCKva.png" alt="" loading="lazy"></p><h3 id="Using-ITK-SNAP" data-id="Using-ITK-SNAP" style=""><a class="anchor hidden-xs" href="#Using-ITK-SNAP" title="Using-ITK-SNAP"><span class="octicon octicon-link"></span></a><span>Using ITK-SNAP</span></h3><p><span>ITK-SNAP is a software application used to segment structures in 3D medical images.</span></p><pre><code>module load itksnap/3.8.0
+itksnap
+</code></pre><p><img src="https://i.imgur.com/WLRsLk4.png" alt="" loading="lazy"></p><h3 id="Installing-and-using-SimpleITK" data-id="Installing-and-using-SimpleITK" style=""><a class="anchor hidden-xs" href="#Installing-and-using-SimpleITK" title="Installing-and-using-SimpleITK"><span class="octicon octicon-link"></span></a><span>Installing and using SimpleITK</span></h3><img src="https://itk.org/Wiki/images/9/95/SimpleITK-SquareTransparentLogo.png" width="25%"><pre><code>module load anaconda3/4.11.0
+python -m venv .
+source ./bin/activate
+pip install numpy scipy SimpleITK
+</code></pre><p><span>For example, to load an image as a numpy array</span></p><pre><code>import SimpleITK as sitk
+import numpy as np
+
+file = '/bil/data/hackathon/2022_GYBS/data/subject/201606_red_mm_RSA.nii.gz'
+image = sitk.ReadImage(file)
+arr = sitk.GetArrayFromImage(image)
+</code></pre><p><span>If you are using iPython you can confirm this</span></p><pre><code>In [2]: whos                                                                                         
+Variable   Type       Data/Info
+-------------------------------
+arr        ndarray    1090x942x997: 1023699660 elems, type `uint8`, 1023699660 bytes (976.2760734558105 Mb)
+file       str        /bil/data/hackathon/2022_&lt;...&gt;/201606_red_mm_RSA.nii.gz
+image      Image      Image (0x55faa4652f50)\n &lt;...&gt;   Capacity: 1023699660\n
+np         module     &lt;module 'numpy' from '/bi&lt;...&gt;kages/numpy/__init__.py'&gt;
+sitk       module     &lt;module 'SimpleITK' from &lt;...&gt;s/SimpleITK/__init__.py'&gt;
+</code></pre><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> If you are working in virtual environment you might also want to install other useful libraries like</span></p>
+<pre><code>pip install matplotlib scipy pandas
+</code></pre>
+</div><h3 id="Installing-ITK" data-id="Installing-ITK" style=""><a class="anchor hidden-xs" href="#Installing-ITK" title="Installing-ITK"><span class="octicon octicon-link"></span></a><span>Installing ITK</span></h3><img src="https://itk.org/wp-content/uploads/2019/10/ITK_Logo_Large-300x143.png"><pre><code>module load anaconda3/4.11.0
+pip install --user itk
+</code></pre><p><span>or</span></p><pre><code>module load anaconda3/4.11.0
+python -m venv .
+source ./bin/activate
+pip install itk
+</code></pre><p><span>For a quick guide to ITK please visit </span><a href="https://itkpythonpackage.readthedocs.io/en/master/Quick_start_guide.html" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><p><span>For example, to read an image</span></p><pre><code>import itk
+import numpy as np
+
+# Read input image
+file = '/bil/data/hackathon/2022_GYBS/data/subject/201606_red_mm_RSA.nii.gz'
+itk_image = itk.imread(file)
+
+# View only of itk.Image, pixel data is not copied
+np_view = itk.array_view_from_image(itk_image)
+</code></pre><p><span>If you are using iPython you can confirm this</span></p><pre><code>Variable    Type              Data/Info
+---------------------------------------
+file        str               /bil/data/hackathon/2022_&lt;...&gt;/201606_red_mm_RSA.nii.gz
+itk         LazyITKModule     &lt;module 'itk' from '/bil/&lt;...&gt;ackages/itk/__init__.py'&gt;
+itk_image   itkImageUC3       Image (0x5653b5da85f0)\n &lt;...&gt;   Capacity: 1023699660\n
+np          module            &lt;module 'numpy' from '/bi&lt;...&gt;kages/numpy/__init__.py'&gt;
+np_view     NDArrayITKBase    [[[0 0 0 ... 0 0 0]\n  [0&lt;...&gt;0]\n  [0 0 0 ... 0 0 0]]]
+</code></pre><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> If you are working in virtual environment you might also want to install other useful libraries like</span></p>
+<pre><code>pip install matplotlib scipy pandas
+</code></pre>
+</div><h3 id="Installing-nibabel" data-id="Installing-nibabel" style=""><a class="anchor hidden-xs" href="#Installing-nibabel" title="Installing-nibabel"><span class="octicon octicon-link"></span></a><span>Installing nibabel</span></h3><p><img src="https://nipy.org/nibabel/_static/nibabel-logo.svg"><br><br>
+<span>Read/write access to some common neuroimaging file formats.</span></p><pre><code>module load anaconda3/4.11.0
+pip install --user nibabel
+</code></pre><p><span>or</span></p><pre><code>module load anaconda3/4.11.0
+python -m venv .
+source ./bin/activate
+pip install nibabel
+</code></pre><h3 id="Installing-cwltool" data-id="Installing-cwltool" style=""><a class="anchor hidden-xs" href="#Installing-cwltool" title="Installing-cwltool"><span class="octicon octicon-link"></span></a><span>Installing cwltool</span></h3><img src="https://repository-images.githubusercontent.com/43816051/ba006580-04d7-11eb-9bab-c6463ba5022b" width="30%"><pre><code>module load anaconda3/4.11.0
+pip install --user cwltool cwlref-runner
+</code></pre><p><span>or</span></p><pre><code>module load anaconda3/4.11.0
+python -m venv .
+source ./bin/activate
+pip install cwltool cwlref-runner
+</code></pre><h3 id="Installing-spyder" data-id="Installing-spyder" style=""><a class="anchor hidden-xs" href="#Installing-spyder" title="Installing-spyder"><span class="octicon octicon-link"></span></a><span>Installing </span><code>spyder</code></h3><p><span>Spyder is a free and open source scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.</span></p><pre><code>export QT_XCB_GL_INTEGRATION=none
+module load anaconda3/4.11.0
+python3 -m venv .
+source ./bin/activate
+pip install spyder
+spyder
+</code></pre><p><img src="https://i.imgur.com/mc56akf.png" alt="" loading="lazy"></p><h2 id="Exercises" data-id="Exercises" style=""><a class="anchor hidden-xs" href="#Exercises" title="Exercises"><span class="octicon octicon-link"></span></a><span>Exercises</span></h2><h3 id="Exercise-0-Submit-a-job-using-OpenOnDemand" data-id="Exercise-0-Submit-a-job-using-OpenOnDemand" style=""><a class="anchor hidden-xs" href="#Exercise-0-Submit-a-job-using-OpenOnDemand" title="Exercise-0-Submit-a-job-using-OpenOnDemand"><span class="octicon octicon-link"></span></a><span>Exercise 0. Submit a job using OpenOnDemand</span></h3><p><img src="https://i.imgur.com/2XE2OGe.png" alt="" loading="lazy"></p><p><img src="https://i.imgur.com/EdCHSoS.png" alt="" loading="lazy"></p><h3 id="Exercise-0-Hello-World-on-Jupyter-Lab" data-id="Exercise-0-Hello-World-on-Jupyter-Lab" style=""><a class="anchor hidden-xs" href="#Exercise-0-Hello-World-on-Jupyter-Lab" title="Exercise-0-Hello-World-on-Jupyter-Lab"><span class="octicon octicon-link"></span></a><span>Exercise 0. </span><code>Hello, World!</code><span> on Jupyter Lab</span></h3><h3 id="Exercise-1-Load-and-combine-images-in-Fiji" data-id="Exercise-1-Load-and-combine-images-in-Fiji" style=""><a class="anchor hidden-xs" href="#Exercise-1-Load-and-combine-images-in-Fiji" title="Exercise-1-Load-and-combine-images-in-Fiji"><span class="octicon octicon-link"></span></a><span>Exercise 1. Load and combine images in Fiji</span></h3><h4 id="Loading-the-proper-module1" data-id="Loading-the-proper-module"><a class="anchor hidden-xs" href="#Loading-the-proper-module1" title="Loading-the-proper-module1"><span class="octicon octicon-link"></span></a><span>Loading the proper module</span></h4><p><span>Click the black terminal icon in the top left corner of your screen</span><br>
+<img src="https://i.imgur.com/sIGIxvP.png" alt="" loading="lazy"></p><p><span>When the terminal opens, type the following commands to load Fiji into your workspace.</span></p><pre><code>module load fiji
+fiji
+</code></pre><p><span>The first time running these commands, the system will install Fiji in your home directory.</span></p><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> If the font size in your terminal is too small, you can press CTRL and + to increase the font size.</span></p>
+<p><img src="https://i.imgur.com/Ch82FcC.png" alt="" loading="lazy"></p>
+</div><p><span>After running the commands above, a toolbar should appear in your screen, similar to the picture below</span></p><p><img src="https://i.imgur.com/My93FBc.png" alt="" loading="lazy"></p><h4 id="Update-Fiji-optional" data-id="Update-Fiji-optional"><a class="anchor hidden-xs" href="#Update-Fiji-optional" title="Update-Fiji-optional"><span class="octicon octicon-link"></span></a><span>Update Fiji (optional)</span></h4><p><img src="https://i.imgur.com/FAnec4v.png" alt="" loading="lazy"></p><p><span>and then update the plugins</span></p><p><img src="https://i.imgur.com/xgYtNKm.png" alt="" loading="lazy"></p><h4 id="Loading-the-first-channel" data-id="Loading-the-first-channel"><a class="anchor hidden-xs" href="#Loading-the-first-channel" title="Loading-the-first-channel"><span class="octicon octicon-link"></span></a><span>Loading the first channel</span></h4><p><span>On the “(Fiji Is Just) ImageJ” window select menu</span></p><pre><code>[PLUGINS]-&gt;[BIOFORMATS][BIOFORMATS-IMPORTER]
+</code></pre><p><img src="https://i.imgur.com/JjAc2xQ.png" alt="" loading="lazy"></p><p><span>Click on FILE SYSTEM in the PLACES sidebar and navigate to</span></p><pre><code>/bil/workshops/2021/data_submission/data/fiji/stitchedImage_ch1
+</code></pre><p><img src="https://i.imgur.com/5VA6Yvh.png" alt="" loading="lazy"></p><p><span>then click on</span></p><pre><code>StitchedImage_Z001_L001.jp2
+</code></pre><p><img src="https://i.imgur.com/QbkvvMg.png" alt="" loading="lazy"></p><p><span>On the “Bio-Formats Input Options” popup select</span></p><p><img src="https://i.imgur.com/5aHcipk.png" alt="" loading="lazy"></p><p><span>-View Stack with Hyperstack</span><br>
+<span>-Group files with similar names</span><br>
+<span>-Color mode: Custom</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Bio-Formats File Stitching” popup select</span></p><p><img src="https://i.imgur.com/JNNfG3e.png" alt="" loading="lazy"></p><p><span>-Axis 1 number of images enter 5</span><br>
+<span>-Axis 1 axis first image enter 1</span><br>
+<span>-Axis 1 axis increment enter 54</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Bio-Formats Series Options” popup select</span></p><p><img src="https://i.imgur.com/pVvsSnM.png" alt="" loading="lazy"></p><p><span>-Series 1 (8557x11377)</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Bio-Formats Custom Colorization” popup select</span></p><p><img src="https://i.imgur.com/2Z9qVJ3.png" alt="" loading="lazy"></p><p><span>-Series 0 channel 0 Red 255</span><br>
+<span>-Click [OK]</span></p><h4 id="Loading-the-second-channel" data-id="Loading-the-second-channel"><a class="anchor hidden-xs" href="#Loading-the-second-channel" title="Loading-the-second-channel"><span class="octicon octicon-link"></span></a><span>Loading the second channel</span></h4><p><span>We will follow a similar procedure as the first channel</span></p><p><span>On the “(Fiji Is Just) ImageJ” window select</span></p><pre><code>[PLUGINS]-&gt;[BIOFORMATS][BIOFORMATS-IMPORTER]
+</code></pre><p><img src="https://i.imgur.com/0SERFvc.png" alt="" loading="lazy"></p><p><span>Click on FILE SYSTEM in the PLACES sidebar and navigate to</span></p><pre><code>/bil/workshops/2021/data_submission/data/fiji/stitchedImage_ch2
+</code></pre><p><span>then click on</span></p><pre><code>StitchedImage_Z001_L001.jp2
+</code></pre><p><span>On the “Bio-Formats Input Options” popup select</span></p><p><img src="https://i.imgur.com/cJxaa2T.png" alt="" loading="lazy"></p><p><span>-View Stack with Hyperstack</span><br>
+<span>-Group files with similar names</span><br>
+<span>-Do Not Use virtual stack</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Bio-Formats File Stitching” popup select</span></p><p><img src="https://i.imgur.com/JFYPnqG.png" alt="" loading="lazy"></p><p><span>-Axis 1 number of images enter 5</span><br>
+<span>-Axis 1 axis first image enter 1</span><br>
+<span>-Axis 1 axis increment enter 54</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Bio-Formats Series Options” popup select</span></p><p><span>-Series 1 (8557x11377)</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Bio-Formats Custom Colorization” popup select</span></p><p><img src="https://i.imgur.com/BBchtcY.png" alt="" loading="lazy"></p><p><span>-Series 0 channel 0 Red 255</span><br>
+<span>-Click [OK]</span></p><h4 id="Merge-2-channels-into-one" data-id="Merge-2-channels-into-one"><a class="anchor hidden-xs" href="#Merge-2-channels-into-one" title="Merge-2-channels-into-one"><span class="octicon octicon-link"></span></a><span>Merge 2 channels into one</span></h4><p><img src="https://i.imgur.com/YZ9bwQl.png" alt="" loading="lazy"></p><p><span>On the “(Fiji Is Just) ImageJ” window select</span></p><p><img src="https://i.imgur.com/mtCheNq.png" alt="" loading="lazy"></p><p><img src="https://i.imgur.com/mQlAPEL.png" alt="" loading="lazy"></p><pre><code>[IMAGE]-&gt;[COLOR]-&gt;[MERGE-CHANNELS]
+</code></pre><p><span>-For C1 (red) select the first item</span><br>
+<span>-For C2 (green) select the second item</span><br>
+<span>-Click [OK]</span></p><p><img src="https://i.imgur.com/RRr8mxn.png" alt="" loading="lazy"></p><h4 id="Adjust-BrightnessContrast" data-id="Adjust-BrightnessContrast"><a class="anchor hidden-xs" href="#Adjust-BrightnessContrast" title="Adjust-BrightnessContrast"><span class="octicon octicon-link"></span></a><span>Adjust Brightness/Contrast</span></h4><p><span>On the “(Fiji Is Just) ImageJ” window select</span></p><p><img src="https://i.imgur.com/59f7aOx.png" alt="" loading="lazy"></p><pre><code>[IMAGE]-&gt;[ADJUST]-&gt;[BRIGHTNESS/CONTRAST]
+</code></pre><p><span>On the “B&amp;C” popup window</span></p><p><img src="https://i.imgur.com/BARkZPe.png" alt="" loading="lazy"></p><p><span>-Set brightness to max</span><br>
+<span>-Set contrast to max</span><br>
+<span>-Click on [Set] button</span></p><p><span>On “Set Display Range” Popup window</span></p><p><img src="https://i.imgur.com/n9x0PmR.png" alt="" loading="lazy"></p><p><span>-Set min=0</span><br>
+<span>-Set max=1500</span><br>
+<span>-Check propagate to all other open windows</span><br>
+<span>-Click [OK]</span></p><p><img src="https://i.imgur.com/82W7NOA.png" alt="" loading="lazy"></p><h4 id="View-Composite-Z-stack-and-zoom" data-id="View-Composite-Z-stack-and-zoom"><a class="anchor hidden-xs" href="#View-Composite-Z-stack-and-zoom" title="View-Composite-Z-stack-and-zoom"><span class="octicon octicon-link"></span></a><span>View Composite Z stack and zoom</span></h4><p><img src="https://i.imgur.com/yiHQj1q.jpg" alt="" loading="lazy"></p><p><span>On the “Composite” window:</span></p><p><span>-Move the “Z” slider slowly to the right/left to view the Z stack.</span><br>
+<span>-Move the mouse cursor (+) to the top-left of an area that is interesting.</span><br>
+<span>-While clicking the left mouse button drag the selection box to the right and down.</span><br>
+<span>-Move the mouse cursor to the center of the box.</span><br>
+<span>-Click on the plus key to zoom in, - to zoom out</span><br>
+<span>-To get back to the original resolution, move the mouse cursor to outside the selection box. Click on the right mouse button. Select “Original Scale”</span></p><h4 id="To-Save-the-combined-channel-images" data-id="To-Save-the-combined-channel-images"><a class="anchor hidden-xs" href="#To-Save-the-combined-channel-images" title="To-Save-the-combined-channel-images"><span class="octicon octicon-link"></span></a><span>To Save the combined-channel images</span></h4><p><span>On the “(Fiji Is Just) ImageJ” window select</span></p><p><img src="https://i.imgur.com/ULOgY4J.png" alt="" loading="lazy"></p><pre><code>[FILE]-&gt;[SAVE AS]-&gt;[IMAGE SEQUENCE]
+</code></pre><p><span>On the “Save Image Sequence” popup set values</span></p><p><img src="https://i.imgur.com/DFoayhg.png" alt="" loading="lazy"><br>
+<span>-Format: TIFF</span><br>
+<span>-Click [OK]</span></p><p><span>On the “Save Image Sequence” popup set values</span></p><p><span>-Set DIR - to someplace where you can save (e.g. /bil/home/$USER or your Desktop)</span><br>
+<span>-Set the name</span><br>
+<span>-Click [OK]</span></p><h4 id="To-make-an-animated-thumbnail" data-id="To-make-an-animated-thumbnail"><a class="anchor hidden-xs" href="#To-make-an-animated-thumbnail" title="To-make-an-animated-thumbnail"><span class="octicon octicon-link"></span></a><span>To make an animated thumbnail</span></h4><p><span>On the “(Fiji Is Just) ImageJ” window select</span><br>
+<img src="https://i.imgur.com/v2NyJ10.png" alt="" loading="lazy"></p><pre><code>[Image]-&gt;[Type]-&gt;[RGB Color]
+</code></pre><p><span>On the “Convert to RGB” window select</span></p><p><img src="https://i.imgur.com/49XYWOh.png" alt="" loading="lazy"></p><p><span>-Slices(5)</span><br>
+<span>-Keep Source</span><br>
+<span>-Click [OK]</span></p><p><span>The Image now needs to be downsized.</span></p><p><span>On the “(Fiji Is Just) ImageJ” window select</span></p><p><img src="https://i.imgur.com/3j9oAcj.png" alt="" loading="lazy"></p><pre><code>[IMAGE]-&gt;[SCALE]
+</code></pre><p><span>-Delete the “Width (pixels)” value and replace with the value 480.</span><br>
+<span>-The Height should automatically be set at 638.</span><br>
+<span>-Set the Title to be “Composite-small”</span><br>
+<span>-Click [OK]</span></p><p><img src="https://i.imgur.com/vp0eLRC.png" alt="" loading="lazy"></p><p><span>The next step is to save the reduced size animated thumbnail.</span></p><p><span>On the “(Fiji Is Just) ImageJ” window select</span><br>
+<img src="https://i.imgur.com/mN3BA2W.png" alt="" loading="lazy"></p><pre><code>[IMAGE]-&gt;[STACKS]-&gt;[ANIMATIONS]-&gt;[ANIMATION OPTIONS]
+</code></pre><p><span>On the “Animation Options” popup set</span></p><p><img src="https://i.imgur.com/y3NtJDE.png" alt="" loading="lazy"><br>
+<span>-Speed to 2</span><br>
+<span>-Click [OK]</span></p><p><span>On the “(Fiji Is Just) ImageJ” window select</span></p><p><img src="https://i.imgur.com/76lYWqB.png" alt="" loading="lazy"></p><pre><code>[FILE]-&gt;[SAVE AS]-&gt;[GIF]
+</code></pre><p><span>On the “Save as GIF” popup, select a directory and filename then click save</span></p><p><img src="https://i.imgur.com/ewDw5Fa.png" alt="" loading="lazy"></p><p><span>If you want to check out the saved gif file, then double click on the file in your desktop to open it with the default viewer.</span></p><p><span>Close Fiji.</span></p><h3 id="Exercise-2-Contrast-stretching-with-ImageMagick" data-id="Exercise-2-Contrast-stretching-with-ImageMagick" style=""><a class="anchor hidden-xs" href="#Exercise-2-Contrast-stretching-with-ImageMagick" title="Exercise-2-Contrast-stretching-with-ImageMagick"><span class="octicon octicon-link"></span></a><span>Exercise 2. Contrast-stretching with ImageMagick</span></h3><p><span>This exercise is trying to tie up together all the concepts discussed in this workshop.</span></p><p><span>Imagine we are interested in collection </span><code>84c11fe5e4550ca0</code><span> that I found in the portal</span></p><p><img src="https://i.imgur.com/pTX96xE.jpg" alt="" loading="lazy"></p><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> There is no need to download the data locally because the data is available when you our resources.</span></p>
+</div><p><img src="https://i.imgur.com/TMhoZTw.png" alt="" loading="lazy"><br>
+<em><span>I can navigate to </span><code>/bil/data/84/c1/84c11fe5e4550ca0/</code><span> to see the contents of the collection.</span></em></p><p><span>Unbfortuntaly it is difficult to visually inspect the images because these are not contrast stretched.</span></p><p><img src="https://i.imgur.com/WzYR67M.png" alt="" loading="lazy"><br>
+<em><span>The images are not contrast stretched and cannot be visually inspected.</span></em></p><p><span>Fortunately there are tools like Fiji that can contrast stretch the images. However I want to do this in batch mode as a job since this process can be automated.</span></p><p><img src="https://i.imgur.com/Z6AcrjZ.jpg" alt="" loading="lazy"><br>
+<a href="https://imagemagick.org/index.php" target="_blank" rel="noopener"><span>ImageMagick</span></a><span> is a robust library for image manipulation. The </span><code>convert</code><span> tool in this library has an option to </span><a href="https://imagemagick.org/script/command-line-options.php#contrast-stretch" target="_blank" rel="noopener"><span>contrast-stretching</span></a><span>.</span></p><p><span>The format is</span></p><pre><code>convert &lt;input-file&gt; -contrast-stretch  &lt;output-file&gt;
+</code></pre><p><span>Next I will create a file called </span><code>script.sh</code><span> and will place it in a folder in my Desktop.</span></p><pre><code>#!/bin/bash
+
+#this line is needed to be able to use modules on the compute nodes
+source /etc/profile.d/modules.sh
+
+#this command loads the ImageMagick library
+module load ImageMagick/7.1.0-2
+
+#this for loop finds all the images in the sample folder and contrast-stretch
+for FILE in /bil/data/84/c1/84c11fe5e4550ca0/SW170711-04A/*tif
+do
+	convert $FILE -contrast-stretch 15% $(basename $FILE)
+done
+</code></pre><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> For simplicity, you can find the script above in</span></p>
+<pre><code>/bil/workshops/2022/data_submission
+</code></pre>
+<p><span>to copy the script to your Desktop run the command in terminal</span></p>
+<pre><code>cp /bil/workshops/2022/data_submission/script.sh ~/Desktop/
+</code></pre>
+</div><p><span>Next I can submit my script using the command</span></p><pre><code>sbatch -p compute --mem=64Gb script.sh
+</code></pre><p><span>Since I am doing serially I don’t need much memory but if I were to do this in parallel I might.</span></p><p><span>To monitor your job progress use the command </span><code>squeue -u &lt;username&gt;</code><span>. For example,</span></p><pre><code>squeue -u icaoberg
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             14243   compute script.s icaoberg  R      15:34      1 l001`
+</code></pre><p><span>This leads to</span></p><p><img src="https://i.imgur.com/uHB0Vr6.png" alt="" loading="lazy"></p><h3 id="Exercise-3-vaa3D" data-id="Exercise-3-vaa3D" style=""><a class="anchor hidden-xs" href="#Exercise-3-vaa3D" title="Exercise-3-vaa3D"><span class="octicon octicon-link"></span></a><span>Exercise 3. vaa3D</span></h3><h5 id="Finding-available-tools" data-id="Finding-available-tools"><a class="anchor hidden-xs" href="#Finding-available-tools" title="Finding-available-tools"><span class="octicon octicon-link"></span></a><span>Finding available tools</span></h5><p><span>To list all available tools, run the command</span></p><pre><code>module avail
+
+----------------------------------------------------------- /bil/modulefiles -----------------------------------------------------------
+anaconda/3.2019.7             c-blosc/1.19.0(default)       knime/4.3.2                   raw2ometiff/0.2.6(default)
+anaconda3/4.9.2               fiji/1.53h                    lazygit/0.22.9                samtools/1.9(default)
+aspera/3.9.6(default)         htslib/1.9(default)           md5deep/4.4                   scala/2.13.5
+bcftools/1.9(default)         ilastik/1.3.3                 openjpeg/2.3.0(default)       singularity/3.7.0
+bioformats/6.0.1              imagej-fiji/1.52p             openslide/3.4.1               vaa3d/3.601
+bioformats/6.1.1              java/jdk8u201                 p7zip/16.02                   xxhash/0.8.0
+bioformats/6.4.0              java/jdk8u211                 picard/2.20.2(default)
+bioformats/6.5.1(default)     java/jdk8u241(default)        R/3.5.1
+bioformats2raw/0.2.4(default) julia/1.0.5                   R/3.6.3
+</code></pre><p><span>To see all the installed versions of a specific package, e.g. java, run the command</span></p><pre><code>module avail java
+
+----------------------------------------------------------- /bil/modulefiles -----------------------------------------------------------
+java/jdk8u201          java/jdk8u211          java/jdk8u241(default)
+</code></pre><p><span>Running the module load command without specifying a version will load the default version of the software. For example, running</span></p><pre><code>module load java
+</code></pre><p><span>will load Java JDK8u241.</span></p><h4 id="Loading-the-proper-module2" data-id="Loading-the-proper-module"><a class="anchor hidden-xs" href="#Loading-the-proper-module2" title="Loading-the-proper-module2"><span class="octicon octicon-link"></span></a><span>Loading the proper module</span></h4><p><span>Click the black terminal icon in the top left corner of your screen</span></p><p><img src="https://i.imgur.com/hnJnQRA.png" alt="" loading="lazy"></p><p><span>When the terminal opens, type the following commands to load Fiji into your workspace.</span></p><pre><code>module load vaa3d
+vaa3d
+</code></pre><p><span>Running the command above will start the tool</span></p><p><img src="https://i.imgur.com/nd77Rwu.png" alt="" loading="lazy"></p><p><span>For explorations, you can find some examples in</span></p><pre><code>/bil/workshops/2021/data_submission/data/vaa3d
+</code></pre><h3 id="Exercise-4-Building-a-Singularity-container" data-id="Exercise-4-Building-a-Singularity-container" style=""><a class="anchor hidden-xs" href="#Exercise-4-Building-a-Singularity-container" title="Exercise-4-Building-a-Singularity-container"><span class="octicon octicon-link"></span></a><span>Exercise 4. Building a Singularity container</span></h3><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> You can find a vetted list of Singularity containers  maintained by PSC, </span><a href="https://github.com/pscedu/singularity" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p>
+</div><p><span>In this example we will build a Singularity container using ther remote builder on </span><a href="http://sylabs.io" target="_blank" rel="noopener"><span>SyLabs.io</span></a><span>.</span></p><p><span>Choose a location in your home directory, and run the following commands</span></p><div class="alert alert-warning">
+<p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> You might to setup your SSH key or GitHub personal access token to clone the repo below. For more information click </span><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p>
+</div><pre><code class="hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code">git clone git@github.com:pscedu/singularity-bioformats2raw.git
+cd singularity-bioformats2raw/3.0.0
+singularity build --remote bioformats2raw.sif Singularity
+</div></div></code></pre><p><span>This will create a local Singularity image file named </span><code>bioformats2raw.sif</code><span>.</span></p><p><span>Since you have access to the definition file</span></p><pre><code>Bootstrap: docker
+From: debian:stretch
+
+%labels
+    AUTHOR icaoberg
+    EMAIL icaoberg@psc.edu
+    SUPPORT help@psc.edu
+    WEBSITE http://github.com/icaoberg/singularity-bioformats2raw
+    COPYRIGHT Copyright © 2021 Pittsburgh Supercomputing Center. All Rights Reserved. 
+    VERSION 3.0.0
+
+%post
+    apt update
+    apt install -y libblosc1 wget unzip default-jdk
+    cd /opt/
+    wget -nc https://github.com/glencoesoftware/bioformats2raw/releases/download/v0.3.0/bioformats2raw-0.3.0.zip
+    unzip bioformats2raw-0.3.0.zip &amp;&amp; rm -f bioformats2raw-0.3.0.zip
+    ln -s /opt/bioformats2raw-0.3.0/bin/bioformats2raw /usr/local/bin/bioformats2raw
+    apt remove -y wget unzip
+    apt clean
+</code></pre><p><span>you can tell the binary </span><code>bioformats2raw</code><span> is available in the container.</span></p><p><span>To use it, run</span></p><pre><code class="hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">module load java
+singularity exec -B /bil bioformats2raw.sif bioformats2raw --help
+
+Missing required parameters: '&lt;inputPath&gt;', '&lt;outputLocation&gt;'
+Usage: &lt;main class&gt; [-p] [--no-hcs] [--[no-]nested] [--no-ome-meta-export]
+                    [--no-root-group] [--overwrite]
+                    [--use-existing-resolutions] [--version] [--debug
+                    [=&lt;logLevel&gt;]] [--extra-readers[=&lt;extraReaders&gt;[,
+                    &lt;extraReaders&gt;...]]]... [--options[=&lt;readerOptions&gt;[,
+                    &lt;readerOptions&gt;...]]]... [-s[=&lt;seriesList&gt;[,
+                    &lt;seriesList&gt;...]]]...
+                    [--additional-scale-format-string-args=&lt;additionalScaleForma
+                    tStringArgsCsv&gt;] [-c=&lt;compressionType&gt;]
+                    [--dimension-order=&lt;dimensionOrder&gt;]
+                    [--downsample-type=&lt;downsampling&gt;]
+                    [--fill-value=&lt;fillValue&gt;] [-h=&lt;tileHeight&gt;]
+                    [--max_cached_tiles=&lt;maxCachedTiles&gt;]
+                    [--max_workers=&lt;maxWorkers&gt;]
+                    [--memo-directory=&lt;memoDirectory&gt;]
+                    [--pixel-type=&lt;outputPixelType&gt;]
+                    [--pyramid-name=&lt;pyramidName&gt;] [-r=&lt;pyramidResolutions&gt;]
+                    [--scale-format-string=&lt;scaleFormatString&gt;]
+                    [-w=&lt;tileWidth&gt;] [-z=&lt;chunkDepth&gt;]
+                    [--compression-properties=&lt;String=Object&gt;]...
+                    [--output-options=&lt;String=String&gt;[\|&lt;String=String&gt;...]]...
+                    &lt;inputPath&gt; &lt;outputLocation&gt;
+      &lt;inputPath&gt;            file to convert
+      &lt;outputLocation&gt;       path to the output pyramid directory. The given
+                               path can also be a URI (containing ://) which
+                               will activate **experimental** support for
+                               Filesystems. For example, if the output path
+                               given is 's3://my-bucket/some-path' *and* you
+                               have an S3FileSystem implementation in your
+                               classpath, then all files will be written to S3.
+      --additional-scale-format-string-args=&lt;additionalScaleFormatStringArgsCsv&gt;
+                             Additional format string argument CSV file
+                               (without header row).  Arguments will be added
+                               to the end of the scale format string mapping
+                               the at the corresponding CSV row index.  It is
+                               expected that the CSV file contain exactly the
+                               same number of rows as the input file has series
+  -c, --compression=&lt;compressionType&gt;
+                             Compression type for Zarr (null, zlib, blosc;
+                               default: blosc)
+      --compression-properties=&lt;String=Object&gt;
+                             Properties for the chosen compression (see https:
+                               //jzarr.readthedocs.io/en/latest/tutorial.
+                               html#compressors )
+      --debug, --log-level[=&lt;logLevel&gt;]
+                             Change logging level; valid values are OFF, ERROR,
+                               WARN, INFO, DEBUG, TRACE and ALL. (default: WARN)
+      --dimension-order=&lt;dimensionOrder&gt;
+                             Override the input file dimension order in the
+                               output file [Can break compatibility with
+                               raw2ometiff] (XYZCT, XYZTC, XYCTZ, XYCZT, XYTCZ,
+                               XYTZC)
+      --downsample-type=&lt;downsampling&gt;
+                             Tile downsampling algorithm (SIMPLE, GAUSSIAN,
+                               AREA, LINEAR, CUBIC, LANCZOS)
+      --extra-readers[=&lt;extraReaders&gt;[,&lt;extraReaders&gt;...]]
+                             Separate set of readers to include; (default:
+                               [class com.glencoesoftware.bioformats2raw.
+                               PyramidTiffReader, class com.glencoesoftware.
+                               bioformats2raw.MiraxReader])
+      --fill-value=&lt;fillValue&gt;
+                             Default value to fill in for missing tiles (0-255)
+                               (currently .mrxs only)
+  -h, --tile_height=&lt;tileHeight&gt;
+                             Maximum tile height to read (default: 1024)
+      --max_cached_tiles=&lt;maxCachedTiles&gt;
+                             Maximum number of tiles that will be cached across
+                               all workers (default: 64)
+      --max_workers=&lt;maxWorkers&gt;
+                             Maximum number of workers (default: 4)
+      --memo-directory=&lt;memoDirectory&gt;
+                             Directory used to store .bfmemo cache files
+      --no-hcs               Turn off HCS writing
+      --[no-]nested          Whether to use '/' as the chunk path seprator
+                               (true by default)
+      --no-ome-meta-export   Turn off OME metadata exporting [Will break
+                               compatibility with raw2ometiff]
+      --no-root-group        Turn off creation of root group and corresponding
+                               metadata [Will break compatibility with
+                               raw2ometiff]
+      --options[=&lt;readerOptions&gt;[,&lt;readerOptions&gt;...]]
+                             Reader-specific options, in format key=value[,
+                               key2=value2]
+      --output-options=&lt;String=String&gt;[\|&lt;String=String&gt;...]
+                             |-separated list of key-value pairs to be used as
+                               an additional argument to Filesystem
+                               implementations if used. For example,
+                               --output-options=s3fs_path_style_access=true|...
+                               might be useful for connecting to minio.
+      --overwrite            Overwrite the output directory if it exists
+      --pixel-type=&lt;outputPixelType&gt;
+                             Pixel type to write if input data is  float or
+                               double (int8, int16, int32, uint8, uint16,
+                               uint32, float, double, complex, double-complex,
+                               bit)
+      --pyramid-name=&lt;pyramidName&gt;
+                             Name of pyramid (default: null) [Can break
+                               compatibility with raw2ometiff]
+  -r, --resolutions=&lt;pyramidResolutions&gt;
+                             Number of pyramid resolutions to generate
+  -s, --series[=&lt;seriesList&gt;[,&lt;seriesList&gt;...]]
+                             Comma-separated list of series indexes to convert
+      --scale-format-string=&lt;scaleFormatString&gt;
+                             Format string for scale paths; the first two
+                               arguments will always be series and resolution
+                               followed by any additional arguments brought in
+                               from `--additional-scale-format-string-args`
+                               [Can break compatibility with raw2ometiff]
+                               (default: %d/%d)
+      --use-existing-resolutions
+                             Use existing sub resolutions from original input
+                               format[Will break compatibility with raw2ometiff]
+  -w, --tile_width=&lt;tileWidth&gt;
+                             Maximum tile width to read (default: 1024)
+  -z, --chunk_depth=&lt;chunkDepth&gt;
+                             Maximum chunk depth to read (default: 1)
+  -p, --progress             Print progress bars during conversion
+      --version              Print version information and exit
+</div></div></code></pre><div class="alert alert-info">
+<p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> The flag </span><code>-B /bil</code><span> is important, please use it everytime you run a container in the Brain Image Library Systems.</span></p>
+</div><p><span>To run the application in the container simply run</span></p><pre><code class="hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code">module load java
+singularity exec -B /bil bioformats2raw.sif bioformats2raw /bil/data/hackathon/2022_GYBS/lightsheet/subject/subject0_25.nii.gz raw/
+</div></div></code></pre><p><span>also try</span></p><pre><code class="hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code">module load java
+singularity exec -B /bil bioformats2raw.sif bioformats2raw /bil/data/hackathon/2022_GYBS/lightsheet/subject/subject0_25.nii.gz raw2/ --resolutions 6
+</div></div></code></pre><p><span>The command above will convert the image </span><code>/bil/data/hackathon/2022_GYBS/lightsheet/subject/subject0_25.nii.gz</code><span> to a Zarr file format in the folder </span><code>raw/</code><span>.</span></p><h3 id="Exercise-5-Trying-the-Napari-BIL-Data-Viewer" data-id="Exercise-5-Trying-the-Napari-BIL-Data-Viewer" style=""><a class="anchor hidden-xs" href="#Exercise-5-Trying-the-Napari-BIL-Data-Viewer" title="Exercise-5-Trying-the-Napari-BIL-Data-Viewer"><span class="octicon octicon-link"></span></a><span>Exercise 5. Trying the Napari BIL Data Viewer</span></h3><img src="https://imgur.com/gkDCsMd.gif"><p><span>This plugin enables viewing of datasets archived in the </span><a href="https://www.brainimagelibrary.org/" target="_blank" rel="noopener"><span>Brain Image Library</span></a><span>.</span></p><div class="alert alert-warning">
+<p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> This plugin is under early development. Currently, only a subset of single color, fMOST datasets which include projections are available to view.</span></p>
+</div><p><span>Though there are several ways to deploy Napari in your laptop/desktop, at the moment, we recommend you install locally using Anaconda.</span></p><h4 id="Installing-Napari" data-id="Installing-Napari"><a class="anchor hidden-xs" href="#Installing-Napari" title="Installing-Napari"><span class="octicon octicon-link"></span></a><span>Installing Napari</span></h4><p><span>Installing Napari is easier using </span><a href="https://conda-forge.org/" target="_blank" rel="noopener"><span>conda-forge</span></a><span>.</span></p><p><span>To install Napari, run the command</span></p><pre><code>conda install -c conda-forge napari
+</code></pre><p><img src="https://i.imgur.com/7t1cUU8.png" alt="" loading="lazy"></p><p><span>If the command above fails or Napari fails to start, you can also try</span></p><pre><code>conda create -y -n napari-env -c conda-forge python=3.8
+conda activate napari-env
+pip install 'napari[all]'
+</code></pre><p><span>Follow the </span><a href="https://docs.anaconda.com/anaconda/install/index.html" target="_blank" rel="noopener"><span>official documentation</span></a><span> to install Anaconda or Miniconda on your local system.</span></p><h4 id="Installing-the-napari-bil-data-viewer" data-id="Installing-the-napari-bil-data-viewer"><a class="anchor hidden-xs" href="#Installing-the-napari-bil-data-viewer" title="Installing-the-napari-bil-data-viewer"><span class="octicon octicon-link"></span></a><span>Installing the napari-bil-data-viewer</span></h4><p><span>To install the plugin, we need to start napari first. To start Napari, run the command</span></p><pre><code>napari
+</code></pre><p><span>This will open the Napari window</span></p><p><img src="https://i.imgur.com/nmOQXMn.png" alt="" loading="lazy"></p><p><span>I am running Napari in MacOSX, but if you are running Windows or Linux you should see a similar menu.</span></p><p><span>Clicking </span><code>Install/Uninstall Plugins...</code><span> should open the window below</span></p><p><img src="https://i.imgur.com/FWtJ1hO.png" alt="" loading="lazy"></p><p><span>Search for </span><code>napari-bil-data-viewer</code><span> and click </span><code>Install</code></p><p><img src="https://i.imgur.com/5cY5xQN.png" alt="" loading="lazy"></p><p><span>If installed properly, the plugin will be listed as </span><code>Installed</code></p><p><img src="https://i.imgur.com/lwUdCf5.png" alt="" loading="lazy"></p><p><span>Close the window and go back to the main window.</span></p><div class="alert alert-info">
+<p><img class="emoji" alt=":pencil:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/pencil.png"><span> If you are familiar with terminal, you can run the following commands instead of following the steps above</span></p>
+<pre><code>conda create -y -n bil-viewer python=3.8
+conda activate bil-viewer
+
+# Install napari-bil-data-viewer
+pip install napari-bil-data-viewer
+</code></pre>
+</div><h4 id="Using-the-plugin" data-id="Using-the-plugin"><a class="anchor hidden-xs" href="#Using-the-plugin" title="Using-the-plugin"><span class="octicon octicon-link"></span></a><span>Using the plugin</span></h4><p><span>On the top menu select</span></p><p><img src="https://i.imgur.com/TQq7QXQ.png" alt="" loading="lazy"></p><p><span>This should a panel to the right</span></p><p><img src="https://i.imgur.com/mu0Ul8R.png" alt="" loading="lazy"></p><p><span>Use the drop down list to choose the images you want to explore with Napari</span></p><p><img src="https://i.imgur.com/O6zUWd0.png" alt="" loading="lazy"></p><p><span>If you are curious about the status of your session in Napari, then you can monitor the logs in the terminal you opened the application in</span></p><p><img src="https://i.imgur.com/BGTFd0D.png" alt="" loading="lazy"></p><div class="alert alert-warning">
+<p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"><span> This plugin is under early development. Currently, only a subset of single color, fMOST datasets which include projections are available to view.</span></p>
+</div><h1 id="Gentle-intro-to-cwltool" data-id="Gentle-intro-to-cwltool" style=""><a class="anchor hidden-xs" href="#Gentle-intro-to-cwltool" title="Gentle-intro-to-cwltool"><span class="octicon octicon-link"></span></a><span>Gentle intro to cwltool</span></h1><img src="https://repository-images.githubusercontent.com/43816051/ba006580-04d7-11eb-9bab-c6463ba5022b" width="30%"><h2 id="Before-we-begin" data-id="Before-we-begin" style=""><a class="anchor hidden-xs" href="#Before-we-begin" title="Before-we-begin"><span class="octicon octicon-link"></span></a><span>Before we begin</span></h2><iframe width="560" height="315" src="https://www.youtube.com/embed/86eY8xs-Vo8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><span>Watch the video above for a gentle intro.</span></p><h2 id="Benefits" data-id="Benefits" style=""><a class="anchor hidden-xs" href="#Benefits" title="Benefits"><span class="octicon octicon-link"></span></a><span>Benefits</span></h2><p><span>There are many benefits to using workflows, mainly their portability. If built flexible, a workflow should be able to be deployed locally, e.g. a laptop, on an HPC cluster, e.g. Brain Image Library or Bridges 2 and in the cloud, e.g. AWS.</span></p><p><span>The second benefit is workflows are very efficient at connecting tools or programs and scripts written in different languages.</span></p><p><span>Third and last, workflows can use containers that can be push to repositories like DockerHub, making them truly portable and flexible.</span></p><div class="alert alert-info">
+<p><span>Using workflows is just one way of running pipelines on the Brain Image Library hardware, users can use traditional approaches like bash or Python scripts to run their workflows.</span></p>
+</div><h2 id="Introduction" data-id="Introduction" style=""><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link"></span></a><span>Introduction</span></h2><h3 id="Installing-cwltool1" data-id="Installing-cwltool" style=""><a class="anchor hidden-xs" href="#Installing-cwltool1" title="Installing-cwltool1"><span class="octicon octicon-link"></span></a><span>Installing cwltool</span></h3><pre><code>module load anaconda3/4.11.0
+pip install --user cwltool cwlref-runner
+</code></pre><p><a href="https://en.wikipedia.org/wiki/Cowsay" target="_blank" rel="noopener"><code>cowsay</code></a><span> is a tool that pretty prints a cow.</span></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Cowsay_Typical_Output.png"><br></p><p><span>Traditionally we would install the tool locally either using a repository or pip.</span></p><p><span>For example,</span></p><pre><code>pip install cowsay
+</code></pre><p><span>will install the binary in our system.</span></p><p><span>Since the only input to </span><code>cowsay</code><span> is a string, a basic CWL workflow document looks like this</span></p><pre><code>#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: cowsay
+inputs:
+  message:
+    type: string
+    inputBinding:
+      position: 1
+outputs: []
+</code></pre><p><span>CWL documents are written either in YAML or JSON. For example, we can create the file </span><code>message.cwl</code></p><pre><code>message: Hello world!
+</code></pre><p><span>and use it as input for the workflow</span></p><pre><code>cwltool cowsay.cwl message.cwl
+
+INFO /bil/packages/anaconda3/4.11.0/bin/cwltool 3.1.20220210171524
+INFO Resolved 'cowsay.cwl' to 'file:///bil/users/icaoberg/code/singularity-cowsay/3.04/cowsay.cwl'
+INFO [job cowsay.cwl] /tmp/l7knmpt3$ cowsay \
+    'Hello world!'
+  ____________
+| Hello world! |
+  ============
+            \
+             \
+               ^__^
+               (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||
+INFO [job cowsay.cwl] completed success
+{}
+INFO Final process status is success
+</code></pre><h2 id="cowsay-on-Docker" data-id="cowsay-on-Docker" style=""><a class="anchor hidden-xs" href="#cowsay-on-Docker" title="cowsay-on-Docker"><span class="octicon octicon-link"></span></a><code>cowsay</code><span> on Docker</span></h2><div class="alert alert-warning">
+<p><span>This step cannot run on Brain Image Library hardware since we do not support Docker.</span></p>
+</div><p><span>Consider the following </span><code>Dockerfile</code></p><pre><code>FROM ubuntu:latest
+
+RUN apt-get update &amp;&amp; apt-get install -y cowsay --no-install-recommends &amp;&amp; rm -rf /var/lib/apt/lists/*
+ENV PATH $PATH:/usr/games
+
+CMD ["cowsay"]
+</code></pre><p><span>The file above creates a container with the </span><code>cowsay</code><span> binary. I can be built it using the command</span></p><pre><code>docker build -t icaoberg/cowsay .
+</code></pre><p><span>and pushed to DockerHub using the command</span></p><pre><code>docker push icaoberg/cowsay
+</code></pre><p><span>This is a dummy example but technically now there exists a container with my tool. Now, I can recycle the CWL workflow from before and it to get the container from the repo by adding the lines</span></p><pre><code>hints:
+  DockerRequirement:
+    dockerPull: icaoberg/cowsay
+</code></pre><p><span>The document now looks like</span></p><pre><code>#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+
+requirements:
+  SubworkflowFeatureRequirement: {}
+
+hints:
+  DockerRequirement:
+    dockerPull: icaoberg/cowsay
+
+baseCommand: cowsay
+inputs:
+  message:
+    type: string
+    inputBinding:
+      position: 1
+outputs: []
+</code></pre><p><span>and running it will produce the same results as the previous example</span></p><pre><code>cwltool cowsay2.cwl message.cwl
+INFO /Users/icaoberg/opt/anaconda3/bin/cwltool 3.1.20220210171524
+INFO Resolved 'cowsay2.cwl' to 'file:///Users/icaoberg/Documents/code/singularity-cowsay/3.04/cowsay2.cwl'
+INFO [job cowsay2.cwl] /private/tmp/docker_tmpr_rjhbrj$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmpr_rjhbrj,target=/xJHVRn \
+    --mount=type=bind,source=/private/tmp/docker_tmpzpu0ulbd,target=/tmp \
+    --workdir=/xJHVRn \
+    --read-only=true \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmp07wk4ale/20220309145946-550721.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/xJHVRn \
+    icaoberg/cowsay \
+    cowsay \
+    'Hello world!'
+ ______________
+&lt; Hello world! &gt;
+ --------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+INFO [job cowsay2.cwl] Max memory used: 0MiB
+INFO [job cowsay2.cwl] completed success
+{}
+INFO Final process status is success
+</code></pre><div class="alert alert-info">
+<p><span>Even though we do not support Docker, you can try installing </span><a href="https://github.com/indigo-dc/udocker" target="_blank" rel="noopener"><code>uDocker</code></a><span>.</span></p>
+</div><h2 id="cowsay-on-Singularity" data-id="cowsay-on-Singularity" style=""><a class="anchor hidden-xs" href="#cowsay-on-Singularity" title="cowsay-on-Singularity"><span class="octicon octicon-link"></span></a><code>cowsay</code><span> on Singularity</span></h2><p><span>The main issue is that most HPC clusters do not support Docker and prefer Singularity or Apptainers. However, if the Docker image in DockerHub has proper entrypoints, then you could simply use the </span><code>--singularity</code><span> option to ask CWL tools to convert the Docker image to Singularity.</span></p><div class="alert alert-warning">
+<p><span>If the Docker image does not a proper entry point this step might fail if you are not aware of how the image was built.</span></p>
+<p><span>Only use vetted images or public images whose Dockerfile you have seen and trust.</span></p>
+</div><p><span>Using the option</span></p><pre><code>cwltool --singularity cowsay2.cwl message.cwl
+</code></pre><p><span>will run the workflow</span></p><pre><code>cwltool --singularity cowsay2.cwl message.cwl
+INFO /bil/packages/anaconda3/4.11.0/bin/cwltool 3.1.20220210171524
+INFO Resolved 'cowsay2.cwl' to 'file:///bil/users/icaoberg/code/singularity-cowsay/3.04/cowsay2.cwl'
+INFO ['singularity', 'pull', '--force', '--name', 'icaoberg_cowsay.sif', 'docker://icaoberg/cowsay']
+INFO:    Converting OCI blobs to SIF format
+INFO:    Starting build...
+Getting image source signatures
+Copying blob 7c3b88808835 done
+Copying blob 6b7a6ea66907 done
+Copying config 063d227371 done
+Writing manifest to image destination
+Storing signatures
+2022/03/09 15:17:27  info unpack layer: sha256:7c3b88808835aa80f1ef7f03083c5ae781d0f44e644537cd72de4ce6c5e62e00
+2022/03/09 15:17:28  info unpack layer: sha256:6b7a6ea669076a74f122534da10e4e459f36777854e8e1529564d31c685fd9ea
+INFO:    Creating SIF file...
+INFO [job cowsay2.cwl] /tmp/ceztlkix$ singularity \
+    --quiet \
+    exec \
+    --contain \
+    --ipc \
+    --cleanenv \
+    --pid \
+    --home \
+    /tmp/ceztlkix:/qxOGcV \
+    --bind \
+    /tmp/o9hfm5tx:/tmp \
+    --pwd \
+    /qxOGcV \
+    /bil/users/icaoberg/code/singularity-cowsay/3.04/icaoberg_cowsay.sif \
+    cowsay \
+    'Hello world!'
+ ______________
+&lt; Hello world! &gt;
+ --------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+INFO [job cowsay2.cwl] completed success
+{}
+INFO Final process status is success
+</code></pre><p><span>but will create a Singularity image file on disk.</span></p><h3 id="Adding-more-options" data-id="Adding-more-options" style=""><a class="anchor hidden-xs" href="#Adding-more-options" title="Adding-more-options"><span class="octicon octicon-link"></span></a><span>Adding more options</span></h3><p><code>cowsay</code><span> has more options than just the input string.</span></p><pre><code>cowsay(6)                                  Games Manual                                  cowsay(6)
+
+NAME
+       cowsay/cowthink - configurable speaking/thinking cow (and a bit more)
+
+SYNOPSIS
+       cowsay  [-e  eye_string]  [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdg‐
+       pstwy]
+</code></pre><p><span>A </span><code>cowfile</code><span> is used to change the picture. For example, running the command</span></p><pre><code>➜  code cowsay -f flaming-sheep "Hello World\!"
+ ______________
+&lt; Hello World! &gt;
+ --------------
+  \            .    .     .   
+   \      .  . .     `  ,     
+    \    .; .  : .' :  :  : . 
+     \   i..`: i` i.i.,i  i . 
+      \   `,--.|i |i|ii|ii|i: 
+           UooU\.'@@@@@@`.||' 
+           \__/(@@@@@@@@@@)'  
+                (@@@@@@@@)    
+                `YY~~~~YY'    
+                 ||    ||   
+</code></pre><p><span>will print a flaming sheep.</span></p><p><span>In this example, we will expose the </span><code>[-f cowfile]</code><span> argument by adding the lines</span></p><pre><code>  format:
+    type: string
+    inputBinding:
+      position: 1
+      prefix: -f
+    default: "flaming-sheep"
+</code></pre><p><span>to the input block, making the workflow look like</span></p><pre><code>#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+
+requirements:
+  SubworkflowFeatureRequirement: {}
+
+hints:
+  DockerRequirement:
+    dockerPull: icaoberg/cowsay
+
+baseCommand: "cowsay"
+inputs:
+  message:
+    type: string
+    inputBinding:
+      position: 2
+
+  format:
+    type: string
+    inputBinding:
+      position: 1
+      prefix: -f
+    default: "flaming-sheep"
+
+outputs: []
+
+</code></pre><p><span>Then you can run it</span></p><pre><code>05:03:16 icaoberg@workshop 3.04 ±|master ✗|→ cwltool --singularity cowsay3.cwl message3.cwl 
+
+INFO /bil/users/icaoberg/.local/bin/cwltool 3.1.20220224085855
+INFO Resolved 'cowsay3.cwl' to 'file:///bil/users/icaoberg/code/singularity-cowsay/3.04/cowsay3.cwl'
+INFO Using local copy of Singularity image found in /bil/users/icaoberg/code/singularity-cowsay/3.04
+INFO [job cowsay3.cwl] /tmp/g2zknke0$ singularity \
+    --quiet \
+    exec \
+    --contain \
+    --ipc \
+    --cleanenv \
+    --pid \
+    --home \
+    /tmp/g2zknke0:/lzqerl \
+    --bind \
+    /tmp/fkb0phq4:/tmp \
+    --pwd \
+    /lzqerl \
+    /bil/users/icaoberg/code/singularity-cowsay/3.04/icaoberg_cowsay.sif \
+    cowsay \
+    -f \
+    flaming-sheep \
+    'Hello world!'
+ ______________
+&lt; Hello world! &gt;
+ --------------
+  \            .    .     .   
+   \      .  . .     `  ,     
+    \    .; .  : .' :  :  : . 
+     \   i..`: i` i.i.,i  i . 
+      \   `,--.|i |i|ii|ii|i: 
+           UooU\.'@@@@@@`.||' 
+           \__/(@@@@@@@@@@)'  
+                (@@@@@@@@)    
+                `YY~~~~YY'    
+                 ||    ||     
+INFO [job cowsay3.cwl] completed success
+{}
+INFO Final process status is success
+</code></pre><p><span>Keep in mind your input argument </span><code>message3.yml</code><span> now looks like this</span></p><pre><code>message: Hello world!
+format: flaming-sheep
+</code></pre><p><span>You can choose to expose as many input arguments as you want or set default values.</span></p><h2 id="Mixing-and-matching" data-id="Mixing-and-matching" style=""><a class="anchor hidden-xs" href="#Mixing-and-matching" title="Mixing-and-matching"><span class="octicon octicon-link"></span></a><span>Mixing and matching</span></h2><p><span>Consider the following workflow, </span><code>fortune.cwl</code></p><pre><code>#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+
+requirements:
+  SubworkflowFeatureRequirement: {}
+
+hints:
+  DockerRequirement:
+    dockerPull: grycap/cowsay
+
+baseCommand: /usr/games/fortune
+inputs: []
+outputs: []
+
+</code></pre><p><span>which does something like</span></p><pre><code>cwltool --singularity fortune.cwl 
+
+INFO /bil/users/icaoberg/.local/bin/cwltool 3.1.20220224085855
+INFO Resolved 'fortune.cwl' to 'file:///bil/users/icaoberg/code/singularity-cowsay/3.04/fortune.cwl'
+INFO Using local copy of Singularity image found in /bil/users/icaoberg/code/singularity-cowsay/3.04
+INFO [job fortune.cwl] /tmp/lppo005u$ singularity \
+    --quiet \
+    exec \
+    --contain \
+    --ipc \
+    --cleanenv \
+    --pid \
+    --home \
+    /tmp/lppo005u:/jzrcyZ \
+    --bind \
+    /tmp/l0squr2a:/tmp \
+    --pwd \
+    /jzrcyZ \
+    /bil/users/icaoberg/code/singularity-cowsay/3.04/grycap_cowsay.sif \
+    /usr/games/fortune
+Q:	How many lawyers does it take to change a light bulb?
+A:	You won't find a lawyer who can change a light bulb.  Now, if
+	you're looking for a lawyer to screw a light bulb...
+INFO [job fortune.cwl] completed success
+{}
+INFO Final process status is success
+</code></pre><hr><p><span>The Brain Image Library is supported by the National Institutes of Mental Health of the National Institutes of Health under award number R24-MH-114793. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#The-BIL-Analysis-Ecosystem" title="The BIL Analysis Ecosystem">The BIL Analysis Ecosystem</a><ul class="nav">
+<li class=""><a href="#How-to-connect-to-the-BIL-Analysis-Ecosystem" title="How to connect to the BIL Analysis Ecosystem">How to connect to the BIL Analysis Ecosystem</a><ul class="nav">
+<li class=""><a href="#Connect-via-Terminal" title="Connect via Terminal">Connect via Terminal</a></li>
+<li class=""><a href="#SSH" title="SSH">SSH</a></li>
+<li class=""><a href="#Remote-Desktop-X2Go" title="Remote Desktop: X2Go">Remote Desktop: X2Go</a></li>
+</ul>
+</li>
+<li class=""><a href="#Interactive-Apps" title="Interactive Apps">Interactive Apps</a><ul class="nav">
+<li class=""><a href="#OpenOnDemand" title="OpenOnDemand">OpenOnDemand</a></li>
+</ul>
+</li>
+<li class=""><a href="#Software-Modules" title="Software Modules">Software Modules</a><ul class="nav">
+<li class=""><a href="#LMOD" title="LMOD">LMOD</a></li>
+<li class=""><a href="#Available-software-modules" title="Available software modules">Available software modules</a></li>
+<li class=""><a href="#Software-versions" title="Software versions">Software versions</a></li>
+<li class=""><a href="#Loading-modules" title="Loading modules">Loading modules</a></li>
+<li class=""><a href="#Loading-a-specific-version-of-a-module" title="Loading a specific version of a module">Loading a specific version of a module</a></li>
+<li class=""><a href="#Listing-loaded-modules" title="Listing loaded modules">Listing loaded modules</a></li>
+<li class=""><a href="#Unload-module" title="Unload module">Unload module</a></li>
+<li class=""><a href="#Using-modules-on-scripts" title="Using modules on scripts">Using modules on scripts</a></li>
+</ul>
+</li>
+<li class=""><a href="#Job-management" title="Job management">Job management</a><ul class="nav">
+<li class=""><a href="#SLURM" title="SLURM">SLURM</a></li>
+<li class=""><a href="#sinfo" title="sinfo">sinfo</a></li>
+<li class=""><a href="#squeue" title="squeue">squeue</a></li>
+<li class=""><a href="#scontrol" title="scontrol">scontrol</a></li>
+<li class=""><a href="#Docker" title="Docker">Docker</a></li>
+<li class=""><a href="#Singularity" title="Singularity">Singularity</a></li>
+</ul>
+</li>
+<li class=""><a href="#Other" title="Other">Other</a><ul class="nav">
+<li class=""><a href="#Installing-Miniconda" title="Installing Miniconda">Installing Miniconda</a></li>
+<li class=""><a href="#Using-Jupyter-Notebooks" title="Using Jupyter Notebooks">Using Jupyter Notebooks</a></li>
+<li class=""><a href="#Using-Matlab" title="Using Matlab">Using Matlab</a></li>
+<li class=""><a href="#Using-ITK-SNAP" title="Using ITK-SNAP">Using ITK-SNAP</a></li>
+<li class=""><a href="#Installing-and-using-SimpleITK" title="Installing and using SimpleITK">Installing and using SimpleITK</a></li>
+<li class=""><a href="#Installing-ITK" title="Installing ITK">Installing ITK</a></li>
+<li><a href="#Installing-nibabel" title="Installing nibabel">Installing nibabel</a></li>
+<li><a href="#Installing-cwltool" title="Installing cwltool">Installing cwltool</a></li>
+<li><a href="#Installing-spyder" title="Installing spyder">Installing spyder</a></li>
+</ul>
+</li>
+<li class=""><a href="#Exercises" title="Exercises">Exercises</a><ul class="nav">
+<li class=""><a href="#Exercise-0-Submit-a-job-using-OpenOnDemand" title="Exercise 0. Submit a job using OpenOnDemand">Exercise 0. Submit a job using OpenOnDemand</a></li>
+<li><a href="#Exercise-0-Hello-World-on-Jupyter-Lab" title="Exercise 0. Hello, World! on Jupyter Lab">Exercise 0. Hello, World! on Jupyter Lab</a></li>
+<li class=""><a href="#Exercise-1-Load-and-combine-images-in-Fiji" title="Exercise 1. Load and combine images in Fiji">Exercise 1. Load and combine images in Fiji</a></li>
+<li class=""><a href="#Exercise-2-Contrast-stretching-with-ImageMagick" title="Exercise 2. Contrast-stretching with ImageMagick">Exercise 2. Contrast-stretching with ImageMagick</a></li>
+<li class=""><a href="#Exercise-3-vaa3D" title="Exercise 3. vaa3D">Exercise 3. vaa3D</a></li>
+<li class=""><a href="#Exercise-4-Building-a-Singularity-container" title="Exercise 4. Building a Singularity container">Exercise 4. Building a Singularity container</a></li>
+<li class=""><a href="#Exercise-5-Trying-the-Napari-BIL-Data-Viewer" title="Exercise 5. Trying the Napari BIL Data Viewer">Exercise 5. Trying the Napari BIL Data Viewer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><a href="#Gentle-intro-to-cwltool" title="Gentle intro to cwltool">Gentle intro to cwltool</a><ul class="nav">
+<li class=""><a href="#Before-we-begin" title="Before we begin">Before we begin</a></li>
+<li class=""><a href="#Benefits" title="Benefits">Benefits</a></li>
+<li class=""><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
+<li class=""><a href="#Installing-cwltool1" title="Installing cwltool">Installing cwltool</a></li>
+</ul>
+</li>
+<li class=""><a href="#cowsay-on-Docker" title="cowsay on Docker">cowsay on Docker</a></li>
+<li class=""><a href="#cowsay-on-Singularity" title="cowsay on Singularity">cowsay on Singularity</a><ul class="nav">
+<li class=""><a href="#Adding-more-options" title="Adding more options">Adding more options</a></li>
+</ul>
+</li>
+<li class=""><a href="#Mixing-and-matching" title="Mixing and matching">Mixing and matching</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#The-BIL-Analysis-Ecosystem" title="The BIL Analysis Ecosystem">The BIL Analysis Ecosystem</a><ul class="nav">
+<li class=""><a href="#How-to-connect-to-the-BIL-Analysis-Ecosystem" title="How to connect to the BIL Analysis Ecosystem">How to connect to the BIL Analysis Ecosystem</a><ul class="nav">
+<li class=""><a href="#Connect-via-Terminal" title="Connect via Terminal">Connect via Terminal</a></li>
+<li class=""><a href="#SSH" title="SSH">SSH</a></li>
+<li class=""><a href="#Remote-Desktop-X2Go" title="Remote Desktop: X2Go">Remote Desktop: X2Go</a></li>
+</ul>
+</li>
+<li class=""><a href="#Interactive-Apps" title="Interactive Apps">Interactive Apps</a><ul class="nav">
+<li class=""><a href="#OpenOnDemand" title="OpenOnDemand">OpenOnDemand</a></li>
+</ul>
+</li>
+<li class=""><a href="#Software-Modules" title="Software Modules">Software Modules</a><ul class="nav">
+<li class=""><a href="#LMOD" title="LMOD">LMOD</a></li>
+<li class=""><a href="#Available-software-modules" title="Available software modules">Available software modules</a></li>
+<li class=""><a href="#Software-versions" title="Software versions">Software versions</a></li>
+<li class=""><a href="#Loading-modules" title="Loading modules">Loading modules</a></li>
+<li class=""><a href="#Loading-a-specific-version-of-a-module" title="Loading a specific version of a module">Loading a specific version of a module</a></li>
+<li class=""><a href="#Listing-loaded-modules" title="Listing loaded modules">Listing loaded modules</a></li>
+<li class=""><a href="#Unload-module" title="Unload module">Unload module</a></li>
+<li class=""><a href="#Using-modules-on-scripts" title="Using modules on scripts">Using modules on scripts</a></li>
+</ul>
+</li>
+<li class=""><a href="#Job-management" title="Job management">Job management</a><ul class="nav">
+<li class=""><a href="#SLURM" title="SLURM">SLURM</a></li>
+<li class=""><a href="#sinfo" title="sinfo">sinfo</a></li>
+<li class=""><a href="#squeue" title="squeue">squeue</a></li>
+<li class=""><a href="#scontrol" title="scontrol">scontrol</a></li>
+<li class=""><a href="#Docker" title="Docker">Docker</a></li>
+<li class=""><a href="#Singularity" title="Singularity">Singularity</a></li>
+</ul>
+</li>
+<li class=""><a href="#Other" title="Other">Other</a><ul class="nav">
+<li class=""><a href="#Installing-Miniconda" title="Installing Miniconda">Installing Miniconda</a></li>
+<li class=""><a href="#Using-Jupyter-Notebooks" title="Using Jupyter Notebooks">Using Jupyter Notebooks</a></li>
+<li class=""><a href="#Using-Matlab" title="Using Matlab">Using Matlab</a></li>
+<li class=""><a href="#Using-ITK-SNAP" title="Using ITK-SNAP">Using ITK-SNAP</a></li>
+<li class=""><a href="#Installing-and-using-SimpleITK" title="Installing and using SimpleITK">Installing and using SimpleITK</a></li>
+<li class=""><a href="#Installing-ITK" title="Installing ITK">Installing ITK</a></li>
+<li><a href="#Installing-nibabel" title="Installing nibabel">Installing nibabel</a></li>
+<li><a href="#Installing-cwltool" title="Installing cwltool">Installing cwltool</a></li>
+<li><a href="#Installing-spyder" title="Installing spyder">Installing spyder</a></li>
+</ul>
+</li>
+<li class=""><a href="#Exercises" title="Exercises">Exercises</a><ul class="nav">
+<li class=""><a href="#Exercise-0-Submit-a-job-using-OpenOnDemand" title="Exercise 0. Submit a job using OpenOnDemand">Exercise 0. Submit a job using OpenOnDemand</a></li>
+<li><a href="#Exercise-0-Hello-World-on-Jupyter-Lab" title="Exercise 0. Hello, World! on Jupyter Lab">Exercise 0. Hello, World! on Jupyter Lab</a></li>
+<li class=""><a href="#Exercise-1-Load-and-combine-images-in-Fiji" title="Exercise 1. Load and combine images in Fiji">Exercise 1. Load and combine images in Fiji</a></li>
+<li class=""><a href="#Exercise-2-Contrast-stretching-with-ImageMagick" title="Exercise 2. Contrast-stretching with ImageMagick">Exercise 2. Contrast-stretching with ImageMagick</a></li>
+<li class=""><a href="#Exercise-3-vaa3D" title="Exercise 3. vaa3D">Exercise 3. vaa3D</a></li>
+<li class=""><a href="#Exercise-4-Building-a-Singularity-container" title="Exercise 4. Building a Singularity container">Exercise 4. Building a Singularity container</a></li>
+<li class=""><a href="#Exercise-5-Trying-the-Napari-BIL-Data-Viewer" title="Exercise 5. Trying the Napari BIL Data Viewer">Exercise 5. Trying the Napari BIL Data Viewer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><a href="#Gentle-intro-to-cwltool" title="Gentle intro to cwltool">Gentle intro to cwltool</a><ul class="nav">
+<li class=""><a href="#Before-we-begin" title="Before we begin">Before we begin</a></li>
+<li class=""><a href="#Benefits" title="Benefits">Benefits</a></li>
+<li class=""><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
+<li class=""><a href="#Installing-cwltool1" title="Installing cwltool">Installing cwltool</a></li>
+</ul>
+</li>
+<li class=""><a href="#cowsay-on-Docker" title="cowsay on Docker">cowsay on Docker</a></li>
+<li class=""><a href="#cowsay-on-Singularity" title="cowsay on Singularity">cowsay on Singularity</a><ul class="nav">
+<li class=""><a href="#Adding-more-options" title="Adding more options">Adding more options</a></li>
+</ul>
+</li>
+<li class=""><a href="#Mixing-and-matching" title="Mixing and matching">Mixing and matching</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
