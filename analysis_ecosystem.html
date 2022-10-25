@@ -34,6 +34,68 @@
 </head>
 
 <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <img src="assets/brainicon.png" height="23" width="23">
+      <a class="navbar-brand" href="index.html">&nbsp;Brain Image Library </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class "navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">About</a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="about.html">About BIL</a>
+                      <a class="dropdown-item" href="people.html">BIL Staff</a>
+    <a class="dropdown-item" href="partners.html">Partners</a>
+                 </div>
+              </li>
+
+
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Data Submission</a>
+                  <div class="dropdown-menu">
+    <a class="dropdown-item" href="datarequirements.html">Data Depositor FAQ</a>
+                      <a class="dropdown-item" href="submission.html">Instructions</a>
+    <a class="dropdown-item" href="account.html">Create Account</a>
+    <a class="dropdown-item" href="datadirbp.html">Submission Best Practices</a>
+                      <a class="dropdown-item" href="https://submit.brainimagelibrary.org/">Data
+                          Submission Portal</a>
+    <a class="dropdown-item" href="newmetadatamodel.html">New Metadata Model</a>
+    <a class="dropdown-item" href="training.html">Training</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Data Access</a>
+                  <div class="dropdown-menu">
+                      <!--
+                      <a class="dropdown-item" href="#">Data Access Portal</a>
+                      -->
+     <a class="dropdown-item" href="https://submit.brainimagelibrary.org/search">Brain Inventory</a>
+                      <a class="dropdown-item" href="download.html">Downloading Data</a>
+                      <a class="dropdown-item" href="computevisual.html">Computation and Visualization</a>
+    <a class="dropdown-item" href="analysis_ecosystem.html">Analysis Ecosystem</a>
+                      <a class="dropdown-item" href="restrictedaccess.html">Restricted Data</a>
+                      <a class="dropdown-item" href="citation.html">Citing Data</a>
+                 </div>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</div>
+<div class="well bg-dark text-light">
+<!--   <i> <div class="mx-auto" style="width:800px;">A national public resource enabling researchers to deposit, analyze, mine, share and interact with large brain image datasets</div></i>
+-->
+</div>
+
+
+
     <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true" style=""><h1 id="The-BIL-Analysis-Ecosystem" data-id="The-BIL-Analysis-Ecosystem" style=""><a class="anchor hidden-xs" href="#The-BIL-Analysis-Ecosystem" title="The-BIL-Analysis-Ecosystem"><span class="octicon octicon-link"></span></a><img src="https://i.imgur.com/GLp06Vi.png" width="70"><span>The BIL Analysis Ecosystem</span></h1><h2 id="How-to-connect-to-the-BIL-Analysis-Ecosystem" data-id="How-to-connect-to-the-BIL-Analysis-Ecosystem" style=""><a class="anchor hidden-xs" href="#How-to-connect-to-the-BIL-Analysis-Ecosystem" title="How-to-connect-to-the-BIL-Analysis-Ecosystem"><span class="octicon octicon-link"></span></a><span>How to connect to the BIL Analysis Ecosystem</span></h2><h3 id="Connect-via-Terminal" data-id="Connect-via-Terminal" style=""><a class="anchor hidden-xs" href="#Connect-via-Terminal" title="Connect-via-Terminal"><span class="octicon octicon-link"></span></a><span>Connect via Terminal</span></h3><h3 id="SSH" data-id="SSH" style=""><a class="anchor hidden-xs" href="#SSH" title="SSH"><span class="octicon octicon-link"></span></a><span>SSH</span></h3><p><span>You can connect to BIL Analysis ecosystem resources with an ssh client from your local machine using your PSC credentials.</span></p><p><span>You must install SSH client software on your local machine, but free ssh clients for  Macs, Windows and Unix are available. Popular ssh clients (GUI) include PuTTY for Windows and Cyberduck for Macs. A command line version of ssh is installed on Macs  by default and you can use the Terminal application if you prefer. You can also check with your university to see if there is an ssh client that they recommend.</span></p><p><span>To use ssh to connect to the BIL Analysis Ecosystem:</span></p><pre><code>ssh userid@login.brainimagelibrary.org
 </code></pre><p><span>Everyone who requests a BIL account has access to the login node using their BIL Username and Password. The login node is not intended for heavy computation or visualization, but rather to provide convenient shell access to BIL data and enable interactive and batch use of the BIL Analysis Ecosystem. The BIL computational cluster provides a suitable resource for both computation and visualization.</span></p><h4 id="Workshop-VM" data-id="Workshop-VM"><a class="anchor hidden-xs" href="#Workshop-VM" title="Workshop-VM"><span class="octicon octicon-link"></span></a><span>Workshop VM</span></h4><p><span>For workshop purposes, enter your PSC credentials when prompted.</span></p><p><span>Open terminal and run the command</span></p><pre><code>ssh userid@workshop.brainimagelibrary.org
 </code></pre><p><span>For example,</span></p><pre><code>ssh icaoberg@workshop.brainimagelibrary.org
@@ -181,7 +243,7 @@ MATLAB is selecting SOFTWARE OPENGL rendering.
  R2021a Update 5 (9.10.0.1739362) 64-bit (glnxa64)
                   August 9, 2021
 
- 
+
 To get started, type doc.
 For product information, visit www.mathworks.com.
 
@@ -211,22 +273,22 @@ Currently Loaded Modulefiles:
 module load matlab/2021a
 module load bioformats
 </div></div></code></pre><h2 id="Job-management" data-id="Job-management" style=""><a class="anchor hidden-xs" href="#Job-management" title="Job-management"><span class="octicon octicon-link"></span></a><span>Job management</span></h2><h3 id="SLURM" data-id="SLURM" style=""><a class="anchor hidden-xs" href="#SLURM" title="SLURM"><span class="octicon octicon-link"></span></a><span>SLURM</span></h3><p><img src="https://i.imgur.com/3gPmu1r.png" alt="" loading="lazy"></p><p><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener"><span>Slurm</span></a><span> is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</span></p><p><span>This document only lists a few commands. For complete documentation click </span><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><h3 id="sinfo" data-id="sinfo" style=""><a class="anchor hidden-xs" href="#sinfo" title="sinfo"><span class="octicon octicon-link"></span></a><span>sinfo</span></h3><pre><code>sinfo - View information about Slurm nodes and partitions.
- 
+
 
 SYNOPSIS
-sinfo [OPTIONS...]  
+sinfo [OPTIONS...]
 </code></pre><p><span>For example</span></p><pre><code>sinfo -p compute
 </code></pre><h3 id="squeue" data-id="squeue" style=""><a class="anchor hidden-xs" href="#squeue" title="squeue"><span class="octicon octicon-link"></span></a><span>squeue</span></h3><pre><code>squeue - view information about jobs located in the Slurm scheduling queue.
- 
+
 
 SYNOPSIS
 squeue [OPTIONS...]
 </code></pre><p><span>For example</span></p><pre><code>squeue -u icaoberg
-             
+
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 14243   compute script.s icaoberg  R      15:34      1 l001
 </code></pre><h3 id="scontrol" data-id="scontrol" style=""><a class="anchor hidden-xs" href="#scontrol" title="scontrol"><span class="octicon octicon-link"></span></a><span>scontrol</span></h3><pre><code>scontrol - view or modify Slurm configuration and state.
- 
+
 
 SYNOPSIS
 scontrol [OPTIONS...] [COMMAND...]
@@ -254,7 +316,7 @@ NodeName=l002 Arch=x86_64 CoresPerSocket=20
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 compute*     up   infinite      8   idle l[001-008]
 </code></pre><h4 id="sbatch" data-id="sbatch"><a class="anchor hidden-xs" href="#sbatch" title="sbatch"><span class="octicon octicon-link"></span></a><span>sbatch</span></h4><pre><code>sbatch - Submit a batch script to Slurm.
- 
+
 
 SYNOPSIS
 sbatch [OPTIONS(0)...] [ : [OPTIONS(N)...]] script(0) [args(0)...]
@@ -271,14 +333,14 @@ Usage:  interact [OPTIONS]
   --mem=&lt;MB&gt;            Real memory required per node in MegaBytes
   -N Nodes              Number of nodes
     --nodes
-  -n NTasks             Number of tasks (spread over all Nodes) 
-  --ntasks-per-node=&lt;ntasks&gt;    Number of tasks, 1 per core per node. 
+  -n NTasks             Number of tasks (spread over all Nodes)
+  --ntasks-per-node=&lt;ntasks&gt;    Number of tasks, 1 per core per node.
   -p Partition          Partition/queue you would like to run on
     --partition
   -R Reservation        Reservation you would like to run on
     --reservation
   -t Time               Set a limit on the total run time. Format include
-                          mins, mins:secs, hours:mins:secs.  e.g. 1:30:00 
+                          mins, mins:secs, hours:mins:secs.  e.g. 1:30:00
     --time
   -h                    Print this help message
     -?
@@ -290,7 +352,7 @@ Usage:  interact [OPTIONS]
 <li><span>To specify the amount of memory use the option </span><code>--mem=&lt;MB&gt;</code><span>. For example </span><code>interact --mem=1Tb</code></li>
 <li><span>This is a shared partition, if you wish to get all the resources in a compute node, use the option </span><code>--nodes</code><span>. For example </span><code>interact -N 1</code><span>. Since this is a shared resource, please be considerate using this resource.</span></li>
 </ul><h4 id="scancel" data-id="scancel"><a class="anchor hidden-xs" href="#scancel" title="scancel"><span class="octicon octicon-link"></span></a><span>scancel</span></h4><pre><code>scancel - Used to signal jobs or job steps that are under the control of Slurm.
- 
+
 
 SYNOPSIS
 scancel [OPTIONS...] [job_id[_array_id][.step_id]] [job_id[_array_id][.step_id]...]
@@ -381,8 +443,8 @@ l001.pvt.bil.psc.edu
 [I 16:45:14.025 NotebookApp] http://l001.pvt.bil.psc.edu:8888/?token=6dd14be951e5717631f9646d292a7dae06c8173c1d850c1b
 [I 16:45:14.025 NotebookApp]  or http://127.0.0.1:8888/?token=6dd14be951e5717631f9646d292a7dae06c8173c1d850c1b
 [I 16:45:14.025 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 16:45:14.039 NotebookApp] 
-    
+[C 16:45:14.039 NotebookApp]
+
     To access the notebook, open this file in a browser:
         file:///bil/users/icaoberg/.local/share/jupyter/runtime/nbserver-1022410-open.html
     Or copy and paste one of these URLs:
@@ -410,7 +472,7 @@ import numpy as np
 file = '/bil/data/hackathon/2022_GYBS/data/subject/201606_red_mm_RSA.nii.gz'
 image = sitk.ReadImage(file)
 arr = sitk.GetArrayFromImage(image)
-</code></pre><p><span>If you are using iPython you can confirm this</span></p><pre><code>In [2]: whos                                                                                         
+</code></pre><p><span>If you are using iPython you can confirm this</span></p><pre><code>In [2]: whos
 Variable   Type       Data/Info
 -------------------------------
 arr        ndarray    1090x942x997: 1023699660 elems, type `uint8`, 1023699660 bytes (976.2760734558105 Mb)
@@ -594,7 +656,7 @@ From: debian:stretch
     EMAIL icaoberg@psc.edu
     SUPPORT help@psc.edu
     WEBSITE http://github.com/icaoberg/singularity-bioformats2raw
-    COPYRIGHT Copyright © 2021 Pittsburgh Supercomputing Center. All Rights Reserved. 
+    COPYRIGHT Copyright © 2021 Pittsburgh Supercomputing Center. All Rights Reserved.
     VERSION 3.0.0
 
 %post
@@ -1032,16 +1094,16 @@ SYNOPSIS
  ______________
 &lt; Hello World! &gt;
  --------------
-  \            .    .     .   
-   \      .  . .     `  ,     
-    \    .; .  : .' :  :  : . 
-     \   i..`: i` i.i.,i  i . 
-      \   `,--.|i |i|ii|ii|i: 
-           UooU\.'@@@@@@`.||' 
-           \__/(@@@@@@@@@@)'  
-                (@@@@@@@@)    
-                `YY~~~~YY'    
-                 ||    ||   
+  \            .    .     .
+   \      .  . .     `  ,
+    \    .; .  : .' :  :  : .
+     \   i..`: i` i.i.,i  i .
+      \   `,--.|i |i|ii|ii|i:
+           UooU\.'@@@@@@`.||'
+           \__/(@@@@@@@@@@)'
+                (@@@@@@@@)
+                `YY~~~~YY'
+                 ||    ||
 </code></pre><p><span>will print a flaming sheep.</span></p><p><span>In this example, we will expose the </span><code>[-f cowfile]</code><span> argument by adding the lines</span></p><pre><code>  format:
     type: string
     inputBinding:
@@ -1076,7 +1138,7 @@ inputs:
 
 outputs: []
 
-</code></pre><p><span>Then you can run it</span></p><pre><code>05:03:16 icaoberg@workshop 3.04 ±|master ✗|→ cwltool --singularity cowsay3.cwl message3.cwl 
+</code></pre><p><span>Then you can run it</span></p><pre><code>05:03:16 icaoberg@workshop 3.04 ±|master ✗|→ cwltool --singularity cowsay3.cwl message3.cwl
 
 INFO /bil/users/icaoberg/.local/bin/cwltool 3.1.20220224085855
 INFO Resolved 'cowsay3.cwl' to 'file:///bil/users/icaoberg/code/singularity-cowsay/3.04/cowsay3.cwl'
@@ -1102,16 +1164,16 @@ INFO [job cowsay3.cwl] /tmp/g2zknke0$ singularity \
  ______________
 &lt; Hello world! &gt;
  --------------
-  \            .    .     .   
-   \      .  . .     `  ,     
-    \    .; .  : .' :  :  : . 
-     \   i..`: i` i.i.,i  i . 
-      \   `,--.|i |i|ii|ii|i: 
-           UooU\.'@@@@@@`.||' 
-           \__/(@@@@@@@@@@)'  
-                (@@@@@@@@)    
-                `YY~~~~YY'    
-                 ||    ||     
+  \            .    .     .
+   \      .  . .     `  ,
+    \    .; .  : .' :  :  : .
+     \   i..`: i` i.i.,i  i .
+      \   `,--.|i |i|ii|ii|i:
+           UooU\.'@@@@@@`.||'
+           \__/(@@@@@@@@@@)'
+                (@@@@@@@@)
+                `YY~~~~YY'
+                 ||    ||
 INFO [job cowsay3.cwl] completed success
 {}
 INFO Final process status is success
@@ -1133,7 +1195,7 @@ baseCommand: /usr/games/fortune
 inputs: []
 outputs: []
 
-</code></pre><p><span>which does something like</span></p><pre><code>cwltool --singularity fortune.cwl 
+</code></pre><p><span>which does something like</span></p><pre><code>cwltool --singularity fortune.cwl
 
 INFO /bil/users/icaoberg/.local/bin/cwltool 3.1.20220224085855
 INFO Resolved 'fortune.cwl' to 'file:///bil/users/icaoberg/code/singularity-cowsay/3.04/fortune.cwl'
