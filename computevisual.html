@@ -43,7 +43,7 @@
       <h1>Computing and Visualization</H1>
       <p>The Brain Image Library provides several ways to access data without having to download it: </p>
       <ul>
-        <li><b>BIL Login Node:</b> All users of the BIL systems have ssh access to the BIL login node<./li>
+        <li><b>BIL Login Node:</b> All users of the BIL systems have ssh access to the BIL login node</li>
 	<li><b>BIL Computational Cluster:</b> The BIL Computational cluster consists of eight nodes 
 	   with 3 terabytes of RAM. The computational cluster runs SLURM and is avaiable for 
            both batch and interactive access from the BIL login node.</li>       
@@ -57,6 +57,8 @@
           analytics, simulation, workflows and gateways, leveraging interactivity, parallel computing, Spark
           and Hadoop.</li>
         <li><b>NeoCortex:</b> Neocortex is a Cerebras CS-1 system.</li>
+        <li><b>Napari-bil-data-viewer:</b> A plugin for the popular Napari image viewer that allows
+          single-click visualization of thousands of datasets at BIL.</li>
       </ul>
       <hr /> 
       <div id="login"></div>
@@ -119,6 +121,20 @@
          development of more efficient algorithms for artificial intelligence and graph analytics.</p>
        <p>Additional information about Neocortex is available 
           <a href="https://www.cmu.edu/psc/aibd/neocortex/">here</a>.
+       </p>
+     <h3>Napari-bil-data-viewer</h3>
+       <p>Napari-bil-data-viewer is a plugin for Napari designed specifically for visualizing BIL data. It has
+           a set of widgets for visualizing different types of data:
+           (a) 272 curated fMOST datasets with associated .swc neuron morphologies,
+           (b) thousands of STPT and other image stacks by providing a URL,
+           (c) multiscale .ome.zarr data by providing a URL,
+           (d) neuron tracings in standard .swc format
+       </p>
+       <p>Installation and usage instructions are available at our
+           <a href="https://github.com/brain-image-library/napari-bil-data-viewer">github</a>
+           and at
+           <a href="https://www.napari-hub.org/plugins/napari-bil-data-viewer">napari hub</a>.
+       </p>
               
 <p>&nbsp;</p>
 
