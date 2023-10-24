@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+        <title>Brain Image Library: Visualization</title>
+     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R1YK9CG4GL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R1YK9CG4GL');
+</script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="/css/bootstrap.css" />
+     <link rel="stylesheet" href="/css/styles.css" />
+     <link rel="stylesheet" href="/my.css" />
+     <script src="/js/jquery.min.js"></script>
+
+</head>
+
+<body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
+
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="jumbotron">
+
+      <h1>Visualization in napari</H1>
+      <p>The Brain Image Library provides following ways to visualize the data remotely, without signing in: </p>
+      <ul>
+        <li><b>Napari-bil-data-viewer:</b> A plugin for the popular <a href="https://napari.org/">napari</a>
+          image viewer that allows single-click visualization of thousands of datasets at BIL.
+        </li>
+      </ul>
+      <hr /> 
+      <div id="login"></div>
+     <h3>Napari-bil-data-viewer</h3>
+       <p>Napari-bil-data-viewer is a plugin for <a href="https://napari.org/">napari</a> designed specifically
+           for visualizing BIL data. It has a set of widgets for visualizing different types of data:
+           (a) 272 curated fMOST datasets with associated .swc neuron morphologies,
+           (b) thousands of STPT and other image stacks by providing a URL,
+           (c) multiscale .ome.zarr data by providing a URL,
+           (d) neuron tracings in standard .swc format
+       </p>
+       <p>Installation and usage instructions are available at our
+           <a href="https://github.com/brain-image-library/napari-bil-data-viewer">github</a>
+           and at
+           <a href="https://www.napari-hub.org/plugins/napari-bil-data-viewer">napari hub</a>.
+       </p>
+       <p>
+           A 2-minute video tutorial on how to use the plugin is available on
+           <a href="https://youtu.be/04mSxB1hgrk">youtube</a>.
+       </p>
+        <p>
+            The plugin can be installed from napari GUI through Plugins > Install/Uninstall Plugins menu,
+            by typing 'bil' in the plugin search box and clicking the "install" button when the plugin
+            shows up in search results.
+        </p>
+        <p>
+            To open the plugin in <a href="https://napari.org/">napari</a>,
+            go to Plugins > napari-bil-data-viewer and select the widget you want to open.
+            The dock widget will appear on the right side of the napari window.
+        </p>
+        <p>
+            To load one of the curated fMOST datasets, open the Load Curated Datasets widget, select one of the datasets
+            in the dropdown menu (the names correspond to dataset names on the BIL file system) and press the
+            Load Dataset button. An image layer with selected dataset will appear.
+            If the dataset has neuron morphology files associated with it, they will appear in the pre-loaded neurons
+            section of the widget. They can be visualized by checking the checkboxes next to the file names.
+            Currently, visualization of neuron morphologies in 2D is impossible due to limitations of napari shapes layer.
+            In the 3D mode the morphologies will be overlaid on top of the whole brain image in the same scale.
+        </p>
+        <p>
+            To load an image stack, open the Load Image Stack From URL widget, paste a URL to an image stack (list of
+            inks to individual files) and click the Load Dataset button. To get started, you can paste an example
+            URL to the URL input field by clicking the corresponding link and load the example image stack.
+            Currently supported formats are .tif, .tiff and .jp2 - most common formats for STPT stacks.
+        </p>
+        <p>
+            To load a multiscale dataset (.zarr or .ome.zarr), open the Load Multiscale Data From URL widget,
+            insert a URL ending in .zarr to the URL input field and click the Load Dataset button.
+            To get started, you can paste an example URL to the URL input field by clicking the corresponding link
+            and load the example dataset.
+        </p>
+        <p>
+            To load a neuron morphology not included with the curated datasets (both from BIL or other sources), open
+            the Load Neuron Morphology From URL widget, paste a URL ending in .swc into the URL input field
+            and click the Show SWC button.
+            To get started, paste and example URL by clicking a corresponding link and load an example .swc file.
+        </p>
+        <p>
+            To adjust scale of any layer open in the viewer, open the Layer Scale Controls widget, select the layer
+            you would like to rescale, paste the desired scale (usually, resolution in microns) in z, y and x,
+            and eventually press the Adjust button.
+        </p>
+
+<p>&nbsp;</p>
+
+    </div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
+
