@@ -1,115 +1,100 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html class="no-js" lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>
-        The BIL Analysis Ecosystem - HackMD
-    </title>
-    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
-    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+        <title>Brain Image Library: Computing and Visualization</title>
+     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R1YK9CG4GL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
-
-
-    <style>
+  gtag('config', 'G-R1YK9CG4GL');
+</script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="/css/bootstrap.css" />
+     <link rel="stylesheet" href="/css/styles.css" />
+     <link rel="stylesheet" href="/my.css" />
+     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{background-color:#f7f7f7;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
-    </style>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
-    <![endif]-->
+     </style>
+     <script src="/js/jquery.min.js"></script>
+
 </head>
 
-<body>
-  <body class="bg">
-      <div class="container">
-          <p>&nbsp;</p>
-      </div>
-  <div class="container">
-  <!--Navigation bar-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-     <img src="assets/brainicon.png" height="23" width="23">
-      <a class="navbar-brand" href="index.html">&nbsp;Brain Image Library </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-      <span class "navbar-toggler-icon"></span>
-      </button>
+<body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">About</a>
-                  <div class="dropdown-menu">
-                      <a class="dropdown-item" href="about.html">About BIL</a>
-                      <a class="dropdown-item" href="people.html">BIL Staff</a>
-    <a class="dropdown-item" href="partners.html">Partners</a>
-                 </div>
-              </li>
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
 
+    <div class="jumbotron">
 
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Data Submission</a>
-                  <div class="dropdown-menu">
-    <a class="dropdown-item" href="datarequirements.html">Data Depositor FAQ</a>
-                      <a class="dropdown-item" href="submission.html">Instructions</a>
-    <a class="dropdown-item" href="account.html">Create Account</a>
-    <a class="dropdown-item" href="datadirbp.html">Submission Best Practices</a>
-                      <a class="dropdown-item" href="https://submit.brainimagelibrary.org/">Data
-                          Submission Portal</a>
-    <a class="dropdown-item" href="newmetadatamodel.html">New Metadata Model</a>
-    <a class="dropdown-item" href="training.html">Training</a>
-                 </div>
-              </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Data Access</a>
-                  <div class="dropdown-menu">
-                      <!--
-                      <a class="dropdown-item" href="#">Data Access Portal</a>
-                      -->
-     <a class="dropdown-item" href="https://submit.brainimagelibrary.org/search">Brain Inventory</a><br/>
-                      <a class="dropdown-item" href="download.html">Downloading Data</a><br/>
-                      <a class="dropdown-item" href="computevisual.html">Computing and Visualization</a><br/>
-                      <a class="dropdown-item" href="visual.html">Napari Visualization</a><br/>
-                      <a class="dropdown-item" href="analysis_ecosystem.html">Analysis Ecosystem</a><br/>
-                      <a class="dropdown-item" href="restrictedaccess.html">Restricted Data</a><br/>
-                      <a class="dropdown-item" href="citation.html">Citing Data</a>
-                 </div>
-              </li>
-
-              <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-          </ul>
-      </div>
-  </nav>
-</div>
-<div class="well bg-dark text-light">
-<!--   <i> <div class="mx-auto" style="width:800px;">A national public resource enabling researchers to deposit, analyze, mine, share and interact with large brain image datasets</div></i>
--->
-</div>
-
-<div id="topmenu">
-</div>
-
-
-
-    <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true" style=""><h1 id="The-BIL-Analysis-Ecosystem" data-id="The-BIL-Analysis-Ecosystem" style=""><a class="anchor hidden-xs" href="#The-BIL-Analysis-Ecosystem" title="The-BIL-Analysis-Ecosystem"><span class="octicon octicon-link"></span></a><img src="https://i.imgur.com/GLp06Vi.png" width="70"><span>The BIL Analysis Ecosystem</span></h1><h2 id="How-to-connect-to-the-BIL-Analysis-Ecosystem" data-id="How-to-connect-to-the-BIL-Analysis-Ecosystem" style=""><a class="anchor hidden-xs" href="#How-to-connect-to-the-BIL-Analysis-Ecosystem" title="How-to-connect-to-the-BIL-Analysis-Ecosystem"><span class="octicon octicon-link"></span></a><span>How to connect to the BIL Analysis Ecosystem</span></h2><h3 id="Connect-via-Terminal" data-id="Connect-via-Terminal" style=""><a class="anchor hidden-xs" href="#Connect-via-Terminal" title="Connect-via-Terminal"><span class="octicon octicon-link"></span></a><span>Connect via Terminal</span></h3><h3 id="SSH" data-id="SSH" style=""><a class="anchor hidden-xs" href="#SSH" title="SSH"><span class="octicon octicon-link"></span></a><span>SSH</span></h3><p><span>You can connect to BIL Analysis ecosystem resources with an ssh client from your local machine using your PSC credentials.</span></p><p><span>You must install SSH client software on your local machine, but free ssh clients for  Macs, Windows and Unix are available. Popular ssh clients (GUI) include PuTTY for Windows and Cyberduck for Macs. A command line version of ssh is installed on Macs  by default and you can use the Terminal application if you prefer. You can also check with your university to see if there is an ssh client that they recommend.</span></p><p><span>To use ssh to connect to the BIL Analysis Ecosystem:</span></p><pre><code>ssh userid@login.brainimagelibrary.org
-</code></pre><p><span>Everyone who requests a BIL account has access to the login node using their BIL Username and Password. The login node is not intended for heavy computation or visualization, but rather to provide convenient shell access to BIL data and enable interactive and batch use of the BIL Analysis Ecosystem. The BIL computational cluster provides a suitable resource for both computation and visualization.</span></p><h4 id="Workshop-VM" data-id="Workshop-VM"><a class="anchor hidden-xs" href="#Workshop-VM" title="Workshop-VM"><span class="octicon octicon-link"></span></a><span>Workshop VM</span></h4><p><span>For workshop purposes, enter your PSC credentials when prompted.</span></p><p><span>Open terminal and run the command</span></p><pre><code>ssh userid@workshop.brainimagelibrary.org
-</code></pre><p><span>For example,</span></p><pre><code>ssh icaoberg@workshop.brainimagelibrary.org
+        <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true" style="">
+            <h1 id="The-BIL-Analysis-Ecosystem" data-id="The-BIL-Analysis-Ecosystem" style="">
+                <a class="anchor hidden-xs" href="#The-BIL-Analysis-Ecosystem" title="The-BIL-Analysis-Ecosystem">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <img src="https://i.imgur.com/GLp06Vi.png" width="70">
+                <span>The BIL Analysis Ecosystem</span>
+            </h1>
+            <h2 id="How-to-connect-to-the-BIL-Analysis-Ecosystem" data-id="How-to-connect-to-the-BIL-Analysis-Ecosystem" style="">
+                <a class="anchor hidden-xs" href="#How-to-connect-to-the-BIL-Analysis-Ecosystem" title="How-to-connect-to-the-BIL-Analysis-Ecosystem">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <span>How to connect to the BIL Analysis Ecosystem</span>
+            </h2>
+            <h3 id="Connect-via-Terminal" data-id="Connect-via-Terminal" style="">
+                <a class="anchor hidden-xs" href="#Connect-via-Terminal" title="Connect-via-Terminal">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <span>Connect via Terminal</span>
+            </h3>
+            <h3 id="SSH" data-id="SSH" style="">
+                <a class="anchor hidden-xs" href="#SSH" title="SSH">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <span>SSH</span>
+            </h3>
+            <p><span>You can connect to BIL Analysis ecosystem resources with an ssh client from your local machine using your PSC credentials.</span></p>
+            <p><span>You must install SSH client software on your local machine, but free ssh clients for
+                Macs, Windows and Unix are available. Popular ssh clients (GUI) include PuTTY for Windows
+                and Cyberduck for Macs. A command line version of ssh is installed on Macs  by default
+                and you can use the Terminal application if you prefer. You can also check with your university
+                to see if there is an ssh client that they recommend.
+            </span></p>
+            <p><span>To use ssh to connect to the BIL Analysis Ecosystem:</span></p>
+            <pre><code>ssh userid@login.brainimagelibrary.org</code></pre>
+            <p><span>Everyone who requests a BIL account has access to the login node using their BIL Username
+                and Password. The login node is not intended for heavy computation or visualization, but rather
+                to provide convenient shell access to BIL data and enable interactive and batch use of the BIL
+                Analysis Ecosystem. The BIL computational cluster provides a suitable resource for both
+                computation and visualization.
+            </span></p>
+            <h4 id="Workshop-VM" data-id="Workshop-VM">
+                <a class="anchor hidden-xs" href="#Workshop-VM" title="Workshop-VM">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <span>Workshop VM</span>
+            </h4>
+            <p><span>For workshop purposes, enter your PSC credentials when prompted.</span></p>
+            <p><span>Open terminal and run the command</span></p>
+            <pre><code>ssh userid@workshop.brainimagelibrary.org</code></pre>
+            <p><span>For example,</span></p>
+            <pre><code>ssh icaoberg@workshop.brainimagelibrary.org
 icaoberg@workshop.brainimagelibrary.org's password:
 
 Last login: Mon Jan 24 10:46:38 2022 from pool-71-162-2-190.pitbpa.fios.verizon.net
@@ -132,75 +117,114 @@ LOG OFF IMMEDIATELY if you do not agree to the conditions stated in this warning
 Please contact support@psc.edu with any comments/concerns.
 
 ********************************* W A R N I N G ********************************
-</code></pre><p><span>If you can see the message above when you connect, then you should be ready to start using the resources.</span></p><h3 id="Remote-Desktop-X2Go" data-id="Remote-Desktop-X2Go" style=""><a class="anchor hidden-xs" href="#Remote-Desktop-X2Go" title="Remote-Desktop-X2Go"><span class="octicon octicon-link"></span></a><span>Remote Desktop: X2Go</span></h3><p><span>You can access the BIL Analysis Ecosystem using a Virtual Machine system supported by the remote-desktop model X2Go. This will give you remote access to the system via a graphical user interface.</span></p><h4 id="Using-X2Go" data-id="Using-X2Go"><a class="anchor hidden-xs" href="#Using-X2Go" title="Using-X2Go"><span class="octicon octicon-link"></span></a><span>Using X2Go</span></h4><ul>
-<li><span>Download and install the appropriate X2Go client (Windows, Linux, or Mac) from </span><a href="https://wiki.x2go.org/doku.php" target="_blank" rel="noopener"><span>here</span></a><span>.</span></li>
-<li><span>Start the X2Go client.</span></li>
-</ul><p><img src="https://i.imgur.com/rTFe2eu.png" alt="" loading="lazy"></p><ul>
-<li><span>Under the Session menu, select </span><code>New Session</code></li>
-<li><span>Enter your VM name for the hostname</span></li>
-<li><span>Enter your PSC login name: (ex. </span><code>ropelews</code><span> or </span><code>icaoberg</code><span>)</span></li>
-<li><span>Under session type select </span><code>MATE</code></li>
-</ul><p><img src="https://i.imgur.com/NYH2vp6.png" alt="" loading="lazy"></p><ul>
-<li><span>On the right side of the screen you should see a box called new session.</span></li>
-</ul><p><img src="https://i.imgur.com/xMvb8PY.png" alt="" loading="lazy"></p><ul>
-<li><span>Move your mouse to the words </span><code>New session</code><span> and click the left mouse button.</span></li>
-<li><span>Log in using your username and password</span></li>
-<li><span>A new window will appear (usually within 10 seconds) . If you click on your left mouse button in this new window, a submenu will appear. Select </span><code>xterm</code><span> to start a terminal.</span></li>
-</ul><p><img src="https://i.imgur.com/m6D4ntw.png" alt="" loading="lazy"></p><ul>
-<li><span>From the </span><code>xterm</code><span> window, start an application with graphical output, such as vaa3D or Fiji. The application will appear in the window.</span></li>
-</ul><h2 id="Interactive-Apps" data-id="Interactive-Apps" style=""><a class="anchor hidden-xs" href="#Interactive-Apps" title="Interactive-Apps"><span class="octicon octicon-link"></span></a><span>Interactive Apps</span></h2><h3 id="OpenOnDemand" data-id="OpenOnDemand" style=""><a class="anchor hidden-xs" href="#OpenOnDemand" title="OpenOnDemand"><span class="octicon octicon-link"></span></a><span>OpenOnDemand</span></h3><p><span>The OpenOnDemand (OOD) interface allows you to connect to the BIL Analysis Ecosystem through the web browser. You can submit and manage jobs, move or create files, or use the apps such as Jupyter Notebook.</span></p><p><span>To connect to the BIL Analysis Ecosystem via Open OnDemand</span></p><ol>
-<li>
-<p><span>In your web broswer, go to </span><code>https://ondemand.bil.psc.edu</code></p>
-</li>
-<li>
-<p><span>Enter your </span><a href="https://hackmd.io/lXd3fXcNSg-odAVC8APRuQ" target="_blank" rel="noopener"><span>PSC username and password</span></a><br>
-<img src="https://i.imgur.com/ARpR80E.png" alt="" loading="lazy"></p>
-</li>
-<li>
-<p><span>From the OOD dashboard, pictured below,  you will see the top menu bar where you can manage file, jobs, or select the apps to use.</span></p>
-</li>
-</ol><p><img src="https://i.imgur.com/ZKeTVXG.png" alt="" loading="lazy"></p><h4 id="Manage-files" data-id="Manage-files"><a class="anchor hidden-xs" href="#Manage-files" title="Manage-files"><span class="octicon octicon-link"></span></a><span>Manage files</span></h4><p><span>From the OOD dashboard, you can create, edit, or move files. Select the </span><code>Files</code><span> option from the top menu bar, then the </span><code>Home</code><span> which will navigate to your home directory at </span><code>/bil/users/</code><span>. From here, you will have the following options:</span></p><ul>
-<li><code>Go To…</code><span>: Navigate to a specified folder</span></li>
-<li><code>Open in Terminal</code><span>: Opens the active folder in a terminal session (new tab)</span></li>
-<li><code>New File</code><span>: Creates a new file in the active folder</span></li>
-<li><code>New Dir</code><span>: Creates a new folder in the active folder</span></li>
-<li><code>Upload</code><span>: Select files from your local machine to upload to the active folder</span></li>
-<li><code>Show Dotfiles</code><span>: Reveals hidden files</span></li>
-<li><code>Show Owner/Mode</code><span>: Shows ownership and permission information</span></li>
-<li><code>View</code><span>: Shows file contents inside the current tab</span></li>
-<li><code>Edit</code><span>: Opens a file editor in a new tab</span></li>
-<li><code>Rename/Move</code><span>: Gives a file a new path and/or name</span></li>
-<li><code>Download</code><span>: Downloads the file or folder to your local machine</span></li>
-<li><code>Copy</code><span>: Copies selected files to the clipboard</span></li>
-<li><code>Paste</code><span>: Pastes files from the clipboard</span></li>
-<li><code>(Un)Select All</code><span>: Select or unselect all files/folders</span></li>
-<li><code>Delete</code><span>: Deletes selected files/folders</span></li>
-</ul><h4 id="Manage-Jobs" data-id="Manage-Jobs"><a class="anchor hidden-xs" href="#Manage-Jobs" title="Manage-Jobs"><span class="octicon octicon-link"></span></a><span>Manage Jobs</span></h4><p><span>From the OOD dashboard, you can create, submit, and edit jobs. Select the </span><code>Jobs</code><span> option from the top menu bar, then </span><code>Job composer</code><span> which will take you to the job composer dashboard. From here, you will have the following options:</span></p><ul>
-<li><span>Create a new job script</span></li>
-<li><span>Edit job scripts</span></li>
-<li><span>Submit a job</span></li>
-</ul><p><span>When you first visit to this page, you’ll go through a helpful tutorial.  The buttons do the following:</span></p><ul>
-<li><code>New Job</code><span>: Create a new job</span>
-<ul>
-<li><code>From Default Template</code><span>: Uses system defaults to create a job that you can then edit.</span></li>
-<li><code>From Specified Path</code><span>: Creates a job from a specific job script.</span></li>
-<li><code>From Selected Job</code><span>: Creates a new job that is a copy of the selected job.</span></li>
-</ul>
-</li>
-<li><code>Edit Files</code><span>: Opens the project folder in a new File Explorer tab and allows you to edit the files within it.</span></li>
-<li><code>Job Options</code><span>: Allows you to edit the Name, Cluster, Job Script, and Account of a job.</span></li>
-<li><code>Open Terminal</code><span>: Opens a terminal session in a new tab at the project folder.</span></li>
-<li><code>Submit</code><span>: Submits the selected job.</span></li>
-<li><code>Stop</code><span>: Stops the selected job if it was already submitted.</span></li>
-<li><code>Delete</code><span>: Delete the selected job.</span></li>
-</ul><h4 id="Jupyter-Notebook" data-id="Jupyter-Notebook"><a class="anchor hidden-xs" href="#Jupyter-Notebook" title="Jupyter-Notebook"><span class="octicon octicon-link"></span></a><span>Jupyter Notebook</span></h4><p><span>From the OOD dashboard you can launch a Jupyter Notebook server on one or more nodes.</span></p><ul>
-<li><span>Select the </span><code>Apps</code><span> option from the top menu bar, then </span><code>Jupyter Notebook</code><span> which will take you to the page to set up your Jupyer Notebook session.</span></li>
-<li><span>From here, you will specify the timelimit, number of nodes to use. Use the Extra Slurm Args field to specify the number of cores or number of GPUs you want. Use the Extra Jupyter Args field to pass arguments to your Jupyter notebook.</span></li>
-<li><span>Select </span><code>Launch</code><span> to begin your Jupyter Notebook session.</span></li>
-<li><span>You will be taken to the dashboard for your interactive sessions. It may take some time for your resources to become available. When your session starts, select the blue “Connect to Jupyter”</span></li>
-<li><span>A new window running Jupyter Hub will open where you can being your Jupyter Notebook session.</span></li>
-<li><span>For instructions on using Jupyter Notebook, see the </span><a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html" target="_blank" rel="noopener"><span>official documentation</span></a><span>.</span></li>
-</ul><h2 id="Software-Modules" data-id="Software-Modules" style=""><a class="anchor hidden-xs" href="#Software-Modules" title="Software-Modules"><span class="octicon octicon-link"></span></a><span>Software Modules</span></h2><h3 id="LMOD" data-id="LMOD" style=""><a class="anchor hidden-xs" href="#LMOD" title="LMOD"><span class="octicon octicon-link"></span></a><span>LMOD</span></h3><img src="https://i.imgur.com/TiNg8y8.png" width="25%"><p><span>Lmod is a Lua based module system that easily handles the MODULEPATH Hierarchical problem. Environment Modules provide a convenient way to dynamically change the users’ environment through modulefiles.</span></p><p><span>In a nutshell, we use LMOD to manage software that can be used in the VM as well as the large memory nodes. Software available as modules should be accessible on both resources.</span></p><p><span>This document only lists a few commands. For complete documentation click </span><a href="https://lmod.readthedocs.io/en/latest/010_user.html" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><div class="alert alert-info">
+            </code></pre>
+            <p><span>If you can see the message above when you connect, then you should be ready to start
+                using the resources.
+            </span></p>
+            <h3 id="Remote-Desktop-X2Go" data-id="Remote-Desktop-X2Go" style="">
+                <a class="anchor hidden-xs" href="#Remote-Desktop-X2Go" title="Remote-Desktop-X2Go">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <span>Remote Desktop: X2Go</span>
+            </h3>
+            <p><span>You can access the BIL Analysis Ecosystem using a Virtual Machine system supported by
+                the remote-desktop model X2Go. This will give you remote access to the system via a
+                graphical user interface.</span></p>
+            <h4 id="Using-X2Go" data-id="Using-X2Go">
+                <a class="anchor hidden-xs" href="#Using-X2Go" title="Using-X2Go">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                <span>Using X2Go</span>
+            </h4>
+            <ul>
+                <li><span>Download and install the appropriate X2Go client (Windows, Linux, or Mac) from </span><a href="https://wiki.x2go.org/doku.php" target="_blank" rel="noopener"><span>here</span></a><span>.</span></li>
+                <li><span>Start the X2Go client.</span></li>
+            </ul>
+            <p><img src="https://i.imgur.com/rTFe2eu.png" alt="" loading="lazy"></p>
+            <ul>
+                <li><span>Under the Session menu, select </span><code>New Session</code></li>
+                <li><span>Enter your VM name for the hostname</span></li>
+                <li><span>Enter your PSC login name: (ex. </span><code>ropelews</code><span> or </span><code>icaoberg</code><span>)</span></li>
+                <li><span>Under session type select </span><code>MATE</code></li>
+            </ul>
+            <p><img src="https://i.imgur.com/NYH2vp6.png" alt="" loading="lazy"></p>
+            <ul>
+                <li><span>On the right side of the screen you should see a box called new session.</span></li>
+            </ul>
+            <p><img src="https://i.imgur.com/xMvb8PY.png" alt="" loading="lazy"></p>
+            <ul>
+                <li><span>Move your mouse to the words </span><code>New session</code><span> and click the left mouse button.</span></li>
+                <li><span>Log in using your username and password</span></li>
+                <li><span>A new window will appear (usually within 10 seconds) . If you click on your left mouse button in this new window, a submenu will appear. Select </span><code>xterm</code><span> to start a terminal.</span></li>
+            </ul>
+            <p><img src="https://i.imgur.com/m6D4ntw.png" alt="" loading="lazy"></p>
+            <ul>
+                <li><span>From the </span><code>xterm</code><span> window, start an application with graphical output, such as vaa3D or Fiji. The application will appear in the window.</span></li>
+            </ul>
+            <h2 id="Interactive-Apps" data-id="Interactive-Apps" style=""><a class="anchor hidden-xs" href="#Interactive-Apps" title="Interactive-Apps"><span class="octicon octicon-link"></span></a><span>Interactive Apps</span></h2><h3 id="OpenOnDemand" data-id="OpenOnDemand" style=""><a class="anchor hidden-xs" href="#OpenOnDemand" title="OpenOnDemand"><span class="octicon octicon-link"></span></a><span>OpenOnDemand</span></h3><p><span>The OpenOnDemand (OOD) interface allows you to connect to the BIL Analysis Ecosystem through the web browser. You can submit and manage jobs, move or create files, or use the apps such as Jupyter Notebook.</span></p><p><span>To connect to the BIL Analysis Ecosystem via Open OnDemand</span></p>
+            <ol>
+                <li>
+                    <p><span>In your web broswer, go to </span><code>https://ondemand.bil.psc.edu</code></p>
+                </li>
+                <li>
+                    <p><span>Enter your </span><a href="https://hackmd.io/lXd3fXcNSg-odAVC8APRuQ" target="_blank" rel="noopener"><span>PSC username and password</span></a><br>
+                    <img src="https://i.imgur.com/ARpR80E.png" alt="" loading="lazy"></p>
+                </li>
+                <li>
+                    <p><span>From the OOD dashboard, pictured below,  you will see the top menu bar where you can manage file, jobs, or select the apps to use.</span></p>
+                </li>
+            </ol>
+            <p><img src="https://i.imgur.com/ZKeTVXG.png" alt="" loading="lazy"></p><h4 id="Manage-files" data-id="Manage-files"><a class="anchor hidden-xs" href="#Manage-files" title="Manage-files"><span class="octicon octicon-link"></span></a><span>Manage files</span></h4><p><span>From the OOD dashboard, you can create, edit, or move files. Select the </span><code>Files</code><span> option from the top menu bar, then the </span><code>Home</code><span> which will navigate to your home directory at </span><code>/bil/users/</code><span>. From here, you will have the following options:</span></p>
+            <ul>
+                <li><code>Go To…</code><span>: Navigate to a specified folder</span></li>
+                <li><code>Open in Terminal</code><span>: Opens the active folder in a terminal session (new tab)</span></li>
+                <li><code>New File</code><span>: Creates a new file in the active folder</span></li>
+                <li><code>New Dir</code><span>: Creates a new folder in the active folder</span></li>
+                <li><code>Upload</code><span>: Select files from your local machine to upload to the active folder</span></li>
+                <li><code>Show Dotfiles</code><span>: Reveals hidden files</span></li>
+                <li><code>Show Owner/Mode</code><span>: Shows ownership and permission information</span></li>
+                <li><code>View</code><span>: Shows file contents inside the current tab</span></li>
+                <li><code>Edit</code><span>: Opens a file editor in a new tab</span></li>
+                <li><code>Rename/Move</code><span>: Gives a file a new path and/or name</span></li>
+                <li><code>Download</code><span>: Downloads the file or folder to your local machine</span></li>
+                <li><code>Copy</code><span>: Copies selected files to the clipboard</span></li>
+                <li><code>Paste</code><span>: Pastes files from the clipboard</span></li>
+                <li><code>(Un)Select All</code><span>: Select or unselect all files/folders</span></li>
+                <li><code>Delete</code><span>: Deletes selected files/folders</span></li>
+            </ul>
+            <h4 id="Manage-Jobs" data-id="Manage-Jobs"><a class="anchor hidden-xs" href="#Manage-Jobs" title="Manage-Jobs"><span class="octicon octicon-link"></span></a><span>Manage Jobs</span></h4><p><span>From the OOD dashboard, you can create, submit, and edit jobs. Select the </span><code>Jobs</code><span> option from the top menu bar, then </span><code>Job composer</code><span> which will take you to the job composer dashboard. From here, you will have the following options:</span></p>
+            <ul>
+                <li><span>Create a new job script</span></li>
+                <li><span>Edit job scripts</span></li>
+                <li><span>Submit a job</span></li>
+            </ul>
+            <p><span>When you first visit to this page, you’ll go through a helpful tutorial.  The buttons do the following:</span></p>
+            <ul>
+                <li><code>New Job</code><span>: Create a new job</span>
+                    <ul>
+                        <li><code>From Default Template</code><span>: Uses system defaults to create a job that you can then edit.</span></li>
+                        <li><code>From Specified Path</code><span>: Creates a job from a specific job script.</span></li>
+                        <li><code>From Selected Job</code><span>: Creates a new job that is a copy of the selected job.</span></li>
+                    </ul>
+                </li>
+                <li><code>Edit Files</code><span>: Opens the project folder in a new File Explorer tab and allows you to edit the files within it.</span></li>
+                <li><code>Job Options</code><span>: Allows you to edit the Name, Cluster, Job Script, and Account of a job.</span></li>
+                <li><code>Open Terminal</code><span>: Opens a terminal session in a new tab at the project folder.</span></li>
+                <li><code>Submit</code><span>: Submits the selected job.</span></li>
+                <li><code>Stop</code><span>: Stops the selected job if it was already submitted.</span></li>
+                <li><code>Delete</code><span>: Delete the selected job.</span></li>
+            </ul>
+            <h4 id="Jupyter-Notebook" data-id="Jupyter-Notebook"><a class="anchor hidden-xs" href="#Jupyter-Notebook" title="Jupyter-Notebook"><span class="octicon octicon-link"></span></a><span>Jupyter Notebook</span></h4><p><span>From the OOD dashboard you can launch a Jupyter Notebook server on one or more nodes.</span></p>
+            <ul>
+                <li><span>Select the </span><code>Apps</code><span> option from the top menu bar, then </span><code>Jupyter Notebook</code><span> which will take you to the page to set up your Jupyer Notebook session.</span></li>
+                <li><span>From here, you will specify the timelimit, number of nodes to use. Use the Extra Slurm Args field to specify the number of cores or number of GPUs you want. Use the Extra Jupyter Args field to pass arguments to your Jupyter notebook.</span></li>
+                <li><span>Select </span><code>Launch</code><span> to begin your Jupyter Notebook session.</span></li>
+                <li><span>You will be taken to the dashboard for your interactive sessions. It may take some time for your resources to become available. When your session starts, select the blue “Connect to Jupyter”</span></li>
+                <li><span>A new window running Jupyter Hub will open where you can being your Jupyter Notebook session.</span></li>
+                <li><span>For instructions on using Jupyter Notebook, see the </span><a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html" target="_blank" rel="noopener"><span>official documentation</span></a><span>.</span></li>
+            </ul>
+
+            <h2 id="Software-Modules" data-id="Software-Modules" style=""><a class="anchor hidden-xs" href="#Software-Modules" title="Software-Modules"><span class="octicon octicon-link"></span></a><span>Software Modules</span></h2><h3 id="LMOD" data-id="LMOD" style=""><a class="anchor hidden-xs" href="#LMOD" title="LMOD"><span class="octicon octicon-link"></span></a><span>LMOD</span></h3><img src="https://i.imgur.com/TiNg8y8.png" width="25%"><p><span>Lmod is a Lua based module system that easily handles the MODULEPATH Hierarchical problem. Environment Modules provide a convenient way to dynamically change the users’ environment through modulefiles.</span></p><p><span>In a nutshell, we use LMOD to manage software that can be used in the VM as well as the large memory nodes. Software available as modules should be accessible on both resources.</span></p><p><span>This document only lists a few commands. For complete documentation click </span><a href="https://lmod.readthedocs.io/en/latest/010_user.html" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><div class="alert alert-info">
 <p><img class="emoji" alt=":bulb:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bulb.png"><span> If you want us to install a piece of software in our resources, then please remember to submit software installation requests to </span><code>bil-support@psc.edu</code><span>.</span></p>
 </div><h3 id="Available-software-modules" data-id="Available-software-modules" style=""><a class="anchor hidden-xs" href="#Available-software-modules" title="Available-software-modules"><span class="octicon octicon-link"></span></a><span>Available software modules</span></h3><p><span>To list all available software modules use the command</span></p><pre><code>module avail
 </code></pre><p><span>For example</span></p><pre><code>module avail
@@ -220,7 +244,7 @@ c-blosc/1.19.0(default)
 dust/0.5.4
 ffmpeg/20210611
 </code></pre><p><span>The command above will list all available software.</span></p><div class="alert alert-info">
-<p><img class="emoji" alt=":envelope:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/envelope.png"><span> Cannot find the software you need to explore the collections? Please send a request to </span><code>bil-support@psc.edu</code><span>.</span></p>
+            <p><img class="emoji" alt=":envelope:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/envelope.png"><span> Cannot find the software you need to explore the collections? Please send a request to </span><code>bil-support@psc.edu</code><span>.</span></p>
 </div><h3 id="Software-versions" data-id="Software-versions" style=""><a class="anchor hidden-xs" href="#Software-versions" title="Software-versions"><span class="octicon octicon-link"></span></a><span>Software versions</span></h3><p><span>To list information about specific modules use the command</span></p><pre><code>module avail &lt;package-name&gt;
 </code></pre><p><span>For example, you can view the two versions of MatLab available</span></p><pre><code>module avail matlab
 
@@ -1232,7 +1256,9 @@ A:	You won't find a lawyer who can change a light bulb.  Now, if
 INFO [job fortune.cwl] completed success
 {}
 INFO Final process status is success
-</code></pre><hr><p><span>The Brain Image Library is supported by the National Institutes of Mental Health of the National Institutes of Health under award number R24-MH-114793. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.</span></p></div>
+</code></pre>
+            <hr>
+        </div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
@@ -1388,8 +1414,25 @@ INFO Final process status is success
 </ul>
 </li>
 </ul>
-</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
+
+    </div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
@@ -1537,5 +1580,5 @@ INFO Final process status is success
         }
     </script>
 </body>
-
 </html>
+
