@@ -72,7 +72,7 @@ There will be other keys in the json payload, based on the metadata element
 and the search string. Here are a few examples:<br /><br />
 <ul>
 <li>Query:</li>  <br /> <br />
-https://api.brainimagelibrary.org/query/contributors?affiliation=Broad
+<a href="https://api.brainimagelibrary.org/query/contributors?affiliation=Broad">https://api.brainimagelibrary.org/query/contributors?affiliation=Broad</a>
 <br /><br />
 	    
 Result: 
@@ -113,8 +113,9 @@ Result:
 </pre>
 </ul>
 When one retreives an entry, the json payload returned will look like:
-Query: retrieve?doi=https://doi.org/10.35077/rut
-
+Query:
+<a href="https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut">https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut</a>
+<br /> <br />
 Result:
 <code>
 	
@@ -267,7 +268,7 @@ Result:
         }
     ]
     }
-</code>
+</pre>
 
 Note that if one retreives MULTIPLE entries via a PUT request, there will be
 multiple objects returned in the retjson array
