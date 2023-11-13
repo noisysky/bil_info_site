@@ -70,8 +70,8 @@ following json keys:
 </ul>
 There will be other keys in the json payload, based on the metadata element
 and the search string. Here are a few examples:<br /><br />
-
-Query:  <br /> <br />
+<ul>
+<li>Query:</li>  <br /> <br />
 https://api.brainimagelibrary.org/query/contributors?affiliation=Broad
 <br /><br />
 	    
@@ -92,10 +92,11 @@ Result:
           ]
         }
 </pre>
-Query:  /query/image?gbytes=17.0
+<li>Query:</li>
+<a href="https://api.brainimagelibrary.org/query/image?gbytes=17.0">https://api.brainimagelibrary.org/query/image?gbytes=17.0</a>
 <br /><br />
 Result: 
-<code>
+<pre>
 {
           "success": "true",
           "endpoint": "Image/gbytes",
@@ -109,9 +110,9 @@ Result:
                      "ace-boo-dip"
           ]
         }
-</code>
+</pre>
+</ul>
 When one retreives an entry, the json payload returned will look like:
-
 Query: retrieve?doi=https://doi.org/10.35077/rut
 
 Result:
