@@ -112,9 +112,10 @@ Result:
 </pre>
 </ul>
 When one retreives an entry, the json payload returned will look like:
-Query:
+<ul>
+<li>Query:</li>
 <a href="https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut">https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut</a>
-<br /> <br />
+<br /> 
 Result:
 <code>
 	
@@ -268,29 +269,32 @@ Result:
     ]
     }
 </pre>
-
+</ul>
 Note that if one retreives MULTIPLE entries via a PUT request, there will be
 multiple objects returned in the retjson array
 
-**********
-* Errors *
-**********
+<h4>Errors</h4>
+
 When the API detects an error it will return a json message indicating the
 error. typical keys returned in the json payload include:
-
-success - with an error, this will be false.
-endpoint -- the endpoint used
-message -- a user-friendly message, describing why the error happened.
-
-Here is an example if a POST was issued instead of GET:
-
-Query:  curl -X POST  http://localhost:8100/query/contributors?affiliation=Broad
-Result: {
+<ul>
+<li>success - with an error, this will be false.</li>
+<li>endpoint -- the endpoint used.</li>
+<li>message -- a user-friendly message, describing why the error happened.</li>
+</ul>
+Here is an example (using CURL) if a POST was issued instead of GET:
+<ul>	    
+<li>Query:</li>  
+curl -X POST  http://localhost:8100/query/contributors?affiliation=Broad
+<br />
+Result:
+<br />
+	{
         "success": "false",
         "endpoint": "Contributors",
         "message": "POST method not allowed"
         }
-
+</ul>
 *********************************************
 * Handling Partial Sucesss/ Partial Failure *
 *********************************************
