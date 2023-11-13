@@ -39,16 +39,17 @@
      
   <p>The metadata API has two primary user-facing endpoints:
   <ul>
-    <li>query - the query endpoint will query the system and return a json document with matching entry. 
+    <li><strong>query</strong> - the query endpoint will query the system and return a json document with matching entry. 
     Queries use GET formatted URLs, which can be pasted in a web browser, utilized at the command-line through tools such as curl, or called programmatically. Query URLs take the form of:
-    /query/metadatadivision?metadataelement=querystring</li><br />
+    <br />
+	/query/metadatadivision?metadataelement=querystring</li><br />
 
-    <li>retrieve - the retrieve endpoint will return the metadata as a json document for the given ids. 
+    <li><strong>retrieve</strong> - the retrieve endpoint will return the metadata as a json document for the given ids. 
     Retrieve queries can be either GET formatted urls (for retrieving metadata for a single entry) or a POST 
     request with a json payload. The json POST payload may be the results of an earlier query. 
-    The basic forms of the retrieve GET url are:<br />
-    <i>/retrieve?bildid=the_desired_id_to_retreive_metadata_for</i> <br />
-    For example:<br /> 
+    The basic forms of the retrieve GET url are:<br /><br />
+    <i>/retrieve?bildid=the_desired_id_to_retreive_metadata_for</i> <br /><br />
+    For example:<br /> <br />
     https://api.brainimagelibrary.org/retrieve?bildid=ace-cot-pad
     </li>  
   </ul>
@@ -68,13 +69,14 @@ following json keys:
            used in the query</li>
 </ul>
 There will be other keys in the json payload, based on the metadata element
-and the search string. Here are a few examples:
+and the search string. Here are a few examples:<br /><br />
 
-Query:  
+Query:  <br /> <br />
 https://api.brainimagelibrary.org/query/contributors?affiliation=Broad
-
+<br /><br />
+	    
 Result: 
-<code>
+<pre>
 	
 {
           "success": "true",
@@ -89,9 +91,9 @@ Result:
                      "ace-big-pun"
           ]
         }
-</code>
+</pre>
 Query:  /query/image?gbytes=17.0
-
+<br /><br />
 Result: 
 <code>
 {
