@@ -41,7 +41,7 @@
   <ul>
     <li>query - the query endpoint will query the system and return a json document with matching entry. 
     Queries use GET formatted URLs, which can be pasted in a web browser, utilized at the command-line through tools such as curl, or called programmatically. Query URLs take the form of:
-    /query/metadatadivision?metadataelement=querystring</li>
+    /query/metadatadivision?metadataelement=querystring</li><br />
 
     <li>retrieve - the retrieve endpoint will return the metadata as a json document for the given ids. 
     Retrieve queries can be either GET formatted urls (for retrieving metadata for a single entry) or a POST 
@@ -54,8 +54,300 @@
   </ul>
       
   <p>To make full programatic use of the Metadata API, we recommend that interested users first familiarize
-    yourself with <a href="metadata.html">BIL's metadata model</a></p>   
-  
+    yourself with <a href="newmetadatamodel.html">BIL's metadata model</a></p>   
+
+<h4>Example Results</h4>
+<p>
+All successful queries will return a json file, that will all have the
+following json keys:
+<ul>
+<li>success -- true for successful queries</li>
+<li>endpoint -- the endpoint used</li>
+<li>message -- a user-friendly message, describing the status of the query</li>
+<li>bildids -- a list of bil data ids that hold records that match the text
+           used in the query</li>
+</ul>
+There will be other keys in the json payload, based on the metadata element
+and the search string. Here are a few examples:
+
+Query:  
+https://api.brainimagelibrary.org/query/contributors?affiliation=Broad
+
+Result: 
+<code>
+	
+{
+          "success": "true",
+          "endpoint": "Contributors/affiliation",
+          "message": "GET success",
+          "affiliation": "Broad",
+          "bildids": [
+                     "ace-big-pup",
+                     "ace-big-pry",
+                     "ace-big-pot",
+                     "ace-big-pox",
+                     "ace-big-pun"
+          ]
+        }
+</code>
+Query:  /query/image?gbytes=17.0
+
+Result: 
+<code>
+{
+          "success": "true",
+          "endpoint": "Image/gbytes",
+          "message": "GET success",
+          "gbytes": "17.0",
+          "bildids": [
+                     "act-zip",
+                     "ace-bay-low",
+                     "ace-aim-gum",
+                     "ace-ask-row",
+                     "ace-boo-dip"
+          ]
+        }
+</code>
+When one retreives an entry, the json payload returned will look like:
+
+Query: retrieve?doi=https://doi.org/10.35077/rut
+
+Result:
+<code>
+	
+   {
+    "success": "true",
+    "endpoint": "Retrieve/doi",
+    "message": "GET success",
+    "doi": "https://doi.org/10.35077/rut",
+    "retjson": [
+        {
+            "Metadata": "2.0",
+            "Submission": {
+                "sheet": "57",
+                "collection": "1394",
+                "submission_uuid": "96ba8210cceceeb7",
+                "method": "ingest_1",
+                "doi": "https://doi.org/10.35077/rut"
+            },
+            "Contributors": [
+                {
+                    "contributorname": "Allen Institute",
+                    "creator": "Yes",
+                    "contributortype": "ResearchGroup",
+                    "nametype": "Organizational",
+                    "nameidentifier": "",
+                    "nameidentifierscheme": "",
+                    "affiliation": "Allen Institute for Brain Science",
+                    "affiliationidentifier": "https://ror.org/00dcv1019",
+                    "affiliationidentifierscheme": "ROR"
+                },
+                {
+                    "contributorname": "Bosiljka Tasic",
+                    "creator": "No",
+                    "contributortype": "ProjectLeader",
+                    "nametype": "Personal",
+                    "nameidentifier": "https://orcid.org/0000-0002-6861-4506",
+                    "nameidentifierscheme": "ORCID",
+                    "affiliation": "Allen Institute for Brain Science",
+                    "affiliationidentifier": "https://ror.org/00dcv1019",
+                    "affiliationidentifierscheme": "ROR"
+                }
+            ],
+            "Funders": [
+                {
+                    "fundername": "National Institutes of Health",
+                    "funding_reference_identifier": "https://ror.org/01cwqze88",
+                    "funding_reference_identifier_type": "ROR",
+                    "award_number": "1-RF-1MH121274-01",
+                    "award_title": "Cell class- or type-specific viruses for brain-wide labeling and neural circuit examination"
+                }
+            ],
+            "Publication": [],
+            "Instrument": [
+                {
+                    "microscopetype": "Two Photon",
+                    "microscopemanufacturerandmodel": "TissueVision TissueCyte 1000",
+                    "objectivename": "Zeiss 20X Plan-Apochromat",
+                    "objectiveimmersion": "Water",
+                    "objectivena": "1.0",
+                    "objectivemagnification": "20X",
+                    "detectortype": "PMT",
+                    "detectormodel": "Hamamatsu R3896",
+                    "illuminationtypes": "",
+                    "illuminationwavelength": "925nm",
+                    "detectionwavelength": "447-593nm",
+                    "sampletemperature": "20.0"
+                }
+            ],
+            "Specimen": [
+                {
+                    "localid": "588181",
+                    "species": "Mouse",
+                    "ncbitaxonomy": "NCBI:txid10090",
+                    "age": "58.0",
+                    "ageunit": "Days",
+                    "sex": "Female",
+                    "genotype": "wt/wt",
+                    "organlocalid": "1119684572.0",
+                    "organname": "Brain",
+                    "samplelocalid": "0539072223",
+                    "atlas": "",
+                    "locations": ""
+                }
+            ],
+            "Dataset": [
+                {
+                    "bildirectory": "/bil/data/96/ba/96ba8210cceceeb7/0539072223",
+                    "title": "588181",
+                    "socialmedia": "",
+                    "subject": "",
+                    "subjectscheme": "",
+                    "rights": "Allen Institute Terms of Use, Creative Commons Attribution 4.0 International",
+                    "rightsuri": "https://alleninstitute.org/legal/terms-use/ , https://creativecommons.org/licenses/by/4.0/",
+                    "rightsidentifier": "CC-BY-4.0",
+                    "dataset_image": "https://alleninstitute.org/media/filer_public_thumbnails/filer_public/2e/6e/2e6e35a2-a82e-4e1c-af3d-4e95e43d3baf/logo_bs_header.png__220x220_q75_subsampling-2.jpg",
+                    "generalmodality": "population imaging",
+                    "technique": "enhancer virus labeling",
+                    "other": "",
+                    "abstract": "This is a series of serial two-photon images of whole mouse brain to characterize cell populations for the purpose of evaluating the specificity of newly created enhancer elements",
+                    "methods": "",
+                    "technicalinfo": "",
+                    "doi": "https://doi.org/10.35077/rut",
+                    "dataset_size": "None"
+                }
+            ],
+            "Assets": [
+                {
+                    "bildid": "rut",
+                    "bildoi": "https://doi.org/10.35077/rut",
+                    "manifestfile": "https://download.brainimagelibrary.org/inventory/248f1b89-d78f-575c-88a4-32ad314a4a6e.json"
+                }
+            ],
+            "Image": [
+                {
+                    "xaxis": "left-to-right",
+                    "obliquexdim1": "",
+                    "obliquexdim2": "",
+                    "obliquexdim3": "",
+                    "yaxis": "superior-to-inferior",
+                    "obliqueydim1": "",
+                    "obliqueydim2": "",
+                    "obliqueydim3": "",
+                    "zaxis": "posterior-to-anterior",
+                    "obliquezdim1": "",
+                    "obliquezdim2": "",
+                    "obliquezdim3": "",
+                    "landmarkname": "",
+                    "landmarkx": "",
+                    "landmarky": "",
+                    "landmarkz": "",
+                    "number": "1,2,3,red,green,blue",
+                    "displaycolor": "(1.0,0.0,0.0),(0.0,1.0,0.0),(0.0,0.0,1.0)",
+                    "representation": "neurite",
+                    "flurophore": "CH1(background fluorescence)  CH2(GFP) CH3(background fluorescence)",
+                    "stepsizex": "0.35",
+                    "stepsizey": "0.35",
+                    "stepsizez": "100.0",
+                    "stepsizet": "",
+                    "channels": "3.0",
+                    "slices": "140.0",
+                    "z": "1.0",
+                    "xsize": "40000.0",
+                    "ysize": "30000.0",
+                    "zsize": "1.0",
+                    "gbytes": "",
+                    "files": "",
+                    "dimensionorder": ""
+                }
+            ]
+        }
+    ]
+    }
+</code>
+
+Note that if one retreives MULTIPLE entries via a PUT request, there will be
+multiple objects returned in the retjson array
+
+**********
+* Errors *
+**********
+When the API detects an error it will return a json message indicating the
+error. typical keys returned in the json payload include:
+
+success - with an error, this will be false.
+endpoint -- the endpoint used
+message -- a user-friendly message, describing why the error happened.
+
+Here is an example if a POST was issued instead of GET:
+
+Query:  curl -X POST  http://localhost:8100/query/contributors?affiliation=Broad
+Result: {
+        "success": "false",
+        "endpoint": "Contributors",
+        "message": "POST method not allowed"
+        }
+
+*********************************************
+* Handling Partial Sucesss/ Partial Failure *
+*********************************************
+This currently will only happen if one uses the /retreive endpoint with a post
+request. In such cases keys:
+
+        success -- this will be "true" NOT "false".
+        message -- will state that the POST was partially successful.
+        status  -- (key,value)- will be "true" for ID's returned in
+                   "retjson", otherwise "false"
+        retjson -- will only contain metadata for the entries found.
+
+Here is a brief example of what the beginning of the returned json document
+will look like:
+
+     {
+     "success": "true",
+     "endpoint": "Retrieve",
+     "message": "POST partially successful, some entries retreived",
+     "status": {
+          "act-zip": true,
+          "ace-bay-low": true,
+          "ace-aim-gum": false,
+          "ace-ask-row": false,
+          "ace-boo-dip": true
+        },
+     "retjson": [ ... ]
+     }
+
+
+
+***********************
+* Additional Examples *
+***********************
+
+
+curl -X POST -H 'Content-Type: application/json' https://api.brainimagelibrary.org/insert -d @/bil/users/ropelews/www/mongo-api/testdata/TEST_SHEET_6.json
+#
+curl -k -X GET  'https://api.brainimagelibrary.org/query/fulltext?text=broad'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/funders?award_number=1-RF1-MH-124598-01'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/submission?doi=rut'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/contributors?affiliation=Broad'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/contributors?creator=Yes'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/instrument?microscopetype=upright'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/instrument?objectivename=olympus'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/specimen?localid=f024'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/dataset?title=mouse'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/image?gbytes=17.0'
+curl -k -X GET  'https://api.brainimagelibrary.org/query/publication?relatedidentifier=doi'
+#
+curl -k -X GET  'https://api.brainimagelibrary.org/retrieve?api_id=64b7f05ae2059cb9fe9a2e8b'
+curl -k -X GET  'https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut'
+#
+#curl -k -X POST -H "Content-type: application/json" -d "{\"firstName\" : \"John\", \"lastName\" : \"Smith\"}" 'https://api.brainimagelibrary.org/retrieve'
+curl -k -X POST -H 'Content-Type: application/json' https://api.brainimagelibrary.org/retrieve -d @/bil/users/ropelews/www/mongo-api/ret_post_test/multiple.json
+
+
+
+	    
+	    
 </div>
     <!--Bottom Footer -->
     <div id="bottomfooter">
