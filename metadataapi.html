@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Brain Image Library: Metadata API</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/my.css" />
+        <script src="/js/jquery.min.js"></script>
+    </head>
+
+    <body class="bg">
+        <div class="container">
+            <p>&nbsp;</p>
+        </div>
+    <div class="container">
+    <!--Navigation bar-->
+    <div id="topmenu">
+    </div>
+    <script>
+        $(function(){
+          $("#topmenu").load("menu.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+    <div class="jumbotron">
+
+      <h1 id="Identifiers" data-id="Identifiers" style=""><span>Metadata API</span></h1>
+
+      <p><span>The </span><strong><span>Brain Image Library (BIL)</span></strong>
+      provides both a metadata API and web portal that uses the API to search and 
+      return metadata and links to datasets in BIL.
+      The metadata API is extremely flexible and capable of full-text searching 
+      or individual metadata fields.</p>
+     
+  <p>The metadata API has two primary user-facing endpoints:
+  <ul>
+    <li>query - the query endpoint will query the system and return a json document with matching entry. 
+    Queries use GET formatted URLs, which can be pasted in a web browser, utilized at the command-line through tools such as curl, or called programmatically. Query URLs take the form of:
+    /query/metadatadivision?metadataelement=querystring</li>
+
+    <li>retrieve - the retrieve endpoint will return the metadata as a json document for the given ids. 
+    Retrieve queries can be either GET formatted urls (for retrieving metadata for a single entry) or a POST 
+    request with a json payload. The json POST payload may be the results of an earlier query. 
+    The basic forms of the retrieve GET url are:<br />
+    <i>/retrieve?bildid=the_desired_id_to_retreive_metadata_for</i> <br />
+    For example:<br /> 
+    https://api.brainimagelibrary.org/retrieve?bildid=ace-cot-pad
+    </li>  
+  </ul>
+      
+  <p>To make full programatic use of the Metadata API, we recommend that interested users first familiarize
+    yourself with <a href="metadata.html">BIL's metadata model</a></p>   
+  
+</div>
+    <!--Bottom Footer -->
+    <div id="bottomfooter">
+    </div>
+    <script>
+        $(function(){
+          $("#bottomfooter").load("footer.html");
+        });
+    </script>
+    <!--end of bottomfooter-->
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
