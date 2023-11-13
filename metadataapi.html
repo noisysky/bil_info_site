@@ -293,7 +293,7 @@ Result:
         "endpoint": "Contributors",
         "message": "POST method not allowed"
         }
-</pre>
+</pre></ul>
 Handling Partial Sucesss/ Partial Failure: This currently will only happen if one uses the /retreive endpoint with a post
 request. In such cases keys:
 <ul>
@@ -333,11 +333,10 @@ Some examples using the web browser: <br />
 <br /><a href="https://api.brainimagelibrary.org/query/dataset?title=mouse">https://api.brainimagelibrary.org/query/dataset?title=mouse</a>
 <br /><a href="https://api.brainimagelibrary.org/query/image?gbytes=17.0">https://api.brainimagelibrary.org/query/image?gbytes=17.0</a>
 <br /><a href="https://api.brainimagelibrary.org/query/publication?relatedidentifier=doi">https://api.brainimagelibrary.org/query/publication?relatedidentifier=doi</a>
-#
 <br /><a href="https://api.brainimagelibrary.org/retrieve?bildid=rut">https://api.brainimagelibrary.org/retrieve?bildid=rut</a>
 <br /><a href="https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut">https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut</a>	    
 <br /><br />
-Some examples accessing the API using curl are shown below: </br>
+Some examples accessing the API using curl are shown below: </br></br>
 <pre>
 curl -k -X GET  'https://api.brainimagelibrary.org/query/fulltext?text=broad'
 curl -k -X GET  'https://api.brainimagelibrary.org/query/funders?award_number=1-RF1-MH-124598-01'
@@ -350,7 +349,7 @@ curl -k -X GET  'https://api.brainimagelibrary.org/query/specimen?localid=f024'
 curl -k -X GET  'https://api.brainimagelibrary.org/query/dataset?title=mouse'
 curl -k -X GET  'https://api.brainimagelibrary.org/query/image?gbytes=17.0'
 curl -k -X GET  'https://api.brainimagelibrary.org/query/publication?relatedidentifier=doi'
-#
+
 curl -k -X GET  'https://api.brainimagelibrary.org/retrieve?bildid=rut'
 curl -k -X GET  'https://api.brainimagelibrary.org/retrieve?doi=https://doi.org/10.35077/rut'
 </pre>
