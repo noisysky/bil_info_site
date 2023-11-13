@@ -287,13 +287,13 @@ Here is an example (using CURL) if a POST was issued instead of GET:
 curl -X POST  http://localhost:8100/query/contributors?affiliation=Broad
 <br />
 Result:
-<br />
+<pre>
 	{
         "success": "false",
         "endpoint": "Contributors",
         "message": "POST method not allowed"
         }
-</ul>
+</pre>
 Handling Partial Sucesss/ Partial Failure: This currently will only happen if one uses the /retreive endpoint with a post
 request. In such cases keys:
 <ul>
