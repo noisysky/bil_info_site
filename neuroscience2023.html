@@ -43,7 +43,7 @@
 <li><span>query - the query endpoint will query the system and return a json document with matching entry. Queries use GET formatted URLs, which can be pasted in a web browser, utilized at the command-line through tools such as curl, or called programmatically. Query URLs take the form of:</span><br>
 <code>/query/metadatadivision?metadataelement=querystring</code></li>
 <li><span>retrieve - the retrieve endpoint will return the metadata as a json document for the given ids. Retrieve queries can be either GET formatted urls (for retrieving metadata for a single entry) or a POST request with a json payload. The json payload may be the results of an earlier query. The basic forms of the retrieve GET url are:</span><br>
-<code>/retrieve?api_id=the_desired_id_to_retreive_metadata_for</code></li>
+<code>/retrieve?bildid=the_desired_id_to_retreive_metadata_for</code>. For example: https://api.brainimagelibrary.org/retrieve?bildid=ace-cot-pad</li>
 </ul>
 </li>
 </ul></div>
